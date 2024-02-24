@@ -1,4 +1,6 @@
+import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/pages/home_page/screens/widgets/screen_title.dart';
+import 'package:data_dex/presentation/pages/home_page/widgets/loan_card.dart';
 import 'package:flutter/material.dart';
 
 class FollowUpScreen extends StatelessWidget {
@@ -6,9 +8,20 @@ class FollowUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        ScreenTitle(title: 'Follow up'),
+        const ScreenTitle(title: 'Follow up'),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: ListView(
+              children: const [
+                LoanCard(),
+                kHeight,
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }

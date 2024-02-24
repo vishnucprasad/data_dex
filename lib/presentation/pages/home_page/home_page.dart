@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
 import 'package:data_dex/application/app_action/app_action_cubit.dart';
+import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/pages/home_page/screens/completed_loans_screen/completed_loans_screen.dart';
 import 'package:data_dex/presentation/pages/home_page/screens/dropped_loans_screen/dropped_loans_screens.dart';
 import 'package:data_dex/presentation/pages/home_page/screens/follow_up_screen/follow_up_screen.dart';
@@ -38,6 +39,20 @@ class HomePage extends StatelessWidget {
         },
       ),
       bottomNavigationBar: const BottomNav(),
+      floatingActionButton: FloatingActionButton(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30.0),
+            topRight: Radius.circular(30.0),
+            bottomLeft: Radius.circular(30.0),
+            bottomRight: Radius.circular(10.0),
+          ),
+        ),
+        backgroundColor: Colors.lightBlue.shade600,
+        foregroundColor: kLightColor,
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

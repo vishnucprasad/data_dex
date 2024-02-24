@@ -13,7 +13,7 @@ class ScreenTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        kHeightLg,
+        kHeightMd,
         Row(
           children: [
             kWidth,
@@ -25,9 +25,15 @@ class ScreenTitle extends StatelessWidget {
                 letterSpacing: 1,
               ),
             ),
+            const Spacer(),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+            ),
+            kWidth,
           ],
         ),
-        kHeightLg,
+        kHeightMd,
       ],
     );
   }
