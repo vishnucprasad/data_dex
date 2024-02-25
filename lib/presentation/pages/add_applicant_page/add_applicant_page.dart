@@ -73,9 +73,6 @@ class AddApplicantPage extends StatelessWidget {
                                   state.formStep + 1));
                         }
                       },
-                      onStepTapped: (step) => context
-                          .read<ApplicantFormBloc>()
-                          .add(ApplicantFormEvent.formStepChanged(step)),
                       steps: [
                         Step(
                           state: state.formStep > 0

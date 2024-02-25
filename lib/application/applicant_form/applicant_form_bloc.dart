@@ -1,3 +1,7 @@
+import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/applicant/failures/applicant_failure.dart';
+import 'package:data_dex/domain/applicant/models/applicant_basic_info/applicant_basic_info_form_data.dart';
+import 'package:data_dex/domain/applicant/value_objects.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -11,8 +15,43 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
   ApplicantFormBloc() : super(ApplicantFormState.initial()) {
     on<ApplicantFormEvent>((event, emit) async {
       await event.map(
-        formStepChanged: (e) async => emit(state.copyWith(
-          formStep: e.index,
+        formStepChanged: (e) async {
+          if (e.index == 1 && state.basicInfo.failureOption.isSome()) {
+            return emit(state.copyWith(
+              showValidationError: true,
+              failureOrSuccess: none(),
+            ));
+          }
+
+          emit(state.copyWith(
+            formStep: e.index,
+            showValidationError: false,
+            failureOrSuccess: none(),
+          ));
+        },
+        nameChanged: (e) async => emit(state.copyWith(
+          basicInfo: state.basicInfo.copyWith(
+            name: Name(e.name),
+          ),
+          failureOrSuccess: none(),
+        )),
+        phoneNumberChanged: (e) async => emit(state.copyWith(
+          basicInfo: state.basicInfo.copyWith(
+            phoneNumber: PhoneNumber(e.phoneNumber),
+          ),
+          failureOrSuccess: none(),
+        )),
+        emailChnaged: (e) async => emit(state.copyWith(
+          basicInfo: state.basicInfo.copyWith(
+            emailAddress: EmailAddress(e.email),
+          ),
+          failureOrSuccess: none(),
+        )),
+        dateOfBirthChanged: (e) async => emit(state.copyWith(
+          basicInfo: state.basicInfo.copyWith(
+            dateOfBirth: DateOfBirth(e.date.toIso8601String()),
+          ),
+          failureOrSuccess: none(),
         )),
       );
     });
