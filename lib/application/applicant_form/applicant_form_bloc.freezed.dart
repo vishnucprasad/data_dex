@@ -18,57 +18,87 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$ApplicantFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
     required TResult Function(String phoneNumber) phoneNumberChanged,
     required TResult Function(String email) emailChnaged,
     required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
     TResult? Function(String phoneNumber)? phoneNumberChanged,
     TResult? Function(String email)? emailChnaged,
     TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
     TResult Function(String phoneNumber)? phoneNumberChanged,
     TResult Function(String email)? emailChnaged,
     TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_FormStepChanged value) formStepChanged,
     required TResult Function(_NameChanged value) nameChanged,
     required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
     required TResult Function(_EmailChnaged value) emailChnaged,
     required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_FormStepChanged value)? formStepChanged,
     TResult? Function(_NameChanged value)? nameChanged,
     TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult? Function(_EmailChnaged value)? emailChnaged,
     TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_FormStepChanged value)? formStepChanged,
     TResult Function(_NameChanged value)? nameChanged,
     TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult Function(_EmailChnaged value)? emailChnaged,
     TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -90,6 +120,156 @@ class _$ApplicantFormEventCopyWithImpl<$Res, $Val extends ApplicantFormEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$InitializedImplCopyWith<$Res> {
+  factory _$$InitializedImplCopyWith(
+          _$InitializedImpl value, $Res Function(_$InitializedImpl) then) =
+      __$$InitializedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$InitializedImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$InitializedImpl>
+    implements _$$InitializedImplCopyWith<$Res> {
+  __$$InitializedImplCopyWithImpl(
+      _$InitializedImpl _value, $Res Function(_$InitializedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$InitializedImpl implements _Initialized {
+  const _$InitializedImpl();
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.initialized()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$InitializedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+  }) {
+    return initialized();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+  }) {
+    return initialized?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (initialized != null) {
+      return initialized();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+  }) {
+    return initialized(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+  }) {
+    return initialized?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (initialized != null) {
+      return initialized(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Initialized implements ApplicantFormEvent {
+  const factory _Initialized() = _$InitializedImpl;
 }
 
 /// @nodoc
@@ -157,11 +337,16 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
     required TResult Function(String phoneNumber) phoneNumberChanged,
     required TResult Function(String email) emailChnaged,
     required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
   }) {
     return formStepChanged(index);
   }
@@ -169,11 +354,16 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
     TResult? Function(String phoneNumber)? phoneNumberChanged,
     TResult? Function(String email)? emailChnaged,
     TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
   }) {
     return formStepChanged?.call(index);
   }
@@ -181,11 +371,16 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
     TResult Function(String phoneNumber)? phoneNumberChanged,
     TResult Function(String email)? emailChnaged,
     TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (formStepChanged != null) {
@@ -197,11 +392,16 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_FormStepChanged value) formStepChanged,
     required TResult Function(_NameChanged value) nameChanged,
     required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
     required TResult Function(_EmailChnaged value) emailChnaged,
     required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
   }) {
     return formStepChanged(this);
   }
@@ -209,11 +409,16 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_FormStepChanged value)? formStepChanged,
     TResult? Function(_NameChanged value)? nameChanged,
     TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult? Function(_EmailChnaged value)? emailChnaged,
     TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
   }) {
     return formStepChanged?.call(this);
   }
@@ -221,11 +426,16 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_FormStepChanged value)? formStepChanged,
     TResult Function(_NameChanged value)? nameChanged,
     TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult Function(_EmailChnaged value)? emailChnaged,
     TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (formStepChanged != null) {
@@ -308,11 +518,16 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
     required TResult Function(String phoneNumber) phoneNumberChanged,
     required TResult Function(String email) emailChnaged,
     required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
   }) {
     return nameChanged(name);
   }
@@ -320,11 +535,16 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
     TResult? Function(String phoneNumber)? phoneNumberChanged,
     TResult? Function(String email)? emailChnaged,
     TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
   }) {
     return nameChanged?.call(name);
   }
@@ -332,11 +552,16 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
     TResult Function(String phoneNumber)? phoneNumberChanged,
     TResult Function(String email)? emailChnaged,
     TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -348,11 +573,16 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_FormStepChanged value) formStepChanged,
     required TResult Function(_NameChanged value) nameChanged,
     required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
     required TResult Function(_EmailChnaged value) emailChnaged,
     required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
   }) {
     return nameChanged(this);
   }
@@ -360,11 +590,16 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_FormStepChanged value)? formStepChanged,
     TResult? Function(_NameChanged value)? nameChanged,
     TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult? Function(_EmailChnaged value)? emailChnaged,
     TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
   }) {
     return nameChanged?.call(this);
   }
@@ -372,11 +607,16 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_FormStepChanged value)? formStepChanged,
     TResult Function(_NameChanged value)? nameChanged,
     TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult Function(_EmailChnaged value)? emailChnaged,
     TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -461,11 +701,16 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
     required TResult Function(String phoneNumber) phoneNumberChanged,
     required TResult Function(String email) emailChnaged,
     required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
   }) {
     return phoneNumberChanged(phoneNumber);
   }
@@ -473,11 +718,16 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
     TResult? Function(String phoneNumber)? phoneNumberChanged,
     TResult? Function(String email)? emailChnaged,
     TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
   }) {
     return phoneNumberChanged?.call(phoneNumber);
   }
@@ -485,11 +735,16 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
     TResult Function(String phoneNumber)? phoneNumberChanged,
     TResult Function(String email)? emailChnaged,
     TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -501,11 +756,16 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_FormStepChanged value) formStepChanged,
     required TResult Function(_NameChanged value) nameChanged,
     required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
     required TResult Function(_EmailChnaged value) emailChnaged,
     required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
   }) {
     return phoneNumberChanged(this);
   }
@@ -513,11 +773,16 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_FormStepChanged value)? formStepChanged,
     TResult? Function(_NameChanged value)? nameChanged,
     TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult? Function(_EmailChnaged value)? emailChnaged,
     TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
   }) {
     return phoneNumberChanged?.call(this);
   }
@@ -525,11 +790,16 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_FormStepChanged value)? formStepChanged,
     TResult Function(_NameChanged value)? nameChanged,
     TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult Function(_EmailChnaged value)? emailChnaged,
     TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -613,11 +883,16 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
     required TResult Function(String phoneNumber) phoneNumberChanged,
     required TResult Function(String email) emailChnaged,
     required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
   }) {
     return emailChnaged(email);
   }
@@ -625,11 +900,16 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
     TResult? Function(String phoneNumber)? phoneNumberChanged,
     TResult? Function(String email)? emailChnaged,
     TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
   }) {
     return emailChnaged?.call(email);
   }
@@ -637,11 +917,16 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
     TResult Function(String phoneNumber)? phoneNumberChanged,
     TResult Function(String email)? emailChnaged,
     TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (emailChnaged != null) {
@@ -653,11 +938,16 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_FormStepChanged value) formStepChanged,
     required TResult Function(_NameChanged value) nameChanged,
     required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
     required TResult Function(_EmailChnaged value) emailChnaged,
     required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
   }) {
     return emailChnaged(this);
   }
@@ -665,11 +955,16 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_FormStepChanged value)? formStepChanged,
     TResult? Function(_NameChanged value)? nameChanged,
     TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult? Function(_EmailChnaged value)? emailChnaged,
     TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
   }) {
     return emailChnaged?.call(this);
   }
@@ -677,11 +972,16 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_FormStepChanged value)? formStepChanged,
     TResult Function(_NameChanged value)? nameChanged,
     TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult Function(_EmailChnaged value)? emailChnaged,
     TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (emailChnaged != null) {
@@ -765,11 +1065,16 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
     required TResult Function(String phoneNumber) phoneNumberChanged,
     required TResult Function(String email) emailChnaged,
     required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
   }) {
     return dateOfBirthChanged(date);
   }
@@ -777,11 +1082,16 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
     TResult? Function(String phoneNumber)? phoneNumberChanged,
     TResult? Function(String email)? emailChnaged,
     TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
   }) {
     return dateOfBirthChanged?.call(date);
   }
@@ -789,11 +1099,16 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
     TResult Function(String phoneNumber)? phoneNumberChanged,
     TResult Function(String email)? emailChnaged,
     TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (dateOfBirthChanged != null) {
@@ -805,11 +1120,16 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
     required TResult Function(_FormStepChanged value) formStepChanged,
     required TResult Function(_NameChanged value) nameChanged,
     required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
     required TResult Function(_EmailChnaged value) emailChnaged,
     required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
   }) {
     return dateOfBirthChanged(this);
   }
@@ -817,11 +1137,16 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
     TResult? Function(_FormStepChanged value)? formStepChanged,
     TResult? Function(_NameChanged value)? nameChanged,
     TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult? Function(_EmailChnaged value)? emailChnaged,
     TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
   }) {
     return dateOfBirthChanged?.call(this);
   }
@@ -829,11 +1154,16 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
     TResult Function(_FormStepChanged value)? formStepChanged,
     TResult Function(_NameChanged value)? nameChanged,
     TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
     TResult Function(_EmailChnaged value)? emailChnaged,
     TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
     required TResult orElse(),
   }) {
     if (dateOfBirthChanged != null) {
@@ -854,11 +1184,746 @@ abstract class _DateOfBirthChanged implements ApplicantFormEvent {
 }
 
 /// @nodoc
+abstract class _$$HouseNameChangedImplCopyWith<$Res> {
+  factory _$$HouseNameChangedImplCopyWith(_$HouseNameChangedImpl value,
+          $Res Function(_$HouseNameChangedImpl) then) =
+      __$$HouseNameChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String houseName});
+}
+
+/// @nodoc
+class __$$HouseNameChangedImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$HouseNameChangedImpl>
+    implements _$$HouseNameChangedImplCopyWith<$Res> {
+  __$$HouseNameChangedImplCopyWithImpl(_$HouseNameChangedImpl _value,
+      $Res Function(_$HouseNameChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? houseName = null,
+  }) {
+    return _then(_$HouseNameChangedImpl(
+      null == houseName
+          ? _value.houseName
+          : houseName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HouseNameChangedImpl implements _HouseNameChanged {
+  const _$HouseNameChangedImpl(this.houseName);
+
+  @override
+  final String houseName;
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.houseNameChanged(houseName: $houseName)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HouseNameChangedImpl &&
+            (identical(other.houseName, houseName) ||
+                other.houseName == houseName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, houseName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HouseNameChangedImplCopyWith<_$HouseNameChangedImpl> get copyWith =>
+      __$$HouseNameChangedImplCopyWithImpl<_$HouseNameChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+  }) {
+    return houseNameChanged(houseName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+  }) {
+    return houseNameChanged?.call(houseName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (houseNameChanged != null) {
+      return houseNameChanged(houseName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+  }) {
+    return houseNameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+  }) {
+    return houseNameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (houseNameChanged != null) {
+      return houseNameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _HouseNameChanged implements ApplicantFormEvent {
+  const factory _HouseNameChanged(final String houseName) =
+      _$HouseNameChangedImpl;
+
+  String get houseName;
+  @JsonKey(ignore: true)
+  _$$HouseNameChangedImplCopyWith<_$HouseNameChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PostOfficeChangedImplCopyWith<$Res> {
+  factory _$$PostOfficeChangedImplCopyWith(_$PostOfficeChangedImpl value,
+          $Res Function(_$PostOfficeChangedImpl) then) =
+      __$$PostOfficeChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String postOffice});
+}
+
+/// @nodoc
+class __$$PostOfficeChangedImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$PostOfficeChangedImpl>
+    implements _$$PostOfficeChangedImplCopyWith<$Res> {
+  __$$PostOfficeChangedImplCopyWithImpl(_$PostOfficeChangedImpl _value,
+      $Res Function(_$PostOfficeChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? postOffice = null,
+  }) {
+    return _then(_$PostOfficeChangedImpl(
+      null == postOffice
+          ? _value.postOffice
+          : postOffice // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PostOfficeChangedImpl implements _PostOfficeChanged {
+  const _$PostOfficeChangedImpl(this.postOffice);
+
+  @override
+  final String postOffice;
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.postOfficeChanged(postOffice: $postOffice)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PostOfficeChangedImpl &&
+            (identical(other.postOffice, postOffice) ||
+                other.postOffice == postOffice));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, postOffice);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PostOfficeChangedImplCopyWith<_$PostOfficeChangedImpl> get copyWith =>
+      __$$PostOfficeChangedImplCopyWithImpl<_$PostOfficeChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+  }) {
+    return postOfficeChanged(postOffice);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+  }) {
+    return postOfficeChanged?.call(postOffice);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (postOfficeChanged != null) {
+      return postOfficeChanged(postOffice);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+  }) {
+    return postOfficeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+  }) {
+    return postOfficeChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (postOfficeChanged != null) {
+      return postOfficeChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PostOfficeChanged implements ApplicantFormEvent {
+  const factory _PostOfficeChanged(final String postOffice) =
+      _$PostOfficeChangedImpl;
+
+  String get postOffice;
+  @JsonKey(ignore: true)
+  _$$PostOfficeChangedImplCopyWith<_$PostOfficeChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$StreetNameChangedImplCopyWith<$Res> {
+  factory _$$StreetNameChangedImplCopyWith(_$StreetNameChangedImpl value,
+          $Res Function(_$StreetNameChangedImpl) then) =
+      __$$StreetNameChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String streetName});
+}
+
+/// @nodoc
+class __$$StreetNameChangedImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$StreetNameChangedImpl>
+    implements _$$StreetNameChangedImplCopyWith<$Res> {
+  __$$StreetNameChangedImplCopyWithImpl(_$StreetNameChangedImpl _value,
+      $Res Function(_$StreetNameChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? streetName = null,
+  }) {
+    return _then(_$StreetNameChangedImpl(
+      null == streetName
+          ? _value.streetName
+          : streetName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$StreetNameChangedImpl implements _StreetNameChanged {
+  const _$StreetNameChangedImpl(this.streetName);
+
+  @override
+  final String streetName;
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.streetNameChanged(streetName: $streetName)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$StreetNameChangedImpl &&
+            (identical(other.streetName, streetName) ||
+                other.streetName == streetName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, streetName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$StreetNameChangedImplCopyWith<_$StreetNameChangedImpl> get copyWith =>
+      __$$StreetNameChangedImplCopyWithImpl<_$StreetNameChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+  }) {
+    return streetNameChanged(streetName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+  }) {
+    return streetNameChanged?.call(streetName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (streetNameChanged != null) {
+      return streetNameChanged(streetName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+  }) {
+    return streetNameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+  }) {
+    return streetNameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (streetNameChanged != null) {
+      return streetNameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _StreetNameChanged implements ApplicantFormEvent {
+  const factory _StreetNameChanged(final String streetName) =
+      _$StreetNameChangedImpl;
+
+  String get streetName;
+  @JsonKey(ignore: true)
+  _$$StreetNameChangedImplCopyWith<_$StreetNameChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PincodeChangedImplCopyWith<$Res> {
+  factory _$$PincodeChangedImplCopyWith(_$PincodeChangedImpl value,
+          $Res Function(_$PincodeChangedImpl) then) =
+      __$$PincodeChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String pincode});
+}
+
+/// @nodoc
+class __$$PincodeChangedImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$PincodeChangedImpl>
+    implements _$$PincodeChangedImplCopyWith<$Res> {
+  __$$PincodeChangedImplCopyWithImpl(
+      _$PincodeChangedImpl _value, $Res Function(_$PincodeChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pincode = null,
+  }) {
+    return _then(_$PincodeChangedImpl(
+      null == pincode
+          ? _value.pincode
+          : pincode // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PincodeChangedImpl implements _PincodeChanged {
+  const _$PincodeChangedImpl(this.pincode);
+
+  @override
+  final String pincode;
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.pincodeChanged(pincode: $pincode)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PincodeChangedImpl &&
+            (identical(other.pincode, pincode) || other.pincode == pincode));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, pincode);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PincodeChangedImplCopyWith<_$PincodeChangedImpl> get copyWith =>
+      __$$PincodeChangedImplCopyWithImpl<_$PincodeChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+  }) {
+    return pincodeChanged(pincode);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+  }) {
+    return pincodeChanged?.call(pincode);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (pincodeChanged != null) {
+      return pincodeChanged(pincode);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+  }) {
+    return pincodeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+  }) {
+    return pincodeChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    required TResult orElse(),
+  }) {
+    if (pincodeChanged != null) {
+      return pincodeChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PincodeChanged implements ApplicantFormEvent {
+  const factory _PincodeChanged(final String pincode) = _$PincodeChangedImpl;
+
+  String get pincode;
+  @JsonKey(ignore: true)
+  _$$PincodeChangedImplCopyWith<_$PincodeChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$ApplicantFormState {
   int get formStep => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   ApplicantBasicInfoFormData get basicInfo =>
       throw _privateConstructorUsedError;
+  ApplicantAddressFormData get address => throw _privateConstructorUsedError;
   Option<Either<ApplicantFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
 
@@ -877,9 +1942,11 @@ abstract class $ApplicantFormStateCopyWith<$Res> {
       {int formStep,
       bool showValidationError,
       ApplicantBasicInfoFormData basicInfo,
+      ApplicantAddressFormData address,
       Option<Either<ApplicantFailure, Unit>> failureOrSuccess});
 
   $ApplicantBasicInfoFormDataCopyWith<$Res> get basicInfo;
+  $ApplicantAddressFormDataCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -898,6 +1965,7 @@ class _$ApplicantFormStateCopyWithImpl<$Res, $Val extends ApplicantFormState>
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
+    Object? address = null,
     Object? failureOrSuccess = null,
   }) {
     return _then(_value.copyWith(
@@ -913,6 +1981,10 @@ class _$ApplicantFormStateCopyWithImpl<$Res, $Val extends ApplicantFormState>
           ? _value.basicInfo
           : basicInfo // ignore: cast_nullable_to_non_nullable
               as ApplicantBasicInfoFormData,
+      address: null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as ApplicantAddressFormData,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -925,6 +1997,14 @@ class _$ApplicantFormStateCopyWithImpl<$Res, $Val extends ApplicantFormState>
   $ApplicantBasicInfoFormDataCopyWith<$Res> get basicInfo {
     return $ApplicantBasicInfoFormDataCopyWith<$Res>(_value.basicInfo, (value) {
       return _then(_value.copyWith(basicInfo: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ApplicantAddressFormDataCopyWith<$Res> get address {
+    return $ApplicantAddressFormDataCopyWith<$Res>(_value.address, (value) {
+      return _then(_value.copyWith(address: value) as $Val);
     });
   }
 }
@@ -941,10 +2021,13 @@ abstract class _$$ApplicantFormStateImplCopyWith<$Res>
       {int formStep,
       bool showValidationError,
       ApplicantBasicInfoFormData basicInfo,
+      ApplicantAddressFormData address,
       Option<Either<ApplicantFailure, Unit>> failureOrSuccess});
 
   @override
   $ApplicantBasicInfoFormDataCopyWith<$Res> get basicInfo;
+  @override
+  $ApplicantAddressFormDataCopyWith<$Res> get address;
 }
 
 /// @nodoc
@@ -961,6 +2044,7 @@ class __$$ApplicantFormStateImplCopyWithImpl<$Res>
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
+    Object? address = null,
     Object? failureOrSuccess = null,
   }) {
     return _then(_$ApplicantFormStateImpl(
@@ -976,6 +2060,10 @@ class __$$ApplicantFormStateImplCopyWithImpl<$Res>
           ? _value.basicInfo
           : basicInfo // ignore: cast_nullable_to_non_nullable
               as ApplicantBasicInfoFormData,
+      address: null == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as ApplicantAddressFormData,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -991,6 +2079,7 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
       {required this.formStep,
       required this.showValidationError,
       required this.basicInfo,
+      required this.address,
       required this.failureOrSuccess});
 
   @override
@@ -1000,11 +2089,13 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
   @override
   final ApplicantBasicInfoFormData basicInfo;
   @override
+  final ApplicantAddressFormData address;
+  @override
   final Option<Either<ApplicantFailure, Unit>> failureOrSuccess;
 
   @override
   String toString() {
-    return 'ApplicantFormState(formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, failureOrSuccess: $failureOrSuccess)';
+    return 'ApplicantFormState(formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, failureOrSuccess: $failureOrSuccess)';
   }
 
   @override
@@ -1018,13 +2109,14 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
                 other.showValidationError == showValidationError) &&
             (identical(other.basicInfo, basicInfo) ||
                 other.basicInfo == basicInfo) &&
+            (identical(other.address, address) || other.address == address) &&
             (identical(other.failureOrSuccess, failureOrSuccess) ||
                 other.failureOrSuccess == failureOrSuccess));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, formStep, showValidationError, basicInfo, failureOrSuccess);
+  int get hashCode => Object.hash(runtimeType, formStep, showValidationError,
+      basicInfo, address, failureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -1039,6 +2131,7 @@ abstract class _ApplicantFormState implements ApplicantFormState {
       {required final int formStep,
       required final bool showValidationError,
       required final ApplicantBasicInfoFormData basicInfo,
+      required final ApplicantAddressFormData address,
       required final Option<Either<ApplicantFailure, Unit>>
           failureOrSuccess}) = _$ApplicantFormStateImpl;
 
@@ -1048,6 +2141,8 @@ abstract class _ApplicantFormState implements ApplicantFormState {
   bool get showValidationError;
   @override
   ApplicantBasicInfoFormData get basicInfo;
+  @override
+  ApplicantAddressFormData get address;
   @override
   Option<Either<ApplicantFailure, Unit>> get failureOrSuccess;
   @override

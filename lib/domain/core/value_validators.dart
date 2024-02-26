@@ -11,8 +11,8 @@ Either<ValueFailure<String>, String> validateEmailAddress(String input) {
 }
 
 Either<ValueFailure<String>, String> validatePhoneNumber(String input) {
-  const phoneNumber = r'^(\+\d{1,3}[- ]?)?\d{10}$';
-  if (RegExp(phoneNumber).hasMatch(input)) {
+  const phoneNumberRegex = r'^(\+\d{1,3}[- ]?)?\d{10}$';
+  if (RegExp(phoneNumberRegex).hasMatch(input)) {
     return right(input);
   }
   return left(ValueFailure.invalid(failedValue: input));
@@ -38,9 +38,30 @@ Either<ValueFailure<String>, String> validateMaxStringLength(
   ));
 }
 
+Either<ValueFailure<String>, String> validateStringLength(
+  String input,
+  int length,
+) {
+  if (input.length == length) {
+    return right(input);
+  }
+  return left(ValueFailure.stringLength(
+    failedValue: input,
+    length: length,
+  ));
+}
+
 Either<ValueFailure<String>, String> validateSingleLine(String input) {
   if (input.contains('\n')) {
     return left(ValueFailure.multiLine(failedValue: input));
   }
   return right(input);
+}
+
+Either<ValueFailure<String>, String> validateNumberString(String input) {
+  const numberRegex = r'^[0-9]+$';
+  if (RegExp(numberRegex).hasMatch(input)) {
+    return right(input);
+  }
+  return left(ValueFailure.notANumber(failedValue: input));
 }

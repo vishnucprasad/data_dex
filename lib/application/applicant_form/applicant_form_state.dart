@@ -6,6 +6,7 @@ class ApplicantFormState with _$ApplicantFormState {
     required int formStep,
     required bool showValidationError,
     required ApplicantBasicInfoFormData basicInfo,
+    required ApplicantAddressFormData address,
     required Option<Either<ApplicantFailure, Unit>> failureOrSuccess,
   }) = _ApplicantFormState;
 
@@ -14,6 +15,7 @@ class ApplicantFormState with _$ApplicantFormState {
       formStep: 0,
       showValidationError: false,
       basicInfo: ApplicantBasicInfoFormData.empty(),
+      address: ApplicantAddressFormData.empty(),
       failureOrSuccess: none(),
     );
   }

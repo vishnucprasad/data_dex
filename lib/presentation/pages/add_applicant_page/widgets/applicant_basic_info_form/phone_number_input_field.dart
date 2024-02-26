@@ -52,11 +52,13 @@ class PhoneNumberInputField extends HookWidget {
               .phoneNumber
               .value
               .fold(
-                (f) => f.maybeMap(
-                  empty: (_) => "Phone number can't be empty",
-                  invalid: (_) => "Invalid phone number",
-                  orElse: () => null,
-                ),
+                (f) => state.formStep == 0
+                    ? f.maybeMap(
+                        empty: (_) => "Phone number can't be empty",
+                        invalid: (_) => "Invalid phone number",
+                        orElse: () => null,
+                      )
+                    : null,
                 (_) => null,
               ),
           onChanged: (phoneNumber) => context

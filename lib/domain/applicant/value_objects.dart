@@ -42,3 +42,49 @@ class DateOfBirth extends ValueObject<String> {
   }
   const DateOfBirth._(this.value);
 }
+
+class HouseName extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory HouseName(String input) {
+    return HouseName._(validateStringNotEmpty(input)
+        .flatMap((input) => validateMaxStringLength(input, 60))
+        .flatMap(validateSingleLine));
+  }
+  const HouseName._(this.value);
+}
+
+class PostOffice extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory PostOffice(String input) {
+    return PostOffice._(validateStringNotEmpty(input)
+        .flatMap((input) => validateMaxStringLength(input, 60))
+        .flatMap(validateSingleLine));
+  }
+  const PostOffice._(this.value);
+}
+
+class StreetName extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory StreetName(String input) {
+    return StreetName._(validateStringNotEmpty(input)
+        .flatMap((input) => validateMaxStringLength(input, 60))
+        .flatMap(validateSingleLine));
+  }
+  const StreetName._(this.value);
+}
+
+class PinCode extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory PinCode(String input) {
+    return PinCode._(
+      validateStringNotEmpty(input)
+          .flatMap(validateNumberString)
+          .flatMap((input) => validateStringLength(input, 6)),
+    );
+  }
+  const PinCode._(this.value);
+}

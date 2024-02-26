@@ -20,10 +20,14 @@ class AddApplicantPage extends StatelessWidget {
         child: Column(
           children: [
             kHeightMd,
-            const Row(
+            Row(
               children: [
-                BackButton(),
-                Text(
+                BackButton(
+                  onPressed: () => context.router.pop().then((_) => context
+                      .read<ApplicantFormBloc>()
+                      .add(const ApplicantFormEvent.initialized())),
+                ),
+                const Text(
                   'Add new applicant',
                   style: TextStyle(
                     fontSize: 20,

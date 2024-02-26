@@ -46,10 +46,12 @@ class NameInputField extends HookWidget {
               : AutovalidateMode.disabled,
           validator: (_) =>
               context.read<ApplicantFormBloc>().state.basicInfo.name.value.fold(
-                    (f) => f.maybeMap(
-                      empty: (_) => "Applicant name can't be empty",
-                      orElse: () => null,
-                    ),
+                    (f) => state.formStep == 0
+                        ? f.maybeMap(
+                            empty: (_) => "Applicant name can't be empty",
+                            orElse: () => null,
+                          )
+                        : null,
                     (_) => null,
                   ),
           onChanged: (name) => context

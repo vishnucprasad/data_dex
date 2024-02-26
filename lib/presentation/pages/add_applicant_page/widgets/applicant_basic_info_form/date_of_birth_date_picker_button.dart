@@ -75,7 +75,9 @@ class DateOfBirthDatePickerButton extends StatelessWidget {
                   style: TextStyle(
                     color: state.basicInfo.dateOfBirth.value.fold(
                       (_) => state.showValidationError
-                          ? Theme.of(context).colorScheme.error
+                          ? state.formStep == 0
+                              ? Theme.of(context).colorScheme.error
+                              : kDarkColor
                           : kDarkColor,
                       (_) => kDarkColor,
                     ),
@@ -86,24 +88,26 @@ class DateOfBirthDatePickerButton extends StatelessWidget {
             ),
             state.basicInfo.dateOfBirth.value.fold(
               (f) => state.showValidationError
-                  ? Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        kHeightMd,
-                        Row(
+                  ? state.formStep == 0
+                      ? Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            kWidth,
-                            Text(
-                              "Date of birth can't be empty",
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Theme.of(context).colorScheme.error,
-                              ),
-                            ),
+                            kHeightMd,
+                            Row(
+                              children: [
+                                kWidth,
+                                Text(
+                                  "Date of birth can't be empty",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Theme.of(context).colorScheme.error,
+                                  ),
+                                ),
+                              ],
+                            )
                           ],
                         )
-                      ],
-                    )
+                      : const SizedBox.shrink()
                   : const SizedBox.shrink(),
               (_) => const SizedBox.shrink(),
             )

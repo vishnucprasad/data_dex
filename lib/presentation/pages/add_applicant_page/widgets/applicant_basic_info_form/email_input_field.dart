@@ -53,11 +53,13 @@ class EmailInputField extends HookWidget {
               .emailAddress
               .value
               .fold(
-                (f) => f.maybeMap(
-                  empty: (_) => "Email address can't be empty",
-                  invalid: (_) => "Invalid email",
-                  orElse: () => null,
-                ),
+                (f) => state.formStep == 0
+                    ? f.maybeMap(
+                        empty: (_) => "Email address can't be empty",
+                        invalid: (_) => "Invalid email",
+                        orElse: () => null,
+                      )
+                    : null,
                 (_) => null,
               ),
           onChanged: (email) => context
