@@ -3,6 +3,7 @@ import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/image_picker_container.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/location_picker_button.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/location_picker_container.dart';
+import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/take_image_button.dart';
 import 'package:flutter/material.dart';
 
 class ApplicantMoreDetailsForm extends StatelessWidget {
@@ -21,7 +22,17 @@ class ApplicantMoreDetailsForm extends StatelessWidget {
         kHeightMd,
         const ImagePickerContainer(),
         kHeightMd,
-        const ImagePickerButton(),
+        const Row(
+          children: [
+            Expanded(
+              child: TakeImageButton(),
+            ),
+            kWidthMd,
+            Expanded(
+              child: ImagePickerButton(),
+            ),
+          ],
+        ),
         kHeightMd,
       ],
     );

@@ -32,4 +32,6 @@ class ApplicantFormEvent with _$ApplicantFormEvent {
   ) = _PincodeChanged;
   const factory ApplicantFormEvent.getCurrentLocation() = _GetCurrentLocation;
   const factory ApplicantFormEvent.openLocationInMap() = _OpenLocationInMap;
+  const factory ApplicantFormEvent.takeImage() = _TakeImage;
+  const factory ApplicantFormEvent.pickImage() = _PickImage;
 }

@@ -8,4 +8,7 @@ class ApplicantFailure with _$ApplicantFailure {
   const factory ApplicantFailure.locationFailure(
     String msg,
   ) = _LocationFailure;
+  const factory ApplicantFailure.imageFailure(
+    String msg,
+  ) = _ImageFailure;
 }

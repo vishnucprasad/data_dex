@@ -3,8 +3,8 @@ import 'package:data_dex/presentation/core/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ImagePickerButton extends StatelessWidget {
-  const ImagePickerButton({super.key});
+class TakeImageButton extends StatelessWidget {
+  const TakeImageButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +25,10 @@ class ImagePickerButton extends StatelessWidget {
         ),
         onPressed: () => context
             .read<ApplicantFormBloc>()
-            .add(const ApplicantFormEvent.pickImage()),
-        icon: const Icon(Icons.image),
+            .add(const ApplicantFormEvent.takeImage()),
+        icon: const Icon(Icons.camera),
         label: const Text(
-          'Pick image',
+          'Take image',
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),

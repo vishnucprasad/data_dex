@@ -20,18 +20,21 @@ mixin _$ApplicantFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() clientFailure,
     required TResult Function(String msg) locationFailure,
+    required TResult Function(String msg) imageFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? clientFailure,
     TResult? Function(String msg)? locationFailure,
+    TResult? Function(String msg)? imageFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? clientFailure,
     TResult Function(String msg)? locationFailure,
+    TResult Function(String msg)? imageFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$ApplicantFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
     required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_ImageFailure value) imageFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
     TResult? Function(_LocationFailure value)? locationFailure,
+    TResult? Function(_ImageFailure value)? imageFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_ImageFailure value)? imageFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +120,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() clientFailure,
     required TResult Function(String msg) locationFailure,
+    required TResult Function(String msg) imageFailure,
   }) {
     return clientFailure();
   }
@@ -123,6 +130,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? clientFailure,
     TResult? Function(String msg)? locationFailure,
+    TResult? Function(String msg)? imageFailure,
   }) {
     return clientFailure?.call();
   }
@@ -132,6 +140,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? clientFailure,
     TResult Function(String msg)? locationFailure,
+    TResult Function(String msg)? imageFailure,
     required TResult orElse(),
   }) {
     if (clientFailure != null) {
@@ -145,6 +154,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
     required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_ImageFailure value) imageFailure,
   }) {
     return clientFailure(this);
   }
@@ -154,6 +164,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
     TResult? Function(_LocationFailure value)? locationFailure,
+    TResult? Function(_ImageFailure value)? imageFailure,
   }) {
     return clientFailure?.call(this);
   }
@@ -163,6 +174,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_ImageFailure value)? imageFailure,
     required TResult orElse(),
   }) {
     if (clientFailure != null) {
@@ -243,6 +255,7 @@ class _$LocationFailureImpl implements _LocationFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() clientFailure,
     required TResult Function(String msg) locationFailure,
+    required TResult Function(String msg) imageFailure,
   }) {
     return locationFailure(msg);
   }
@@ -252,6 +265,7 @@ class _$LocationFailureImpl implements _LocationFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? clientFailure,
     TResult? Function(String msg)? locationFailure,
+    TResult? Function(String msg)? imageFailure,
   }) {
     return locationFailure?.call(msg);
   }
@@ -261,6 +275,7 @@ class _$LocationFailureImpl implements _LocationFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? clientFailure,
     TResult Function(String msg)? locationFailure,
+    TResult Function(String msg)? imageFailure,
     required TResult orElse(),
   }) {
     if (locationFailure != null) {
@@ -274,6 +289,7 @@ class _$LocationFailureImpl implements _LocationFailure {
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
     required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_ImageFailure value) imageFailure,
   }) {
     return locationFailure(this);
   }
@@ -283,6 +299,7 @@ class _$LocationFailureImpl implements _LocationFailure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
     TResult? Function(_LocationFailure value)? locationFailure,
+    TResult? Function(_ImageFailure value)? imageFailure,
   }) {
     return locationFailure?.call(this);
   }
@@ -292,6 +309,7 @@ class _$LocationFailureImpl implements _LocationFailure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
     TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_ImageFailure value)? imageFailure,
     required TResult orElse(),
   }) {
     if (locationFailure != null) {
@@ -307,5 +325,144 @@ abstract class _LocationFailure implements ApplicantFailure {
   String get msg;
   @JsonKey(ignore: true)
   _$$LocationFailureImplCopyWith<_$LocationFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ImageFailureImplCopyWith<$Res> {
+  factory _$$ImageFailureImplCopyWith(
+          _$ImageFailureImpl value, $Res Function(_$ImageFailureImpl) then) =
+      __$$ImageFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String msg});
+}
+
+/// @nodoc
+class __$$ImageFailureImplCopyWithImpl<$Res>
+    extends _$ApplicantFailureCopyWithImpl<$Res, _$ImageFailureImpl>
+    implements _$$ImageFailureImplCopyWith<$Res> {
+  __$$ImageFailureImplCopyWithImpl(
+      _$ImageFailureImpl _value, $Res Function(_$ImageFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? msg = null,
+  }) {
+    return _then(_$ImageFailureImpl(
+      null == msg
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ImageFailureImpl implements _ImageFailure {
+  const _$ImageFailureImpl(this.msg);
+
+  @override
+  final String msg;
+
+  @override
+  String toString() {
+    return 'ApplicantFailure.imageFailure(msg: $msg)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ImageFailureImpl &&
+            (identical(other.msg, msg) || other.msg == msg));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, msg);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ImageFailureImplCopyWith<_$ImageFailureImpl> get copyWith =>
+      __$$ImageFailureImplCopyWithImpl<_$ImageFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() clientFailure,
+    required TResult Function(String msg) locationFailure,
+    required TResult Function(String msg) imageFailure,
+  }) {
+    return imageFailure(msg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? clientFailure,
+    TResult? Function(String msg)? locationFailure,
+    TResult? Function(String msg)? imageFailure,
+  }) {
+    return imageFailure?.call(msg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? clientFailure,
+    TResult Function(String msg)? locationFailure,
+    TResult Function(String msg)? imageFailure,
+    required TResult orElse(),
+  }) {
+    if (imageFailure != null) {
+      return imageFailure(msg);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_ImageFailure value) imageFailure,
+  }) {
+    return imageFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_LocationFailure value)? locationFailure,
+    TResult? Function(_ImageFailure value)? imageFailure,
+  }) {
+    return imageFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_ImageFailure value)? imageFailure,
+    required TResult orElse(),
+  }) {
+    if (imageFailure != null) {
+      return imageFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ImageFailure implements ApplicantFailure {
+  const factory _ImageFailure(final String msg) = _$ImageFailureImpl;
+
+  String get msg;
+  @JsonKey(ignore: true)
+  _$$ImageFailureImplCopyWith<_$ImageFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

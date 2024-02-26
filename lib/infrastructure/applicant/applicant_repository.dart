@@ -1,7 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/applicant/failures/applicant_failure.dart';
 import 'package:data_dex/domain/applicant/i_applicant_repository.dart';
+import 'package:data_dex/injection.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -65,6 +67,21 @@ class ApplicantRepository implements IApplicantRepository {
       return right(unit);
     } else {
       return left(ApplicantFailure.locationFailure('Could not launch $url'));
+    }
+  }
+
+  @override
+  Future<Either<ApplicantFailure, XFile?>> pickImage(ImageSource source) async {
+    try {
+      final XFile? imageFile = await getIt<ImagePicker>().pickImage(
+        source: source,
+      );
+
+      return right(imageFile);
+    } catch (_) {
+      return left(const ApplicantFailure.imageFailure(
+        'Something went wrong, unable to pick image.',
+      ));
     }
   }
 }

@@ -7,6 +7,7 @@ import 'package:data_dex/domain/applicant/value_objects.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 
 part 'applicant_form_event.dart';
@@ -158,6 +159,54 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
             ),
             (r) => state.copyWith(
               failureOrSuccess: some(right(r)),
+            ),
+          ));
+        },
+        takeImage: (_) async {
+          emit(state.copyWith(
+            isImagePicking: true,
+            houseImage: null,
+            failureOrSuccess: none(),
+          ));
+
+          final imageOption = await _applicantRepository.pickImage(
+            ImageSource.camera,
+          );
+
+          emit(imageOption.fold(
+            (l) => state.copyWith(
+              isImagePicking: false,
+              houseImage: null,
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) => state.copyWith(
+              isImagePicking: false,
+              houseImage: r,
+              failureOrSuccess: some(right(unit)),
+            ),
+          ));
+        },
+        pickImage: (_) async {
+          emit(state.copyWith(
+            isImagePicking: true,
+            houseImage: null,
+            failureOrSuccess: none(),
+          ));
+
+          final imageOption = await _applicantRepository.pickImage(
+            ImageSource.gallery,
+          );
+
+          emit(imageOption.fold(
+            (l) => state.copyWith(
+              isImagePicking: false,
+              houseImage: null,
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) => state.copyWith(
+              isImagePicking: false,
+              houseImage: r,
+              failureOrSuccess: some(right(unit)),
             ),
           ));
         },

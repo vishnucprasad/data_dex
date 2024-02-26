@@ -30,6 +30,8 @@ mixin _$ApplicantFormEvent {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,6 +48,8 @@ mixin _$ApplicantFormEvent {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,6 +66,8 @@ mixin _$ApplicantFormEvent {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -79,6 +85,8 @@ mixin _$ApplicantFormEvent {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +103,8 @@ mixin _$ApplicantFormEvent {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +121,8 @@ mixin _$ApplicantFormEvent {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -184,6 +196,8 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return initialized();
   }
@@ -203,6 +217,8 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return initialized?.call();
   }
@@ -222,6 +238,8 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (initialized != null) {
@@ -245,6 +263,8 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return initialized(this);
   }
@@ -264,6 +284,8 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return initialized?.call(this);
   }
@@ -283,6 +305,8 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (initialized != null) {
@@ -373,6 +397,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return formStepChanged(index);
   }
@@ -392,6 +418,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return formStepChanged?.call(index);
   }
@@ -411,6 +439,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (formStepChanged != null) {
@@ -434,6 +464,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return formStepChanged(this);
   }
@@ -453,6 +485,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return formStepChanged?.call(this);
   }
@@ -472,6 +506,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (formStepChanged != null) {
@@ -566,6 +602,8 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return nameChanged(name);
   }
@@ -585,6 +623,8 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return nameChanged?.call(name);
   }
@@ -604,6 +644,8 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -627,6 +669,8 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return nameChanged(this);
   }
@@ -646,6 +690,8 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return nameChanged?.call(this);
   }
@@ -665,6 +711,8 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -761,6 +809,8 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return phoneNumberChanged(phoneNumber);
   }
@@ -780,6 +830,8 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return phoneNumberChanged?.call(phoneNumber);
   }
@@ -799,6 +851,8 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -822,6 +876,8 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return phoneNumberChanged(this);
   }
@@ -841,6 +897,8 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return phoneNumberChanged?.call(this);
   }
@@ -860,6 +918,8 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -955,6 +1015,8 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return emailChnaged(email);
   }
@@ -974,6 +1036,8 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return emailChnaged?.call(email);
   }
@@ -993,6 +1057,8 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (emailChnaged != null) {
@@ -1016,6 +1082,8 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return emailChnaged(this);
   }
@@ -1035,6 +1103,8 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return emailChnaged?.call(this);
   }
@@ -1054,6 +1124,8 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (emailChnaged != null) {
@@ -1149,6 +1221,8 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return dateOfBirthChanged(date);
   }
@@ -1168,6 +1242,8 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return dateOfBirthChanged?.call(date);
   }
@@ -1187,6 +1263,8 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (dateOfBirthChanged != null) {
@@ -1210,6 +1288,8 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return dateOfBirthChanged(this);
   }
@@ -1229,6 +1309,8 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return dateOfBirthChanged?.call(this);
   }
@@ -1248,6 +1330,8 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (dateOfBirthChanged != null) {
@@ -1345,6 +1429,8 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return houseNameChanged(houseName);
   }
@@ -1364,6 +1450,8 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return houseNameChanged?.call(houseName);
   }
@@ -1383,6 +1471,8 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (houseNameChanged != null) {
@@ -1406,6 +1496,8 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return houseNameChanged(this);
   }
@@ -1425,6 +1517,8 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return houseNameChanged?.call(this);
   }
@@ -1444,6 +1538,8 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (houseNameChanged != null) {
@@ -1541,6 +1637,8 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return postOfficeChanged(postOffice);
   }
@@ -1560,6 +1658,8 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return postOfficeChanged?.call(postOffice);
   }
@@ -1579,6 +1679,8 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (postOfficeChanged != null) {
@@ -1602,6 +1704,8 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return postOfficeChanged(this);
   }
@@ -1621,6 +1725,8 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return postOfficeChanged?.call(this);
   }
@@ -1640,6 +1746,8 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (postOfficeChanged != null) {
@@ -1737,6 +1845,8 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return streetNameChanged(streetName);
   }
@@ -1756,6 +1866,8 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return streetNameChanged?.call(streetName);
   }
@@ -1775,6 +1887,8 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (streetNameChanged != null) {
@@ -1798,6 +1912,8 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return streetNameChanged(this);
   }
@@ -1817,6 +1933,8 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return streetNameChanged?.call(this);
   }
@@ -1836,6 +1954,8 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (streetNameChanged != null) {
@@ -1932,6 +2052,8 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return pincodeChanged(pincode);
   }
@@ -1951,6 +2073,8 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return pincodeChanged?.call(pincode);
   }
@@ -1970,6 +2094,8 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (pincodeChanged != null) {
@@ -1993,6 +2119,8 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return pincodeChanged(this);
   }
@@ -2012,6 +2140,8 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return pincodeChanged?.call(this);
   }
@@ -2031,6 +2161,8 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (pincodeChanged != null) {
@@ -2099,6 +2231,8 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return getCurrentLocation();
   }
@@ -2118,6 +2252,8 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return getCurrentLocation?.call();
   }
@@ -2137,6 +2273,8 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (getCurrentLocation != null) {
@@ -2160,6 +2298,8 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return getCurrentLocation(this);
   }
@@ -2179,6 +2319,8 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return getCurrentLocation?.call(this);
   }
@@ -2198,6 +2340,8 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (getCurrentLocation != null) {
@@ -2261,6 +2405,8 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
   }) {
     return openLocationInMap();
   }
@@ -2280,6 +2426,8 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
   }) {
     return openLocationInMap?.call();
   }
@@ -2299,6 +2447,8 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
     required TResult orElse(),
   }) {
     if (openLocationInMap != null) {
@@ -2322,6 +2472,8 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
   }) {
     return openLocationInMap(this);
   }
@@ -2341,6 +2493,8 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
   }) {
     return openLocationInMap?.call(this);
   }
@@ -2360,6 +2514,8 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
     required TResult orElse(),
   }) {
     if (openLocationInMap != null) {
@@ -2374,14 +2530,364 @@ abstract class _OpenLocationInMap implements ApplicantFormEvent {
 }
 
 /// @nodoc
+abstract class _$$TakeImageImplCopyWith<$Res> {
+  factory _$$TakeImageImplCopyWith(
+          _$TakeImageImpl value, $Res Function(_$TakeImageImpl) then) =
+      __$$TakeImageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$TakeImageImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$TakeImageImpl>
+    implements _$$TakeImageImplCopyWith<$Res> {
+  __$$TakeImageImplCopyWithImpl(
+      _$TakeImageImpl _value, $Res Function(_$TakeImageImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$TakeImageImpl implements _TakeImage {
+  const _$TakeImageImpl();
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.takeImage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$TakeImageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
+  }) {
+    return takeImage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
+  }) {
+    return takeImage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
+    required TResult orElse(),
+  }) {
+    if (takeImage != null) {
+      return takeImage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
+  }) {
+    return takeImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
+  }) {
+    return takeImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
+    required TResult orElse(),
+  }) {
+    if (takeImage != null) {
+      return takeImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _TakeImage implements ApplicantFormEvent {
+  const factory _TakeImage() = _$TakeImageImpl;
+}
+
+/// @nodoc
+abstract class _$$PickImageImplCopyWith<$Res> {
+  factory _$$PickImageImplCopyWith(
+          _$PickImageImpl value, $Res Function(_$PickImageImpl) then) =
+      __$$PickImageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$PickImageImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$PickImageImpl>
+    implements _$$PickImageImplCopyWith<$Res> {
+  __$$PickImageImplCopyWithImpl(
+      _$PickImageImpl _value, $Res Function(_$PickImageImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$PickImageImpl implements _PickImage {
+  const _$PickImageImpl();
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.pickImage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PickImageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
+  }) {
+    return pickImage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
+  }) {
+    return pickImage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
+    required TResult orElse(),
+  }) {
+    if (pickImage != null) {
+      return pickImage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
+  }) {
+    return pickImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
+  }) {
+    return pickImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
+    required TResult orElse(),
+  }) {
+    if (pickImage != null) {
+      return pickImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PickImage implements ApplicantFormEvent {
+  const factory _PickImage() = _$PickImageImpl;
+}
+
+/// @nodoc
 mixin _$ApplicantFormState {
   bool get isLocationFetching => throw _privateConstructorUsedError;
+  bool get isImagePicking => throw _privateConstructorUsedError;
   int get formStep => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   ApplicantBasicInfoFormData get basicInfo =>
       throw _privateConstructorUsedError;
   ApplicantAddressFormData get address => throw _privateConstructorUsedError;
   Position? get location => throw _privateConstructorUsedError;
+  XFile? get houseImage => throw _privateConstructorUsedError;
   Option<Either<ApplicantFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
 
@@ -2398,11 +2904,13 @@ abstract class $ApplicantFormStateCopyWith<$Res> {
   @useResult
   $Res call(
       {bool isLocationFetching,
+      bool isImagePicking,
       int formStep,
       bool showValidationError,
       ApplicantBasicInfoFormData basicInfo,
       ApplicantAddressFormData address,
       Position? location,
+      XFile? houseImage,
       Option<Either<ApplicantFailure, Unit>> failureOrSuccess});
 
   $ApplicantBasicInfoFormDataCopyWith<$Res> get basicInfo;
@@ -2423,17 +2931,23 @@ class _$ApplicantFormStateCopyWithImpl<$Res, $Val extends ApplicantFormState>
   @override
   $Res call({
     Object? isLocationFetching = null,
+    Object? isImagePicking = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
     Object? address = null,
     Object? location = freezed,
+    Object? houseImage = freezed,
     Object? failureOrSuccess = null,
   }) {
     return _then(_value.copyWith(
       isLocationFetching: null == isLocationFetching
           ? _value.isLocationFetching
           : isLocationFetching // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isImagePicking: null == isImagePicking
+          ? _value.isImagePicking
+          : isImagePicking // ignore: cast_nullable_to_non_nullable
               as bool,
       formStep: null == formStep
           ? _value.formStep
@@ -2455,6 +2969,10 @@ class _$ApplicantFormStateCopyWithImpl<$Res, $Val extends ApplicantFormState>
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Position?,
+      houseImage: freezed == houseImage
+          ? _value.houseImage
+          : houseImage // ignore: cast_nullable_to_non_nullable
+              as XFile?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -2489,11 +3007,13 @@ abstract class _$$ApplicantFormStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool isLocationFetching,
+      bool isImagePicking,
       int formStep,
       bool showValidationError,
       ApplicantBasicInfoFormData basicInfo,
       ApplicantAddressFormData address,
       Position? location,
+      XFile? houseImage,
       Option<Either<ApplicantFailure, Unit>> failureOrSuccess});
 
   @override
@@ -2514,17 +3034,23 @@ class __$$ApplicantFormStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isLocationFetching = null,
+    Object? isImagePicking = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
     Object? address = null,
     Object? location = freezed,
+    Object? houseImage = freezed,
     Object? failureOrSuccess = null,
   }) {
     return _then(_$ApplicantFormStateImpl(
       isLocationFetching: null == isLocationFetching
           ? _value.isLocationFetching
           : isLocationFetching // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isImagePicking: null == isImagePicking
+          ? _value.isImagePicking
+          : isImagePicking // ignore: cast_nullable_to_non_nullable
               as bool,
       formStep: null == formStep
           ? _value.formStep
@@ -2546,6 +3072,10 @@ class __$$ApplicantFormStateImplCopyWithImpl<$Res>
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Position?,
+      houseImage: freezed == houseImage
+          ? _value.houseImage
+          : houseImage // ignore: cast_nullable_to_non_nullable
+              as XFile?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -2559,15 +3089,19 @@ class __$$ApplicantFormStateImplCopyWithImpl<$Res>
 class _$ApplicantFormStateImpl implements _ApplicantFormState {
   const _$ApplicantFormStateImpl(
       {required this.isLocationFetching,
+      required this.isImagePicking,
       required this.formStep,
       required this.showValidationError,
       required this.basicInfo,
       required this.address,
       required this.location,
+      required this.houseImage,
       required this.failureOrSuccess});
 
   @override
   final bool isLocationFetching;
+  @override
+  final bool isImagePicking;
   @override
   final int formStep;
   @override
@@ -2579,11 +3113,13 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
   @override
   final Position? location;
   @override
+  final XFile? houseImage;
+  @override
   final Option<Either<ApplicantFailure, Unit>> failureOrSuccess;
 
   @override
   String toString() {
-    return 'ApplicantFormState(isLocationFetching: $isLocationFetching, formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, location: $location, failureOrSuccess: $failureOrSuccess)';
+    return 'ApplicantFormState(isLocationFetching: $isLocationFetching, isImagePicking: $isImagePicking, formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, location: $location, houseImage: $houseImage, failureOrSuccess: $failureOrSuccess)';
   }
 
   @override
@@ -2593,6 +3129,8 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
             other is _$ApplicantFormStateImpl &&
             (identical(other.isLocationFetching, isLocationFetching) ||
                 other.isLocationFetching == isLocationFetching) &&
+            (identical(other.isImagePicking, isImagePicking) ||
+                other.isImagePicking == isImagePicking) &&
             (identical(other.formStep, formStep) ||
                 other.formStep == formStep) &&
             (identical(other.showValidationError, showValidationError) ||
@@ -2602,13 +3140,24 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
             (identical(other.address, address) || other.address == address) &&
             (identical(other.location, location) ||
                 other.location == location) &&
+            (identical(other.houseImage, houseImage) ||
+                other.houseImage == houseImage) &&
             (identical(other.failureOrSuccess, failureOrSuccess) ||
                 other.failureOrSuccess == failureOrSuccess));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isLocationFetching, formStep,
-      showValidationError, basicInfo, address, location, failureOrSuccess);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isLocationFetching,
+      isImagePicking,
+      formStep,
+      showValidationError,
+      basicInfo,
+      address,
+      location,
+      houseImage,
+      failureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -2621,16 +3170,20 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
 abstract class _ApplicantFormState implements ApplicantFormState {
   const factory _ApplicantFormState(
       {required final bool isLocationFetching,
+      required final bool isImagePicking,
       required final int formStep,
       required final bool showValidationError,
       required final ApplicantBasicInfoFormData basicInfo,
       required final ApplicantAddressFormData address,
       required final Position? location,
+      required final XFile? houseImage,
       required final Option<Either<ApplicantFailure, Unit>>
           failureOrSuccess}) = _$ApplicantFormStateImpl;
 
   @override
   bool get isLocationFetching;
+  @override
+  bool get isImagePicking;
   @override
   int get formStep;
   @override
@@ -2641,6 +3194,8 @@ abstract class _ApplicantFormState implements ApplicantFormState {
   ApplicantAddressFormData get address;
   @override
   Position? get location;
+  @override
+  XFile? get houseImage;
   @override
   Option<Either<ApplicantFailure, Unit>> get failureOrSuccess;
   @override

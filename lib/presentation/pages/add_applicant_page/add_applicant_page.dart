@@ -27,6 +27,7 @@ class AddApplicantPage extends StatelessWidget {
                 (f) => FlushbarHelper.createError(
                   message: f.map(
                     clientFailure: (_) => 'Something went wrong.',
+                    imageFailure: (e) => e.msg,
                     locationFailure: (e) => e.msg,
                   ),
                 ).show(context),
