@@ -5,4 +5,8 @@ import 'package:geolocator/geolocator.dart';
 abstract class IApplicantRepository {
   Future<Either<ApplicantFailure, Unit>> handleLocationPermission();
   Future<Either<ApplicantFailure, Position>> getCurrentPosition();
+  Future<Either<ApplicantFailure, Unit>> openLocationInMap({
+    required String latitude,
+    required String longitude,
+  });
 }

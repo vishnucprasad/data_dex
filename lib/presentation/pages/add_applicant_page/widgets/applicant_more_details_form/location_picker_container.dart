@@ -35,40 +35,55 @@ class LocationPickerContainer extends StatelessWidget {
                   ? const Center(
                       child: CircularProgressIndicator(),
                     )
-                  : Column(
+                  : Row(
                       children: [
-                        Row(
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'Latitude : ',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                            Row(
+                              children: [
+                                const Text(
+                                  'Latitude : ',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                kWidthMd,
+                                Text(
+                                  state.location != null
+                                      ? state.location!.latitude.toString()
+                                      : 'Not selected',
+                                ),
+                              ],
                             ),
-                            kWidthMd,
-                            Text(
-                              state.location != null
-                                  ? state.location!.latitude.toString()
-                                  : 'Not selected',
+                            Row(
+                              children: [
+                                const Text(
+                                  'Longitude : ',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                kWidthMd,
+                                Text(
+                                  state.location != null
+                                      ? state.location!.longitude.toString()
+                                      : 'Not selected',
+                                ),
+                              ],
                             ),
                           ],
                         ),
-                        Row(
-                          children: [
-                            const Text(
-                              'Longitude : ',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            kWidthMd,
-                            Text(
-                              state.location != null
-                                  ? state.location!.longitude.toString()
-                                  : 'Not selected',
-                            ),
-                          ],
-                        ),
+                        const Spacer(),
+                        if (state.location != null)
+                          IconButton(
+                            onPressed: () => context
+                                .read<ApplicantFormBloc>()
+                                .add(
+                                  const ApplicantFormEvent.openLocationInMap(),
+                                ),
+                            icon: const Icon(Icons.open_in_new),
+                          )
                       ],
                     )
             ],

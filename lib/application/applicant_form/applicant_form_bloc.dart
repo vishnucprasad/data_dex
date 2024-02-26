@@ -132,6 +132,35 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
             ),
           ));
         },
+        openLocationInMap: (_) async {
+          emit(state.copyWith(
+            failureOrSuccess: none(),
+          ));
+
+          if (state.location == null) {
+            emit(state.copyWith(
+              failureOrSuccess: some(
+                left(const ApplicantFailure.locationFailure(
+                  'Location error',
+                )),
+              ),
+            ));
+          }
+
+          final locationOption = await _applicantRepository.openLocationInMap(
+            latitude: state.location!.latitude.toString(),
+            longitude: state.location!.longitude.toString(),
+          );
+
+          emit(locationOption.fold(
+            (l) => state.copyWith(
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) => state.copyWith(
+              failureOrSuccess: some(right(r)),
+            ),
+          ));
+        },
       );
     });
   }

@@ -29,6 +29,7 @@ mixin _$ApplicantFormEvent {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +45,7 @@ mixin _$ApplicantFormEvent {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +61,7 @@ mixin _$ApplicantFormEvent {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -75,6 +78,7 @@ mixin _$ApplicantFormEvent {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -90,6 +94,7 @@ mixin _$ApplicantFormEvent {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -105,6 +110,7 @@ mixin _$ApplicantFormEvent {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -177,6 +183,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return initialized();
   }
@@ -195,6 +202,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return initialized?.call();
   }
@@ -213,6 +221,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (initialized != null) {
@@ -235,6 +244,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return initialized(this);
   }
@@ -253,6 +263,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return initialized?.call(this);
   }
@@ -271,6 +282,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (initialized != null) {
@@ -360,6 +372,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return formStepChanged(index);
   }
@@ -378,6 +391,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return formStepChanged?.call(index);
   }
@@ -396,6 +410,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (formStepChanged != null) {
@@ -418,6 +433,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return formStepChanged(this);
   }
@@ -436,6 +452,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return formStepChanged?.call(this);
   }
@@ -454,6 +471,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (formStepChanged != null) {
@@ -547,6 +565,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return nameChanged(name);
   }
@@ -565,6 +584,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return nameChanged?.call(name);
   }
@@ -583,6 +603,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -605,6 +626,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return nameChanged(this);
   }
@@ -623,6 +645,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return nameChanged?.call(this);
   }
@@ -641,6 +664,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -736,6 +760,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return phoneNumberChanged(phoneNumber);
   }
@@ -754,6 +779,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return phoneNumberChanged?.call(phoneNumber);
   }
@@ -772,6 +798,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -794,6 +821,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return phoneNumberChanged(this);
   }
@@ -812,6 +840,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return phoneNumberChanged?.call(this);
   }
@@ -830,6 +859,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -924,6 +954,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return emailChnaged(email);
   }
@@ -942,6 +973,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return emailChnaged?.call(email);
   }
@@ -960,6 +992,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (emailChnaged != null) {
@@ -982,6 +1015,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return emailChnaged(this);
   }
@@ -1000,6 +1034,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return emailChnaged?.call(this);
   }
@@ -1018,6 +1053,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (emailChnaged != null) {
@@ -1112,6 +1148,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return dateOfBirthChanged(date);
   }
@@ -1130,6 +1167,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return dateOfBirthChanged?.call(date);
   }
@@ -1148,6 +1186,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (dateOfBirthChanged != null) {
@@ -1170,6 +1209,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return dateOfBirthChanged(this);
   }
@@ -1188,6 +1228,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return dateOfBirthChanged?.call(this);
   }
@@ -1206,6 +1247,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (dateOfBirthChanged != null) {
@@ -1302,6 +1344,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return houseNameChanged(houseName);
   }
@@ -1320,6 +1363,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return houseNameChanged?.call(houseName);
   }
@@ -1338,6 +1382,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (houseNameChanged != null) {
@@ -1360,6 +1405,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return houseNameChanged(this);
   }
@@ -1378,6 +1424,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return houseNameChanged?.call(this);
   }
@@ -1396,6 +1443,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (houseNameChanged != null) {
@@ -1492,6 +1540,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return postOfficeChanged(postOffice);
   }
@@ -1510,6 +1559,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return postOfficeChanged?.call(postOffice);
   }
@@ -1528,6 +1578,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (postOfficeChanged != null) {
@@ -1550,6 +1601,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return postOfficeChanged(this);
   }
@@ -1568,6 +1620,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return postOfficeChanged?.call(this);
   }
@@ -1586,6 +1639,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (postOfficeChanged != null) {
@@ -1682,6 +1736,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return streetNameChanged(streetName);
   }
@@ -1700,6 +1755,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return streetNameChanged?.call(streetName);
   }
@@ -1718,6 +1774,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (streetNameChanged != null) {
@@ -1740,6 +1797,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return streetNameChanged(this);
   }
@@ -1758,6 +1816,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return streetNameChanged?.call(this);
   }
@@ -1776,6 +1835,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (streetNameChanged != null) {
@@ -1871,6 +1931,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return pincodeChanged(pincode);
   }
@@ -1889,6 +1950,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return pincodeChanged?.call(pincode);
   }
@@ -1907,6 +1969,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (pincodeChanged != null) {
@@ -1929,6 +1992,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return pincodeChanged(this);
   }
@@ -1947,6 +2011,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return pincodeChanged?.call(this);
   }
@@ -1965,6 +2030,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (pincodeChanged != null) {
@@ -2032,6 +2098,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
   }) {
     return getCurrentLocation();
   }
@@ -2050,6 +2117,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
   }) {
     return getCurrentLocation?.call();
   }
@@ -2068,6 +2136,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
     required TResult orElse(),
   }) {
     if (getCurrentLocation != null) {
@@ -2090,6 +2159,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
   }) {
     return getCurrentLocation(this);
   }
@@ -2108,6 +2178,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
   }) {
     return getCurrentLocation?.call(this);
   }
@@ -2126,6 +2197,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
     required TResult orElse(),
   }) {
     if (getCurrentLocation != null) {
@@ -2137,6 +2209,168 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
 
 abstract class _GetCurrentLocation implements ApplicantFormEvent {
   const factory _GetCurrentLocation() = _$GetCurrentLocationImpl;
+}
+
+/// @nodoc
+abstract class _$$OpenLocationInMapImplCopyWith<$Res> {
+  factory _$$OpenLocationInMapImplCopyWith(_$OpenLocationInMapImpl value,
+          $Res Function(_$OpenLocationInMapImpl) then) =
+      __$$OpenLocationInMapImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OpenLocationInMapImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$OpenLocationInMapImpl>
+    implements _$$OpenLocationInMapImplCopyWith<$Res> {
+  __$$OpenLocationInMapImplCopyWithImpl(_$OpenLocationInMapImpl _value,
+      $Res Function(_$OpenLocationInMapImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$OpenLocationInMapImpl implements _OpenLocationInMap {
+  const _$OpenLocationInMapImpl();
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.openLocationInMap()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$OpenLocationInMapImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
+  }) {
+    return openLocationInMap();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
+  }) {
+    return openLocationInMap?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
+    required TResult orElse(),
+  }) {
+    if (openLocationInMap != null) {
+      return openLocationInMap();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
+  }) {
+    return openLocationInMap(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+  }) {
+    return openLocationInMap?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    required TResult orElse(),
+  }) {
+    if (openLocationInMap != null) {
+      return openLocationInMap(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _OpenLocationInMap implements ApplicantFormEvent {
+  const factory _OpenLocationInMap() = _$OpenLocationInMapImpl;
 }
 
 /// @nodoc

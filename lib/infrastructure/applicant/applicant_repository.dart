@@ -3,6 +3,7 @@ import 'package:data_dex/domain/applicant/failures/applicant_failure.dart';
 import 'package:data_dex/domain/applicant/i_applicant_repository.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:injectable/injectable.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 @LazySingleton(as: IApplicantRepository)
 class ApplicantRepository implements IApplicantRepository {
@@ -50,5 +51,20 @@ class ApplicantRepository implements IApplicantRepository {
     }
 
     return right(unit);
+  }
+
+  @override
+  Future<Either<ApplicantFailure, Unit>> openLocationInMap({
+    required String latitude,
+    required String longitude,
+  }) async {
+    final url =
+        'https://www.google.com/maps/search/?api=1&query=$latitude,$longitude';
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
+      return right(unit);
+    } else {
+      return left(ApplicantFailure.locationFailure('Could not launch $url'));
+    }
   }
 }

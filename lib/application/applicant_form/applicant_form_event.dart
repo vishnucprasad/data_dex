@@ -31,4 +31,5 @@ class ApplicantFormEvent with _$ApplicantFormEvent {
     String pincode,
   ) = _PincodeChanged;
   const factory ApplicantFormEvent.getCurrentLocation() = _GetCurrentLocation;
+  const factory ApplicantFormEvent.openLocationInMap() = _OpenLocationInMap;
 }
