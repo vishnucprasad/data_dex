@@ -1,5 +1,7 @@
+import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LocationPickerButton extends StatelessWidget {
   const LocationPickerButton({super.key});
@@ -21,7 +23,9 @@ class LocationPickerButton extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: () => context
+            .read<ApplicantFormBloc>()
+            .add(const ApplicantFormEvent.getCurrentLocation()),
         icon: const Icon(Icons.my_location),
         label: const Text(
           'Get current location',

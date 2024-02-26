@@ -19,32 +19,38 @@ mixin _$ApplicantFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() clientFailure,
+    required TResult Function(String msg) locationFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? clientFailure,
+    TResult? Function(String msg)? locationFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? clientFailure,
+    TResult Function(String msg)? locationFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_LocationFailure value) locationFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_LocationFailure value)? locationFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_LocationFailure value)? locationFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +113,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() clientFailure,
+    required TResult Function(String msg) locationFailure,
   }) {
     return clientFailure();
   }
@@ -115,6 +122,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? clientFailure,
+    TResult? Function(String msg)? locationFailure,
   }) {
     return clientFailure?.call();
   }
@@ -123,6 +131,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? clientFailure,
+    TResult Function(String msg)? locationFailure,
     required TResult orElse(),
   }) {
     if (clientFailure != null) {
@@ -135,6 +144,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_LocationFailure value) locationFailure,
   }) {
     return clientFailure(this);
   }
@@ -143,6 +153,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_LocationFailure value)? locationFailure,
   }) {
     return clientFailure?.call(this);
   }
@@ -151,6 +162,7 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_LocationFailure value)? locationFailure,
     required TResult orElse(),
   }) {
     if (clientFailure != null) {
@@ -162,4 +174,138 @@ class _$ClientFailureImpl implements _ClientFailure {
 
 abstract class _ClientFailure implements ApplicantFailure {
   const factory _ClientFailure() = _$ClientFailureImpl;
+}
+
+/// @nodoc
+abstract class _$$LocationFailureImplCopyWith<$Res> {
+  factory _$$LocationFailureImplCopyWith(_$LocationFailureImpl value,
+          $Res Function(_$LocationFailureImpl) then) =
+      __$$LocationFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String msg});
+}
+
+/// @nodoc
+class __$$LocationFailureImplCopyWithImpl<$Res>
+    extends _$ApplicantFailureCopyWithImpl<$Res, _$LocationFailureImpl>
+    implements _$$LocationFailureImplCopyWith<$Res> {
+  __$$LocationFailureImplCopyWithImpl(
+      _$LocationFailureImpl _value, $Res Function(_$LocationFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? msg = null,
+  }) {
+    return _then(_$LocationFailureImpl(
+      null == msg
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LocationFailureImpl implements _LocationFailure {
+  const _$LocationFailureImpl(this.msg);
+
+  @override
+  final String msg;
+
+  @override
+  String toString() {
+    return 'ApplicantFailure.locationFailure(msg: $msg)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LocationFailureImpl &&
+            (identical(other.msg, msg) || other.msg == msg));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, msg);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LocationFailureImplCopyWith<_$LocationFailureImpl> get copyWith =>
+      __$$LocationFailureImplCopyWithImpl<_$LocationFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() clientFailure,
+    required TResult Function(String msg) locationFailure,
+  }) {
+    return locationFailure(msg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? clientFailure,
+    TResult? Function(String msg)? locationFailure,
+  }) {
+    return locationFailure?.call(msg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? clientFailure,
+    TResult Function(String msg)? locationFailure,
+    required TResult orElse(),
+  }) {
+    if (locationFailure != null) {
+      return locationFailure(msg);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_LocationFailure value) locationFailure,
+  }) {
+    return locationFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_LocationFailure value)? locationFailure,
+  }) {
+    return locationFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_LocationFailure value)? locationFailure,
+    required TResult orElse(),
+  }) {
+    if (locationFailure != null) {
+      return locationFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LocationFailure implements ApplicantFailure {
+  const factory _LocationFailure(final String msg) = _$LocationFailureImpl;
+
+  String get msg;
+  @JsonKey(ignore: true)
+  _$$LocationFailureImplCopyWith<_$LocationFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

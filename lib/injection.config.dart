@@ -10,7 +10,10 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:data_dex/application/app_action/app_action_cubit.dart' as _i3;
 import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart'
-    as _i4;
+    as _i6;
+import 'package:data_dex/domain/applicant/i_applicant_repository.dart' as _i4;
+import 'package:data_dex/infrastructure/applicant/applicant_repository.dart'
+    as _i5;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -26,7 +29,9 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     gh.factory<_i3.AppActionCubit>(() => _i3.AppActionCubit());
-    gh.factory<_i4.ApplicantFormBloc>(() => _i4.ApplicantFormBloc());
+    gh.lazySingleton<_i4.IApplicantRepository>(() => _i5.ApplicantRepository());
+    gh.factory<_i6.ApplicantFormBloc>(
+        () => _i6.ApplicantFormBloc(gh<_i4.IApplicantRepository>()));
     return this;
   }
 }

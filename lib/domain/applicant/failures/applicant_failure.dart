@@ -5,4 +5,7 @@ part 'applicant_failure.freezed.dart';
 @freezed
 class ApplicantFailure with _$ApplicantFailure {
   const factory ApplicantFailure.clientFailure() = _ClientFailure;
+  const factory ApplicantFailure.locationFailure(
+    String msg,
+  ) = _LocationFailure;
 }

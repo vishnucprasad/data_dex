@@ -1,10 +1,12 @@
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/applicant/failures/applicant_failure.dart';
+import 'package:data_dex/domain/applicant/i_applicant_repository.dart';
 import 'package:data_dex/domain/applicant/models/applicant_address/applicant_address_form_data.dart';
 import 'package:data_dex/domain/applicant/models/applicant_basic_info/applicant_basic_info_form_data.dart';
 import 'package:data_dex/domain/applicant/value_objects.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:injectable/injectable.dart';
 
 part 'applicant_form_event.dart';
@@ -13,7 +15,10 @@ part 'applicant_form_bloc.freezed.dart';
 
 @injectable
 class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
-  ApplicantFormBloc() : super(ApplicantFormState.initial()) {
+  final IApplicantRepository _applicantRepository;
+  ApplicantFormBloc(
+    this._applicantRepository,
+  ) : super(ApplicantFormState.initial()) {
     on<ApplicantFormEvent>((event, emit) async {
       await event.map(
         initialized: (_) async => emit(ApplicantFormState.initial()),
@@ -86,6 +91,47 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
           ),
           failureOrSuccess: none(),
         )),
+        getCurrentLocation: (_) async {
+          emit(state.copyWith(
+            isLocationFetching: true,
+            location: null,
+            failureOrSuccess: none(),
+          ));
+
+          final permissionOption =
+              await _applicantRepository.handleLocationPermission();
+
+          if (permissionOption.isRight()) {
+            final locationOption =
+                await _applicantRepository.getCurrentPosition();
+
+            return emit(
+              await locationOption.fold(
+                (l) => state.copyWith(
+                  isLocationFetching: false,
+                  location: null,
+                  failureOrSuccess: some(left(l)),
+                ),
+                (r) => state.copyWith(
+                  isLocationFetching: false,
+                  location: r,
+                  failureOrSuccess: some(right(unit)),
+                ),
+              ),
+            );
+          }
+
+          emit(state.copyWith(
+            isLocationFetching: false,
+            location: null,
+            failureOrSuccess: some(
+              left(
+                permissionOption.fold((l) => l, (r) => null) ??
+                    const ApplicantFailure.clientFailure(),
+              ),
+            ),
+          ));
+        },
       );
     });
   }

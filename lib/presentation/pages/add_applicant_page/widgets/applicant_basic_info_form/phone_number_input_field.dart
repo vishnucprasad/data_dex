@@ -41,7 +41,7 @@ class PhoneNumberInputField extends HookWidget {
               horizontal: 16,
             ),
           ),
-          keyboardType: TextInputType.number,
+          keyboardType: TextInputType.phone,
           autovalidateMode: state.showValidationError
               ? AutovalidateMode.always
               : AutovalidateMode.disabled,

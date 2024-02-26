@@ -30,4 +30,5 @@ class ApplicantFormEvent with _$ApplicantFormEvent {
   const factory ApplicantFormEvent.pincodeChanged(
     String pincode,
   ) = _PincodeChanged;
+  const factory ApplicantFormEvent.getCurrentLocation() = _GetCurrentLocation;
 }

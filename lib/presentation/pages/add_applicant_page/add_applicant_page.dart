@@ -1,3 +1,4 @@
+import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
@@ -17,98 +18,116 @@ class AddApplicantPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            kHeightMd,
-            Row(
-              children: [
-                BackButton(
-                  onPressed: () => context.router.pop().then((_) => context
-                      .read<ApplicantFormBloc>()
-                      .add(const ApplicantFormEvent.initialized())),
-                ),
-                const Text(
-                  'Add new applicant',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1,
+        child: BlocListener<ApplicantFormBloc, ApplicantFormState>(
+          listenWhen: (p, c) => p.failureOrSuccess != c.failureOrSuccess,
+          listener: (context, state) {
+            state.failureOrSuccess.fold(
+              () => null,
+              (either) => either.fold(
+                (f) => FlushbarHelper.createError(
+                  message: f.map(
+                    clientFailure: (_) => 'Something went wrong.',
+                    locationFailure: (e) => e.msg,
                   ),
-                ),
-              ],
-            ),
-            kHeightMd,
-            Expanded(
-              child: BlocBuilder<ApplicantFormBloc, ApplicantFormState>(
-                builder: (context, state) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Stepper(
-                      type: StepperType.vertical,
-                      currentStep: state.formStep,
-                      connectorColor: MaterialStatePropertyAll<Color>(
-                        Colors.lightBlue.shade600,
-                      ),
-                      controlsBuilder: (context, ControlsDetails details) {
-                        final isLastStep = state.formStep == 2;
-                        return Row(
-                          children: [
-                            StepperNextButton(
-                              isLastStep: isLastStep,
-                              onPressed: details.onStepContinue,
-                            ),
-                            if (state.formStep != 0) kWidth,
-                            if (state.formStep != 0)
-                              StepperBackButton(
-                                  onPressed: details.onStepCancel),
-                          ],
-                        );
-                      },
-                      onStepCancel: () => context.read<ApplicantFormBloc>().add(
-                          ApplicantFormEvent.formStepChanged(
-                              state.formStep - 1)),
-                      onStepContinue: () {
-                        bool isLastStep = (state.formStep == 2);
-                        if (isLastStep) {
-                          //Do something with this information
-                        } else {
-                          context.read<ApplicantFormBloc>().add(
-                              ApplicantFormEvent.formStepChanged(
-                                  state.formStep + 1));
-                        }
-                      },
-                      steps: [
-                        Step(
-                          state: state.formStep > 0
-                              ? StepState.complete
-                              : StepState.indexed,
-                          isActive: state.formStep >= 0,
-                          title: const Text("Basic information"),
-                          content: const ApplicantBasicInfoForm(),
-                        ),
-                        Step(
-                          state: state.formStep > 1
-                              ? StepState.complete
-                              : StepState.indexed,
-                          isActive: state.formStep >= 1,
-                          title: const Text("Address"),
-                          content: const ApplicantAddressForm(),
-                        ),
-                        Step(
-                          state: state.formStep > 2
-                              ? StepState.complete
-                              : StepState.indexed,
-                          isActive: state.formStep >= 2,
-                          title: const Text("More details"),
-                          content: const ApplicantMoreDetailsForm(),
-                        ),
-                      ],
-                    ),
-                  );
-                },
+                ).show(context),
+                (_) => null,
               ),
-            ),
-          ],
+            );
+          },
+          child: Column(
+            children: [
+              kHeightMd,
+              Row(
+                children: [
+                  BackButton(
+                    onPressed: () => context.router.pop().then((_) => context
+                        .read<ApplicantFormBloc>()
+                        .add(const ApplicantFormEvent.initialized())),
+                  ),
+                  const Text(
+                    'Add new applicant',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                ],
+              ),
+              kHeightMd,
+              Expanded(
+                child: BlocBuilder<ApplicantFormBloc, ApplicantFormState>(
+                  builder: (context, state) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Stepper(
+                        type: StepperType.vertical,
+                        currentStep: state.formStep,
+                        connectorColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlue.shade600,
+                        ),
+                        controlsBuilder: (context, ControlsDetails details) {
+                          final isLastStep = state.formStep == 2;
+                          return Row(
+                            children: [
+                              StepperNextButton(
+                                isLastStep: isLastStep,
+                                onPressed: details.onStepContinue,
+                              ),
+                              if (state.formStep != 0) kWidth,
+                              if (state.formStep != 0)
+                                StepperBackButton(
+                                    onPressed: details.onStepCancel),
+                            ],
+                          );
+                        },
+                        onStepCancel: () => context
+                            .read<ApplicantFormBloc>()
+                            .add(ApplicantFormEvent.formStepChanged(
+                                state.formStep - 1)),
+                        onStepContinue: () {
+                          bool isLastStep = (state.formStep == 2);
+                          if (isLastStep) {
+                            //Do something with this information
+                          } else {
+                            context.read<ApplicantFormBloc>().add(
+                                ApplicantFormEvent.formStepChanged(
+                                    state.formStep + 1));
+                          }
+                        },
+                        steps: [
+                          Step(
+                            state: state.formStep > 0
+                                ? StepState.complete
+                                : StepState.indexed,
+                            isActive: state.formStep >= 0,
+                            title: const Text("Basic information"),
+                            content: const ApplicantBasicInfoForm(),
+                          ),
+                          Step(
+                            state: state.formStep > 1
+                                ? StepState.complete
+                                : StepState.indexed,
+                            isActive: state.formStep >= 1,
+                            title: const Text("Address"),
+                            content: const ApplicantAddressForm(),
+                          ),
+                          Step(
+                            state: state.formStep > 2
+                                ? StepState.complete
+                                : StepState.indexed,
+                            isActive: state.formStep >= 2,
+                            title: const Text("More details"),
+                            content: const ApplicantMoreDetailsForm(),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -40,6 +40,7 @@ class PincodeInputField extends HookWidget {
               horizontal: 16,
             ),
           ),
+          keyboardType: TextInputType.number,
           autovalidateMode: state.showValidationError
               ? AutovalidateMode.always
               : AutovalidateMode.disabled,

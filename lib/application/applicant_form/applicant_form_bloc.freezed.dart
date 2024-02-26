@@ -28,6 +28,7 @@ mixin _$ApplicantFormEvent {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +43,7 @@ mixin _$ApplicantFormEvent {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +58,7 @@ mixin _$ApplicantFormEvent {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -71,6 +74,7 @@ mixin _$ApplicantFormEvent {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +89,7 @@ mixin _$ApplicantFormEvent {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +104,7 @@ mixin _$ApplicantFormEvent {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -170,6 +176,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return initialized();
   }
@@ -187,6 +194,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return initialized?.call();
   }
@@ -204,6 +212,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (initialized != null) {
@@ -225,6 +234,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return initialized(this);
   }
@@ -242,6 +252,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return initialized?.call(this);
   }
@@ -259,6 +270,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (initialized != null) {
@@ -347,6 +359,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return formStepChanged(index);
   }
@@ -364,6 +377,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return formStepChanged?.call(index);
   }
@@ -381,6 +395,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (formStepChanged != null) {
@@ -402,6 +417,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return formStepChanged(this);
   }
@@ -419,6 +435,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return formStepChanged?.call(this);
   }
@@ -436,6 +453,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (formStepChanged != null) {
@@ -528,6 +546,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return nameChanged(name);
   }
@@ -545,6 +564,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return nameChanged?.call(name);
   }
@@ -562,6 +582,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -583,6 +604,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return nameChanged(this);
   }
@@ -600,6 +622,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return nameChanged?.call(this);
   }
@@ -617,6 +640,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -711,6 +735,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return phoneNumberChanged(phoneNumber);
   }
@@ -728,6 +753,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return phoneNumberChanged?.call(phoneNumber);
   }
@@ -745,6 +771,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -766,6 +793,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return phoneNumberChanged(this);
   }
@@ -783,6 +811,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return phoneNumberChanged?.call(this);
   }
@@ -800,6 +829,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (phoneNumberChanged != null) {
@@ -893,6 +923,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return emailChnaged(email);
   }
@@ -910,6 +941,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return emailChnaged?.call(email);
   }
@@ -927,6 +959,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (emailChnaged != null) {
@@ -948,6 +981,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return emailChnaged(this);
   }
@@ -965,6 +999,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return emailChnaged?.call(this);
   }
@@ -982,6 +1017,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (emailChnaged != null) {
@@ -1075,6 +1111,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return dateOfBirthChanged(date);
   }
@@ -1092,6 +1129,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return dateOfBirthChanged?.call(date);
   }
@@ -1109,6 +1147,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (dateOfBirthChanged != null) {
@@ -1130,6 +1169,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return dateOfBirthChanged(this);
   }
@@ -1147,6 +1187,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return dateOfBirthChanged?.call(this);
   }
@@ -1164,6 +1205,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (dateOfBirthChanged != null) {
@@ -1259,6 +1301,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return houseNameChanged(houseName);
   }
@@ -1276,6 +1319,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return houseNameChanged?.call(houseName);
   }
@@ -1293,6 +1337,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (houseNameChanged != null) {
@@ -1314,6 +1359,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return houseNameChanged(this);
   }
@@ -1331,6 +1377,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return houseNameChanged?.call(this);
   }
@@ -1348,6 +1395,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (houseNameChanged != null) {
@@ -1443,6 +1491,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return postOfficeChanged(postOffice);
   }
@@ -1460,6 +1509,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return postOfficeChanged?.call(postOffice);
   }
@@ -1477,6 +1527,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (postOfficeChanged != null) {
@@ -1498,6 +1549,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return postOfficeChanged(this);
   }
@@ -1515,6 +1567,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return postOfficeChanged?.call(this);
   }
@@ -1532,6 +1585,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (postOfficeChanged != null) {
@@ -1627,6 +1681,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return streetNameChanged(streetName);
   }
@@ -1644,6 +1699,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return streetNameChanged?.call(streetName);
   }
@@ -1661,6 +1717,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (streetNameChanged != null) {
@@ -1682,6 +1739,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return streetNameChanged(this);
   }
@@ -1699,6 +1757,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return streetNameChanged?.call(this);
   }
@@ -1716,6 +1775,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (streetNameChanged != null) {
@@ -1810,6 +1870,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
     required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
   }) {
     return pincodeChanged(pincode);
   }
@@ -1827,6 +1888,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
     TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
   }) {
     return pincodeChanged?.call(pincode);
   }
@@ -1844,6 +1906,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
     TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (pincodeChanged != null) {
@@ -1865,6 +1928,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
   }) {
     return pincodeChanged(this);
   }
@@ -1882,6 +1946,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
   }) {
     return pincodeChanged?.call(this);
   }
@@ -1899,6 +1964,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     required TResult orElse(),
   }) {
     if (pincodeChanged != null) {
@@ -1918,12 +1984,170 @@ abstract class _PincodeChanged implements ApplicantFormEvent {
 }
 
 /// @nodoc
+abstract class _$$GetCurrentLocationImplCopyWith<$Res> {
+  factory _$$GetCurrentLocationImplCopyWith(_$GetCurrentLocationImpl value,
+          $Res Function(_$GetCurrentLocationImpl) then) =
+      __$$GetCurrentLocationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetCurrentLocationImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$GetCurrentLocationImpl>
+    implements _$$GetCurrentLocationImplCopyWith<$Res> {
+  __$$GetCurrentLocationImplCopyWithImpl(_$GetCurrentLocationImpl _value,
+      $Res Function(_$GetCurrentLocationImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCurrentLocationImpl implements _GetCurrentLocation {
+  const _$GetCurrentLocationImpl();
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.getCurrentLocation()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetCurrentLocationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
+  }) {
+    return getCurrentLocation();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
+  }) {
+    return getCurrentLocation?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
+    required TResult orElse(),
+  }) {
+    if (getCurrentLocation != null) {
+      return getCurrentLocation();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+  }) {
+    return getCurrentLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+  }) {
+    return getCurrentLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    required TResult orElse(),
+  }) {
+    if (getCurrentLocation != null) {
+      return getCurrentLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetCurrentLocation implements ApplicantFormEvent {
+  const factory _GetCurrentLocation() = _$GetCurrentLocationImpl;
+}
+
+/// @nodoc
 mixin _$ApplicantFormState {
+  bool get isLocationFetching => throw _privateConstructorUsedError;
   int get formStep => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   ApplicantBasicInfoFormData get basicInfo =>
       throw _privateConstructorUsedError;
   ApplicantAddressFormData get address => throw _privateConstructorUsedError;
+  Position? get location => throw _privateConstructorUsedError;
   Option<Either<ApplicantFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
 
@@ -1939,10 +2163,12 @@ abstract class $ApplicantFormStateCopyWith<$Res> {
       _$ApplicantFormStateCopyWithImpl<$Res, ApplicantFormState>;
   @useResult
   $Res call(
-      {int formStep,
+      {bool isLocationFetching,
+      int formStep,
       bool showValidationError,
       ApplicantBasicInfoFormData basicInfo,
       ApplicantAddressFormData address,
+      Position? location,
       Option<Either<ApplicantFailure, Unit>> failureOrSuccess});
 
   $ApplicantBasicInfoFormDataCopyWith<$Res> get basicInfo;
@@ -1962,13 +2188,19 @@ class _$ApplicantFormStateCopyWithImpl<$Res, $Val extends ApplicantFormState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isLocationFetching = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
     Object? address = null,
+    Object? location = freezed,
     Object? failureOrSuccess = null,
   }) {
     return _then(_value.copyWith(
+      isLocationFetching: null == isLocationFetching
+          ? _value.isLocationFetching
+          : isLocationFetching // ignore: cast_nullable_to_non_nullable
+              as bool,
       formStep: null == formStep
           ? _value.formStep
           : formStep // ignore: cast_nullable_to_non_nullable
@@ -1985,6 +2217,10 @@ class _$ApplicantFormStateCopyWithImpl<$Res, $Val extends ApplicantFormState>
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as ApplicantAddressFormData,
+      location: freezed == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Position?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -2018,10 +2254,12 @@ abstract class _$$ApplicantFormStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int formStep,
+      {bool isLocationFetching,
+      int formStep,
       bool showValidationError,
       ApplicantBasicInfoFormData basicInfo,
       ApplicantAddressFormData address,
+      Position? location,
       Option<Either<ApplicantFailure, Unit>> failureOrSuccess});
 
   @override
@@ -2041,13 +2279,19 @@ class __$$ApplicantFormStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? isLocationFetching = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
     Object? address = null,
+    Object? location = freezed,
     Object? failureOrSuccess = null,
   }) {
     return _then(_$ApplicantFormStateImpl(
+      isLocationFetching: null == isLocationFetching
+          ? _value.isLocationFetching
+          : isLocationFetching // ignore: cast_nullable_to_non_nullable
+              as bool,
       formStep: null == formStep
           ? _value.formStep
           : formStep // ignore: cast_nullable_to_non_nullable
@@ -2064,6 +2308,10 @@ class __$$ApplicantFormStateImplCopyWithImpl<$Res>
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as ApplicantAddressFormData,
+      location: freezed == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Position?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -2076,12 +2324,16 @@ class __$$ApplicantFormStateImplCopyWithImpl<$Res>
 
 class _$ApplicantFormStateImpl implements _ApplicantFormState {
   const _$ApplicantFormStateImpl(
-      {required this.formStep,
+      {required this.isLocationFetching,
+      required this.formStep,
       required this.showValidationError,
       required this.basicInfo,
       required this.address,
+      required this.location,
       required this.failureOrSuccess});
 
+  @override
+  final bool isLocationFetching;
   @override
   final int formStep;
   @override
@@ -2091,11 +2343,13 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
   @override
   final ApplicantAddressFormData address;
   @override
+  final Position? location;
+  @override
   final Option<Either<ApplicantFailure, Unit>> failureOrSuccess;
 
   @override
   String toString() {
-    return 'ApplicantFormState(formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, failureOrSuccess: $failureOrSuccess)';
+    return 'ApplicantFormState(isLocationFetching: $isLocationFetching, formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, location: $location, failureOrSuccess: $failureOrSuccess)';
   }
 
   @override
@@ -2103,6 +2357,8 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ApplicantFormStateImpl &&
+            (identical(other.isLocationFetching, isLocationFetching) ||
+                other.isLocationFetching == isLocationFetching) &&
             (identical(other.formStep, formStep) ||
                 other.formStep == formStep) &&
             (identical(other.showValidationError, showValidationError) ||
@@ -2110,13 +2366,15 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
             (identical(other.basicInfo, basicInfo) ||
                 other.basicInfo == basicInfo) &&
             (identical(other.address, address) || other.address == address) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
             (identical(other.failureOrSuccess, failureOrSuccess) ||
                 other.failureOrSuccess == failureOrSuccess));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, formStep, showValidationError,
-      basicInfo, address, failureOrSuccess);
+  int get hashCode => Object.hash(runtimeType, isLocationFetching, formStep,
+      showValidationError, basicInfo, address, location, failureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -2128,13 +2386,17 @@ class _$ApplicantFormStateImpl implements _ApplicantFormState {
 
 abstract class _ApplicantFormState implements ApplicantFormState {
   const factory _ApplicantFormState(
-      {required final int formStep,
+      {required final bool isLocationFetching,
+      required final int formStep,
       required final bool showValidationError,
       required final ApplicantBasicInfoFormData basicInfo,
       required final ApplicantAddressFormData address,
+      required final Position? location,
       required final Option<Either<ApplicantFailure, Unit>>
           failureOrSuccess}) = _$ApplicantFormStateImpl;
 
+  @override
+  bool get isLocationFetching;
   @override
   int get formStep;
   @override
@@ -2143,6 +2405,8 @@ abstract class _ApplicantFormState implements ApplicantFormState {
   ApplicantBasicInfoFormData get basicInfo;
   @override
   ApplicantAddressFormData get address;
+  @override
+  Position? get location;
   @override
   Option<Either<ApplicantFailure, Unit>> get failureOrSuccess;
   @override
