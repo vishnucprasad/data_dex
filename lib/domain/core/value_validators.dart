@@ -10,6 +10,15 @@ Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   return left(ValueFailure.invalid(failedValue: input));
 }
 
+Either<ValueFailure<String>, String> validatePassWord(String input) {
+  const passwordRegex =
+      r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$';
+  if (RegExp(passwordRegex).hasMatch(input)) {
+    return right(input);
+  }
+  return left(ValueFailure.invalid(failedValue: input));
+}
+
 Either<ValueFailure<String>, String> validatePhoneNumber(String input) {
   const phoneNumberRegex = r'^(\+\d{1,3}[- ]?)?\d{10}$';
   if (RegExp(phoneNumberRegex).hasMatch(input)) {

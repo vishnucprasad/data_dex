@@ -3,7 +3,7 @@ import 'package:data_dex/domain/applicant/failures/applicant_failure.dart';
 import 'package:data_dex/domain/applicant/i_applicant_repository.dart';
 import 'package:data_dex/domain/applicant/models/applicant_address/applicant_address_form_data.dart';
 import 'package:data_dex/domain/applicant/models/applicant_basic_info/applicant_basic_info_form_data.dart';
-import 'package:data_dex/domain/applicant/value_objects.dart';
+import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:geolocator/geolocator.dart';

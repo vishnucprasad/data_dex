@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "194005231179",
+    "project_id": "data-dex-a1841",
+    "storage_bucket": "data-dex-a1841.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194005231179:android:4cce7c64fc42a8c9de8fce",
+        "android_client_info": {
+          "package_name": "com.subinlr.datadex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194005231179-a9dl497as8f7dgd0g63f5g7t7hodci8r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.subinlr.datadex",
+            "certificate_hash": "45818a73ae0c3d4b95154a375bfa3cef879b01cc"
+          }
+        },
+        {
+          "client_id": "194005231179-mvdtj6fkvpvb3up2mu30hihvrqt80ror.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkXgljxeHEw5TPr6XedQKQYfP4GoZaKGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194005231179-3hqds4sum7ihuuniod6dtnk9etjljmck.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "194005231179-ih4q77nfb8b7o38493bjjfs56uksuv0f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dataDex"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

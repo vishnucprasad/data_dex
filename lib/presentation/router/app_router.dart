@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/add_applicant_page.dart';
 import 'package:data_dex/presentation/pages/home_page/home_page.dart';
+import 'package:data_dex/presentation/pages/signin_page/signin_page.dart';
 import 'package:data_dex/presentation/pages/splash_page.dart/splash_page.dart';
 
 part 'app_router.gr.dart';
@@ -13,6 +14,10 @@ class AppRouter extends _$AppRouter {
       AutoRoute(
         initial: true,
         page: SplashRoute.page,
+      ),
+      CustomRoute(
+        page: SigninRoute.page,
+        transitionsBuilder: TransitionsBuilders.fadeIn,
       ),
       CustomRoute(
         page: HomeRoute.page,

@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:data_dex/domain/applicant/value_objects.dart';
+import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/core/value_failure.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/core/value_failure.dart';
 import 'package:data_dex/domain/core/value_object.dart';
 import 'package:data_dex/domain/core/value_validators.dart';
+import 'package:uuid/uuid.dart';
 
 class Name extends ValueObject<String> {
   @override
@@ -23,6 +24,30 @@ class EmailAddress extends ValueObject<String> {
   const EmailAddress._(this.value);
 }
 
+class RequiredEmailAddress extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory RequiredEmailAddress(String input) {
+    return RequiredEmailAddress._(validateStringNotEmpty(
+      input,
+    ).flatMap(validateEmailAddress));
+  }
+  const RequiredEmailAddress._(this.value);
+}
+
+class Password extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory Password(String input) {
+    return Password._(
+      validateStringNotEmpty(input).flatMap(
+        validatePassWord,
+      ),
+    );
+  }
+  const Password._(this.value);
+}
+
 class PhoneNumber extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
@@ -32,6 +57,23 @@ class PhoneNumber extends ValueObject<String> {
     ).flatMap(validatePhoneNumber));
   }
   const PhoneNumber._(this.value);
+}
+
+class UniqueId extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory UniqueId() {
+    return UniqueId._(
+      right(const Uuid().v1()),
+    );
+  }
+  factory UniqueId.fromUniqueString(String? uniqueId) {
+    assert(uniqueId != null);
+    return UniqueId._(
+      right(uniqueId!),
+    );
+  }
+  const UniqueId._(this.value);
 }
 
 class DateOfBirth extends ValueObject<String> {
