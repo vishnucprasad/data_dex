@@ -1,12 +1,17 @@
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/applicant/failures/applicant_failure.dart';
 import 'package:data_dex/domain/applicant/i_applicant_repository.dart';
-import 'package:data_dex/domain/applicant/models/applicant_address/applicant_address_form_data.dart';
-import 'package:data_dex/domain/applicant/models/applicant_basic_info/applicant_basic_info_form_data.dart';
+import 'package:data_dex/domain/applicant/models/applicant.dart';
+import 'package:data_dex/domain/core/constants.dart';
+import 'package:data_dex/domain/core/models/address/address.dart';
+import 'package:data_dex/domain/core/models/basic_info/basic_info.dart';
+import 'package:data_dex/domain/core/models/location/location.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
+import 'package:data_dex/domain/loan/failures/loan_failure.dart';
+import 'package:data_dex/domain/loan/i_loan_repository.dart';
+import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 
@@ -17,8 +22,10 @@ part 'applicant_form_bloc.freezed.dart';
 @injectable
 class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
   final IApplicantRepository _applicantRepository;
+  final ILoanRepository _loanRepository;
   ApplicantFormBloc(
     this._applicantRepository,
+    this._loanRepository,
   ) : super(ApplicantFormState.initial()) {
     on<ApplicantFormEvent>((event, emit) async {
       await event.map(
@@ -58,7 +65,7 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
         )),
         emailChnaged: (e) async => emit(state.copyWith(
           basicInfo: state.basicInfo.copyWith(
-            emailAddress: EmailAddress(e.email),
+            emailAddress: e.email.isEmpty ? null : EmailAddress(e.email),
           ),
           failureOrSuccess: none(),
         )),
@@ -115,7 +122,10 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
                 ),
                 (r) => state.copyWith(
                   isLocationFetching: false,
-                  location: r,
+                  location: Location(
+                    latitude: r.latitude.toString(),
+                    longitude: r.longitude.toString(),
+                  ),
                   failureOrSuccess: some(right(unit)),
                 ),
               ),
@@ -164,7 +174,6 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
         },
         takeImage: (_) async {
           emit(state.copyWith(
-            isImagePicking: true,
             houseImage: null,
             failureOrSuccess: none(),
           ));
@@ -175,12 +184,10 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
 
           emit(imageOption.fold(
             (l) => state.copyWith(
-              isImagePicking: false,
               houseImage: null,
               failureOrSuccess: some(left(l)),
             ),
             (r) => state.copyWith(
-              isImagePicking: false,
               houseImage: r,
               failureOrSuccess: some(right(unit)),
             ),
@@ -188,7 +195,6 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
         },
         pickImage: (_) async {
           emit(state.copyWith(
-            isImagePicking: true,
             houseImage: null,
             failureOrSuccess: none(),
           ));
@@ -199,14 +205,44 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
 
           emit(imageOption.fold(
             (l) => state.copyWith(
-              isImagePicking: false,
               houseImage: null,
               failureOrSuccess: some(left(l)),
             ),
             (r) => state.copyWith(
-              isImagePicking: false,
               houseImage: r,
               failureOrSuccess: some(right(unit)),
+            ),
+          ));
+        },
+        saveApplicant: (_) async {
+          emit(state.copyWith(
+            isSaving: true,
+            loanFailureOrSuccess: none(),
+          ));
+
+          final applicant = Applicant(
+            basicInfo: state.basicInfo,
+            address: state.address,
+            location: state.location,
+            houseImage: await state.houseImage?.readAsBytes(),
+          );
+
+          final loan = Loan(
+            id: UniqueId(),
+            loanStatusIndex: LoanStatus.pending.index,
+            applicant: applicant,
+          );
+
+          final loanOption = await _loanRepository.create(loan);
+
+          emit(loanOption.fold(
+            (l) => state.copyWith(
+              isSaving: false,
+              loanFailureOrSuccess: some(left(l)),
+            ),
+            (r) => state.copyWith(
+              isSaving: false,
+              loanFailureOrSuccess: some(right(loan.id)),
             ),
           ));
         },

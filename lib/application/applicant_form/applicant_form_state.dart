@@ -3,28 +3,30 @@ part of 'applicant_form_bloc.dart';
 @freezed
 class ApplicantFormState with _$ApplicantFormState {
   const factory ApplicantFormState({
+    required bool isSaving,
     required bool isLocationFetching,
-    required bool isImagePicking,
     required int formStep,
     required bool showValidationError,
-    required ApplicantBasicInfoFormData basicInfo,
-    required ApplicantAddressFormData address,
-    required Position? location,
+    required BasicInfo basicInfo,
+    required Address address,
+    required Location? location,
     required XFile? houseImage,
     required Option<Either<ApplicantFailure, Unit>> failureOrSuccess,
+    required Option<Either<LoanFailure, UniqueId>> loanFailureOrSuccess,
   }) = _ApplicantFormState;
 
   factory ApplicantFormState.initial() {
     return ApplicantFormState(
+      isSaving: false,
       isLocationFetching: false,
-      isImagePicking: false,
       formStep: 0,
       showValidationError: false,
-      basicInfo: ApplicantBasicInfoFormData.empty(),
-      address: ApplicantAddressFormData.empty(),
+      basicInfo: BasicInfo.empty(),
+      address: Address.empty(),
       location: null,
       houseImage: null,
       failureOrSuccess: none(),
+      loanFailureOrSuccess: none(),
     );
   }
 }

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'applicant_basic_info_form_data.dart';
+part of 'basic_info.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,38 +15,35 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$ApplicantBasicInfoFormData {
+mixin _$BasicInfo {
   Name get name => throw _privateConstructorUsedError;
   PhoneNumber get phoneNumber => throw _privateConstructorUsedError;
-  EmailAddress get emailAddress => throw _privateConstructorUsedError;
+  EmailAddress? get emailAddress => throw _privateConstructorUsedError;
   DateOfBirth get dateOfBirth => throw _privateConstructorUsedError;
   dynamic get key => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ApplicantBasicInfoFormDataCopyWith<ApplicantBasicInfoFormData>
-      get copyWith => throw _privateConstructorUsedError;
+  $BasicInfoCopyWith<BasicInfo> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ApplicantBasicInfoFormDataCopyWith<$Res> {
-  factory $ApplicantBasicInfoFormDataCopyWith(ApplicantBasicInfoFormData value,
-          $Res Function(ApplicantBasicInfoFormData) then) =
-      _$ApplicantBasicInfoFormDataCopyWithImpl<$Res,
-          ApplicantBasicInfoFormData>;
+abstract class $BasicInfoCopyWith<$Res> {
+  factory $BasicInfoCopyWith(BasicInfo value, $Res Function(BasicInfo) then) =
+      _$BasicInfoCopyWithImpl<$Res, BasicInfo>;
   @useResult
   $Res call(
       {Name name,
       PhoneNumber phoneNumber,
-      EmailAddress emailAddress,
+      EmailAddress? emailAddress,
       DateOfBirth dateOfBirth,
       dynamic key});
 }
 
 /// @nodoc
-class _$ApplicantBasicInfoFormDataCopyWithImpl<$Res,
-        $Val extends ApplicantBasicInfoFormData>
-    implements $ApplicantBasicInfoFormDataCopyWith<$Res> {
-  _$ApplicantBasicInfoFormDataCopyWithImpl(this._value, this._then);
+class _$BasicInfoCopyWithImpl<$Res, $Val extends BasicInfo>
+    implements $BasicInfoCopyWith<$Res> {
+  _$BasicInfoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -58,7 +55,7 @@ class _$ApplicantBasicInfoFormDataCopyWithImpl<$Res,
   $Res call({
     Object? name = null,
     Object? phoneNumber = null,
-    Object? emailAddress = null,
+    Object? emailAddress = freezed,
     Object? dateOfBirth = null,
     Object? key = freezed,
   }) {
@@ -71,10 +68,10 @@ class _$ApplicantBasicInfoFormDataCopyWithImpl<$Res,
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
               as PhoneNumber,
-      emailAddress: null == emailAddress
+      emailAddress: freezed == emailAddress
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
-              as EmailAddress,
+              as EmailAddress?,
       dateOfBirth: null == dateOfBirth
           ? _value.dateOfBirth
           : dateOfBirth // ignore: cast_nullable_to_non_nullable
@@ -88,30 +85,27 @@ class _$ApplicantBasicInfoFormDataCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ApplicantBasicInfoFormDataImplCopyWith<$Res>
-    implements $ApplicantBasicInfoFormDataCopyWith<$Res> {
-  factory _$$ApplicantBasicInfoFormDataImplCopyWith(
-          _$ApplicantBasicInfoFormDataImpl value,
-          $Res Function(_$ApplicantBasicInfoFormDataImpl) then) =
-      __$$ApplicantBasicInfoFormDataImplCopyWithImpl<$Res>;
+abstract class _$$BasicInfoImplCopyWith<$Res>
+    implements $BasicInfoCopyWith<$Res> {
+  factory _$$BasicInfoImplCopyWith(
+          _$BasicInfoImpl value, $Res Function(_$BasicInfoImpl) then) =
+      __$$BasicInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {Name name,
       PhoneNumber phoneNumber,
-      EmailAddress emailAddress,
+      EmailAddress? emailAddress,
       DateOfBirth dateOfBirth,
       dynamic key});
 }
 
 /// @nodoc
-class __$$ApplicantBasicInfoFormDataImplCopyWithImpl<$Res>
-    extends _$ApplicantBasicInfoFormDataCopyWithImpl<$Res,
-        _$ApplicantBasicInfoFormDataImpl>
-    implements _$$ApplicantBasicInfoFormDataImplCopyWith<$Res> {
-  __$$ApplicantBasicInfoFormDataImplCopyWithImpl(
-      _$ApplicantBasicInfoFormDataImpl _value,
-      $Res Function(_$ApplicantBasicInfoFormDataImpl) _then)
+class __$$BasicInfoImplCopyWithImpl<$Res>
+    extends _$BasicInfoCopyWithImpl<$Res, _$BasicInfoImpl>
+    implements _$$BasicInfoImplCopyWith<$Res> {
+  __$$BasicInfoImplCopyWithImpl(
+      _$BasicInfoImpl _value, $Res Function(_$BasicInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -119,11 +113,11 @@ class __$$ApplicantBasicInfoFormDataImplCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? phoneNumber = null,
-    Object? emailAddress = null,
+    Object? emailAddress = freezed,
     Object? dateOfBirth = null,
     Object? key = freezed,
   }) {
-    return _then(_$ApplicantBasicInfoFormDataImpl(
+    return _then(_$BasicInfoImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -132,10 +126,10 @@ class __$$ApplicantBasicInfoFormDataImplCopyWithImpl<$Res>
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
               as PhoneNumber,
-      emailAddress: null == emailAddress
+      emailAddress: freezed == emailAddress
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
-              as EmailAddress,
+              as EmailAddress?,
       dateOfBirth: null == dateOfBirth
           ? _value.dateOfBirth
           : dateOfBirth // ignore: cast_nullable_to_non_nullable
@@ -150,8 +144,8 @@ class __$$ApplicantBasicInfoFormDataImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ApplicantBasicInfoFormDataImpl extends _ApplicantBasicInfoFormData {
-  const _$ApplicantBasicInfoFormDataImpl(
+class _$BasicInfoImpl extends _BasicInfo {
+  const _$BasicInfoImpl(
       {required this.name,
       required this.phoneNumber,
       required this.emailAddress,
@@ -164,7 +158,7 @@ class _$ApplicantBasicInfoFormDataImpl extends _ApplicantBasicInfoFormData {
   @override
   final PhoneNumber phoneNumber;
   @override
-  final EmailAddress emailAddress;
+  final EmailAddress? emailAddress;
   @override
   final DateOfBirth dateOfBirth;
   @override
@@ -172,14 +166,14 @@ class _$ApplicantBasicInfoFormDataImpl extends _ApplicantBasicInfoFormData {
 
   @override
   String toString() {
-    return 'ApplicantBasicInfoFormData(name: $name, phoneNumber: $phoneNumber, emailAddress: $emailAddress, dateOfBirth: $dateOfBirth, key: $key)';
+    return 'BasicInfo(name: $name, phoneNumber: $phoneNumber, emailAddress: $emailAddress, dateOfBirth: $dateOfBirth, key: $key)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ApplicantBasicInfoFormDataImpl &&
+            other is _$BasicInfoImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.phoneNumber, phoneNumber) ||
                 other.phoneNumber == phoneNumber) &&
@@ -197,32 +191,31 @@ class _$ApplicantBasicInfoFormDataImpl extends _ApplicantBasicInfoFormData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ApplicantBasicInfoFormDataImplCopyWith<_$ApplicantBasicInfoFormDataImpl>
-      get copyWith => __$$ApplicantBasicInfoFormDataImplCopyWithImpl<
-          _$ApplicantBasicInfoFormDataImpl>(this, _$identity);
+  _$$BasicInfoImplCopyWith<_$BasicInfoImpl> get copyWith =>
+      __$$BasicInfoImplCopyWithImpl<_$BasicInfoImpl>(this, _$identity);
 }
 
-abstract class _ApplicantBasicInfoFormData extends ApplicantBasicInfoFormData {
-  const factory _ApplicantBasicInfoFormData(
+abstract class _BasicInfo extends BasicInfo {
+  const factory _BasicInfo(
       {required final Name name,
       required final PhoneNumber phoneNumber,
-      required final EmailAddress emailAddress,
+      required final EmailAddress? emailAddress,
       required final DateOfBirth dateOfBirth,
-      final dynamic key}) = _$ApplicantBasicInfoFormDataImpl;
-  const _ApplicantBasicInfoFormData._() : super._();
+      final dynamic key}) = _$BasicInfoImpl;
+  const _BasicInfo._() : super._();
 
   @override
   Name get name;
   @override
   PhoneNumber get phoneNumber;
   @override
-  EmailAddress get emailAddress;
+  EmailAddress? get emailAddress;
   @override
   DateOfBirth get dateOfBirth;
   @override
   dynamic get key;
   @override
   @JsonKey(ignore: true)
-  _$$ApplicantBasicInfoFormDataImplCopyWith<_$ApplicantBasicInfoFormDataImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$BasicInfoImplCopyWith<_$BasicInfoImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

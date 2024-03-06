@@ -3,24 +3,24 @@ import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/core/value_failure.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'applicant_basic_info_form_data.freezed.dart';
+part 'basic_info.freezed.dart';
 
 @freezed
-class ApplicantBasicInfoFormData with _$ApplicantBasicInfoFormData {
-  const ApplicantBasicInfoFormData._();
-  const factory ApplicantBasicInfoFormData({
+class BasicInfo with _$BasicInfo {
+  const BasicInfo._();
+  const factory BasicInfo({
     required Name name,
     required PhoneNumber phoneNumber,
-    required EmailAddress emailAddress,
+    required EmailAddress? emailAddress,
     required DateOfBirth dateOfBirth,
     dynamic key,
-  }) = _ApplicantBasicInfoFormData;
+  }) = _BasicInfo;
 
-  factory ApplicantBasicInfoFormData.empty() {
-    return ApplicantBasicInfoFormData(
+  factory BasicInfo.empty() {
+    return BasicInfo(
       name: Name(''),
       phoneNumber: PhoneNumber(''),
-      emailAddress: EmailAddress(''),
+      emailAddress: null,
       dateOfBirth: DateOfBirth(''),
     );
   }
@@ -28,7 +28,9 @@ class ApplicantBasicInfoFormData with _$ApplicantBasicInfoFormData {
   Option<ValueFailure<dynamic>> get failureOption {
     return name.failureOrUnit
         .andThen(phoneNumber.failureOrUnit)
-        .andThen(emailAddress.failureOrUnit)
+        .andThen(
+          emailAddress == null ? right(unit) : emailAddress!.failureOrUnit,
+        )
         .andThen(dateOfBirth.failureOrUnit)
         .fold((f) => some(f), (_) => none());
   }

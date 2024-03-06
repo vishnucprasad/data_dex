@@ -15,8 +15,9 @@ class EmailInputField extends HookWidget {
     return BlocConsumer<ApplicantFormBloc, ApplicantFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text =
-            state.basicInfo.emailAddress.value.getOrElse(() => '');
+        controller.text = state.basicInfo.emailAddress != null
+            ? state.basicInfo.emailAddress!.value.getOrElse(() => '')
+            : '';
       },
       builder: (context, state) {
         return TextFormField(
@@ -51,7 +52,7 @@ class EmailInputField extends HookWidget {
               .state
               .basicInfo
               .emailAddress
-              .value
+              ?.value
               .fold(
                 (f) => state.formStep == 0
                     ? f.maybeMap(

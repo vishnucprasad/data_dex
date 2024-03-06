@@ -5,10 +5,12 @@ class StepperNextButton extends StatelessWidget {
   const StepperNextButton({
     super.key,
     required this.isLastStep,
+    required this.isSaving,
     required this.onPressed,
   });
 
   final bool isLastStep;
+  final bool isSaving;
   final void Function()? onPressed;
 
   @override
@@ -31,7 +33,11 @@ class StepperNextButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Text(
-          isLastStep ? 'Save' : 'Next',
+          isLastStep
+              ? isSaving
+                  ? 'Saving ...'
+                  : 'Save'
+              : 'Next',
           style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,

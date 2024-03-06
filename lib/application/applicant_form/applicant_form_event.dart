@@ -34,4 +34,5 @@ class ApplicantFormEvent with _$ApplicantFormEvent {
   const factory ApplicantFormEvent.openLocationInMap() = _OpenLocationInMap;
   const factory ApplicantFormEvent.takeImage() = _TakeImage;
   const factory ApplicantFormEvent.pickImage() = _PickImage;
+  const factory ApplicantFormEvent.saveApplicant() = _SaveApplicant;
 }
