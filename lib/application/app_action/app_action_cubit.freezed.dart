@@ -17,6 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$AppActionState {
   int get bottomNavIndex => throw _privateConstructorUsedError;
+  Option<Either<CommonFailure, Unit>> get failureOrSuccess =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppActionStateCopyWith<AppActionState> get copyWith =>
@@ -29,7 +31,9 @@ abstract class $AppActionStateCopyWith<$Res> {
           AppActionState value, $Res Function(AppActionState) then) =
       _$AppActionStateCopyWithImpl<$Res, AppActionState>;
   @useResult
-  $Res call({int bottomNavIndex});
+  $Res call(
+      {int bottomNavIndex,
+      Option<Either<CommonFailure, Unit>> failureOrSuccess});
 }
 
 /// @nodoc
@@ -46,12 +50,17 @@ class _$AppActionStateCopyWithImpl<$Res, $Val extends AppActionState>
   @override
   $Res call({
     Object? bottomNavIndex = null,
+    Object? failureOrSuccess = null,
   }) {
     return _then(_value.copyWith(
       bottomNavIndex: null == bottomNavIndex
           ? _value.bottomNavIndex
           : bottomNavIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      failureOrSuccess: null == failureOrSuccess
+          ? _value.failureOrSuccess
+          : failureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Option<Either<CommonFailure, Unit>>,
     ) as $Val);
   }
 }
@@ -64,7 +73,9 @@ abstract class _$$AppActionStateImplCopyWith<$Res>
       __$$AppActionStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int bottomNavIndex});
+  $Res call(
+      {int bottomNavIndex,
+      Option<Either<CommonFailure, Unit>> failureOrSuccess});
 }
 
 /// @nodoc
@@ -79,12 +90,17 @@ class __$$AppActionStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? bottomNavIndex = null,
+    Object? failureOrSuccess = null,
   }) {
     return _then(_$AppActionStateImpl(
       bottomNavIndex: null == bottomNavIndex
           ? _value.bottomNavIndex
           : bottomNavIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      failureOrSuccess: null == failureOrSuccess
+          ? _value.failureOrSuccess
+          : failureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Option<Either<CommonFailure, Unit>>,
     ));
   }
 }
@@ -92,14 +108,17 @@ class __$$AppActionStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AppActionStateImpl implements _AppActionState {
-  const _$AppActionStateImpl({required this.bottomNavIndex});
+  const _$AppActionStateImpl(
+      {required this.bottomNavIndex, required this.failureOrSuccess});
 
   @override
   final int bottomNavIndex;
+  @override
+  final Option<Either<CommonFailure, Unit>> failureOrSuccess;
 
   @override
   String toString() {
-    return 'AppActionState(bottomNavIndex: $bottomNavIndex)';
+    return 'AppActionState(bottomNavIndex: $bottomNavIndex, failureOrSuccess: $failureOrSuccess)';
   }
 
   @override
@@ -108,11 +127,14 @@ class _$AppActionStateImpl implements _AppActionState {
         (other.runtimeType == runtimeType &&
             other is _$AppActionStateImpl &&
             (identical(other.bottomNavIndex, bottomNavIndex) ||
-                other.bottomNavIndex == bottomNavIndex));
+                other.bottomNavIndex == bottomNavIndex) &&
+            (identical(other.failureOrSuccess, failureOrSuccess) ||
+                other.failureOrSuccess == failureOrSuccess));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, bottomNavIndex);
+  int get hashCode =>
+      Object.hash(runtimeType, bottomNavIndex, failureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -123,11 +145,15 @@ class _$AppActionStateImpl implements _AppActionState {
 }
 
 abstract class _AppActionState implements AppActionState {
-  const factory _AppActionState({required final int bottomNavIndex}) =
-      _$AppActionStateImpl;
+  const factory _AppActionState(
+      {required final int bottomNavIndex,
+      required final Option<Either<CommonFailure, Unit>>
+          failureOrSuccess}) = _$AppActionStateImpl;
 
   @override
   int get bottomNavIndex;
+  @override
+  Option<Either<CommonFailure, Unit>> get failureOrSuccess;
   @override
   @JsonKey(ignore: true)
   _$$AppActionStateImplCopyWith<_$AppActionStateImpl> get copyWith =>

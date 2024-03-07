@@ -1,6 +1,5 @@
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/pages/home_page/screens/widgets/screen_title.dart';
-import 'package:data_dex/presentation/pages/home_page/widgets/loan_card.dart';
 import 'package:flutter/material.dart';
 
 class FollowUpScreen extends StatelessWidget {
@@ -8,16 +7,23 @@ class FollowUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        const ScreenTitle(title: 'Follow up'),
+        ScreenTitle(title: 'Follow up'),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: ListView(
-              children: const [
-                LoanCard(),
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.not_interested, size: 62),
                 kHeight,
+                Text(
+                  'There are currently no loans to follow up',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
               ],
             ),
           ),

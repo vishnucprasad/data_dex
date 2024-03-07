@@ -1,49 +1,120 @@
+import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:data_dex/application/app_action/app_action_cubit.dart';
+import 'package:data_dex/domain/core/constants.dart';
+import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 
 class LoanCard extends StatelessWidget {
   const LoanCard({
     super.key,
+    required this.loan,
   });
+
+  final Loan loan;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(16),
           width: double.infinity,
           decoration: BoxDecoration(
             color: Colors.lightBlue.shade600,
             borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(32),
-              topRight: Radius.circular(32),
+              topLeft: Radius.circular(16),
+              topRight: Radius.circular(16),
             ),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Disbursment date:',
-                style: TextStyle(
-                  color: kSecondaryColor,
+          child: LoanStatus.values[loan.loanStatusIndex] == LoanStatus.pending
+              ? Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton.icon(
+                        style: ButtonStyle(
+                          elevation: const MaterialStatePropertyAll<double>(0),
+                          backgroundColor:
+                              const MaterialStatePropertyAll<Color>(
+                            Colors.transparent,
+                          ),
+                          foregroundColor:
+                              const MaterialStatePropertyAll<Color>(
+                            kSecondaryColor,
+                          ),
+                          shape:
+                              MaterialStatePropertyAll<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                              side: const BorderSide(
+                                width: 2,
+                                color: kSecondaryColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                        onPressed: () {},
+                        label: const Text(
+                          'Disburse',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        icon: const Icon(Icons.check),
+                      ),
+                    ),
+                    kWidthMd,
+                    SizedBox(
+                      width: 75,
+                      child: IconButton(
+                        style: ButtonStyle(
+                          elevation: const MaterialStatePropertyAll<double>(0),
+                          backgroundColor:
+                              const MaterialStatePropertyAll<Color>(
+                            kSecondaryColor,
+                          ),
+                          foregroundColor: MaterialStatePropertyAll<Color>(
+                            Colors.lightBlue.shade600,
+                          ),
+                          shape:
+                              MaterialStatePropertyAll<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          ),
+                        ),
+                        onPressed: () {},
+                        icon: const Icon(Icons.edit_square),
+                      ),
+                    ),
+                  ],
+                )
+              : Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Disbursment date:',
+                      style: TextStyle(
+                        color: kSecondaryColor,
+                      ),
+                    ),
+                    Text(
+                      DateFormat.yMMMMEEEEd().format(DateTime.now()),
+                      style: const TextStyle(
+                        color: kLightColor,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              Text(
-                DateFormat.yMMMMEEEEd().format(DateTime.now()),
-                style: const TextStyle(
-                  color: kLightColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
         ),
         Container(
-          padding: const EdgeInsets.all(32),
+          padding: const EdgeInsets.all(16),
           width: double.infinity,
           decoration: const BoxDecoration(
             color: kSecondaryColor,
@@ -56,28 +127,48 @@ class LoanCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Container(
-                    height: 80,
-                    width: 80,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(28),
-                      image: const DecorationImage(
-                        image: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/81964443?v=4',
+                  LoanStatus.values[loan.loanStatusIndex] ==
+                              LoanStatus.pending ||
+                          LoanStatus.values[loan.loanStatusIndex] ==
+                              LoanStatus.dropped
+                      ? Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(28),
+                            color: kLightColor,
+                          ),
+                          child: const Center(
+                            child: Icon(
+                              Icons.person,
+                              size: 48,
+                            ),
+                          ),
+                        )
+                      : Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(28),
+                            image: const DecorationImage(
+                              image: NetworkImage(
+                                'https://avatars.githubusercontent.com/u/81964443?v=4',
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
                   kWidth,
-                  const Flexible(
+                  SizedBox(
+                    width: 180,
                     child: Text(
-                      'Subin Lahayil Reghuvaran',
-                      style: TextStyle(
+                      loan.applicant.basicInfo.name.getOrCrash(),
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
+                  const Spacer(),
                   Icon(
                     Icons.info_outline,
                     size: 36,
@@ -85,7 +176,7 @@ class LoanCard extends StatelessWidget {
                   ),
                 ],
               ),
-              kHeight,
+              kHeightMd,
               Row(
                 children: [
                   Expanded(
@@ -99,7 +190,11 @@ class LoanCard extends StatelessWidget {
                           kLightColor,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () => context
+                          .read<AppActionCubit>()
+                          .openPhoneNumberInDialer(
+                            loan.applicant.basicInfo.phoneNumber.getOrCrash(),
+                          ),
                       label: const Text('Call'),
                       icon: const Icon(Icons.call),
                     ),
@@ -116,7 +211,16 @@ class LoanCard extends StatelessWidget {
                           kPrimaryColor,
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () => Clipboard.setData(
+                        ClipboardData(
+                          text:
+                              loan.applicant.basicInfo.phoneNumber.getOrCrash(),
+                        ),
+                      ).then(
+                        (_) => FlushbarHelper.createSuccess(
+                          message: 'Phone number copied!',
+                        ).show(context),
+                      ),
                       label: const Text('Copy'),
                       icon: const Icon(Icons.copy),
                     ),
