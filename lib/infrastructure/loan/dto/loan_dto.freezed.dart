@@ -24,6 +24,7 @@ mixin _$LoanDto {
   String? get id => throw _privateConstructorUsedError;
   int get loanStatusIndex => throw _privateConstructorUsedError;
   ApplicantDto get applicant => throw _privateConstructorUsedError;
+  CoApplicantDto? get coApplicant => throw _privateConstructorUsedError;
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp => throw _privateConstructorUsedError;
 
@@ -41,9 +42,11 @@ abstract class $LoanDtoCopyWith<$Res> {
       {@JsonKey(includeToJson: false, includeFromJson: false) String? id,
       int loanStatusIndex,
       ApplicantDto applicant,
+      CoApplicantDto? coApplicant,
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 
   $ApplicantDtoCopyWith<$Res> get applicant;
+  $CoApplicantDtoCopyWith<$Res>? get coApplicant;
 }
 
 /// @nodoc
@@ -62,6 +65,7 @@ class _$LoanDtoCopyWithImpl<$Res, $Val extends LoanDto>
     Object? id = freezed,
     Object? loanStatusIndex = null,
     Object? applicant = null,
+    Object? coApplicant = freezed,
     Object? serverTimeStamp = null,
   }) {
     return _then(_value.copyWith(
@@ -77,6 +81,10 @@ class _$LoanDtoCopyWithImpl<$Res, $Val extends LoanDto>
           ? _value.applicant
           : applicant // ignore: cast_nullable_to_non_nullable
               as ApplicantDto,
+      coApplicant: freezed == coApplicant
+          ? _value.coApplicant
+          : coApplicant // ignore: cast_nullable_to_non_nullable
+              as CoApplicantDto?,
       serverTimeStamp: null == serverTimeStamp
           ? _value.serverTimeStamp
           : serverTimeStamp // ignore: cast_nullable_to_non_nullable
@@ -89,6 +97,18 @@ class _$LoanDtoCopyWithImpl<$Res, $Val extends LoanDto>
   $ApplicantDtoCopyWith<$Res> get applicant {
     return $ApplicantDtoCopyWith<$Res>(_value.applicant, (value) {
       return _then(_value.copyWith(applicant: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CoApplicantDtoCopyWith<$Res>? get coApplicant {
+    if (_value.coApplicant == null) {
+      return null;
+    }
+
+    return $CoApplicantDtoCopyWith<$Res>(_value.coApplicant!, (value) {
+      return _then(_value.copyWith(coApplicant: value) as $Val);
     });
   }
 }
@@ -104,10 +124,13 @@ abstract class _$$LoanDtoImplCopyWith<$Res> implements $LoanDtoCopyWith<$Res> {
       {@JsonKey(includeToJson: false, includeFromJson: false) String? id,
       int loanStatusIndex,
       ApplicantDto applicant,
+      CoApplicantDto? coApplicant,
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 
   @override
   $ApplicantDtoCopyWith<$Res> get applicant;
+  @override
+  $CoApplicantDtoCopyWith<$Res>? get coApplicant;
 }
 
 /// @nodoc
@@ -124,6 +147,7 @@ class __$$LoanDtoImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? loanStatusIndex = null,
     Object? applicant = null,
+    Object? coApplicant = freezed,
     Object? serverTimeStamp = null,
   }) {
     return _then(_$LoanDtoImpl(
@@ -139,6 +163,10 @@ class __$$LoanDtoImplCopyWithImpl<$Res>
           ? _value.applicant
           : applicant // ignore: cast_nullable_to_non_nullable
               as ApplicantDto,
+      coApplicant: freezed == coApplicant
+          ? _value.coApplicant
+          : coApplicant // ignore: cast_nullable_to_non_nullable
+              as CoApplicantDto?,
       serverTimeStamp: null == serverTimeStamp
           ? _value.serverTimeStamp
           : serverTimeStamp // ignore: cast_nullable_to_non_nullable
@@ -155,6 +183,7 @@ class _$LoanDtoImpl extends _LoanDto {
       {@JsonKey(includeToJson: false, includeFromJson: false) this.id,
       required this.loanStatusIndex,
       required this.applicant,
+      required this.coApplicant,
       @ServerTimeStampConverter() required this.serverTimeStamp})
       : super._();
 
@@ -169,12 +198,14 @@ class _$LoanDtoImpl extends _LoanDto {
   @override
   final ApplicantDto applicant;
   @override
+  final CoApplicantDto? coApplicant;
+  @override
   @ServerTimeStampConverter()
   final FieldValue serverTimeStamp;
 
   @override
   String toString() {
-    return 'LoanDto(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, serverTimeStamp: $serverTimeStamp)';
+    return 'LoanDto(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, coApplicant: $coApplicant, serverTimeStamp: $serverTimeStamp)';
   }
 
   @override
@@ -187,14 +218,16 @@ class _$LoanDtoImpl extends _LoanDto {
                 other.loanStatusIndex == loanStatusIndex) &&
             (identical(other.applicant, applicant) ||
                 other.applicant == applicant) &&
+            (identical(other.coApplicant, coApplicant) ||
+                other.coApplicant == coApplicant) &&
             (identical(other.serverTimeStamp, serverTimeStamp) ||
                 other.serverTimeStamp == serverTimeStamp));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, loanStatusIndex, applicant, serverTimeStamp);
+  int get hashCode => Object.hash(runtimeType, id, loanStatusIndex, applicant,
+      coApplicant, serverTimeStamp);
 
   @JsonKey(ignore: true)
   @override
@@ -215,6 +248,7 @@ abstract class _LoanDto extends LoanDto {
       {@JsonKey(includeToJson: false, includeFromJson: false) final String? id,
       required final int loanStatusIndex,
       required final ApplicantDto applicant,
+      required final CoApplicantDto? coApplicant,
       @ServerTimeStampConverter()
       required final FieldValue serverTimeStamp}) = _$LoanDtoImpl;
   const _LoanDto._() : super._();
@@ -228,6 +262,8 @@ abstract class _LoanDto extends LoanDto {
   int get loanStatusIndex;
   @override
   ApplicantDto get applicant;
+  @override
+  CoApplicantDto? get coApplicant;
   @override
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;

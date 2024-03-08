@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/infrastructure/applicant/dto/applicant_dto.dart';
+import 'package:data_dex/infrastructure/co_applicant/dto/co_applicant_dto.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'loan_dto.freezed.dart';
@@ -18,6 +19,7 @@ class LoanDto with _$LoanDto {
     @JsonKey(includeToJson: false, includeFromJson: false) String? id,
     required int loanStatusIndex,
     required ApplicantDto applicant,
+    required CoApplicantDto? coApplicant,
     @ServerTimeStampConverter() required FieldValue serverTimeStamp,
   }) = _LoanDto;
 
@@ -26,6 +28,9 @@ class LoanDto with _$LoanDto {
       id: loan.id.getOrCrash(),
       loanStatusIndex: loan.loanStatusIndex,
       applicant: ApplicantDto.fromDomain(loan.applicant),
+      coApplicant: loan.coApplicant != null
+          ? CoApplicantDto.fromDomain(loan.coApplicant!)
+          : null,
       serverTimeStamp: FieldValue.serverTimestamp(),
     );
   }
@@ -35,6 +40,7 @@ class LoanDto with _$LoanDto {
       id: UniqueId.fromUniqueString(id),
       loanStatusIndex: loanStatusIndex,
       applicant: applicant.toDomain(),
+      coApplicant: coApplicant?.toDomain(),
     );
   }
 

@@ -1,12 +1,14 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart';
+import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/image_picker_button.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/image_picker_container.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/location_picker_button.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/location_picker_container.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_more_details_form/take_image_button.dart';
+import 'package:data_dex/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -29,11 +31,14 @@ class ApplicantMoreDetailsForm extends StatelessWidget {
                 unableToDelete: (_) => 'Unable to delete note',
               ),
             ).show(context),
-            (_) {
+            (loanId) {
               context
                   .read<ApplicantFormBloc>()
                   .add(const ApplicantFormEvent.initialized());
-              context.popRoute();
+              context
+                  .read<CoApplicantFormBloc>()
+                  .add(CoApplicantFormEvent.loanIdChanged(loanId));
+              context.replaceRoute(const AddCoApplicantRoute());
             },
           ),
         );

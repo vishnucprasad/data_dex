@@ -19,6 +19,7 @@ mixin _$Loan {
   UniqueId get id => throw _privateConstructorUsedError;
   int get loanStatusIndex => throw _privateConstructorUsedError;
   Applicant get applicant => throw _privateConstructorUsedError;
+  CoApplicant? get coApplicant => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LoanCopyWith<Loan> get copyWith => throw _privateConstructorUsedError;
@@ -29,9 +30,14 @@ abstract class $LoanCopyWith<$Res> {
   factory $LoanCopyWith(Loan value, $Res Function(Loan) then) =
       _$LoanCopyWithImpl<$Res, Loan>;
   @useResult
-  $Res call({UniqueId id, int loanStatusIndex, Applicant applicant});
+  $Res call(
+      {UniqueId id,
+      int loanStatusIndex,
+      Applicant applicant,
+      CoApplicant? coApplicant});
 
   $ApplicantCopyWith<$Res> get applicant;
+  $CoApplicantCopyWith<$Res>? get coApplicant;
 }
 
 /// @nodoc
@@ -50,6 +56,7 @@ class _$LoanCopyWithImpl<$Res, $Val extends Loan>
     Object? id = null,
     Object? loanStatusIndex = null,
     Object? applicant = null,
+    Object? coApplicant = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -64,6 +71,10 @@ class _$LoanCopyWithImpl<$Res, $Val extends Loan>
           ? _value.applicant
           : applicant // ignore: cast_nullable_to_non_nullable
               as Applicant,
+      coApplicant: freezed == coApplicant
+          ? _value.coApplicant
+          : coApplicant // ignore: cast_nullable_to_non_nullable
+              as CoApplicant?,
     ) as $Val);
   }
 
@@ -72,6 +83,18 @@ class _$LoanCopyWithImpl<$Res, $Val extends Loan>
   $ApplicantCopyWith<$Res> get applicant {
     return $ApplicantCopyWith<$Res>(_value.applicant, (value) {
       return _then(_value.copyWith(applicant: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CoApplicantCopyWith<$Res>? get coApplicant {
+    if (_value.coApplicant == null) {
+      return null;
+    }
+
+    return $CoApplicantCopyWith<$Res>(_value.coApplicant!, (value) {
+      return _then(_value.copyWith(coApplicant: value) as $Val);
     });
   }
 }
@@ -83,10 +106,16 @@ abstract class _$$LoanImplCopyWith<$Res> implements $LoanCopyWith<$Res> {
       __$$LoanImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UniqueId id, int loanStatusIndex, Applicant applicant});
+  $Res call(
+      {UniqueId id,
+      int loanStatusIndex,
+      Applicant applicant,
+      CoApplicant? coApplicant});
 
   @override
   $ApplicantCopyWith<$Res> get applicant;
+  @override
+  $CoApplicantCopyWith<$Res>? get coApplicant;
 }
 
 /// @nodoc
@@ -102,6 +131,7 @@ class __$$LoanImplCopyWithImpl<$Res>
     Object? id = null,
     Object? loanStatusIndex = null,
     Object? applicant = null,
+    Object? coApplicant = freezed,
   }) {
     return _then(_$LoanImpl(
       id: null == id
@@ -116,6 +146,10 @@ class __$$LoanImplCopyWithImpl<$Res>
           ? _value.applicant
           : applicant // ignore: cast_nullable_to_non_nullable
               as Applicant,
+      coApplicant: freezed == coApplicant
+          ? _value.coApplicant
+          : coApplicant // ignore: cast_nullable_to_non_nullable
+              as CoApplicant?,
     ));
   }
 }
@@ -126,7 +160,8 @@ class _$LoanImpl implements _Loan {
   const _$LoanImpl(
       {required this.id,
       required this.loanStatusIndex,
-      required this.applicant});
+      required this.applicant,
+      this.coApplicant});
 
   @override
   final UniqueId id;
@@ -134,10 +169,12 @@ class _$LoanImpl implements _Loan {
   final int loanStatusIndex;
   @override
   final Applicant applicant;
+  @override
+  final CoApplicant? coApplicant;
 
   @override
   String toString() {
-    return 'Loan(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant)';
+    return 'Loan(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, coApplicant: $coApplicant)';
   }
 
   @override
@@ -149,11 +186,14 @@ class _$LoanImpl implements _Loan {
             (identical(other.loanStatusIndex, loanStatusIndex) ||
                 other.loanStatusIndex == loanStatusIndex) &&
             (identical(other.applicant, applicant) ||
-                other.applicant == applicant));
+                other.applicant == applicant) &&
+            (identical(other.coApplicant, coApplicant) ||
+                other.coApplicant == coApplicant));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, loanStatusIndex, applicant);
+  int get hashCode =>
+      Object.hash(runtimeType, id, loanStatusIndex, applicant, coApplicant);
 
   @JsonKey(ignore: true)
   @override
@@ -166,7 +206,8 @@ abstract class _Loan implements Loan {
   const factory _Loan(
       {required final UniqueId id,
       required final int loanStatusIndex,
-      required final Applicant applicant}) = _$LoanImpl;
+      required final Applicant applicant,
+      final CoApplicant? coApplicant}) = _$LoanImpl;
 
   @override
   UniqueId get id;
@@ -174,6 +215,8 @@ abstract class _Loan implements Loan {
   int get loanStatusIndex;
   @override
   Applicant get applicant;
+  @override
+  CoApplicant? get coApplicant;
   @override
   @JsonKey(ignore: true)
   _$$LoanImplCopyWith<_$LoanImpl> get copyWith =>

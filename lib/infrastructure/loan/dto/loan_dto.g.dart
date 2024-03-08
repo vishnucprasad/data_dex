@@ -11,6 +11,10 @@ _$LoanDtoImpl _$$LoanDtoImplFromJson(Map<String, dynamic> json) =>
       loanStatusIndex: json['loanStatusIndex'] as int,
       applicant:
           ApplicantDto.fromJson(json['applicant'] as Map<String, dynamic>),
+      coApplicant: json['coApplicant'] == null
+          ? null
+          : CoApplicantDto.fromJson(
+              json['coApplicant'] as Map<String, dynamic>),
       serverTimeStamp: const ServerTimeStampConverter()
           .fromJson(json['serverTimeStamp'] as Object),
     );
@@ -19,6 +23,7 @@ Map<String, dynamic> _$$LoanDtoImplToJson(_$LoanDtoImpl instance) =>
     <String, dynamic>{
       'loanStatusIndex': instance.loanStatusIndex,
       'applicant': instance.applicant.toJson(),
+      'coApplicant': instance.coApplicant?.toJson(),
       'serverTimeStamp':
           const ServerTimeStampConverter().toJson(instance.serverTimeStamp),
     };
