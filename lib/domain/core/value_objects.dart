@@ -130,3 +130,69 @@ class PinCode extends ValueObject<String> {
   }
   const PinCode._(this.value);
 }
+
+class RequiredPrice extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory RequiredPrice(String input) {
+    return RequiredPrice._(
+      validateStringNotEmpty(
+        input,
+      ).flatMap(validateUnsignedDouble),
+    );
+  }
+  const RequiredPrice._(this.value);
+}
+
+class OptionalPrice extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory OptionalPrice(String input) {
+    return OptionalPrice._(
+      validateUnsignedDouble(
+        input,
+      ),
+    );
+  }
+  const OptionalPrice._(this.value);
+}
+
+class LTVData extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory LTVData(String input) {
+    return LTVData._(
+      validateStringNotEmpty(
+        input,
+      ).flatMap(validatePercentageString),
+    );
+  }
+  const LTVData._(this.value);
+}
+
+class EMIDate extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory EMIDate(String input) {
+    return EMIDate._(validateStringNotEmpty(input));
+  }
+  const EMIDate._(this.value);
+}
+
+class Tenure extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory Tenure(String input) {
+    return Tenure._(validateStringNotEmpty(input));
+  }
+  const Tenure._(this.value);
+}
+
+class RepaymentMode extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory RepaymentMode(String input) {
+    return RepaymentMode._(validateStringNotEmpty(input));
+  }
+  const RepaymentMode._(this.value);
+}

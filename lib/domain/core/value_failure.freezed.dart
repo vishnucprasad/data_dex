@@ -23,6 +23,8 @@ mixin _$ValueFailure<T> {
     required TResult Function(T failedValue, int length) stringLength,
     required TResult Function(T failedValue) multiLine,
     required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
     required TResult Function(T failedValue) empty,
     required TResult Function(T failedValue) invalid,
   }) =>
@@ -33,6 +35,8 @@ mixin _$ValueFailure<T> {
     TResult? Function(T failedValue, int length)? stringLength,
     TResult? Function(T failedValue)? multiLine,
     TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
     TResult? Function(T failedValue)? empty,
     TResult? Function(T failedValue)? invalid,
   }) =>
@@ -43,6 +47,8 @@ mixin _$ValueFailure<T> {
     TResult Function(T failedValue, int length)? stringLength,
     TResult Function(T failedValue)? multiLine,
     TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
     TResult Function(T failedValue)? empty,
     TResult Function(T failedValue)? invalid,
     required TResult orElse(),
@@ -54,6 +60,8 @@ mixin _$ValueFailure<T> {
     required TResult Function(_StringLength<T> value) stringLength,
     required TResult Function(_MultiLine<T> value) multiLine,
     required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
     required TResult Function(_Empty<T> value) empty,
     required TResult Function(_Invalid<T> value) invalid,
   }) =>
@@ -64,6 +72,8 @@ mixin _$ValueFailure<T> {
     TResult? Function(_StringLength<T> value)? stringLength,
     TResult? Function(_MultiLine<T> value)? multiLine,
     TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
     TResult? Function(_Empty<T> value)? empty,
     TResult? Function(_Invalid<T> value)? invalid,
   }) =>
@@ -74,6 +84,8 @@ mixin _$ValueFailure<T> {
     TResult Function(_StringLength<T> value)? stringLength,
     TResult Function(_MultiLine<T> value)? multiLine,
     TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
     TResult Function(_Empty<T> value)? empty,
     TResult Function(_Invalid<T> value)? invalid,
     required TResult orElse(),
@@ -201,6 +213,8 @@ class _$ExceedingLengthImpl<T> implements _ExceedingLength<T> {
     required TResult Function(T failedValue, int length) stringLength,
     required TResult Function(T failedValue) multiLine,
     required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
     required TResult Function(T failedValue) empty,
     required TResult Function(T failedValue) invalid,
   }) {
@@ -214,6 +228,8 @@ class _$ExceedingLengthImpl<T> implements _ExceedingLength<T> {
     TResult? Function(T failedValue, int length)? stringLength,
     TResult? Function(T failedValue)? multiLine,
     TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
     TResult? Function(T failedValue)? empty,
     TResult? Function(T failedValue)? invalid,
   }) {
@@ -227,6 +243,8 @@ class _$ExceedingLengthImpl<T> implements _ExceedingLength<T> {
     TResult Function(T failedValue, int length)? stringLength,
     TResult Function(T failedValue)? multiLine,
     TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
     TResult Function(T failedValue)? empty,
     TResult Function(T failedValue)? invalid,
     required TResult orElse(),
@@ -244,6 +262,8 @@ class _$ExceedingLengthImpl<T> implements _ExceedingLength<T> {
     required TResult Function(_StringLength<T> value) stringLength,
     required TResult Function(_MultiLine<T> value) multiLine,
     required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
     required TResult Function(_Empty<T> value) empty,
     required TResult Function(_Invalid<T> value) invalid,
   }) {
@@ -257,6 +277,8 @@ class _$ExceedingLengthImpl<T> implements _ExceedingLength<T> {
     TResult? Function(_StringLength<T> value)? stringLength,
     TResult? Function(_MultiLine<T> value)? multiLine,
     TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
     TResult? Function(_Empty<T> value)? empty,
     TResult? Function(_Invalid<T> value)? invalid,
   }) {
@@ -270,6 +292,8 @@ class _$ExceedingLengthImpl<T> implements _ExceedingLength<T> {
     TResult Function(_StringLength<T> value)? stringLength,
     TResult Function(_MultiLine<T> value)? multiLine,
     TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
     TResult Function(_Empty<T> value)? empty,
     TResult Function(_Invalid<T> value)? invalid,
     required TResult orElse(),
@@ -376,6 +400,8 @@ class _$StringLengthImpl<T> implements _StringLength<T> {
     required TResult Function(T failedValue, int length) stringLength,
     required TResult Function(T failedValue) multiLine,
     required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
     required TResult Function(T failedValue) empty,
     required TResult Function(T failedValue) invalid,
   }) {
@@ -389,6 +415,8 @@ class _$StringLengthImpl<T> implements _StringLength<T> {
     TResult? Function(T failedValue, int length)? stringLength,
     TResult? Function(T failedValue)? multiLine,
     TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
     TResult? Function(T failedValue)? empty,
     TResult? Function(T failedValue)? invalid,
   }) {
@@ -402,6 +430,8 @@ class _$StringLengthImpl<T> implements _StringLength<T> {
     TResult Function(T failedValue, int length)? stringLength,
     TResult Function(T failedValue)? multiLine,
     TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
     TResult Function(T failedValue)? empty,
     TResult Function(T failedValue)? invalid,
     required TResult orElse(),
@@ -419,6 +449,8 @@ class _$StringLengthImpl<T> implements _StringLength<T> {
     required TResult Function(_StringLength<T> value) stringLength,
     required TResult Function(_MultiLine<T> value) multiLine,
     required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
     required TResult Function(_Empty<T> value) empty,
     required TResult Function(_Invalid<T> value) invalid,
   }) {
@@ -432,6 +464,8 @@ class _$StringLengthImpl<T> implements _StringLength<T> {
     TResult? Function(_StringLength<T> value)? stringLength,
     TResult? Function(_MultiLine<T> value)? multiLine,
     TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
     TResult? Function(_Empty<T> value)? empty,
     TResult? Function(_Invalid<T> value)? invalid,
   }) {
@@ -445,6 +479,8 @@ class _$StringLengthImpl<T> implements _StringLength<T> {
     TResult Function(_StringLength<T> value)? stringLength,
     TResult Function(_MultiLine<T> value)? multiLine,
     TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
     TResult Function(_Empty<T> value)? empty,
     TResult Function(_Invalid<T> value)? invalid,
     required TResult orElse(),
@@ -542,6 +578,8 @@ class _$MultiLineImpl<T> implements _MultiLine<T> {
     required TResult Function(T failedValue, int length) stringLength,
     required TResult Function(T failedValue) multiLine,
     required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
     required TResult Function(T failedValue) empty,
     required TResult Function(T failedValue) invalid,
   }) {
@@ -555,6 +593,8 @@ class _$MultiLineImpl<T> implements _MultiLine<T> {
     TResult? Function(T failedValue, int length)? stringLength,
     TResult? Function(T failedValue)? multiLine,
     TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
     TResult? Function(T failedValue)? empty,
     TResult? Function(T failedValue)? invalid,
   }) {
@@ -568,6 +608,8 @@ class _$MultiLineImpl<T> implements _MultiLine<T> {
     TResult Function(T failedValue, int length)? stringLength,
     TResult Function(T failedValue)? multiLine,
     TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
     TResult Function(T failedValue)? empty,
     TResult Function(T failedValue)? invalid,
     required TResult orElse(),
@@ -585,6 +627,8 @@ class _$MultiLineImpl<T> implements _MultiLine<T> {
     required TResult Function(_StringLength<T> value) stringLength,
     required TResult Function(_MultiLine<T> value) multiLine,
     required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
     required TResult Function(_Empty<T> value) empty,
     required TResult Function(_Invalid<T> value) invalid,
   }) {
@@ -598,6 +642,8 @@ class _$MultiLineImpl<T> implements _MultiLine<T> {
     TResult? Function(_StringLength<T> value)? stringLength,
     TResult? Function(_MultiLine<T> value)? multiLine,
     TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
     TResult? Function(_Empty<T> value)? empty,
     TResult? Function(_Invalid<T> value)? invalid,
   }) {
@@ -611,6 +657,8 @@ class _$MultiLineImpl<T> implements _MultiLine<T> {
     TResult Function(_StringLength<T> value)? stringLength,
     TResult Function(_MultiLine<T> value)? multiLine,
     TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
     TResult Function(_Empty<T> value)? empty,
     TResult Function(_Invalid<T> value)? invalid,
     required TResult orElse(),
@@ -705,6 +753,8 @@ class _$NotANumberImpl<T> implements _NotANumber<T> {
     required TResult Function(T failedValue, int length) stringLength,
     required TResult Function(T failedValue) multiLine,
     required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
     required TResult Function(T failedValue) empty,
     required TResult Function(T failedValue) invalid,
   }) {
@@ -718,6 +768,8 @@ class _$NotANumberImpl<T> implements _NotANumber<T> {
     TResult? Function(T failedValue, int length)? stringLength,
     TResult? Function(T failedValue)? multiLine,
     TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
     TResult? Function(T failedValue)? empty,
     TResult? Function(T failedValue)? invalid,
   }) {
@@ -731,6 +783,8 @@ class _$NotANumberImpl<T> implements _NotANumber<T> {
     TResult Function(T failedValue, int length)? stringLength,
     TResult Function(T failedValue)? multiLine,
     TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
     TResult Function(T failedValue)? empty,
     TResult Function(T failedValue)? invalid,
     required TResult orElse(),
@@ -748,6 +802,8 @@ class _$NotANumberImpl<T> implements _NotANumber<T> {
     required TResult Function(_StringLength<T> value) stringLength,
     required TResult Function(_MultiLine<T> value) multiLine,
     required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
     required TResult Function(_Empty<T> value) empty,
     required TResult Function(_Invalid<T> value) invalid,
   }) {
@@ -761,6 +817,8 @@ class _$NotANumberImpl<T> implements _NotANumber<T> {
     TResult? Function(_StringLength<T> value)? stringLength,
     TResult? Function(_MultiLine<T> value)? multiLine,
     TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
     TResult? Function(_Empty<T> value)? empty,
     TResult? Function(_Invalid<T> value)? invalid,
   }) {
@@ -774,6 +832,8 @@ class _$NotANumberImpl<T> implements _NotANumber<T> {
     TResult Function(_StringLength<T> value)? stringLength,
     TResult Function(_MultiLine<T> value)? multiLine,
     TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
     TResult Function(_Empty<T> value)? empty,
     TResult Function(_Invalid<T> value)? invalid,
     required TResult orElse(),
@@ -794,6 +854,359 @@ abstract class _NotANumber<T> implements ValueFailure<T> {
   @override
   @JsonKey(ignore: true)
   _$$NotANumberImplCopyWith<T, _$NotANumberImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UnsignedDoubleImplCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory _$$UnsignedDoubleImplCopyWith(_$UnsignedDoubleImpl<T> value,
+          $Res Function(_$UnsignedDoubleImpl<T>) then) =
+      __$$UnsignedDoubleImplCopyWithImpl<T, $Res>;
+  @override
+  @useResult
+  $Res call({T failedValue});
+}
+
+/// @nodoc
+class __$$UnsignedDoubleImplCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$UnsignedDoubleImpl<T>>
+    implements _$$UnsignedDoubleImplCopyWith<T, $Res> {
+  __$$UnsignedDoubleImplCopyWithImpl(_$UnsignedDoubleImpl<T> _value,
+      $Res Function(_$UnsignedDoubleImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failedValue = freezed,
+  }) {
+    return _then(_$UnsignedDoubleImpl<T>(
+      failedValue: freezed == failedValue
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UnsignedDoubleImpl<T> implements _UnsignedDouble<T> {
+  const _$UnsignedDoubleImpl({required this.failedValue});
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.unsignedDouble(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UnsignedDoubleImpl<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UnsignedDoubleImplCopyWith<T, _$UnsignedDoubleImpl<T>> get copyWith =>
+      __$$UnsignedDoubleImplCopyWithImpl<T, _$UnsignedDoubleImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue, int maxLength) exceedingLength,
+    required TResult Function(T failedValue, int length) stringLength,
+    required TResult Function(T failedValue) multiLine,
+    required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
+    required TResult Function(T failedValue) empty,
+    required TResult Function(T failedValue) invalid,
+  }) {
+    return unsignedDouble(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(T failedValue, int maxLength)? exceedingLength,
+    TResult? Function(T failedValue, int length)? stringLength,
+    TResult? Function(T failedValue)? multiLine,
+    TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? invalid,
+  }) {
+    return unsignedDouble?.call(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue, int maxLength)? exceedingLength,
+    TResult Function(T failedValue, int length)? stringLength,
+    TResult Function(T failedValue)? multiLine,
+    TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
+    TResult Function(T failedValue)? empty,
+    TResult Function(T failedValue)? invalid,
+    required TResult orElse(),
+  }) {
+    if (unsignedDouble != null) {
+      return unsignedDouble(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ExceedingLength<T> value) exceedingLength,
+    required TResult Function(_StringLength<T> value) stringLength,
+    required TResult Function(_MultiLine<T> value) multiLine,
+    required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
+    required TResult Function(_Empty<T> value) empty,
+    required TResult Function(_Invalid<T> value) invalid,
+  }) {
+    return unsignedDouble(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(_StringLength<T> value)? stringLength,
+    TResult? Function(_MultiLine<T> value)? multiLine,
+    TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
+    TResult? Function(_Empty<T> value)? empty,
+    TResult? Function(_Invalid<T> value)? invalid,
+  }) {
+    return unsignedDouble?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ExceedingLength<T> value)? exceedingLength,
+    TResult Function(_StringLength<T> value)? stringLength,
+    TResult Function(_MultiLine<T> value)? multiLine,
+    TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
+    TResult Function(_Empty<T> value)? empty,
+    TResult Function(_Invalid<T> value)? invalid,
+    required TResult orElse(),
+  }) {
+    if (unsignedDouble != null) {
+      return unsignedDouble(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UnsignedDouble<T> implements ValueFailure<T> {
+  const factory _UnsignedDouble({required final T failedValue}) =
+      _$UnsignedDoubleImpl<T>;
+
+  @override
+  T get failedValue;
+  @override
+  @JsonKey(ignore: true)
+  _$$UnsignedDoubleImplCopyWith<T, _$UnsignedDoubleImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PercentageImplCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory _$$PercentageImplCopyWith(
+          _$PercentageImpl<T> value, $Res Function(_$PercentageImpl<T>) then) =
+      __$$PercentageImplCopyWithImpl<T, $Res>;
+  @override
+  @useResult
+  $Res call({T failedValue});
+}
+
+/// @nodoc
+class __$$PercentageImplCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$PercentageImpl<T>>
+    implements _$$PercentageImplCopyWith<T, $Res> {
+  __$$PercentageImplCopyWithImpl(
+      _$PercentageImpl<T> _value, $Res Function(_$PercentageImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failedValue = freezed,
+  }) {
+    return _then(_$PercentageImpl<T>(
+      failedValue: freezed == failedValue
+          ? _value.failedValue
+          : failedValue // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PercentageImpl<T> implements _Percentage<T> {
+  const _$PercentageImpl({required this.failedValue});
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.percentage(failedValue: $failedValue)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PercentageImpl<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PercentageImplCopyWith<T, _$PercentageImpl<T>> get copyWith =>
+      __$$PercentageImplCopyWithImpl<T, _$PercentageImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue, int maxLength) exceedingLength,
+    required TResult Function(T failedValue, int length) stringLength,
+    required TResult Function(T failedValue) multiLine,
+    required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
+    required TResult Function(T failedValue) empty,
+    required TResult Function(T failedValue) invalid,
+  }) {
+    return percentage(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(T failedValue, int maxLength)? exceedingLength,
+    TResult? Function(T failedValue, int length)? stringLength,
+    TResult? Function(T failedValue)? multiLine,
+    TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? invalid,
+  }) {
+    return percentage?.call(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue, int maxLength)? exceedingLength,
+    TResult Function(T failedValue, int length)? stringLength,
+    TResult Function(T failedValue)? multiLine,
+    TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
+    TResult Function(T failedValue)? empty,
+    TResult Function(T failedValue)? invalid,
+    required TResult orElse(),
+  }) {
+    if (percentage != null) {
+      return percentage(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ExceedingLength<T> value) exceedingLength,
+    required TResult Function(_StringLength<T> value) stringLength,
+    required TResult Function(_MultiLine<T> value) multiLine,
+    required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
+    required TResult Function(_Empty<T> value) empty,
+    required TResult Function(_Invalid<T> value) invalid,
+  }) {
+    return percentage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(_StringLength<T> value)? stringLength,
+    TResult? Function(_MultiLine<T> value)? multiLine,
+    TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
+    TResult? Function(_Empty<T> value)? empty,
+    TResult? Function(_Invalid<T> value)? invalid,
+  }) {
+    return percentage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ExceedingLength<T> value)? exceedingLength,
+    TResult Function(_StringLength<T> value)? stringLength,
+    TResult Function(_MultiLine<T> value)? multiLine,
+    TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
+    TResult Function(_Empty<T> value)? empty,
+    TResult Function(_Invalid<T> value)? invalid,
+    required TResult orElse(),
+  }) {
+    if (percentage != null) {
+      return percentage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Percentage<T> implements ValueFailure<T> {
+  const factory _Percentage({required final T failedValue}) =
+      _$PercentageImpl<T>;
+
+  @override
+  T get failedValue;
+  @override
+  @JsonKey(ignore: true)
+  _$$PercentageImplCopyWith<T, _$PercentageImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -869,6 +1282,8 @@ class _$EmptyImpl<T> implements _Empty<T> {
     required TResult Function(T failedValue, int length) stringLength,
     required TResult Function(T failedValue) multiLine,
     required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
     required TResult Function(T failedValue) empty,
     required TResult Function(T failedValue) invalid,
   }) {
@@ -882,6 +1297,8 @@ class _$EmptyImpl<T> implements _Empty<T> {
     TResult? Function(T failedValue, int length)? stringLength,
     TResult? Function(T failedValue)? multiLine,
     TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
     TResult? Function(T failedValue)? empty,
     TResult? Function(T failedValue)? invalid,
   }) {
@@ -895,6 +1312,8 @@ class _$EmptyImpl<T> implements _Empty<T> {
     TResult Function(T failedValue, int length)? stringLength,
     TResult Function(T failedValue)? multiLine,
     TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
     TResult Function(T failedValue)? empty,
     TResult Function(T failedValue)? invalid,
     required TResult orElse(),
@@ -912,6 +1331,8 @@ class _$EmptyImpl<T> implements _Empty<T> {
     required TResult Function(_StringLength<T> value) stringLength,
     required TResult Function(_MultiLine<T> value) multiLine,
     required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
     required TResult Function(_Empty<T> value) empty,
     required TResult Function(_Invalid<T> value) invalid,
   }) {
@@ -925,6 +1346,8 @@ class _$EmptyImpl<T> implements _Empty<T> {
     TResult? Function(_StringLength<T> value)? stringLength,
     TResult? Function(_MultiLine<T> value)? multiLine,
     TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
     TResult? Function(_Empty<T> value)? empty,
     TResult? Function(_Invalid<T> value)? invalid,
   }) {
@@ -938,6 +1361,8 @@ class _$EmptyImpl<T> implements _Empty<T> {
     TResult Function(_StringLength<T> value)? stringLength,
     TResult Function(_MultiLine<T> value)? multiLine,
     TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
     TResult Function(_Empty<T> value)? empty,
     TResult Function(_Invalid<T> value)? invalid,
     required TResult orElse(),
@@ -1032,6 +1457,8 @@ class _$InvalidImpl<T> implements _Invalid<T> {
     required TResult Function(T failedValue, int length) stringLength,
     required TResult Function(T failedValue) multiLine,
     required TResult Function(T failedValue) notANumber,
+    required TResult Function(T failedValue) unsignedDouble,
+    required TResult Function(T failedValue) percentage,
     required TResult Function(T failedValue) empty,
     required TResult Function(T failedValue) invalid,
   }) {
@@ -1045,6 +1472,8 @@ class _$InvalidImpl<T> implements _Invalid<T> {
     TResult? Function(T failedValue, int length)? stringLength,
     TResult? Function(T failedValue)? multiLine,
     TResult? Function(T failedValue)? notANumber,
+    TResult? Function(T failedValue)? unsignedDouble,
+    TResult? Function(T failedValue)? percentage,
     TResult? Function(T failedValue)? empty,
     TResult? Function(T failedValue)? invalid,
   }) {
@@ -1058,6 +1487,8 @@ class _$InvalidImpl<T> implements _Invalid<T> {
     TResult Function(T failedValue, int length)? stringLength,
     TResult Function(T failedValue)? multiLine,
     TResult Function(T failedValue)? notANumber,
+    TResult Function(T failedValue)? unsignedDouble,
+    TResult Function(T failedValue)? percentage,
     TResult Function(T failedValue)? empty,
     TResult Function(T failedValue)? invalid,
     required TResult orElse(),
@@ -1075,6 +1506,8 @@ class _$InvalidImpl<T> implements _Invalid<T> {
     required TResult Function(_StringLength<T> value) stringLength,
     required TResult Function(_MultiLine<T> value) multiLine,
     required TResult Function(_NotANumber<T> value) notANumber,
+    required TResult Function(_UnsignedDouble<T> value) unsignedDouble,
+    required TResult Function(_Percentage<T> value) percentage,
     required TResult Function(_Empty<T> value) empty,
     required TResult Function(_Invalid<T> value) invalid,
   }) {
@@ -1088,6 +1521,8 @@ class _$InvalidImpl<T> implements _Invalid<T> {
     TResult? Function(_StringLength<T> value)? stringLength,
     TResult? Function(_MultiLine<T> value)? multiLine,
     TResult? Function(_NotANumber<T> value)? notANumber,
+    TResult? Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult? Function(_Percentage<T> value)? percentage,
     TResult? Function(_Empty<T> value)? empty,
     TResult? Function(_Invalid<T> value)? invalid,
   }) {
@@ -1101,6 +1536,8 @@ class _$InvalidImpl<T> implements _Invalid<T> {
     TResult Function(_StringLength<T> value)? stringLength,
     TResult Function(_MultiLine<T> value)? multiLine,
     TResult Function(_NotANumber<T> value)? notANumber,
+    TResult Function(_UnsignedDouble<T> value)? unsignedDouble,
+    TResult Function(_Percentage<T> value)? percentage,
     TResult Function(_Empty<T> value)? empty,
     TResult Function(_Invalid<T> value)? invalid,
     required TResult orElse(),

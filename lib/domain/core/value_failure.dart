@@ -18,6 +18,12 @@ class ValueFailure<T> with _$ValueFailure<T> {
   const factory ValueFailure.notANumber({
     required T failedValue,
   }) = _NotANumber<T>;
+  const factory ValueFailure.unsignedDouble({
+    required T failedValue,
+  }) = _UnsignedDouble<T>;
+  const factory ValueFailure.percentage({
+    required T failedValue,
+  }) = _Percentage<T>;
   const factory ValueFailure.empty({
     required T failedValue,
   }) = _Empty<T>;

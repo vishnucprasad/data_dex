@@ -4,6 +4,7 @@ import 'package:data_dex/application/auth/auth_bloc.dart';
 import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart';
 import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart';
 import 'package:data_dex/application/loan/loan_watcher/loan_watcher_bloc.dart';
+import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart';
 import 'package:data_dex/injection.dart';
 import 'package:data_dex/presentation/router/app_router.dart';
 import 'package:data_dex/presentation/theme/app_theme.dart';
@@ -26,6 +27,7 @@ class DataDexApp extends StatelessWidget {
         BlocProvider(create: (context) => getIt<ApplicantFormBloc>()),
         BlocProvider(create: (context) => getIt<CoApplicantFormBloc>()),
         BlocProvider(create: (context) => getIt<GuarenterFormBloc>()),
+        BlocProvider(create: (context) => getIt<LoanParticularsFormBloc>()),
         BlocProvider(create: (context) => getIt<LoanWatcherBloc>()),
       ],
       child: BlocListener<AuthBloc, AuthState>(

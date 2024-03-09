@@ -1,12 +1,14 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart';
+import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_back_button.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_next_button.dart';
 import 'package:data_dex/presentation/pages/add_guarenter_page/widgets/guarenter_address_form/guarenter_address_form.dart';
 import 'package:data_dex/presentation/pages/add_guarenter_page/widgets/guarenter_basic_info_form/guarenter_basic_info_form.dart';
 import 'package:data_dex/presentation/pages/add_guarenter_page/widgets/guarenter_more_details_form/guarenter_more_details_form.dart';
+import 'package:data_dex/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -61,9 +63,14 @@ class AddGuarenterPage extends StatelessWidget {
                     TextButton(
                       onPressed: () {
                         context
+                            .read<LoanParticularsFormBloc>()
+                            .add(LoanParticularsFormEvent.loanIdChanged(
+                              state.loanId!,
+                            ));
+                        context
                             .read<GuarenterFormBloc>()
                             .add(const GuarenterFormEvent.initialized());
-                        context.popRoute();
+                        context.replaceRoute(const AddLoanParticularsRoute());
                       },
                       child: Row(
                         children: [

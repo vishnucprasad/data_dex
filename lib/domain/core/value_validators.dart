@@ -74,3 +74,19 @@ Either<ValueFailure<String>, String> validateNumberString(String input) {
   }
   return left(ValueFailure.notANumber(failedValue: input));
 }
+
+Either<ValueFailure<String>, String> validateUnsignedDouble(String input) {
+  const unsignedDoubleRegex = r'^(0|[1-9]\d*)(\.\d+)?$';
+  if (input.isEmpty || RegExp(unsignedDoubleRegex).hasMatch(input)) {
+    return right(input);
+  }
+  return left(ValueFailure.unsignedDouble(failedValue: input));
+}
+
+Either<ValueFailure<String>, String> validatePercentageString(String input) {
+  const percentageRegex = r'^(100(\.0+)?|\d{0,2}(\.\d+)?)$';
+  if (RegExp(percentageRegex).hasMatch(input)) {
+    return right(input);
+  }
+  return left(ValueFailure.percentage(failedValue: input));
+}

@@ -1,71 +1,43 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart';
-import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart';
+import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_back_button.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_next_button.dart';
-import 'package:data_dex/presentation/pages/add_co_applicant_page/widgets/co_applicant_address_form/co_applicant_address_form.dart';
-import 'package:data_dex/presentation/pages/add_co_applicant_page/widgets/co_applicant_basic_info_form/co_applicant_basic_info_form.dart';
-import 'package:data_dex/presentation/router/app_router.dart';
+import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/emi_details_form/emi_details_form.dart';
+import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/loan_details_form/loan_details_form.dart';
+import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/vehicle_details_form/vehicle_details_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
-class AddCoApplicantPage extends StatelessWidget {
-  const AddCoApplicantPage({super.key});
+class AddLoanParticularsPage extends StatelessWidget {
+  const AddLoanParticularsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
         context
-            .read<CoApplicantFormBloc>()
-            .add(const CoApplicantFormEvent.initialized());
-
+            .read<LoanParticularsFormBloc>()
+            .add(const LoanParticularsFormEvent.initialized());
         return true;
       },
-      child: BlocBuilder<CoApplicantFormBloc, CoApplicantFormState>(
+      child: BlocBuilder<LoanParticularsFormBloc, LoanParticularsFormState>(
         builder: (context, state) {
           return Scaffold(
             body: SafeArea(
               child: Column(
                 children: [
                   kHeightMd,
-                  Row(
+                  const Row(
                     children: [
-                      const BackButton(),
-                      const Text(
-                        'Add coapplicant',
+                      BackButton(),
+                      Text(
+                        'Loan particulars',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1,
-                        ),
-                      ),
-                      const Spacer(),
-                      TextButton(
-                        onPressed: () {
-                          context.read<GuarenterFormBloc>().add(
-                              GuarenterFormEvent.loanIdChanged(state.loanId!));
-                          context
-                              .read<CoApplicantFormBloc>()
-                              .add(const CoApplicantFormEvent.initialized());
-                          context.replaceRoute(const AddGuarenterRoute());
-                        },
-                        child: Row(
-                          children: [
-                            Text(
-                              'Skip',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.lightBlue.shade600,
-                              ),
-                            ),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: Colors.lightBlue.shade600,
-                            ),
-                          ],
                         ),
                       ),
                     ],
@@ -81,7 +53,7 @@ class AddCoApplicantPage extends StatelessWidget {
                           Colors.lightBlue.shade600,
                         ),
                         controlsBuilder: (context, ControlsDetails details) {
-                          final isLastStep = state.formStep == 1;
+                          final isLastStep = state.formStep == 2;
                           return Row(
                             children: [
                               StepperNextButton(
@@ -89,7 +61,7 @@ class AddCoApplicantPage extends StatelessWidget {
                                 isLastStep: isLastStep,
                                 onPressed: details.onStepContinue,
                               ),
-                              if (state.formStep != 0) kWidth,
+                              if (state.formStep != 0) kWidthMd,
                               if (state.formStep != 0)
                                 StepperBackButton(
                                   onPressed: details.onStepCancel,
@@ -98,39 +70,45 @@ class AddCoApplicantPage extends StatelessWidget {
                           );
                         },
                         onStepCancel: () => context
-                            .read<CoApplicantFormBloc>()
-                            .add(CoApplicantFormEvent.formStepChanged(
+                            .read<LoanParticularsFormBloc>()
+                            .add(LoanParticularsFormEvent.formStepChanged(
                                 state.formStep - 1)),
                         onStepContinue: () {
-                          bool isLastStep = (state.formStep == 1);
+                          bool isLastStep = (state.formStep == 2);
                           if (isLastStep) {
-                            context.read<CoApplicantFormBloc>().add(
-                                const CoApplicantFormEvent.saveCoApplicant());
+                            context.read<LoanParticularsFormBloc>().add(
+                                const LoanParticularsFormEvent
+                                    .saveLoanParticulars());
                           } else {
-                            context.read<CoApplicantFormBloc>().add(
-                                CoApplicantFormEvent.formStepChanged(
+                            context.read<LoanParticularsFormBloc>().add(
+                                LoanParticularsFormEvent.formStepChanged(
                                     state.formStep + 1));
                           }
                         },
-                        onStepTapped: (step) => context
-                            .read<CoApplicantFormBloc>()
-                            .add(CoApplicantFormEvent.formStepChanged(step)),
                         steps: [
                           Step(
                             state: state.formStep > 0
                                 ? StepState.complete
                                 : StepState.indexed,
                             isActive: state.formStep >= 0,
-                            title: const Text("Basic information"),
-                            content: const CoApplicantBasicInfoForm(),
+                            title: const Text("Vehicle details"),
+                            content: const VehicleDetailsForm(),
                           ),
                           Step(
                             state: state.formStep > 1
                                 ? StepState.complete
                                 : StepState.indexed,
                             isActive: state.formStep >= 1,
-                            title: const Text("Address"),
-                            content: const CoApplicantAddressForm(),
+                            title: const Text("Loan details"),
+                            content: const LoanDetailsForm(),
+                          ),
+                          Step(
+                            state: state.formStep > 2
+                                ? StepState.complete
+                                : StepState.indexed,
+                            isActive: state.formStep >= 2,
+                            title: const Text("EMI details"),
+                            content: const EMIDetailsForm(),
                           ),
                         ],
                       ),

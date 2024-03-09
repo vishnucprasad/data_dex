@@ -33,6 +33,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const AddGuarenterPage(),
       );
     },
+    AddLoanParticularsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AddLoanParticularsPage(),
+      );
+    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -92,6 +98,20 @@ class AddGuarenterRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AddGuarenterRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [AddLoanParticularsPage]
+class AddLoanParticularsRoute extends PageRouteInfo<void> {
+  const AddLoanParticularsRoute({List<PageRouteInfo>? children})
+      : super(
+          AddLoanParticularsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AddLoanParticularsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
