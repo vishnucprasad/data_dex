@@ -196,3 +196,44 @@ class RepaymentMode extends ValueObject<String> {
   }
   const RepaymentMode._(this.value);
 }
+
+class AppId extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory AppId(String input) {
+    return AppId._(
+      validateStringNotEmpty(
+        input,
+      )
+          .flatMap((input) => validateMaxStringLength(input, 8))
+          .flatMap(validateNumberString),
+    );
+  }
+  const AppId._(this.value);
+}
+
+class LeadId extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory LeadId(String input) {
+    return LeadId._(
+      validateStringNotEmpty(
+        input,
+      )
+          .flatMap((input) => validateMaxStringLength(input, 8))
+          .flatMap(validateNumberString),
+    );
+  }
+  const LeadId._(this.value);
+}
+
+class Remarks extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory Remarks(String input) {
+    return Remarks._(
+      validateMaxStringLength(input, 1000),
+    );
+  }
+  const Remarks._(this.value);
+}

@@ -22,6 +22,8 @@ mixin _$Loan {
   CoApplicant? get coApplicant => throw _privateConstructorUsedError;
   Guarenter? get guarenter => throw _privateConstructorUsedError;
   LoanParticulars? get loanParticulars => throw _privateConstructorUsedError;
+  MiscellaneousDetails? get miscellaneousDetails =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LoanCopyWith<Loan> get copyWith => throw _privateConstructorUsedError;
@@ -38,12 +40,14 @@ abstract class $LoanCopyWith<$Res> {
       Applicant applicant,
       CoApplicant? coApplicant,
       Guarenter? guarenter,
-      LoanParticulars? loanParticulars});
+      LoanParticulars? loanParticulars,
+      MiscellaneousDetails? miscellaneousDetails});
 
   $ApplicantCopyWith<$Res> get applicant;
   $CoApplicantCopyWith<$Res>? get coApplicant;
   $GuarenterCopyWith<$Res>? get guarenter;
   $LoanParticularsCopyWith<$Res>? get loanParticulars;
+  $MiscellaneousDetailsCopyWith<$Res>? get miscellaneousDetails;
 }
 
 /// @nodoc
@@ -65,6 +69,7 @@ class _$LoanCopyWithImpl<$Res, $Val extends Loan>
     Object? coApplicant = freezed,
     Object? guarenter = freezed,
     Object? loanParticulars = freezed,
+    Object? miscellaneousDetails = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -91,6 +96,10 @@ class _$LoanCopyWithImpl<$Res, $Val extends Loan>
           ? _value.loanParticulars
           : loanParticulars // ignore: cast_nullable_to_non_nullable
               as LoanParticulars?,
+      miscellaneousDetails: freezed == miscellaneousDetails
+          ? _value.miscellaneousDetails
+          : miscellaneousDetails // ignore: cast_nullable_to_non_nullable
+              as MiscellaneousDetails?,
     ) as $Val);
   }
 
@@ -137,6 +146,19 @@ class _$LoanCopyWithImpl<$Res, $Val extends Loan>
       return _then(_value.copyWith(loanParticulars: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MiscellaneousDetailsCopyWith<$Res>? get miscellaneousDetails {
+    if (_value.miscellaneousDetails == null) {
+      return null;
+    }
+
+    return $MiscellaneousDetailsCopyWith<$Res>(_value.miscellaneousDetails!,
+        (value) {
+      return _then(_value.copyWith(miscellaneousDetails: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -152,7 +174,8 @@ abstract class _$$LoanImplCopyWith<$Res> implements $LoanCopyWith<$Res> {
       Applicant applicant,
       CoApplicant? coApplicant,
       Guarenter? guarenter,
-      LoanParticulars? loanParticulars});
+      LoanParticulars? loanParticulars,
+      MiscellaneousDetails? miscellaneousDetails});
 
   @override
   $ApplicantCopyWith<$Res> get applicant;
@@ -162,6 +185,8 @@ abstract class _$$LoanImplCopyWith<$Res> implements $LoanCopyWith<$Res> {
   $GuarenterCopyWith<$Res>? get guarenter;
   @override
   $LoanParticularsCopyWith<$Res>? get loanParticulars;
+  @override
+  $MiscellaneousDetailsCopyWith<$Res>? get miscellaneousDetails;
 }
 
 /// @nodoc
@@ -180,6 +205,7 @@ class __$$LoanImplCopyWithImpl<$Res>
     Object? coApplicant = freezed,
     Object? guarenter = freezed,
     Object? loanParticulars = freezed,
+    Object? miscellaneousDetails = freezed,
   }) {
     return _then(_$LoanImpl(
       id: null == id
@@ -206,6 +232,10 @@ class __$$LoanImplCopyWithImpl<$Res>
           ? _value.loanParticulars
           : loanParticulars // ignore: cast_nullable_to_non_nullable
               as LoanParticulars?,
+      miscellaneousDetails: freezed == miscellaneousDetails
+          ? _value.miscellaneousDetails
+          : miscellaneousDetails // ignore: cast_nullable_to_non_nullable
+              as MiscellaneousDetails?,
     ));
   }
 }
@@ -219,7 +249,8 @@ class _$LoanImpl implements _Loan {
       required this.applicant,
       this.coApplicant,
       this.guarenter,
-      this.loanParticulars});
+      this.loanParticulars,
+      this.miscellaneousDetails});
 
   @override
   final UniqueId id;
@@ -233,10 +264,12 @@ class _$LoanImpl implements _Loan {
   final Guarenter? guarenter;
   @override
   final LoanParticulars? loanParticulars;
+  @override
+  final MiscellaneousDetails? miscellaneousDetails;
 
   @override
   String toString() {
-    return 'Loan(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, coApplicant: $coApplicant, guarenter: $guarenter, loanParticulars: $loanParticulars)';
+    return 'Loan(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, coApplicant: $coApplicant, guarenter: $guarenter, loanParticulars: $loanParticulars, miscellaneousDetails: $miscellaneousDetails)';
   }
 
   @override
@@ -254,12 +287,14 @@ class _$LoanImpl implements _Loan {
             (identical(other.guarenter, guarenter) ||
                 other.guarenter == guarenter) &&
             (identical(other.loanParticulars, loanParticulars) ||
-                other.loanParticulars == loanParticulars));
+                other.loanParticulars == loanParticulars) &&
+            (identical(other.miscellaneousDetails, miscellaneousDetails) ||
+                other.miscellaneousDetails == miscellaneousDetails));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, id, loanStatusIndex, applicant,
-      coApplicant, guarenter, loanParticulars);
+      coApplicant, guarenter, loanParticulars, miscellaneousDetails);
 
   @JsonKey(ignore: true)
   @override
@@ -275,7 +310,8 @@ abstract class _Loan implements Loan {
       required final Applicant applicant,
       final CoApplicant? coApplicant,
       final Guarenter? guarenter,
-      final LoanParticulars? loanParticulars}) = _$LoanImpl;
+      final LoanParticulars? loanParticulars,
+      final MiscellaneousDetails? miscellaneousDetails}) = _$LoanImpl;
 
   @override
   UniqueId get id;
@@ -289,6 +325,8 @@ abstract class _Loan implements Loan {
   Guarenter? get guarenter;
   @override
   LoanParticulars? get loanParticulars;
+  @override
+  MiscellaneousDetails? get miscellaneousDetails;
   @override
   @JsonKey(ignore: true)
   _$$LoanImplCopyWith<_$LoanImpl> get copyWith =>
