@@ -1,6 +1,7 @@
 import 'package:data_dex/domain/applicant/models/applicant.dart';
 import 'package:data_dex/domain/co_applicant/models/co_applicant.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
+import 'package:data_dex/domain/guarenter/models/guarenter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'loan.freezed.dart';
@@ -12,5 +13,6 @@ class Loan with _$Loan {
     required int loanStatusIndex,
     required Applicant applicant,
     CoApplicant? coApplicant,
+    Guarenter? guarenter,
   }) = _Loan;
 }

@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart';
+import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_back_button.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_next_button.dart';
@@ -43,6 +44,8 @@ class AddCoApplicantPage extends StatelessWidget {
                       const Spacer(),
                       TextButton(
                         onPressed: () {
+                          context.read<GuarenterFormBloc>().add(
+                              GuarenterFormEvent.loanIdChanged(state.loanId!));
                           context
                               .read<CoApplicantFormBloc>()
                               .add(const CoApplicantFormEvent.initialized());
