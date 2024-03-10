@@ -2,8 +2,8 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:data_dex/domain/co_applicant/models/co_applicant.dart';
-import 'package:data_dex/infrastructure/core/dto/address_dto.dart';
-import 'package:data_dex/infrastructure/core/dto/basic_info_dto.dart';
+import 'package:data_dex/infrastructure/core/dto/address_dto/address_dto.dart';
+import 'package:data_dex/infrastructure/core/dto/basic_info_dto/basic_info_dto.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'co_applicant_dto.freezed.dart';

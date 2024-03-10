@@ -1,7 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/applicant/failures/applicant_failure.dart';
 import 'package:data_dex/domain/applicant/i_applicant_repository.dart';
+import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
+import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/injection.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
@@ -9,6 +13,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 @LazySingleton(as: IApplicantRepository)
 class ApplicantRepository implements IApplicantRepository {
+  final _storage = getIt<FirebaseStorage>();
+
   @override
   Future<Either<ApplicantFailure, Position>> getCurrentPosition() async {
     try {
@@ -82,6 +88,50 @@ class ApplicantRepository implements IApplicantRepository {
       return left(const ApplicantFailure.imageFailure(
         'Something went wrong, unable to pick image.',
       ));
+    }
+  }
+
+  @override
+  Future<Either<ApplicantFailure, Unit>> deleteImage(
+    CloudImage image,
+  ) async {
+    try {
+      await _storage.refFromURL(image.url).delete();
+      return right(unit);
+    } on PlatformException catch (e) {
+      print(e.toString());
+
+      if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {
+        return left(const ApplicantFailure.permissionDenied());
+      }
+      return left(const ApplicantFailure.unexpected());
+    } catch (e) {
+      print(e.toString());
+      return left(const ApplicantFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<ApplicantFailure, CloudImage>> uploadImage(
+    UniqueId id,
+    XFile image,
+  ) async {
+    try {
+      final ref = _storage
+          .ref()
+          .child('/${id.getOrCrash()}/applicant/house/${image.name}');
+      final uploadTask = ref.putData(await image.readAsBytes());
+
+      final url = await (await uploadTask).ref.getDownloadURL();
+      return right(CloudImage(
+        name: image.name,
+        url: url,
+      ));
+    } on PlatformException catch (e) {
+      if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {
+        return left(const ApplicantFailure.permissionDenied());
+      }
+      return left(const ApplicantFailure.unexpected());
     }
   }
 }

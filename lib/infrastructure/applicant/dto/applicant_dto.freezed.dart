@@ -23,8 +23,7 @@ mixin _$ApplicantDto {
   BasicInfoDto get basicInfo => throw _privateConstructorUsedError;
   AddressDto get address => throw _privateConstructorUsedError;
   LocationDto? get location => throw _privateConstructorUsedError;
-  @Uint8ListConverter()
-  Uint8List? get houseImage => throw _privateConstructorUsedError;
+  CloudImageDto? get houseImage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,11 +41,12 @@ abstract class $ApplicantDtoCopyWith<$Res> {
       {BasicInfoDto basicInfo,
       AddressDto address,
       LocationDto? location,
-      @Uint8ListConverter() Uint8List? houseImage});
+      CloudImageDto? houseImage});
 
   $BasicInfoDtoCopyWith<$Res> get basicInfo;
   $AddressDtoCopyWith<$Res> get address;
   $LocationDtoCopyWith<$Res>? get location;
+  $CloudImageDtoCopyWith<$Res>? get houseImage;
 }
 
 /// @nodoc
@@ -83,7 +83,7 @@ class _$ApplicantDtoCopyWithImpl<$Res, $Val extends ApplicantDto>
       houseImage: freezed == houseImage
           ? _value.houseImage
           : houseImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImageDto?,
     ) as $Val);
   }
 
@@ -114,6 +114,18 @@ class _$ApplicantDtoCopyWithImpl<$Res, $Val extends ApplicantDto>
       return _then(_value.copyWith(location: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageDtoCopyWith<$Res>? get houseImage {
+    if (_value.houseImage == null) {
+      return null;
+    }
+
+    return $CloudImageDtoCopyWith<$Res>(_value.houseImage!, (value) {
+      return _then(_value.copyWith(houseImage: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -128,7 +140,7 @@ abstract class _$$ApplicantDtoImplCopyWith<$Res>
       {BasicInfoDto basicInfo,
       AddressDto address,
       LocationDto? location,
-      @Uint8ListConverter() Uint8List? houseImage});
+      CloudImageDto? houseImage});
 
   @override
   $BasicInfoDtoCopyWith<$Res> get basicInfo;
@@ -136,6 +148,8 @@ abstract class _$$ApplicantDtoImplCopyWith<$Res>
   $AddressDtoCopyWith<$Res> get address;
   @override
   $LocationDtoCopyWith<$Res>? get location;
+  @override
+  $CloudImageDtoCopyWith<$Res>? get houseImage;
 }
 
 /// @nodoc
@@ -170,7 +184,7 @@ class __$$ApplicantDtoImplCopyWithImpl<$Res>
       houseImage: freezed == houseImage
           ? _value.houseImage
           : houseImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImageDto?,
     ));
   }
 }
@@ -183,7 +197,7 @@ class _$ApplicantDtoImpl extends _ApplicantDto with DiagnosticableTreeMixin {
       {required this.basicInfo,
       required this.address,
       required this.location,
-      @Uint8ListConverter() required this.houseImage})
+      required this.houseImage})
       : super._();
 
   factory _$ApplicantDtoImpl.fromJson(Map<String, dynamic> json) =>
@@ -196,8 +210,7 @@ class _$ApplicantDtoImpl extends _ApplicantDto with DiagnosticableTreeMixin {
   @override
   final LocationDto? location;
   @override
-  @Uint8ListConverter()
-  final Uint8List? houseImage;
+  final CloudImageDto? houseImage;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -225,14 +238,14 @@ class _$ApplicantDtoImpl extends _ApplicantDto with DiagnosticableTreeMixin {
             (identical(other.address, address) || other.address == address) &&
             (identical(other.location, location) ||
                 other.location == location) &&
-            const DeepCollectionEquality()
-                .equals(other.houseImage, houseImage));
+            (identical(other.houseImage, houseImage) ||
+                other.houseImage == houseImage));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, basicInfo, address, location,
-      const DeepCollectionEquality().hash(houseImage));
+  int get hashCode =>
+      Object.hash(runtimeType, basicInfo, address, location, houseImage);
 
   @JsonKey(ignore: true)
   @override
@@ -250,11 +263,10 @@ class _$ApplicantDtoImpl extends _ApplicantDto with DiagnosticableTreeMixin {
 
 abstract class _ApplicantDto extends ApplicantDto {
   const factory _ApplicantDto(
-          {required final BasicInfoDto basicInfo,
-          required final AddressDto address,
-          required final LocationDto? location,
-          @Uint8ListConverter() required final Uint8List? houseImage}) =
-      _$ApplicantDtoImpl;
+      {required final BasicInfoDto basicInfo,
+      required final AddressDto address,
+      required final LocationDto? location,
+      required final CloudImageDto? houseImage}) = _$ApplicantDtoImpl;
   const _ApplicantDto._() : super._();
 
   factory _ApplicantDto.fromJson(Map<String, dynamic> json) =
@@ -267,8 +279,7 @@ abstract class _ApplicantDto extends ApplicantDto {
   @override
   LocationDto? get location;
   @override
-  @Uint8ListConverter()
-  Uint8List? get houseImage;
+  CloudImageDto? get houseImage;
   @override
   @JsonKey(ignore: true)
   _$$ApplicantDtoImplCopyWith<_$ApplicantDtoImpl> get copyWith =>

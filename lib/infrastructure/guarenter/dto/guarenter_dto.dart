@@ -4,9 +4,9 @@ import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:data_dex/domain/guarenter/models/guarenter.dart';
-import 'package:data_dex/infrastructure/core/dto/address_dto.dart';
-import 'package:data_dex/infrastructure/core/dto/basic_info_dto.dart';
-import 'package:data_dex/infrastructure/core/dto/location_dto.dart';
+import 'package:data_dex/infrastructure/core/dto/address_dto/address_dto.dart';
+import 'package:data_dex/infrastructure/core/dto/basic_info_dto/basic_info_dto.dart';
+import 'package:data_dex/infrastructure/core/dto/location_dto/location_dto.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

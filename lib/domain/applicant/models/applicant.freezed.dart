@@ -19,7 +19,7 @@ mixin _$Applicant {
   BasicInfo get basicInfo => throw _privateConstructorUsedError;
   Address get address => throw _privateConstructorUsedError;
   Location? get location => throw _privateConstructorUsedError;
-  Uint8List? get houseImage => throw _privateConstructorUsedError;
+  CloudImage? get houseImage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ApplicantCopyWith<Applicant> get copyWith =>
@@ -35,11 +35,12 @@ abstract class $ApplicantCopyWith<$Res> {
       {BasicInfo basicInfo,
       Address address,
       Location? location,
-      Uint8List? houseImage});
+      CloudImage? houseImage});
 
   $BasicInfoCopyWith<$Res> get basicInfo;
   $AddressCopyWith<$Res> get address;
   $LocationCopyWith<$Res>? get location;
+  $CloudImageCopyWith<$Res>? get houseImage;
 }
 
 /// @nodoc
@@ -76,7 +77,7 @@ class _$ApplicantCopyWithImpl<$Res, $Val extends Applicant>
       houseImage: freezed == houseImage
           ? _value.houseImage
           : houseImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImage?,
     ) as $Val);
   }
 
@@ -107,6 +108,18 @@ class _$ApplicantCopyWithImpl<$Res, $Val extends Applicant>
       return _then(_value.copyWith(location: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageCopyWith<$Res>? get houseImage {
+    if (_value.houseImage == null) {
+      return null;
+    }
+
+    return $CloudImageCopyWith<$Res>(_value.houseImage!, (value) {
+      return _then(_value.copyWith(houseImage: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -121,7 +134,7 @@ abstract class _$$ApplicantImplCopyWith<$Res>
       {BasicInfo basicInfo,
       Address address,
       Location? location,
-      Uint8List? houseImage});
+      CloudImage? houseImage});
 
   @override
   $BasicInfoCopyWith<$Res> get basicInfo;
@@ -129,6 +142,8 @@ abstract class _$$ApplicantImplCopyWith<$Res>
   $AddressCopyWith<$Res> get address;
   @override
   $LocationCopyWith<$Res>? get location;
+  @override
+  $CloudImageCopyWith<$Res>? get houseImage;
 }
 
 /// @nodoc
@@ -163,7 +178,7 @@ class __$$ApplicantImplCopyWithImpl<$Res>
       houseImage: freezed == houseImage
           ? _value.houseImage
           : houseImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImage?,
     ));
   }
 }
@@ -184,7 +199,7 @@ class _$ApplicantImpl with DiagnosticableTreeMixin implements _Applicant {
   @override
   final Location? location;
   @override
-  final Uint8List? houseImage;
+  final CloudImage? houseImage;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -212,13 +227,13 @@ class _$ApplicantImpl with DiagnosticableTreeMixin implements _Applicant {
             (identical(other.address, address) || other.address == address) &&
             (identical(other.location, location) ||
                 other.location == location) &&
-            const DeepCollectionEquality()
-                .equals(other.houseImage, houseImage));
+            (identical(other.houseImage, houseImage) ||
+                other.houseImage == houseImage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, basicInfo, address, location,
-      const DeepCollectionEquality().hash(houseImage));
+  int get hashCode =>
+      Object.hash(runtimeType, basicInfo, address, location, houseImage);
 
   @JsonKey(ignore: true)
   @override
@@ -232,7 +247,7 @@ abstract class _Applicant implements Applicant {
       {required final BasicInfo basicInfo,
       required final Address address,
       required final Location? location,
-      required final Uint8List? houseImage}) = _$ApplicantImpl;
+      required final CloudImage? houseImage}) = _$ApplicantImpl;
 
   @override
   BasicInfo get basicInfo;
@@ -241,7 +256,7 @@ abstract class _Applicant implements Applicant {
   @override
   Location? get location;
   @override
-  Uint8List? get houseImage;
+  CloudImage? get houseImage;
   @override
   @JsonKey(ignore: true)
   _$$ApplicantImplCopyWith<_$ApplicantImpl> get copyWith =>

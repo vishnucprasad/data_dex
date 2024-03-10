@@ -20,6 +20,9 @@ class AddApplicantPage extends StatelessWidget {
       onWillPop: () async {
         context
             .read<ApplicantFormBloc>()
+            .add(const ApplicantFormEvent.deleteImage());
+        context
+            .read<ApplicantFormBloc>()
             .add(const ApplicantFormEvent.initialized());
         return true;
       },
@@ -36,6 +39,10 @@ class AddApplicantPage extends StatelessWidget {
                       clientFailure: (_) => 'Something went wrong.',
                       imageFailure: (e) => e.msg,
                       locationFailure: (e) => e.msg,
+                      permissionDenied: (_) => 'Access denied!',
+                      unexpected: (_) => 'An unexpected error occurred',
+                      unableToUpdate: (_) => 'Unable to update note',
+                      unableToDelete: (_) => 'Unable to delete note',
                     ),
                   ).show(context),
                   (_) => null,

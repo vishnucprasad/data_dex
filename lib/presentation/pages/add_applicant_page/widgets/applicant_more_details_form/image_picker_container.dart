@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
@@ -33,29 +31,47 @@ class ImagePickerContainer extends StatelessWidget {
                 ),
               ),
               state.houseImage == null
-                  ? const SizedBox(
-                      width: double.infinity,
-                      child: Column(
-                        children: [
-                          kHeightMd,
-                          Icon(
-                            Icons.hide_image_outlined,
-                            size: 78,
+                  ? state.isImageUploading
+                      ? const SizedBox(
+                          width: double.infinity,
+                          child: Column(
+                            children: [
+                              kHeightMd,
+                              CircularProgressIndicator(),
+                              kHeightMd,
+                              Text(
+                                'Uploading... please wait',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              kHeightMd,
+                            ],
                           ),
-                          kHeightMd,
-                          Text(
-                            'Image not selected',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                        )
+                      : const SizedBox(
+                          width: double.infinity,
+                          child: Column(
+                            children: [
+                              kHeightMd,
+                              Icon(
+                                Icons.hide_image_outlined,
+                                size: 78,
+                              ),
+                              kHeightMd,
+                              Text(
+                                'Image not selected',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              kHeightMd,
+                            ],
                           ),
-                          kHeightMd,
-                        ],
-                      ),
-                    )
+                        )
                   : SizedBox(
                       width: double.infinity,
-                      child: Image.file(File(state.houseImage!.path)),
+                      child: Image.network(state.houseImage!.url),
                     ),
             ],
           );

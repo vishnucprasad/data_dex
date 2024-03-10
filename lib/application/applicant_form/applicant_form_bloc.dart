@@ -5,6 +5,7 @@ import 'package:data_dex/domain/applicant/models/applicant.dart';
 import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/domain/core/models/address/address.dart';
 import 'package:data_dex/domain/core/models/basic_info/basic_info.dart';
+import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
 import 'package:data_dex/domain/core/models/location/location.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan/failures/loan_failure.dart';
@@ -174,6 +175,7 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
         },
         takeImage: (_) async {
           emit(state.copyWith(
+            isImageUploading: true,
             houseImage: null,
             failureOrSuccess: none(),
           ));
@@ -182,19 +184,33 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
             ImageSource.camera,
           );
 
-          emit(imageOption.fold(
+          emit(await imageOption.fold(
             (l) => state.copyWith(
+              isImageUploading: false,
               houseImage: null,
               failureOrSuccess: some(left(l)),
             ),
-            (r) => state.copyWith(
-              houseImage: r,
-              failureOrSuccess: some(right(unit)),
-            ),
+            (r) async {
+              final uploadOption =
+                  await _applicantRepository.uploadImage(state.loanId, r!);
+              return uploadOption.fold(
+                (l) => state.copyWith(
+                  isImageUploading: false,
+                  houseImage: null,
+                  failureOrSuccess: some(right(unit)),
+                ),
+                (r) => state.copyWith(
+                  isImageUploading: false,
+                  houseImage: r,
+                  failureOrSuccess: some(right(unit)),
+                ),
+              );
+            },
           ));
         },
         pickImage: (_) async {
           emit(state.copyWith(
+            isImageUploading: true,
             houseImage: null,
             failureOrSuccess: none(),
           ));
@@ -203,14 +219,49 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
             ImageSource.gallery,
           );
 
-          emit(imageOption.fold(
+          emit(await imageOption.fold(
+            (l) => state.copyWith(
+              isImageUploading: false,
+              houseImage: null,
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) async {
+              final uploadOption =
+                  await _applicantRepository.uploadImage(state.loanId, r!);
+
+              return uploadOption.fold(
+                (l) => state.copyWith(
+                  isImageUploading: false,
+                  houseImage: null,
+                  failureOrSuccess: some(right(unit)),
+                ),
+                (r) => state.copyWith(
+                  isImageUploading: false,
+                  houseImage: r,
+                  failureOrSuccess: some(right(unit)),
+                ),
+              );
+            },
+          ));
+        },
+        deleteImage: (_) async {
+          if (state.houseImage == null) {
+            return emit(state.copyWith(
+              failureOrSuccess: none(),
+            ));
+          }
+
+          final deleteOption =
+              await _applicantRepository.deleteImage(state.houseImage!);
+
+          emit(deleteOption.fold(
             (l) => state.copyWith(
               houseImage: null,
               failureOrSuccess: some(left(l)),
             ),
             (r) => state.copyWith(
-              houseImage: r,
-              failureOrSuccess: some(right(unit)),
+              houseImage: null,
+              failureOrSuccess: some(right(r)),
             ),
           ));
         },
@@ -224,11 +275,11 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
             basicInfo: state.basicInfo,
             address: state.address,
             location: state.location,
-            houseImage: await state.houseImage?.readAsBytes(),
+            houseImage: state.houseImage,
           );
 
           final loan = Loan(
-            id: UniqueId(),
+            id: state.loanId,
             loanStatusIndex: LoanStatus.pending.index,
             applicant: applicant,
           );
