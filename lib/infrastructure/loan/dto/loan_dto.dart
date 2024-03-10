@@ -5,6 +5,9 @@ import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/infrastructure/applicant/dto/applicant_dto.dart';
 import 'package:data_dex/infrastructure/co_applicant/dto/co_applicant_dto.dart';
+import 'package:data_dex/infrastructure/guarenter/dto/guarenter_dto.dart';
+import 'package:data_dex/infrastructure/loan_particulars/dto/loan_particulars_dto.dart';
+import 'package:data_dex/infrastructure/miscellaneous_details/dto/miscellaneous_details_dto.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'loan_dto.freezed.dart';
@@ -20,6 +23,9 @@ class LoanDto with _$LoanDto {
     required int loanStatusIndex,
     required ApplicantDto applicant,
     required CoApplicantDto? coApplicant,
+    required GuarenterDto? guarenter,
+    required LoanParticularsDto? loanParticulars,
+    required MiscellaneousDetailsDto? miscellaneousDetails,
     @ServerTimeStampConverter() required FieldValue serverTimeStamp,
   }) = _LoanDto;
 
@@ -31,6 +37,15 @@ class LoanDto with _$LoanDto {
       coApplicant: loan.coApplicant != null
           ? CoApplicantDto.fromDomain(loan.coApplicant!)
           : null,
+      guarenter: loan.guarenter != null
+          ? GuarenterDto.fromDomain(loan.guarenter!)
+          : null,
+      loanParticulars: loan.loanParticulars != null
+          ? LoanParticularsDto.fromDomain(loan.loanParticulars!)
+          : null,
+      miscellaneousDetails: loan.miscellaneousDetails != null
+          ? MiscellaneousDetailsDto.fromDomain(loan.miscellaneousDetails!)
+          : null,
       serverTimeStamp: FieldValue.serverTimestamp(),
     );
   }
@@ -41,6 +56,9 @@ class LoanDto with _$LoanDto {
       loanStatusIndex: loanStatusIndex,
       applicant: applicant.toDomain(),
       coApplicant: coApplicant?.toDomain(),
+      guarenter: guarenter?.toDomain(),
+      loanParticulars: loanParticulars?.toDomain(),
+      miscellaneousDetails: miscellaneousDetails?.toDomain(),
     );
   }
 

@@ -15,6 +15,17 @@ _$LoanDtoImpl _$$LoanDtoImplFromJson(Map<String, dynamic> json) =>
           ? null
           : CoApplicantDto.fromJson(
               json['coApplicant'] as Map<String, dynamic>),
+      guarenter: json['guarenter'] == null
+          ? null
+          : GuarenterDto.fromJson(json['guarenter'] as Map<String, dynamic>),
+      loanParticulars: json['loanParticulars'] == null
+          ? null
+          : LoanParticularsDto.fromJson(
+              json['loanParticulars'] as Map<String, dynamic>),
+      miscellaneousDetails: json['miscellaneousDetails'] == null
+          ? null
+          : MiscellaneousDetailsDto.fromJson(
+              json['miscellaneousDetails'] as Map<String, dynamic>),
       serverTimeStamp: const ServerTimeStampConverter()
           .fromJson(json['serverTimeStamp'] as Object),
     );
@@ -24,6 +35,9 @@ Map<String, dynamic> _$$LoanDtoImplToJson(_$LoanDtoImpl instance) =>
       'loanStatusIndex': instance.loanStatusIndex,
       'applicant': instance.applicant.toJson(),
       'coApplicant': instance.coApplicant?.toJson(),
+      'guarenter': instance.guarenter?.toJson(),
+      'loanParticulars': instance.loanParticulars?.toJson(),
+      'miscellaneousDetails': instance.miscellaneousDetails?.toJson(),
       'serverTimeStamp':
           const ServerTimeStampConverter().toJson(instance.serverTimeStamp),
     };
