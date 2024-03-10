@@ -37,5 +37,6 @@ class GuarenterFormEvent with _$GuarenterFormEvent {
   const factory GuarenterFormEvent.openLocationInMap() = _OpenLocationInMap;
   const factory GuarenterFormEvent.takeImage() = _TakeImage;
   const factory GuarenterFormEvent.pickImage() = _PickImage;
+  const factory GuarenterFormEvent.deleteImage() = _DeleteImage;
   const factory GuarenterFormEvent.saveGuarenter() = _SaveGuarenter;
 }

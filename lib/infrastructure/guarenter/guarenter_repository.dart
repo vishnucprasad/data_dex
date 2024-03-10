@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/guarenter/failures/guarenter_failure.dart';
 import 'package:data_dex/domain/guarenter/i_guarenter_repository.dart';
@@ -7,6 +8,7 @@ import 'package:data_dex/domain/guarenter/models/guarenter.dart';
 import 'package:data_dex/infrastructure/core/firestore_helpers.dart';
 import 'package:data_dex/infrastructure/guarenter/dto/guarenter_dto.dart';
 import 'package:data_dex/injection.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
@@ -16,6 +18,7 @@ import 'package:url_launcher/url_launcher.dart';
 @LazySingleton(as: IGuarenterRepository)
 class GuarenterRepository implements IGuarenterRepository {
   final _firestore = getIt<FirebaseFirestore>();
+  final _storage = getIt<FirebaseStorage>();
 
   @override
   Future<Either<GuarenterFailure, Position>> getCurrentPosition() async {
@@ -112,6 +115,46 @@ class GuarenterRepository implements IGuarenterRepository {
           return left(const GuarenterFailure.permissionDenied());
         }
         return left(const GuarenterFailure.unableToUpdate());
+      }
+      return left(const GuarenterFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<GuarenterFailure, Unit>> deleteImage(CloudImage image) async {
+    try {
+      await _storage.refFromURL(image.url).delete();
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message != null) {
+        if (e.message!.contains('PERMISSION_DENIED')) {
+          return left(const GuarenterFailure.permissionDenied());
+        }
+        return left(const GuarenterFailure.unableToUpdate());
+      }
+      return left(const GuarenterFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<GuarenterFailure, CloudImage>> uploadImage(
+    UniqueId id,
+    XFile image,
+  ) async {
+    try {
+      final ref = _storage
+          .ref()
+          .child('/${id.getOrCrash()}/co_applicant/house/${image.name}');
+      final uploadTask = ref.putData(await image.readAsBytes());
+
+      final url = await (await uploadTask).ref.getDownloadURL();
+      return right(CloudImage(
+        name: image.name,
+        url: url,
+      ));
+    } on PlatformException catch (e) {
+      if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {
+        return left(const GuarenterFailure.permissionDenied());
       }
       return left(const GuarenterFailure.unexpected());
     }

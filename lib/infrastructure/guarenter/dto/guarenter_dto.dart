@@ -1,11 +1,9 @@
 // ignore_for_file: invalid_annotation_target
-
-import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:data_dex/domain/guarenter/models/guarenter.dart';
 import 'package:data_dex/infrastructure/core/dto/address_dto/address_dto.dart';
 import 'package:data_dex/infrastructure/core/dto/basic_info_dto/basic_info_dto.dart';
+import 'package:data_dex/infrastructure/core/dto/cloud_image_dto/cloud_image_dto.dart';
 import 'package:data_dex/infrastructure/core/dto/location_dto/location_dto.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -22,7 +20,7 @@ class GuarenterDto with _$GuarenterDto {
     required BasicInfoDto basicInfo,
     required AddressDto address,
     required LocationDto? location,
-    @Uint8ListConverter() required Uint8List? houseImage,
+    required CloudImageDto? houseImage,
   }) = _GuarenterDto;
 
   factory GuarenterDto.fromDomain(Guarenter guarenter) {
@@ -32,7 +30,9 @@ class GuarenterDto with _$GuarenterDto {
       location: guarenter.location != null
           ? LocationDto.fromDomain(guarenter.location!)
           : null,
-      houseImage: guarenter.houseImage,
+      houseImage: guarenter.houseImage != null
+          ? CloudImageDto.fromDomain(guarenter.houseImage!)
+          : null,
     );
   }
 
@@ -41,7 +41,7 @@ class GuarenterDto with _$GuarenterDto {
       basicInfo: basicInfo.toDomain(),
       address: address.toDomain(),
       location: location?.toDomain(),
-      houseImage: houseImage,
+      houseImage: houseImage?.toDomain(),
     );
   }
 
@@ -52,19 +52,5 @@ class GuarenterDto with _$GuarenterDto {
     DocumentSnapshot<Map<String, dynamic>> doc,
   ) {
     return GuarenterDto.fromJson(doc.data() as Map<String, dynamic>);
-  }
-}
-
-class Uint8ListConverter implements JsonConverter<Uint8List, String> {
-  const Uint8ListConverter();
-
-  @override
-  Uint8List fromJson(String json) {
-    return base64Decode(json);
-  }
-
-  @override
-  String toJson(Uint8List object) {
-    return base64Encode(object);
   }
 }

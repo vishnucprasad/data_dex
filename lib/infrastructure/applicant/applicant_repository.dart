@@ -99,14 +99,9 @@ class ApplicantRepository implements IApplicantRepository {
       await _storage.refFromURL(image.url).delete();
       return right(unit);
     } on PlatformException catch (e) {
-      print(e.toString());
-
       if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {
         return left(const ApplicantFailure.permissionDenied());
       }
-      return left(const ApplicantFailure.unexpected());
-    } catch (e) {
-      print(e.toString());
       return left(const ApplicantFailure.unexpected());
     }
   }

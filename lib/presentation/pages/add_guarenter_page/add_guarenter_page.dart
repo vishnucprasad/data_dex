@@ -22,6 +22,9 @@ class AddGuarenterPage extends StatelessWidget {
       onWillPop: () async {
         context
             .read<GuarenterFormBloc>()
+            .add(const GuarenterFormEvent.deleteImage());
+        context
+            .read<GuarenterFormBloc>()
             .add(const GuarenterFormEvent.initialized());
 
         return true;

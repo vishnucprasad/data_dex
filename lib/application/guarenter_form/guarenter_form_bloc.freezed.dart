@@ -33,6 +33,7 @@ mixin _$GuarenterFormEvent {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) =>
       throw _privateConstructorUsedError;
@@ -53,6 +54,7 @@ mixin _$GuarenterFormEvent {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) =>
       throw _privateConstructorUsedError;
@@ -73,6 +75,7 @@ mixin _$GuarenterFormEvent {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) =>
@@ -94,6 +97,7 @@ mixin _$GuarenterFormEvent {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +118,7 @@ mixin _$GuarenterFormEvent {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +139,7 @@ mixin _$GuarenterFormEvent {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) =>
@@ -211,6 +217,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return initialized();
@@ -234,6 +241,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return initialized?.call();
@@ -257,6 +265,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -284,6 +293,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return initialized(this);
@@ -307,6 +317,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return initialized?.call(this);
@@ -330,6 +341,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -423,6 +435,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return loanIdChanged(loanId);
@@ -446,6 +459,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return loanIdChanged?.call(loanId);
@@ -469,6 +483,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -496,6 +511,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return loanIdChanged(this);
@@ -519,6 +535,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return loanIdChanged?.call(this);
@@ -542,6 +559,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -641,6 +659,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return formStepChanged(index);
@@ -664,6 +683,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return formStepChanged?.call(index);
@@ -687,6 +707,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -714,6 +735,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return formStepChanged(this);
@@ -737,6 +759,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return formStepChanged?.call(this);
@@ -760,6 +783,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -858,6 +882,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return nameChanged(name);
@@ -881,6 +906,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return nameChanged?.call(name);
@@ -904,6 +930,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -931,6 +958,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return nameChanged(this);
@@ -954,6 +982,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return nameChanged?.call(this);
@@ -977,6 +1006,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1077,6 +1107,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return phoneNumberChanged(phoneNumber);
@@ -1100,6 +1131,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return phoneNumberChanged?.call(phoneNumber);
@@ -1123,6 +1155,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1150,6 +1183,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return phoneNumberChanged(this);
@@ -1173,6 +1207,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return phoneNumberChanged?.call(this);
@@ -1196,6 +1231,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1295,6 +1331,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return emailChnaged(email);
@@ -1318,6 +1355,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return emailChnaged?.call(email);
@@ -1341,6 +1379,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1368,6 +1407,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return emailChnaged(this);
@@ -1391,6 +1431,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return emailChnaged?.call(this);
@@ -1414,6 +1455,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1513,6 +1555,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return dateOfBirthChanged(date);
@@ -1536,6 +1579,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return dateOfBirthChanged?.call(date);
@@ -1559,6 +1603,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1586,6 +1631,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return dateOfBirthChanged(this);
@@ -1609,6 +1655,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return dateOfBirthChanged?.call(this);
@@ -1632,6 +1679,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1733,6 +1781,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return houseNameChanged(houseName);
@@ -1756,6 +1805,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return houseNameChanged?.call(houseName);
@@ -1779,6 +1829,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1806,6 +1857,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return houseNameChanged(this);
@@ -1829,6 +1881,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return houseNameChanged?.call(this);
@@ -1852,6 +1905,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -1953,6 +2007,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return postOfficeChanged(postOffice);
@@ -1976,6 +2031,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return postOfficeChanged?.call(postOffice);
@@ -1999,6 +2055,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2026,6 +2083,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return postOfficeChanged(this);
@@ -2049,6 +2107,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return postOfficeChanged?.call(this);
@@ -2072,6 +2131,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2173,6 +2233,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return streetNameChanged(streetName);
@@ -2196,6 +2257,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return streetNameChanged?.call(streetName);
@@ -2219,6 +2281,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2246,6 +2309,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return streetNameChanged(this);
@@ -2269,6 +2333,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return streetNameChanged?.call(this);
@@ -2292,6 +2357,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2392,6 +2458,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return pincodeChanged(pincode);
@@ -2415,6 +2482,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return pincodeChanged?.call(pincode);
@@ -2438,6 +2506,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2465,6 +2534,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return pincodeChanged(this);
@@ -2488,6 +2558,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return pincodeChanged?.call(this);
@@ -2511,6 +2582,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2583,6 +2655,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return getCurrentLocation();
@@ -2606,6 +2679,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return getCurrentLocation?.call();
@@ -2629,6 +2703,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2656,6 +2731,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return getCurrentLocation(this);
@@ -2679,6 +2755,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return getCurrentLocation?.call(this);
@@ -2702,6 +2779,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2769,6 +2847,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return openLocationInMap();
@@ -2792,6 +2871,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return openLocationInMap?.call();
@@ -2815,6 +2895,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2842,6 +2923,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return openLocationInMap(this);
@@ -2865,6 +2947,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return openLocationInMap?.call(this);
@@ -2888,6 +2971,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -2955,6 +3039,7 @@ class _$TakeImageImpl implements _TakeImage {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return takeImage();
@@ -2978,6 +3063,7 @@ class _$TakeImageImpl implements _TakeImage {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return takeImage?.call();
@@ -3001,6 +3087,7 @@ class _$TakeImageImpl implements _TakeImage {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -3028,6 +3115,7 @@ class _$TakeImageImpl implements _TakeImage {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return takeImage(this);
@@ -3051,6 +3139,7 @@ class _$TakeImageImpl implements _TakeImage {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return takeImage?.call(this);
@@ -3074,6 +3163,7 @@ class _$TakeImageImpl implements _TakeImage {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -3141,6 +3231,7 @@ class _$PickImageImpl implements _PickImage {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return pickImage();
@@ -3164,6 +3255,7 @@ class _$PickImageImpl implements _PickImage {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return pickImage?.call();
@@ -3187,6 +3279,7 @@ class _$PickImageImpl implements _PickImage {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -3214,6 +3307,7 @@ class _$PickImageImpl implements _PickImage {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return pickImage(this);
@@ -3237,6 +3331,7 @@ class _$PickImageImpl implements _PickImage {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return pickImage?.call(this);
@@ -3260,6 +3355,7 @@ class _$PickImageImpl implements _PickImage {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -3272,6 +3368,198 @@ class _$PickImageImpl implements _PickImage {
 
 abstract class _PickImage implements GuarenterFormEvent {
   const factory _PickImage() = _$PickImageImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteImageImplCopyWith<$Res> {
+  factory _$$DeleteImageImplCopyWith(
+          _$DeleteImageImpl value, $Res Function(_$DeleteImageImpl) then) =
+      __$$DeleteImageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteImageImplCopyWithImpl<$Res>
+    extends _$GuarenterFormEventCopyWithImpl<$Res, _$DeleteImageImpl>
+    implements _$$DeleteImageImplCopyWith<$Res> {
+  __$$DeleteImageImplCopyWithImpl(
+      _$DeleteImageImpl _value, $Res Function(_$DeleteImageImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteImageImpl implements _DeleteImage {
+  const _$DeleteImageImpl();
+
+  @override
+  String toString() {
+    return 'GuarenterFormEvent.deleteImage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteImageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(UniqueId loanId) loanIdChanged,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
+    required TResult Function() deleteImage,
+    required TResult Function() saveGuarenter,
+  }) {
+    return deleteImage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(UniqueId loanId)? loanIdChanged,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? saveGuarenter,
+  }) {
+    return deleteImage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(UniqueId loanId)? loanIdChanged,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
+    TResult Function()? deleteImage,
+    TResult Function()? saveGuarenter,
+    required TResult orElse(),
+  }) {
+    if (deleteImage != null) {
+      return deleteImage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_LoanIdChanged value) loanIdChanged,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
+    required TResult Function(_SaveGuarenter value) saveGuarenter,
+  }) {
+    return deleteImage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_LoanIdChanged value)? loanIdChanged,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
+    TResult? Function(_SaveGuarenter value)? saveGuarenter,
+  }) {
+    return deleteImage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_LoanIdChanged value)? loanIdChanged,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
+    TResult Function(_SaveGuarenter value)? saveGuarenter,
+    required TResult orElse(),
+  }) {
+    if (deleteImage != null) {
+      return deleteImage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteImage implements GuarenterFormEvent {
+  const factory _DeleteImage() = _$DeleteImageImpl;
 }
 
 /// @nodoc
@@ -3327,6 +3615,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
     required TResult Function() openLocationInMap,
     required TResult Function() takeImage,
     required TResult Function() pickImage,
+    required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
     return saveGuarenter();
@@ -3350,6 +3639,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
     TResult? Function()? openLocationInMap,
     TResult? Function()? takeImage,
     TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
     return saveGuarenter?.call();
@@ -3373,6 +3663,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
     TResult Function()? openLocationInMap,
     TResult Function()? takeImage,
     TResult Function()? pickImage,
+    TResult Function()? deleteImage,
     TResult Function()? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -3400,6 +3691,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
     required TResult Function(_TakeImage value) takeImage,
     required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
     required TResult Function(_SaveGuarenter value) saveGuarenter,
   }) {
     return saveGuarenter(this);
@@ -3423,6 +3715,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
     TResult? Function(_TakeImage value)? takeImage,
     TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
     TResult? Function(_SaveGuarenter value)? saveGuarenter,
   }) {
     return saveGuarenter?.call(this);
@@ -3446,6 +3739,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
     TResult Function(_TakeImage value)? takeImage,
     TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
     TResult Function(_SaveGuarenter value)? saveGuarenter,
     required TResult orElse(),
   }) {
@@ -3464,12 +3758,13 @@ abstract class _SaveGuarenter implements GuarenterFormEvent {
 mixin _$GuarenterFormState {
   bool get isSaving => throw _privateConstructorUsedError;
   bool get isLocationFetching => throw _privateConstructorUsedError;
+  bool get isImageUploading => throw _privateConstructorUsedError;
   int get formStep => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   BasicInfo get basicInfo => throw _privateConstructorUsedError;
   Address get address => throw _privateConstructorUsedError;
   Location? get location => throw _privateConstructorUsedError;
-  XFile? get houseImage => throw _privateConstructorUsedError;
+  CloudImage? get houseImage => throw _privateConstructorUsedError;
   UniqueId? get loanId => throw _privateConstructorUsedError;
   Option<Either<GuarenterFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
@@ -3490,12 +3785,13 @@ abstract class $GuarenterFormStateCopyWith<$Res> {
   $Res call(
       {bool isSaving,
       bool isLocationFetching,
+      bool isImageUploading,
       int formStep,
       bool showValidationError,
       BasicInfo basicInfo,
       Address address,
       Location? location,
-      XFile? houseImage,
+      CloudImage? houseImage,
       UniqueId? loanId,
       Option<Either<GuarenterFailure, Unit>> failureOrSuccess,
       Option<Either<GuarenterFailure, Unit>> guarenterFailureOrSuccess});
@@ -3503,6 +3799,7 @@ abstract class $GuarenterFormStateCopyWith<$Res> {
   $BasicInfoCopyWith<$Res> get basicInfo;
   $AddressCopyWith<$Res> get address;
   $LocationCopyWith<$Res>? get location;
+  $CloudImageCopyWith<$Res>? get houseImage;
 }
 
 /// @nodoc
@@ -3520,6 +3817,7 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
   $Res call({
     Object? isSaving = null,
     Object? isLocationFetching = null,
+    Object? isImageUploading = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
@@ -3538,6 +3836,10 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
       isLocationFetching: null == isLocationFetching
           ? _value.isLocationFetching
           : isLocationFetching // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isImageUploading: null == isImageUploading
+          ? _value.isImageUploading
+          : isImageUploading // ignore: cast_nullable_to_non_nullable
               as bool,
       formStep: null == formStep
           ? _value.formStep
@@ -3562,7 +3864,7 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
       houseImage: freezed == houseImage
           ? _value.houseImage
           : houseImage // ignore: cast_nullable_to_non_nullable
-              as XFile?,
+              as CloudImage?,
       loanId: freezed == loanId
           ? _value.loanId
           : loanId // ignore: cast_nullable_to_non_nullable
@@ -3605,6 +3907,18 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
       return _then(_value.copyWith(location: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageCopyWith<$Res>? get houseImage {
+    if (_value.houseImage == null) {
+      return null;
+    }
+
+    return $CloudImageCopyWith<$Res>(_value.houseImage!, (value) {
+      return _then(_value.copyWith(houseImage: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -3618,12 +3932,13 @@ abstract class _$$GuarenterFormStateImplCopyWith<$Res>
   $Res call(
       {bool isSaving,
       bool isLocationFetching,
+      bool isImageUploading,
       int formStep,
       bool showValidationError,
       BasicInfo basicInfo,
       Address address,
       Location? location,
-      XFile? houseImage,
+      CloudImage? houseImage,
       UniqueId? loanId,
       Option<Either<GuarenterFailure, Unit>> failureOrSuccess,
       Option<Either<GuarenterFailure, Unit>> guarenterFailureOrSuccess});
@@ -3634,6 +3949,8 @@ abstract class _$$GuarenterFormStateImplCopyWith<$Res>
   $AddressCopyWith<$Res> get address;
   @override
   $LocationCopyWith<$Res>? get location;
+  @override
+  $CloudImageCopyWith<$Res>? get houseImage;
 }
 
 /// @nodoc
@@ -3649,6 +3966,7 @@ class __$$GuarenterFormStateImplCopyWithImpl<$Res>
   $Res call({
     Object? isSaving = null,
     Object? isLocationFetching = null,
+    Object? isImageUploading = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
@@ -3667,6 +3985,10 @@ class __$$GuarenterFormStateImplCopyWithImpl<$Res>
       isLocationFetching: null == isLocationFetching
           ? _value.isLocationFetching
           : isLocationFetching // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isImageUploading: null == isImageUploading
+          ? _value.isImageUploading
+          : isImageUploading // ignore: cast_nullable_to_non_nullable
               as bool,
       formStep: null == formStep
           ? _value.formStep
@@ -3691,7 +4013,7 @@ class __$$GuarenterFormStateImplCopyWithImpl<$Res>
       houseImage: freezed == houseImage
           ? _value.houseImage
           : houseImage // ignore: cast_nullable_to_non_nullable
-              as XFile?,
+              as CloudImage?,
       loanId: freezed == loanId
           ? _value.loanId
           : loanId // ignore: cast_nullable_to_non_nullable
@@ -3714,6 +4036,7 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
   const _$GuarenterFormStateImpl(
       {required this.isSaving,
       required this.isLocationFetching,
+      required this.isImageUploading,
       required this.formStep,
       required this.showValidationError,
       required this.basicInfo,
@@ -3729,6 +4052,8 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
   @override
   final bool isLocationFetching;
   @override
+  final bool isImageUploading;
+  @override
   final int formStep;
   @override
   final bool showValidationError;
@@ -3739,7 +4064,7 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
   @override
   final Location? location;
   @override
-  final XFile? houseImage;
+  final CloudImage? houseImage;
   @override
   final UniqueId? loanId;
   @override
@@ -3749,7 +4074,7 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
 
   @override
   String toString() {
-    return 'GuarenterFormState(isSaving: $isSaving, isLocationFetching: $isLocationFetching, formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, location: $location, houseImage: $houseImage, loanId: $loanId, failureOrSuccess: $failureOrSuccess, guarenterFailureOrSuccess: $guarenterFailureOrSuccess)';
+    return 'GuarenterFormState(isSaving: $isSaving, isLocationFetching: $isLocationFetching, isImageUploading: $isImageUploading, formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, location: $location, houseImage: $houseImage, loanId: $loanId, failureOrSuccess: $failureOrSuccess, guarenterFailureOrSuccess: $guarenterFailureOrSuccess)';
   }
 
   @override
@@ -3761,6 +4086,8 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
                 other.isSaving == isSaving) &&
             (identical(other.isLocationFetching, isLocationFetching) ||
                 other.isLocationFetching == isLocationFetching) &&
+            (identical(other.isImageUploading, isImageUploading) ||
+                other.isImageUploading == isImageUploading) &&
             (identical(other.formStep, formStep) ||
                 other.formStep == formStep) &&
             (identical(other.showValidationError, showValidationError) ||
@@ -3785,6 +4112,7 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
       runtimeType,
       isSaving,
       isLocationFetching,
+      isImageUploading,
       formStep,
       showValidationError,
       basicInfo,
@@ -3807,12 +4135,13 @@ abstract class _GuarenterFormState implements GuarenterFormState {
   const factory _GuarenterFormState(
       {required final bool isSaving,
       required final bool isLocationFetching,
+      required final bool isImageUploading,
       required final int formStep,
       required final bool showValidationError,
       required final BasicInfo basicInfo,
       required final Address address,
       required final Location? location,
-      required final XFile? houseImage,
+      required final CloudImage? houseImage,
       required final UniqueId? loanId,
       required final Option<Either<GuarenterFailure, Unit>> failureOrSuccess,
       required final Option<Either<GuarenterFailure, Unit>>
@@ -3822,6 +4151,8 @@ abstract class _GuarenterFormState implements GuarenterFormState {
   bool get isSaving;
   @override
   bool get isLocationFetching;
+  @override
+  bool get isImageUploading;
   @override
   int get formStep;
   @override
@@ -3833,7 +4164,7 @@ abstract class _GuarenterFormState implements GuarenterFormState {
   @override
   Location? get location;
   @override
-  XFile? get houseImage;
+  CloudImage? get houseImage;
   @override
   UniqueId? get loanId;
   @override

@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/guarenter/failures/guarenter_failure.dart';
 import 'package:data_dex/domain/guarenter/models/guarenter.dart';
@@ -14,6 +15,13 @@ abstract class IGuarenterRepository {
   });
   Future<Either<GuarenterFailure, XFile?>> pickImage(
     ImageSource source,
+  );
+  Future<Either<GuarenterFailure, CloudImage>> uploadImage(
+    UniqueId id,
+    XFile image,
+  );
+  Future<Either<GuarenterFailure, Unit>> deleteImage(
+    CloudImage image,
   );
   Future<Either<GuarenterFailure, Unit>> saveGuarenter(
     UniqueId id,

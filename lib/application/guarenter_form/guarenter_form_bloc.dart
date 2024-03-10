@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/core/models/address/address.dart';
 import 'package:data_dex/domain/core/models/basic_info/basic_info.dart';
+import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
 import 'package:data_dex/domain/core/models/location/location.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/guarenter/failures/guarenter_failure.dart';
@@ -180,15 +181,28 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
             ImageSource.camera,
           );
 
-          emit(imageOption.fold(
+          emit(await imageOption.fold(
             (l) => state.copyWith(
               houseImage: null,
               failureOrSuccess: some(left(l)),
             ),
-            (r) => state.copyWith(
-              houseImage: r,
-              failureOrSuccess: some(right(unit)),
-            ),
+            (r) async {
+              final uploadOption =
+                  await _guarenterRepository.uploadImage(state.loanId!, r!);
+
+              return uploadOption.fold(
+                (l) => state.copyWith(
+                  isImageUploading: false,
+                  houseImage: null,
+                  failureOrSuccess: some(right(unit)),
+                ),
+                (r) => state.copyWith(
+                  isImageUploading: false,
+                  houseImage: r,
+                  failureOrSuccess: some(right(unit)),
+                ),
+              );
+            },
           ));
         },
         pickImage: (_) async {
@@ -201,14 +215,48 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
             ImageSource.gallery,
           );
 
-          emit(imageOption.fold(
+          emit(await imageOption.fold(
+            (l) => state.copyWith(
+              houseImage: null,
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) async {
+              final uploadOption =
+                  await _guarenterRepository.uploadImage(state.loanId!, r!);
+
+              return uploadOption.fold(
+                (l) => state.copyWith(
+                  isImageUploading: false,
+                  houseImage: null,
+                  failureOrSuccess: some(right(unit)),
+                ),
+                (r) => state.copyWith(
+                  isImageUploading: false,
+                  houseImage: r,
+                  failureOrSuccess: some(right(unit)),
+                ),
+              );
+            },
+          ));
+        },
+        deleteImage: (_) async {
+          if (state.houseImage == null) {
+            return emit(state.copyWith(
+              failureOrSuccess: none(),
+            ));
+          }
+
+          final deleteOption =
+              await _guarenterRepository.deleteImage(state.houseImage!);
+
+          emit(deleteOption.fold(
             (l) => state.copyWith(
               houseImage: null,
               failureOrSuccess: some(left(l)),
             ),
             (r) => state.copyWith(
-              houseImage: r,
-              failureOrSuccess: some(right(unit)),
+              houseImage: null,
+              failureOrSuccess: some(right(r)),
             ),
           ));
         },
@@ -224,7 +272,7 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
               basicInfo: state.basicInfo,
               address: state.address,
               location: state.location,
-              houseImage: await state.houseImage?.readAsBytes(),
+              houseImage: state.houseImage,
             ),
           );
 
