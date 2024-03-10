@@ -39,6 +39,7 @@ class MiscellaneousDetailsFormEvent with _$MiscellaneousDetailsFormEvent {
       _PickGuarenterImage;
   const factory MiscellaneousDetailsFormEvent.takeGuarenterImage() =
       _TakeGuarenterImage;
+  const factory MiscellaneousDetailsFormEvent.deleteImages() = _DeleteImages;
   const factory MiscellaneousDetailsFormEvent.appIdChanged(
     String appId,
   ) = _AppIdChanged;

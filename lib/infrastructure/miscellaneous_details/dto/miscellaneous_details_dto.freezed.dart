@@ -25,12 +25,9 @@ mixin _$MiscellaneousDetailsDto {
   ReferenceDetailsDto get referenceDetails =>
       throw _privateConstructorUsedError;
   RemarksAndMoreDto get remarksAndMore => throw _privateConstructorUsedError;
-  @Uint8ListConverter()
-  Uint8List? get applicantImage => throw _privateConstructorUsedError;
-  @Uint8ListConverter()
-  Uint8List? get coApplicantImage => throw _privateConstructorUsedError;
-  @Uint8ListConverter()
-  Uint8List? get guarenterImage => throw _privateConstructorUsedError;
+  CloudImageDto? get applicantImage => throw _privateConstructorUsedError;
+  CloudImageDto? get coApplicantImage => throw _privateConstructorUsedError;
+  CloudImageDto? get guarenterImage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,13 +45,16 @@ abstract class $MiscellaneousDetailsDtoCopyWith<$Res> {
       {PayoutDetailsDto payoutDetails,
       ReferenceDetailsDto referenceDetails,
       RemarksAndMoreDto remarksAndMore,
-      @Uint8ListConverter() Uint8List? applicantImage,
-      @Uint8ListConverter() Uint8List? coApplicantImage,
-      @Uint8ListConverter() Uint8List? guarenterImage});
+      CloudImageDto? applicantImage,
+      CloudImageDto? coApplicantImage,
+      CloudImageDto? guarenterImage});
 
   $PayoutDetailsDtoCopyWith<$Res> get payoutDetails;
   $ReferenceDetailsDtoCopyWith<$Res> get referenceDetails;
   $RemarksAndMoreDtoCopyWith<$Res> get remarksAndMore;
+  $CloudImageDtoCopyWith<$Res>? get applicantImage;
+  $CloudImageDtoCopyWith<$Res>? get coApplicantImage;
+  $CloudImageDtoCopyWith<$Res>? get guarenterImage;
 }
 
 /// @nodoc
@@ -94,15 +94,15 @@ class _$MiscellaneousDetailsDtoCopyWithImpl<$Res,
       applicantImage: freezed == applicantImage
           ? _value.applicantImage
           : applicantImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImageDto?,
       coApplicantImage: freezed == coApplicantImage
           ? _value.coApplicantImage
           : coApplicantImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImageDto?,
       guarenterImage: freezed == guarenterImage
           ? _value.guarenterImage
           : guarenterImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImageDto?,
     ) as $Val);
   }
 
@@ -129,6 +129,42 @@ class _$MiscellaneousDetailsDtoCopyWithImpl<$Res,
       return _then(_value.copyWith(remarksAndMore: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageDtoCopyWith<$Res>? get applicantImage {
+    if (_value.applicantImage == null) {
+      return null;
+    }
+
+    return $CloudImageDtoCopyWith<$Res>(_value.applicantImage!, (value) {
+      return _then(_value.copyWith(applicantImage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageDtoCopyWith<$Res>? get coApplicantImage {
+    if (_value.coApplicantImage == null) {
+      return null;
+    }
+
+    return $CloudImageDtoCopyWith<$Res>(_value.coApplicantImage!, (value) {
+      return _then(_value.copyWith(coApplicantImage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageDtoCopyWith<$Res>? get guarenterImage {
+    if (_value.guarenterImage == null) {
+      return null;
+    }
+
+    return $CloudImageDtoCopyWith<$Res>(_value.guarenterImage!, (value) {
+      return _then(_value.copyWith(guarenterImage: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -144,9 +180,9 @@ abstract class _$$MiscellaneousDetailsDtoImplCopyWith<$Res>
       {PayoutDetailsDto payoutDetails,
       ReferenceDetailsDto referenceDetails,
       RemarksAndMoreDto remarksAndMore,
-      @Uint8ListConverter() Uint8List? applicantImage,
-      @Uint8ListConverter() Uint8List? coApplicantImage,
-      @Uint8ListConverter() Uint8List? guarenterImage});
+      CloudImageDto? applicantImage,
+      CloudImageDto? coApplicantImage,
+      CloudImageDto? guarenterImage});
 
   @override
   $PayoutDetailsDtoCopyWith<$Res> get payoutDetails;
@@ -154,6 +190,12 @@ abstract class _$$MiscellaneousDetailsDtoImplCopyWith<$Res>
   $ReferenceDetailsDtoCopyWith<$Res> get referenceDetails;
   @override
   $RemarksAndMoreDtoCopyWith<$Res> get remarksAndMore;
+  @override
+  $CloudImageDtoCopyWith<$Res>? get applicantImage;
+  @override
+  $CloudImageDtoCopyWith<$Res>? get coApplicantImage;
+  @override
+  $CloudImageDtoCopyWith<$Res>? get guarenterImage;
 }
 
 /// @nodoc
@@ -192,15 +234,15 @@ class __$$MiscellaneousDetailsDtoImplCopyWithImpl<$Res>
       applicantImage: freezed == applicantImage
           ? _value.applicantImage
           : applicantImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImageDto?,
       coApplicantImage: freezed == coApplicantImage
           ? _value.coApplicantImage
           : coApplicantImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImageDto?,
       guarenterImage: freezed == guarenterImage
           ? _value.guarenterImage
           : guarenterImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImageDto?,
     ));
   }
 }
@@ -214,9 +256,9 @@ class _$MiscellaneousDetailsDtoImpl extends _MiscellaneousDetailsDto
       {required this.payoutDetails,
       required this.referenceDetails,
       required this.remarksAndMore,
-      @Uint8ListConverter() required this.applicantImage,
-      @Uint8ListConverter() required this.coApplicantImage,
-      @Uint8ListConverter() required this.guarenterImage})
+      required this.applicantImage,
+      required this.coApplicantImage,
+      required this.guarenterImage})
       : super._();
 
   factory _$MiscellaneousDetailsDtoImpl.fromJson(Map<String, dynamic> json) =>
@@ -229,14 +271,11 @@ class _$MiscellaneousDetailsDtoImpl extends _MiscellaneousDetailsDto
   @override
   final RemarksAndMoreDto remarksAndMore;
   @override
-  @Uint8ListConverter()
-  final Uint8List? applicantImage;
+  final CloudImageDto? applicantImage;
   @override
-  @Uint8ListConverter()
-  final Uint8List? coApplicantImage;
+  final CloudImageDto? coApplicantImage;
   @override
-  @Uint8ListConverter()
-  final Uint8List? guarenterImage;
+  final CloudImageDto? guarenterImage;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -267,24 +306,18 @@ class _$MiscellaneousDetailsDtoImpl extends _MiscellaneousDetailsDto
                 other.referenceDetails == referenceDetails) &&
             (identical(other.remarksAndMore, remarksAndMore) ||
                 other.remarksAndMore == remarksAndMore) &&
-            const DeepCollectionEquality()
-                .equals(other.applicantImage, applicantImage) &&
-            const DeepCollectionEquality()
-                .equals(other.coApplicantImage, coApplicantImage) &&
-            const DeepCollectionEquality()
-                .equals(other.guarenterImage, guarenterImage));
+            (identical(other.applicantImage, applicantImage) ||
+                other.applicantImage == applicantImage) &&
+            (identical(other.coApplicantImage, coApplicantImage) ||
+                other.coApplicantImage == coApplicantImage) &&
+            (identical(other.guarenterImage, guarenterImage) ||
+                other.guarenterImage == guarenterImage));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      payoutDetails,
-      referenceDetails,
-      remarksAndMore,
-      const DeepCollectionEquality().hash(applicantImage),
-      const DeepCollectionEquality().hash(coApplicantImage),
-      const DeepCollectionEquality().hash(guarenterImage));
+  int get hashCode => Object.hash(runtimeType, payoutDetails, referenceDetails,
+      remarksAndMore, applicantImage, coApplicantImage, guarenterImage);
 
   @JsonKey(ignore: true)
   @override
@@ -306,9 +339,9 @@ abstract class _MiscellaneousDetailsDto extends MiscellaneousDetailsDto {
           {required final PayoutDetailsDto payoutDetails,
           required final ReferenceDetailsDto referenceDetails,
           required final RemarksAndMoreDto remarksAndMore,
-          @Uint8ListConverter() required final Uint8List? applicantImage,
-          @Uint8ListConverter() required final Uint8List? coApplicantImage,
-          @Uint8ListConverter() required final Uint8List? guarenterImage}) =
+          required final CloudImageDto? applicantImage,
+          required final CloudImageDto? coApplicantImage,
+          required final CloudImageDto? guarenterImage}) =
       _$MiscellaneousDetailsDtoImpl;
   const _MiscellaneousDetailsDto._() : super._();
 
@@ -322,14 +355,11 @@ abstract class _MiscellaneousDetailsDto extends MiscellaneousDetailsDto {
   @override
   RemarksAndMoreDto get remarksAndMore;
   @override
-  @Uint8ListConverter()
-  Uint8List? get applicantImage;
+  CloudImageDto? get applicantImage;
   @override
-  @Uint8ListConverter()
-  Uint8List? get coApplicantImage;
+  CloudImageDto? get coApplicantImage;
   @override
-  @Uint8ListConverter()
-  Uint8List? get guarenterImage;
+  CloudImageDto? get guarenterImage;
   @override
   @JsonKey(ignore: true)
   _$$MiscellaneousDetailsDtoImplCopyWith<_$MiscellaneousDetailsDtoImpl>

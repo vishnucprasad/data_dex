@@ -173,6 +173,7 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
         },
         takeImage: (_) async {
           emit(state.copyWith(
+            isImageUploading: true,
             houseImage: null,
             failureOrSuccess: none(),
           ));
@@ -207,6 +208,7 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
         },
         pickImage: (_) async {
           emit(state.copyWith(
+            isImageUploading: true,
             houseImage: null,
             failureOrSuccess: none(),
           ));

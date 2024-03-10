@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/miscellaneous_details/failures/miscellaneous_details_failure.dart';
 import 'package:data_dex/domain/miscellaneous_details/i_miscellaneous_details_repository.dart';
@@ -7,6 +8,7 @@ import 'package:data_dex/domain/miscellaneous_details/models/miscellaneous_detai
 import 'package:data_dex/infrastructure/core/firestore_helpers.dart';
 import 'package:data_dex/infrastructure/miscellaneous_details/dto/miscellaneous_details_dto.dart';
 import 'package:data_dex/injection.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_cropper/image_cropper.dart';
@@ -17,6 +19,7 @@ import 'package:injectable/injectable.dart';
 class MiscellaneousDetailsRepository
     implements IMiscellaneousDetailsRepository {
   final _firestore = getIt<FirebaseFirestore>();
+  final _storage = getIt<FirebaseStorage>();
 
   @override
   Future<Either<MiscellaneousDetailsFailure, CroppedFile?>> cropImage(
@@ -93,6 +96,49 @@ class MiscellaneousDetailsRepository
           return left(const MiscellaneousDetailsFailure.permissionDenied());
         }
         return left(const MiscellaneousDetailsFailure.unableToUpdate());
+      }
+      return left(const MiscellaneousDetailsFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<MiscellaneousDetailsFailure, Unit>> deleteImage(
+    UniqueId id,
+  ) async {
+    try {
+      await _storage.ref('/${id.getOrCrash()}/miscellaneous_images').delete();
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message != null) {
+        if (e.message!.contains('PERMISSION_DENIED')) {
+          return left(const MiscellaneousDetailsFailure.permissionDenied());
+        }
+        return left(const MiscellaneousDetailsFailure.unableToUpdate());
+      }
+      return left(const MiscellaneousDetailsFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<MiscellaneousDetailsFailure, CloudImage>> uploadImage(
+    UniqueId id,
+    String name,
+    XFile image,
+  ) async {
+    try {
+      final ref = _storage
+          .ref()
+          .child('/${id.getOrCrash()}/miscellaneous_images/$name');
+      final uploadTask = ref.putData(await image.readAsBytes());
+
+      final url = await (await uploadTask).ref.getDownloadURL();
+      return right(CloudImage(
+        name: image.name,
+        url: url,
+      ));
+    } on PlatformException catch (e) {
+      if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {
+        return left(const MiscellaneousDetailsFailure.permissionDenied());
       }
       return left(const MiscellaneousDetailsFailure.unexpected());
     }

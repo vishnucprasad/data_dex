@@ -4,13 +4,16 @@ part of 'miscellaneous_form_bloc.dart';
 class MiscellaneousDetailsFormState with _$MiscellaneousDetailsFormState {
   const factory MiscellaneousDetailsFormState({
     required bool isSaving,
+    required bool isApplicantImageUploading,
+    required bool isCoApplicantImageUploading,
+    required bool isGuarenterImageUploading,
     required bool showValidationError,
     required int formStep,
     required PayoutDetails payoutDetails,
     required ReferenceDetails referenceDetails,
-    required XFile? applicantImage,
-    required XFile? coApplicantImage,
-    required XFile? guarenterImage,
+    required CloudImage? applicantImage,
+    required CloudImage? coApplicantImage,
+    required CloudImage? guarenterImage,
     required RemarksAndMore remarksAndMore,
     required UniqueId? loanId,
     required Option<Either<MiscellaneousDetailsFailure, Unit>> failureOrSuccess,
@@ -21,6 +24,9 @@ class MiscellaneousDetailsFormState with _$MiscellaneousDetailsFormState {
   factory MiscellaneousDetailsFormState.initial() {
     return MiscellaneousDetailsFormState(
       isSaving: false,
+      isApplicantImageUploading: false,
+      isCoApplicantImageUploading: false,
+      isGuarenterImageUploading: false,
       showValidationError: false,
       formStep: 0,
       payoutDetails: PayoutDetails.empty(),

@@ -15,12 +15,18 @@ _$MiscellaneousDetailsDtoImpl _$$MiscellaneousDetailsDtoImplFromJson(
           json['referenceDetails'] as Map<String, dynamic>),
       remarksAndMore: RemarksAndMoreDto.fromJson(
           json['remarksAndMore'] as Map<String, dynamic>),
-      applicantImage: _$JsonConverterFromJson<String, Uint8List>(
-          json['applicantImage'], const Uint8ListConverter().fromJson),
-      coApplicantImage: _$JsonConverterFromJson<String, Uint8List>(
-          json['coApplicantImage'], const Uint8ListConverter().fromJson),
-      guarenterImage: _$JsonConverterFromJson<String, Uint8List>(
-          json['guarenterImage'], const Uint8ListConverter().fromJson),
+      applicantImage: json['applicantImage'] == null
+          ? null
+          : CloudImageDto.fromJson(
+              json['applicantImage'] as Map<String, dynamic>),
+      coApplicantImage: json['coApplicantImage'] == null
+          ? null
+          : CloudImageDto.fromJson(
+              json['coApplicantImage'] as Map<String, dynamic>),
+      guarenterImage: json['guarenterImage'] == null
+          ? null
+          : CloudImageDto.fromJson(
+              json['guarenterImage'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$MiscellaneousDetailsDtoImplToJson(
@@ -29,22 +35,7 @@ Map<String, dynamic> _$$MiscellaneousDetailsDtoImplToJson(
       'payoutDetails': instance.payoutDetails.toJson(),
       'referenceDetails': instance.referenceDetails.toJson(),
       'remarksAndMore': instance.remarksAndMore.toJson(),
-      'applicantImage': _$JsonConverterToJson<String, Uint8List>(
-          instance.applicantImage, const Uint8ListConverter().toJson),
-      'coApplicantImage': _$JsonConverterToJson<String, Uint8List>(
-          instance.coApplicantImage, const Uint8ListConverter().toJson),
-      'guarenterImage': _$JsonConverterToJson<String, Uint8List>(
-          instance.guarenterImage, const Uint8ListConverter().toJson),
+      'applicantImage': instance.applicantImage?.toJson(),
+      'coApplicantImage': instance.coApplicantImage?.toJson(),
+      'guarenterImage': instance.guarenterImage?.toJson(),
     };
-
-Value? _$JsonConverterFromJson<Json, Value>(
-  Object? json,
-  Value? Function(Json json) fromJson,
-) =>
-    json == null ? null : fromJson(json as Json);
-
-Json? _$JsonConverterToJson<Json, Value>(
-  Value? value,
-  Json? Function(Value value) toJson,
-) =>
-    value == null ? null : toJson(value);

@@ -35,6 +35,7 @@ mixin _$MiscellaneousDetailsFormEvent {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -60,6 +61,7 @@ mixin _$MiscellaneousDetailsFormEvent {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -85,6 +87,7 @@ mixin _$MiscellaneousDetailsFormEvent {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -113,6 +116,7 @@ mixin _$MiscellaneousDetailsFormEvent {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -139,6 +143,7 @@ mixin _$MiscellaneousDetailsFormEvent {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -165,6 +170,7 @@ mixin _$MiscellaneousDetailsFormEvent {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -250,6 +256,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -278,6 +285,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -306,6 +314,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -340,6 +349,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -369,6 +379,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -398,6 +409,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -496,6 +508,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -524,6 +537,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -552,6 +566,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -586,6 +601,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -615,6 +631,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -644,6 +661,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -748,6 +766,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -776,6 +795,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -804,6 +824,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -838,6 +859,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -867,6 +889,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -896,6 +919,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -1002,6 +1026,7 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -1030,6 +1055,7 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -1058,6 +1084,7 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -1092,6 +1119,7 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -1121,6 +1149,7 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -1150,6 +1179,7 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -1257,6 +1287,7 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -1285,6 +1316,7 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -1313,6 +1345,7 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -1347,6 +1380,7 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -1376,6 +1410,7 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -1405,6 +1440,7 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -1514,6 +1550,7 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -1542,6 +1579,7 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -1570,6 +1608,7 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -1604,6 +1643,7 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -1633,6 +1673,7 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -1662,6 +1703,7 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -1775,6 +1817,7 @@ class _$ReferenceOnePhoneNumberChangedImpl
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -1803,6 +1846,7 @@ class _$ReferenceOnePhoneNumberChangedImpl
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -1831,6 +1875,7 @@ class _$ReferenceOnePhoneNumberChangedImpl
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -1865,6 +1910,7 @@ class _$ReferenceOnePhoneNumberChangedImpl
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -1894,6 +1940,7 @@ class _$ReferenceOnePhoneNumberChangedImpl
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -1923,6 +1970,7 @@ class _$ReferenceOnePhoneNumberChangedImpl
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -2035,6 +2083,7 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -2063,6 +2112,7 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -2091,6 +2141,7 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -2125,6 +2176,7 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -2154,6 +2206,7 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -2183,6 +2236,7 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -2296,6 +2350,7 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -2324,6 +2379,7 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -2352,6 +2408,7 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -2386,6 +2443,7 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -2415,6 +2473,7 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -2444,6 +2503,7 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -2526,6 +2586,7 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -2554,6 +2615,7 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -2582,6 +2644,7 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -2616,6 +2679,7 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -2645,6 +2709,7 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -2674,6 +2739,7 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -2747,6 +2813,7 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -2775,6 +2842,7 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -2803,6 +2871,7 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -2837,6 +2906,7 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -2866,6 +2936,7 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -2895,6 +2966,7 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -2969,6 +3041,7 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -2997,6 +3070,7 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -3025,6 +3099,7 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -3059,6 +3134,7 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -3088,6 +3164,7 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -3117,6 +3194,7 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -3191,6 +3269,7 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -3219,6 +3298,7 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -3247,6 +3327,7 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -3281,6 +3362,7 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -3310,6 +3392,7 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -3339,6 +3422,7 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -3412,6 +3496,7 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -3440,6 +3525,7 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -3468,6 +3554,7 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -3502,6 +3589,7 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -3531,6 +3619,7 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -3560,6 +3649,7 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -3633,6 +3723,7 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -3661,6 +3752,7 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -3689,6 +3781,7 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -3723,6 +3816,7 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -3752,6 +3846,7 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -3781,6 +3876,7 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -3796,6 +3892,232 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
 
 abstract class _TakeGuarenterImage implements MiscellaneousDetailsFormEvent {
   const factory _TakeGuarenterImage() = _$TakeGuarenterImageImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteImagesImplCopyWith<$Res> {
+  factory _$$DeleteImagesImplCopyWith(
+          _$DeleteImagesImpl value, $Res Function(_$DeleteImagesImpl) then) =
+      __$$DeleteImagesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteImagesImplCopyWithImpl<$Res>
+    extends _$MiscellaneousDetailsFormEventCopyWithImpl<$Res,
+        _$DeleteImagesImpl> implements _$$DeleteImagesImplCopyWith<$Res> {
+  __$$DeleteImagesImplCopyWithImpl(
+      _$DeleteImagesImpl _value, $Res Function(_$DeleteImagesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DeleteImagesImpl implements _DeleteImages {
+  const _$DeleteImagesImpl();
+
+  @override
+  String toString() {
+    return 'MiscellaneousDetailsFormEvent.deleteImages()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteImagesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initialized,
+    required TResult Function(UniqueId loanId) loanIdChanged,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String payeeName) payeeNameChanged,
+    required TResult Function(String payeeAmount) payeeAmountChanged,
+    required TResult Function(String referenceOneName) referenceOneNameChanged,
+    required TResult Function(String referenceOnePhoneNumber)
+        referenceOnePhoneNumberChanged,
+    required TResult Function(String referenceTwoName) referenceTwoNameChanged,
+    required TResult Function(String referenceTwoPhoneNumber)
+        referenceTwoPhoneNumberChanged,
+    required TResult Function() pickApplicantImage,
+    required TResult Function() takeApplicantImage,
+    required TResult Function() pickCoApplicantImage,
+    required TResult Function() takeCoApplicantImage,
+    required TResult Function() pickGuarenterImage,
+    required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
+    required TResult Function(String appId) appIdChanged,
+    required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String remarks) remarksChanged,
+    required TResult Function() saveMiscellaneousDetails,
+  }) {
+    return deleteImages();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initialized,
+    TResult? Function(UniqueId loanId)? loanIdChanged,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String payeeName)? payeeNameChanged,
+    TResult? Function(String payeeAmount)? payeeAmountChanged,
+    TResult? Function(String referenceOneName)? referenceOneNameChanged,
+    TResult? Function(String referenceOnePhoneNumber)?
+        referenceOnePhoneNumberChanged,
+    TResult? Function(String referenceTwoName)? referenceTwoNameChanged,
+    TResult? Function(String referenceTwoPhoneNumber)?
+        referenceTwoPhoneNumberChanged,
+    TResult? Function()? pickApplicantImage,
+    TResult? Function()? takeApplicantImage,
+    TResult? Function()? pickCoApplicantImage,
+    TResult? Function()? takeCoApplicantImage,
+    TResult? Function()? pickGuarenterImage,
+    TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
+    TResult? Function(String appId)? appIdChanged,
+    TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String remarks)? remarksChanged,
+    TResult? Function()? saveMiscellaneousDetails,
+  }) {
+    return deleteImages?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initialized,
+    TResult Function(UniqueId loanId)? loanIdChanged,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String payeeName)? payeeNameChanged,
+    TResult Function(String payeeAmount)? payeeAmountChanged,
+    TResult Function(String referenceOneName)? referenceOneNameChanged,
+    TResult Function(String referenceOnePhoneNumber)?
+        referenceOnePhoneNumberChanged,
+    TResult Function(String referenceTwoName)? referenceTwoNameChanged,
+    TResult Function(String referenceTwoPhoneNumber)?
+        referenceTwoPhoneNumberChanged,
+    TResult Function()? pickApplicantImage,
+    TResult Function()? takeApplicantImage,
+    TResult Function()? pickCoApplicantImage,
+    TResult Function()? takeCoApplicantImage,
+    TResult Function()? pickGuarenterImage,
+    TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
+    TResult Function(String appId)? appIdChanged,
+    TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String remarks)? remarksChanged,
+    TResult Function()? saveMiscellaneousDetails,
+    required TResult orElse(),
+  }) {
+    if (deleteImages != null) {
+      return deleteImages();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_LoanIdChanged value) loanIdChanged,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_PayeeNameChanged value) payeeNameChanged,
+    required TResult Function(_PayeeAmountChanged value) payeeAmountChanged,
+    required TResult Function(_ReferenceOneNameChanged value)
+        referenceOneNameChanged,
+    required TResult Function(_ReferenceOnePhoneNumberChanged value)
+        referenceOnePhoneNumberChanged,
+    required TResult Function(_ReferenceTwoNameChanged value)
+        referenceTwoNameChanged,
+    required TResult Function(_ReferenceTwoPhoneNumberChanged value)
+        referenceTwoPhoneNumberChanged,
+    required TResult Function(_PickApplicantImage value) pickApplicantImage,
+    required TResult Function(_TakeApplicantImage value) takeApplicantImage,
+    required TResult Function(_PickCoApplicantImage value) pickCoApplicantImage,
+    required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
+    required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
+    required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
+    required TResult Function(_AppIdChanged value) appIdChanged,
+    required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_RemarksChanged value) remarksChanged,
+    required TResult Function(_SaveMiscellaneousDetails value)
+        saveMiscellaneousDetails,
+  }) {
+    return deleteImages(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_LoanIdChanged value)? loanIdChanged,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_PayeeNameChanged value)? payeeNameChanged,
+    TResult? Function(_PayeeAmountChanged value)? payeeAmountChanged,
+    TResult? Function(_ReferenceOneNameChanged value)? referenceOneNameChanged,
+    TResult? Function(_ReferenceOnePhoneNumberChanged value)?
+        referenceOnePhoneNumberChanged,
+    TResult? Function(_ReferenceTwoNameChanged value)? referenceTwoNameChanged,
+    TResult? Function(_ReferenceTwoPhoneNumberChanged value)?
+        referenceTwoPhoneNumberChanged,
+    TResult? Function(_PickApplicantImage value)? pickApplicantImage,
+    TResult? Function(_TakeApplicantImage value)? takeApplicantImage,
+    TResult? Function(_PickCoApplicantImage value)? pickCoApplicantImage,
+    TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
+    TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
+    TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
+    TResult? Function(_AppIdChanged value)? appIdChanged,
+    TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_RemarksChanged value)? remarksChanged,
+    TResult? Function(_SaveMiscellaneousDetails value)?
+        saveMiscellaneousDetails,
+  }) {
+    return deleteImages?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_LoanIdChanged value)? loanIdChanged,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_PayeeNameChanged value)? payeeNameChanged,
+    TResult Function(_PayeeAmountChanged value)? payeeAmountChanged,
+    TResult Function(_ReferenceOneNameChanged value)? referenceOneNameChanged,
+    TResult Function(_ReferenceOnePhoneNumberChanged value)?
+        referenceOnePhoneNumberChanged,
+    TResult Function(_ReferenceTwoNameChanged value)? referenceTwoNameChanged,
+    TResult Function(_ReferenceTwoPhoneNumberChanged value)?
+        referenceTwoPhoneNumberChanged,
+    TResult Function(_PickApplicantImage value)? pickApplicantImage,
+    TResult Function(_TakeApplicantImage value)? takeApplicantImage,
+    TResult Function(_PickCoApplicantImage value)? pickCoApplicantImage,
+    TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
+    TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
+    TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
+    TResult Function(_AppIdChanged value)? appIdChanged,
+    TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_RemarksChanged value)? remarksChanged,
+    TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
+    required TResult orElse(),
+  }) {
+    if (deleteImages != null) {
+      return deleteImages(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteImages implements MiscellaneousDetailsFormEvent {
+  const factory _DeleteImages() = _$DeleteImagesImpl;
 }
 
 /// @nodoc
@@ -3879,6 +4201,7 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -3907,6 +4230,7 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -3935,6 +4259,7 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -3969,6 +4294,7 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -3998,6 +4324,7 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -4027,6 +4354,7 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -4130,6 +4458,7 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -4158,6 +4487,7 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -4186,6 +4516,7 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -4220,6 +4551,7 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -4249,6 +4581,7 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -4278,6 +4611,7 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -4382,6 +4716,7 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -4410,6 +4745,7 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -4438,6 +4774,7 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -4472,6 +4809,7 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -4501,6 +4839,7 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -4530,6 +4869,7 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -4611,6 +4951,7 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     required TResult Function() takeCoApplicantImage,
     required TResult Function() pickGuarenterImage,
     required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
     required TResult Function(String remarks) remarksChanged,
@@ -4639,6 +4980,7 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     TResult? Function()? takeCoApplicantImage,
     TResult? Function()? pickGuarenterImage,
     TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
     TResult? Function(String remarks)? remarksChanged,
@@ -4667,6 +5009,7 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     TResult Function()? takeCoApplicantImage,
     TResult Function()? pickGuarenterImage,
     TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
     TResult Function(String remarks)? remarksChanged,
@@ -4701,6 +5044,7 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
     required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
     required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
@@ -4730,6 +5074,7 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
@@ -4759,6 +5104,7 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
     TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
     TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
@@ -4780,13 +5126,16 @@ abstract class _SaveMiscellaneousDetails
 /// @nodoc
 mixin _$MiscellaneousDetailsFormState {
   bool get isSaving => throw _privateConstructorUsedError;
+  bool get isApplicantImageUploading => throw _privateConstructorUsedError;
+  bool get isCoApplicantImageUploading => throw _privateConstructorUsedError;
+  bool get isGuarenterImageUploading => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   int get formStep => throw _privateConstructorUsedError;
   PayoutDetails get payoutDetails => throw _privateConstructorUsedError;
   ReferenceDetails get referenceDetails => throw _privateConstructorUsedError;
-  XFile? get applicantImage => throw _privateConstructorUsedError;
-  XFile? get coApplicantImage => throw _privateConstructorUsedError;
-  XFile? get guarenterImage => throw _privateConstructorUsedError;
+  CloudImage? get applicantImage => throw _privateConstructorUsedError;
+  CloudImage? get coApplicantImage => throw _privateConstructorUsedError;
+  CloudImage? get guarenterImage => throw _privateConstructorUsedError;
   RemarksAndMore get remarksAndMore => throw _privateConstructorUsedError;
   UniqueId? get loanId => throw _privateConstructorUsedError;
   Option<Either<MiscellaneousDetailsFailure, Unit>> get failureOrSuccess =>
@@ -4809,13 +5158,16 @@ abstract class $MiscellaneousDetailsFormStateCopyWith<$Res> {
   @useResult
   $Res call(
       {bool isSaving,
+      bool isApplicantImageUploading,
+      bool isCoApplicantImageUploading,
+      bool isGuarenterImageUploading,
       bool showValidationError,
       int formStep,
       PayoutDetails payoutDetails,
       ReferenceDetails referenceDetails,
-      XFile? applicantImage,
-      XFile? coApplicantImage,
-      XFile? guarenterImage,
+      CloudImage? applicantImage,
+      CloudImage? coApplicantImage,
+      CloudImage? guarenterImage,
       RemarksAndMore remarksAndMore,
       UniqueId? loanId,
       Option<Either<MiscellaneousDetailsFailure, Unit>> failureOrSuccess,
@@ -4823,6 +5175,9 @@ abstract class $MiscellaneousDetailsFormStateCopyWith<$Res> {
 
   $PayoutDetailsCopyWith<$Res> get payoutDetails;
   $ReferenceDetailsCopyWith<$Res> get referenceDetails;
+  $CloudImageCopyWith<$Res>? get applicantImage;
+  $CloudImageCopyWith<$Res>? get coApplicantImage;
+  $CloudImageCopyWith<$Res>? get guarenterImage;
   $RemarksAndMoreCopyWith<$Res> get remarksAndMore;
 }
 
@@ -4841,6 +5196,9 @@ class _$MiscellaneousDetailsFormStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? isSaving = null,
+    Object? isApplicantImageUploading = null,
+    Object? isCoApplicantImageUploading = null,
+    Object? isGuarenterImageUploading = null,
     Object? showValidationError = null,
     Object? formStep = null,
     Object? payoutDetails = null,
@@ -4857,6 +5215,18 @@ class _$MiscellaneousDetailsFormStateCopyWithImpl<$Res,
       isSaving: null == isSaving
           ? _value.isSaving
           : isSaving // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isApplicantImageUploading: null == isApplicantImageUploading
+          ? _value.isApplicantImageUploading
+          : isApplicantImageUploading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isCoApplicantImageUploading: null == isCoApplicantImageUploading
+          ? _value.isCoApplicantImageUploading
+          : isCoApplicantImageUploading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isGuarenterImageUploading: null == isGuarenterImageUploading
+          ? _value.isGuarenterImageUploading
+          : isGuarenterImageUploading // ignore: cast_nullable_to_non_nullable
               as bool,
       showValidationError: null == showValidationError
           ? _value.showValidationError
@@ -4877,15 +5247,15 @@ class _$MiscellaneousDetailsFormStateCopyWithImpl<$Res,
       applicantImage: freezed == applicantImage
           ? _value.applicantImage
           : applicantImage // ignore: cast_nullable_to_non_nullable
-              as XFile?,
+              as CloudImage?,
       coApplicantImage: freezed == coApplicantImage
           ? _value.coApplicantImage
           : coApplicantImage // ignore: cast_nullable_to_non_nullable
-              as XFile?,
+              as CloudImage?,
       guarenterImage: freezed == guarenterImage
           ? _value.guarenterImage
           : guarenterImage // ignore: cast_nullable_to_non_nullable
-              as XFile?,
+              as CloudImage?,
       remarksAndMore: null == remarksAndMore
           ? _value.remarksAndMore
           : remarksAndMore // ignore: cast_nullable_to_non_nullable
@@ -4923,6 +5293,42 @@ class _$MiscellaneousDetailsFormStateCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
+  $CloudImageCopyWith<$Res>? get applicantImage {
+    if (_value.applicantImage == null) {
+      return null;
+    }
+
+    return $CloudImageCopyWith<$Res>(_value.applicantImage!, (value) {
+      return _then(_value.copyWith(applicantImage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageCopyWith<$Res>? get coApplicantImage {
+    if (_value.coApplicantImage == null) {
+      return null;
+    }
+
+    return $CloudImageCopyWith<$Res>(_value.coApplicantImage!, (value) {
+      return _then(_value.copyWith(coApplicantImage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageCopyWith<$Res>? get guarenterImage {
+    if (_value.guarenterImage == null) {
+      return null;
+    }
+
+    return $CloudImageCopyWith<$Res>(_value.guarenterImage!, (value) {
+      return _then(_value.copyWith(guarenterImage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $RemarksAndMoreCopyWith<$Res> get remarksAndMore {
     return $RemarksAndMoreCopyWith<$Res>(_value.remarksAndMore, (value) {
       return _then(_value.copyWith(remarksAndMore: value) as $Val);
@@ -4941,13 +5347,16 @@ abstract class _$$MiscellaneousDetailsFormStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool isSaving,
+      bool isApplicantImageUploading,
+      bool isCoApplicantImageUploading,
+      bool isGuarenterImageUploading,
       bool showValidationError,
       int formStep,
       PayoutDetails payoutDetails,
       ReferenceDetails referenceDetails,
-      XFile? applicantImage,
-      XFile? coApplicantImage,
-      XFile? guarenterImage,
+      CloudImage? applicantImage,
+      CloudImage? coApplicantImage,
+      CloudImage? guarenterImage,
       RemarksAndMore remarksAndMore,
       UniqueId? loanId,
       Option<Either<MiscellaneousDetailsFailure, Unit>> failureOrSuccess,
@@ -4957,6 +5366,12 @@ abstract class _$$MiscellaneousDetailsFormStateImplCopyWith<$Res>
   $PayoutDetailsCopyWith<$Res> get payoutDetails;
   @override
   $ReferenceDetailsCopyWith<$Res> get referenceDetails;
+  @override
+  $CloudImageCopyWith<$Res>? get applicantImage;
+  @override
+  $CloudImageCopyWith<$Res>? get coApplicantImage;
+  @override
+  $CloudImageCopyWith<$Res>? get guarenterImage;
   @override
   $RemarksAndMoreCopyWith<$Res> get remarksAndMore;
 }
@@ -4975,6 +5390,9 @@ class __$$MiscellaneousDetailsFormStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isSaving = null,
+    Object? isApplicantImageUploading = null,
+    Object? isCoApplicantImageUploading = null,
+    Object? isGuarenterImageUploading = null,
     Object? showValidationError = null,
     Object? formStep = null,
     Object? payoutDetails = null,
@@ -4991,6 +5409,18 @@ class __$$MiscellaneousDetailsFormStateImplCopyWithImpl<$Res>
       isSaving: null == isSaving
           ? _value.isSaving
           : isSaving // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isApplicantImageUploading: null == isApplicantImageUploading
+          ? _value.isApplicantImageUploading
+          : isApplicantImageUploading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isCoApplicantImageUploading: null == isCoApplicantImageUploading
+          ? _value.isCoApplicantImageUploading
+          : isCoApplicantImageUploading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isGuarenterImageUploading: null == isGuarenterImageUploading
+          ? _value.isGuarenterImageUploading
+          : isGuarenterImageUploading // ignore: cast_nullable_to_non_nullable
               as bool,
       showValidationError: null == showValidationError
           ? _value.showValidationError
@@ -5011,15 +5441,15 @@ class __$$MiscellaneousDetailsFormStateImplCopyWithImpl<$Res>
       applicantImage: freezed == applicantImage
           ? _value.applicantImage
           : applicantImage // ignore: cast_nullable_to_non_nullable
-              as XFile?,
+              as CloudImage?,
       coApplicantImage: freezed == coApplicantImage
           ? _value.coApplicantImage
           : coApplicantImage // ignore: cast_nullable_to_non_nullable
-              as XFile?,
+              as CloudImage?,
       guarenterImage: freezed == guarenterImage
           ? _value.guarenterImage
           : guarenterImage // ignore: cast_nullable_to_non_nullable
-              as XFile?,
+              as CloudImage?,
       remarksAndMore: null == remarksAndMore
           ? _value.remarksAndMore
           : remarksAndMore // ignore: cast_nullable_to_non_nullable
@@ -5046,6 +5476,9 @@ class _$MiscellaneousDetailsFormStateImpl
     implements _MiscellaneousDetailsFormState {
   const _$MiscellaneousDetailsFormStateImpl(
       {required this.isSaving,
+      required this.isApplicantImageUploading,
+      required this.isCoApplicantImageUploading,
+      required this.isGuarenterImageUploading,
       required this.showValidationError,
       required this.formStep,
       required this.payoutDetails,
@@ -5061,6 +5494,12 @@ class _$MiscellaneousDetailsFormStateImpl
   @override
   final bool isSaving;
   @override
+  final bool isApplicantImageUploading;
+  @override
+  final bool isCoApplicantImageUploading;
+  @override
+  final bool isGuarenterImageUploading;
+  @override
   final bool showValidationError;
   @override
   final int formStep;
@@ -5069,11 +5508,11 @@ class _$MiscellaneousDetailsFormStateImpl
   @override
   final ReferenceDetails referenceDetails;
   @override
-  final XFile? applicantImage;
+  final CloudImage? applicantImage;
   @override
-  final XFile? coApplicantImage;
+  final CloudImage? coApplicantImage;
   @override
-  final XFile? guarenterImage;
+  final CloudImage? guarenterImage;
   @override
   final RemarksAndMore remarksAndMore;
   @override
@@ -5085,7 +5524,7 @@ class _$MiscellaneousDetailsFormStateImpl
 
   @override
   String toString() {
-    return 'MiscellaneousDetailsFormState(isSaving: $isSaving, showValidationError: $showValidationError, formStep: $formStep, payoutDetails: $payoutDetails, referenceDetails: $referenceDetails, applicantImage: $applicantImage, coApplicantImage: $coApplicantImage, guarenterImage: $guarenterImage, remarksAndMore: $remarksAndMore, loanId: $loanId, failureOrSuccess: $failureOrSuccess, saveFailureOrSuccess: $saveFailureOrSuccess)';
+    return 'MiscellaneousDetailsFormState(isSaving: $isSaving, isApplicantImageUploading: $isApplicantImageUploading, isCoApplicantImageUploading: $isCoApplicantImageUploading, isGuarenterImageUploading: $isGuarenterImageUploading, showValidationError: $showValidationError, formStep: $formStep, payoutDetails: $payoutDetails, referenceDetails: $referenceDetails, applicantImage: $applicantImage, coApplicantImage: $coApplicantImage, guarenterImage: $guarenterImage, remarksAndMore: $remarksAndMore, loanId: $loanId, failureOrSuccess: $failureOrSuccess, saveFailureOrSuccess: $saveFailureOrSuccess)';
   }
 
   @override
@@ -5095,6 +5534,16 @@ class _$MiscellaneousDetailsFormStateImpl
             other is _$MiscellaneousDetailsFormStateImpl &&
             (identical(other.isSaving, isSaving) ||
                 other.isSaving == isSaving) &&
+            (identical(other.isApplicantImageUploading,
+                    isApplicantImageUploading) ||
+                other.isApplicantImageUploading == isApplicantImageUploading) &&
+            (identical(other.isCoApplicantImageUploading,
+                    isCoApplicantImageUploading) ||
+                other.isCoApplicantImageUploading ==
+                    isCoApplicantImageUploading) &&
+            (identical(other.isGuarenterImageUploading,
+                    isGuarenterImageUploading) ||
+                other.isGuarenterImageUploading == isGuarenterImageUploading) &&
             (identical(other.showValidationError, showValidationError) ||
                 other.showValidationError == showValidationError) &&
             (identical(other.formStep, formStep) ||
@@ -5122,6 +5571,9 @@ class _$MiscellaneousDetailsFormStateImpl
   int get hashCode => Object.hash(
       runtimeType,
       isSaving,
+      isApplicantImageUploading,
+      isCoApplicantImageUploading,
+      isGuarenterImageUploading,
       showValidationError,
       formStep,
       payoutDetails,
@@ -5147,13 +5599,16 @@ abstract class _MiscellaneousDetailsFormState
     implements MiscellaneousDetailsFormState {
   const factory _MiscellaneousDetailsFormState(
       {required final bool isSaving,
+      required final bool isApplicantImageUploading,
+      required final bool isCoApplicantImageUploading,
+      required final bool isGuarenterImageUploading,
       required final bool showValidationError,
       required final int formStep,
       required final PayoutDetails payoutDetails,
       required final ReferenceDetails referenceDetails,
-      required final XFile? applicantImage,
-      required final XFile? coApplicantImage,
-      required final XFile? guarenterImage,
+      required final CloudImage? applicantImage,
+      required final CloudImage? coApplicantImage,
+      required final CloudImage? guarenterImage,
       required final RemarksAndMore remarksAndMore,
       required final UniqueId? loanId,
       required final Option<Either<MiscellaneousDetailsFailure, Unit>>
@@ -5164,6 +5619,12 @@ abstract class _MiscellaneousDetailsFormState
   @override
   bool get isSaving;
   @override
+  bool get isApplicantImageUploading;
+  @override
+  bool get isCoApplicantImageUploading;
+  @override
+  bool get isGuarenterImageUploading;
+  @override
   bool get showValidationError;
   @override
   int get formStep;
@@ -5172,11 +5633,11 @@ abstract class _MiscellaneousDetailsFormState
   @override
   ReferenceDetails get referenceDetails;
   @override
-  XFile? get applicantImage;
+  CloudImage? get applicantImage;
   @override
-  XFile? get coApplicantImage;
+  CloudImage? get coApplicantImage;
   @override
-  XFile? get guarenterImage;
+  CloudImage? get guarenterImage;
   @override
   RemarksAndMore get remarksAndMore;
   @override

@@ -19,9 +19,9 @@ mixin _$MiscellaneousDetails {
   PayoutDetails get payoutDetails => throw _privateConstructorUsedError;
   ReferenceDetails get referenceDetails => throw _privateConstructorUsedError;
   RemarksAndMore get remarksAndMore => throw _privateConstructorUsedError;
-  Uint8List? get applicantImage => throw _privateConstructorUsedError;
-  Uint8List? get coApplicantImage => throw _privateConstructorUsedError;
-  Uint8List? get guarenterImage => throw _privateConstructorUsedError;
+  CloudImage? get applicantImage => throw _privateConstructorUsedError;
+  CloudImage? get coApplicantImage => throw _privateConstructorUsedError;
+  CloudImage? get guarenterImage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MiscellaneousDetailsCopyWith<MiscellaneousDetails> get copyWith =>
@@ -38,13 +38,16 @@ abstract class $MiscellaneousDetailsCopyWith<$Res> {
       {PayoutDetails payoutDetails,
       ReferenceDetails referenceDetails,
       RemarksAndMore remarksAndMore,
-      Uint8List? applicantImage,
-      Uint8List? coApplicantImage,
-      Uint8List? guarenterImage});
+      CloudImage? applicantImage,
+      CloudImage? coApplicantImage,
+      CloudImage? guarenterImage});
 
   $PayoutDetailsCopyWith<$Res> get payoutDetails;
   $ReferenceDetailsCopyWith<$Res> get referenceDetails;
   $RemarksAndMoreCopyWith<$Res> get remarksAndMore;
+  $CloudImageCopyWith<$Res>? get applicantImage;
+  $CloudImageCopyWith<$Res>? get coApplicantImage;
+  $CloudImageCopyWith<$Res>? get guarenterImage;
 }
 
 /// @nodoc
@@ -84,15 +87,15 @@ class _$MiscellaneousDetailsCopyWithImpl<$Res,
       applicantImage: freezed == applicantImage
           ? _value.applicantImage
           : applicantImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImage?,
       coApplicantImage: freezed == coApplicantImage
           ? _value.coApplicantImage
           : coApplicantImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImage?,
       guarenterImage: freezed == guarenterImage
           ? _value.guarenterImage
           : guarenterImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImage?,
     ) as $Val);
   }
 
@@ -119,6 +122,42 @@ class _$MiscellaneousDetailsCopyWithImpl<$Res,
       return _then(_value.copyWith(remarksAndMore: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageCopyWith<$Res>? get applicantImage {
+    if (_value.applicantImage == null) {
+      return null;
+    }
+
+    return $CloudImageCopyWith<$Res>(_value.applicantImage!, (value) {
+      return _then(_value.copyWith(applicantImage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageCopyWith<$Res>? get coApplicantImage {
+    if (_value.coApplicantImage == null) {
+      return null;
+    }
+
+    return $CloudImageCopyWith<$Res>(_value.coApplicantImage!, (value) {
+      return _then(_value.copyWith(coApplicantImage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CloudImageCopyWith<$Res>? get guarenterImage {
+    if (_value.guarenterImage == null) {
+      return null;
+    }
+
+    return $CloudImageCopyWith<$Res>(_value.guarenterImage!, (value) {
+      return _then(_value.copyWith(guarenterImage: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -133,9 +172,9 @@ abstract class _$$MiscellaneousDetailsImplCopyWith<$Res>
       {PayoutDetails payoutDetails,
       ReferenceDetails referenceDetails,
       RemarksAndMore remarksAndMore,
-      Uint8List? applicantImage,
-      Uint8List? coApplicantImage,
-      Uint8List? guarenterImage});
+      CloudImage? applicantImage,
+      CloudImage? coApplicantImage,
+      CloudImage? guarenterImage});
 
   @override
   $PayoutDetailsCopyWith<$Res> get payoutDetails;
@@ -143,6 +182,12 @@ abstract class _$$MiscellaneousDetailsImplCopyWith<$Res>
   $ReferenceDetailsCopyWith<$Res> get referenceDetails;
   @override
   $RemarksAndMoreCopyWith<$Res> get remarksAndMore;
+  @override
+  $CloudImageCopyWith<$Res>? get applicantImage;
+  @override
+  $CloudImageCopyWith<$Res>? get coApplicantImage;
+  @override
+  $CloudImageCopyWith<$Res>? get guarenterImage;
 }
 
 /// @nodoc
@@ -179,24 +224,22 @@ class __$$MiscellaneousDetailsImplCopyWithImpl<$Res>
       applicantImage: freezed == applicantImage
           ? _value.applicantImage
           : applicantImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImage?,
       coApplicantImage: freezed == coApplicantImage
           ? _value.coApplicantImage
           : coApplicantImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImage?,
       guarenterImage: freezed == guarenterImage
           ? _value.guarenterImage
           : guarenterImage // ignore: cast_nullable_to_non_nullable
-              as Uint8List?,
+              as CloudImage?,
     ));
   }
 }
 
 /// @nodoc
 
-class _$MiscellaneousDetailsImpl
-    with DiagnosticableTreeMixin
-    implements _MiscellaneousDetails {
+class _$MiscellaneousDetailsImpl implements _MiscellaneousDetails {
   const _$MiscellaneousDetailsImpl(
       {required this.payoutDetails,
       required this.referenceDetails,
@@ -212,28 +255,15 @@ class _$MiscellaneousDetailsImpl
   @override
   final RemarksAndMore remarksAndMore;
   @override
-  final Uint8List? applicantImage;
+  final CloudImage? applicantImage;
   @override
-  final Uint8List? coApplicantImage;
+  final CloudImage? coApplicantImage;
   @override
-  final Uint8List? guarenterImage;
+  final CloudImage? guarenterImage;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'MiscellaneousDetails(payoutDetails: $payoutDetails, referenceDetails: $referenceDetails, remarksAndMore: $remarksAndMore, applicantImage: $applicantImage, coApplicantImage: $coApplicantImage, guarenterImage: $guarenterImage)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'MiscellaneousDetails'))
-      ..add(DiagnosticsProperty('payoutDetails', payoutDetails))
-      ..add(DiagnosticsProperty('referenceDetails', referenceDetails))
-      ..add(DiagnosticsProperty('remarksAndMore', remarksAndMore))
-      ..add(DiagnosticsProperty('applicantImage', applicantImage))
-      ..add(DiagnosticsProperty('coApplicantImage', coApplicantImage))
-      ..add(DiagnosticsProperty('guarenterImage', guarenterImage));
   }
 
   @override
@@ -247,23 +277,17 @@ class _$MiscellaneousDetailsImpl
                 other.referenceDetails == referenceDetails) &&
             (identical(other.remarksAndMore, remarksAndMore) ||
                 other.remarksAndMore == remarksAndMore) &&
-            const DeepCollectionEquality()
-                .equals(other.applicantImage, applicantImage) &&
-            const DeepCollectionEquality()
-                .equals(other.coApplicantImage, coApplicantImage) &&
-            const DeepCollectionEquality()
-                .equals(other.guarenterImage, guarenterImage));
+            (identical(other.applicantImage, applicantImage) ||
+                other.applicantImage == applicantImage) &&
+            (identical(other.coApplicantImage, coApplicantImage) ||
+                other.coApplicantImage == coApplicantImage) &&
+            (identical(other.guarenterImage, guarenterImage) ||
+                other.guarenterImage == guarenterImage));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      payoutDetails,
-      referenceDetails,
-      remarksAndMore,
-      const DeepCollectionEquality().hash(applicantImage),
-      const DeepCollectionEquality().hash(coApplicantImage),
-      const DeepCollectionEquality().hash(guarenterImage));
+  int get hashCode => Object.hash(runtimeType, payoutDetails, referenceDetails,
+      remarksAndMore, applicantImage, coApplicantImage, guarenterImage);
 
   @JsonKey(ignore: true)
   @override
@@ -279,9 +303,9 @@ abstract class _MiscellaneousDetails implements MiscellaneousDetails {
       {required final PayoutDetails payoutDetails,
       required final ReferenceDetails referenceDetails,
       required final RemarksAndMore remarksAndMore,
-      required final Uint8List? applicantImage,
-      required final Uint8List? coApplicantImage,
-      required final Uint8List? guarenterImage}) = _$MiscellaneousDetailsImpl;
+      required final CloudImage? applicantImage,
+      required final CloudImage? coApplicantImage,
+      required final CloudImage? guarenterImage}) = _$MiscellaneousDetailsImpl;
 
   @override
   PayoutDetails get payoutDetails;
@@ -290,11 +314,11 @@ abstract class _MiscellaneousDetails implements MiscellaneousDetails {
   @override
   RemarksAndMore get remarksAndMore;
   @override
-  Uint8List? get applicantImage;
+  CloudImage? get applicantImage;
   @override
-  Uint8List? get coApplicantImage;
+  CloudImage? get coApplicantImage;
   @override
-  Uint8List? get guarenterImage;
+  CloudImage? get guarenterImage;
   @override
   @JsonKey(ignore: true)
   _$$MiscellaneousDetailsImplCopyWith<_$MiscellaneousDetailsImpl>

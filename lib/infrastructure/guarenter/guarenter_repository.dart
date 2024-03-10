@@ -144,7 +144,7 @@ class GuarenterRepository implements IGuarenterRepository {
     try {
       final ref = _storage
           .ref()
-          .child('/${id.getOrCrash()}/co_applicant/house/${image.name}');
+          .child('/${id.getOrCrash()}/guarenter/house/${image.name}');
       final uploadTask = ref.putData(await image.readAsBytes());
 
       final url = await (await uploadTask).ref.getDownloadURL();

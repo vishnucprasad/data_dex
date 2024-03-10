@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/miscellaneous_details/failures/miscellaneous_details_failure.dart';
 import 'package:data_dex/domain/miscellaneous_details/i_miscellaneous_details_repository.dart';
@@ -87,6 +88,7 @@ class MiscellaneousDetailsFormBloc
         )),
         pickApplicantImage: (_) async {
           emit(state.copyWith(
+            isApplicantImageUploading: true,
             applicantImage: null,
             failureOrSuccess: none(),
           ));
@@ -105,19 +107,38 @@ class MiscellaneousDetailsFormBloc
             return emit(
               await cropOption.fold(
                 (l) => state.copyWith(
+                  isApplicantImageUploading: false,
                   applicantImage: null,
                   failureOrSuccess: some(left(l)),
                 ),
-                (r) => state.copyWith(
-                  applicantImage: XFile(r!.path),
-                  failureOrSuccess: some(right(unit)),
-                ),
+                (r) async {
+                  final uploadOption =
+                      await _miscellaneousDetailsRepository.uploadImage(
+                    state.loanId!,
+                    'applicant_image.jpg',
+                    XFile.fromData(await r!.readAsBytes()),
+                  );
+
+                  return uploadOption.fold(
+                    (l) => state.copyWith(
+                      isApplicantImageUploading: false,
+                      applicantImage: null,
+                      failureOrSuccess: some(left(l)),
+                    ),
+                    (r) => state.copyWith(
+                      isApplicantImageUploading: false,
+                      applicantImage: r,
+                      failureOrSuccess: some(right(unit)),
+                    ),
+                  );
+                },
               ),
             );
           }
 
           emit(state.copyWith(
             applicantImage: null,
+            isApplicantImageUploading: false,
             failureOrSuccess: some(
               left(
                 imageOption.fold((l) => l, (r) => null) ??
@@ -128,6 +149,7 @@ class MiscellaneousDetailsFormBloc
         },
         takeApplicantImage: (_) async {
           emit(state.copyWith(
+            isApplicantImageUploading: true,
             applicantImage: null,
             failureOrSuccess: none(),
           ));
@@ -146,19 +168,38 @@ class MiscellaneousDetailsFormBloc
             return emit(
               await cropOption.fold(
                 (l) => state.copyWith(
+                  isApplicantImageUploading: false,
                   applicantImage: null,
                   failureOrSuccess: some(left(l)),
                 ),
-                (r) => state.copyWith(
-                  applicantImage: XFile(r!.path),
-                  failureOrSuccess: some(right(unit)),
-                ),
+                (r) async {
+                  final uploadOption =
+                      await _miscellaneousDetailsRepository.uploadImage(
+                    state.loanId!,
+                    'applicant_image.jpg',
+                    XFile.fromData(await r!.readAsBytes()),
+                  );
+
+                  return uploadOption.fold(
+                    (l) => state.copyWith(
+                      isApplicantImageUploading: false,
+                      applicantImage: null,
+                      failureOrSuccess: some(left(l)),
+                    ),
+                    (r) => state.copyWith(
+                      isApplicantImageUploading: false,
+                      applicantImage: r,
+                      failureOrSuccess: some(right(unit)),
+                    ),
+                  );
+                },
               ),
             );
           }
 
           emit(state.copyWith(
             applicantImage: null,
+            isApplicantImageUploading: false,
             failureOrSuccess: some(
               left(
                 imageOption.fold((l) => l, (r) => null) ??
@@ -169,6 +210,7 @@ class MiscellaneousDetailsFormBloc
         },
         pickCoApplicantImage: (_) async {
           emit(state.copyWith(
+            isCoApplicantImageUploading: true,
             coApplicantImage: null,
             failureOrSuccess: none(),
           ));
@@ -187,18 +229,37 @@ class MiscellaneousDetailsFormBloc
             return emit(
               await cropOption.fold(
                 (l) => state.copyWith(
+                  isCoApplicantImageUploading: false,
                   coApplicantImage: null,
                   failureOrSuccess: some(left(l)),
                 ),
-                (r) => state.copyWith(
-                  coApplicantImage: XFile(r!.path),
-                  failureOrSuccess: some(right(unit)),
-                ),
+                (r) async {
+                  final uploadOption =
+                      await _miscellaneousDetailsRepository.uploadImage(
+                    state.loanId!,
+                    'co_applicant_image.jpg',
+                    XFile.fromData(await r!.readAsBytes()),
+                  );
+
+                  return uploadOption.fold(
+                    (l) => state.copyWith(
+                      isCoApplicantImageUploading: false,
+                      coApplicantImage: null,
+                      failureOrSuccess: some(left(l)),
+                    ),
+                    (r) => state.copyWith(
+                      isCoApplicantImageUploading: false,
+                      coApplicantImage: r,
+                      failureOrSuccess: some(right(unit)),
+                    ),
+                  );
+                },
               ),
             );
           }
 
           emit(state.copyWith(
+            isCoApplicantImageUploading: false,
             coApplicantImage: null,
             failureOrSuccess: some(
               left(
@@ -210,6 +271,7 @@ class MiscellaneousDetailsFormBloc
         },
         takeCoApplicantImage: (_) async {
           emit(state.copyWith(
+            isCoApplicantImageUploading: true,
             coApplicantImage: null,
             failureOrSuccess: none(),
           ));
@@ -228,18 +290,37 @@ class MiscellaneousDetailsFormBloc
             return emit(
               await cropOption.fold(
                 (l) => state.copyWith(
+                  isCoApplicantImageUploading: false,
                   coApplicantImage: null,
                   failureOrSuccess: some(left(l)),
                 ),
-                (r) => state.copyWith(
-                  coApplicantImage: XFile(r!.path),
-                  failureOrSuccess: some(right(unit)),
-                ),
+                (r) async {
+                  final uploadOption =
+                      await _miscellaneousDetailsRepository.uploadImage(
+                    state.loanId!,
+                    'co_applicant_image.jpg',
+                    XFile.fromData(await r!.readAsBytes()),
+                  );
+
+                  return uploadOption.fold(
+                    (l) => state.copyWith(
+                      isCoApplicantImageUploading: false,
+                      coApplicantImage: null,
+                      failureOrSuccess: some(left(l)),
+                    ),
+                    (r) => state.copyWith(
+                      isCoApplicantImageUploading: false,
+                      coApplicantImage: r,
+                      failureOrSuccess: some(right(unit)),
+                    ),
+                  );
+                },
               ),
             );
           }
 
           emit(state.copyWith(
+            isCoApplicantImageUploading: false,
             coApplicantImage: null,
             failureOrSuccess: some(
               left(
@@ -251,6 +332,7 @@ class MiscellaneousDetailsFormBloc
         },
         pickGuarenterImage: (_) async {
           emit(state.copyWith(
+            isGuarenterImageUploading: true,
             guarenterImage: null,
             failureOrSuccess: none(),
           ));
@@ -269,18 +351,37 @@ class MiscellaneousDetailsFormBloc
             return emit(
               await cropOption.fold(
                 (l) => state.copyWith(
+                  isGuarenterImageUploading: false,
                   guarenterImage: null,
                   failureOrSuccess: some(left(l)),
                 ),
-                (r) => state.copyWith(
-                  guarenterImage: XFile(r!.path),
-                  failureOrSuccess: some(right(unit)),
-                ),
+                (r) async {
+                  final uploadOption =
+                      await _miscellaneousDetailsRepository.uploadImage(
+                    state.loanId!,
+                    'guarenter_image.jpg',
+                    XFile.fromData(await r!.readAsBytes()),
+                  );
+
+                  return uploadOption.fold(
+                    (l) => state.copyWith(
+                      isGuarenterImageUploading: false,
+                      guarenterImage: null,
+                      failureOrSuccess: some(left(l)),
+                    ),
+                    (r) => state.copyWith(
+                      isGuarenterImageUploading: false,
+                      guarenterImage: r,
+                      failureOrSuccess: some(right(unit)),
+                    ),
+                  );
+                },
               ),
             );
           }
 
           emit(state.copyWith(
+            isGuarenterImageUploading: false,
             guarenterImage: null,
             failureOrSuccess: some(
               left(
@@ -292,6 +393,7 @@ class MiscellaneousDetailsFormBloc
         },
         takeGuarenterImage: (_) async {
           emit(state.copyWith(
+            isGuarenterImageUploading: true,
             guarenterImage: null,
             failureOrSuccess: none(),
           ));
@@ -310,24 +412,62 @@ class MiscellaneousDetailsFormBloc
             return emit(
               await cropOption.fold(
                 (l) => state.copyWith(
+                  isGuarenterImageUploading: false,
                   guarenterImage: null,
                   failureOrSuccess: some(left(l)),
                 ),
-                (r) => state.copyWith(
-                  guarenterImage: XFile(r!.path),
-                  failureOrSuccess: some(right(unit)),
-                ),
+                (r) async {
+                  final uploadOption =
+                      await _miscellaneousDetailsRepository.uploadImage(
+                    state.loanId!,
+                    'guarenter_image.jpg',
+                    XFile.fromData(await r!.readAsBytes()),
+                  );
+
+                  return uploadOption.fold(
+                    (l) => state.copyWith(
+                      isGuarenterImageUploading: false,
+                      guarenterImage: null,
+                      failureOrSuccess: some(left(l)),
+                    ),
+                    (r) => state.copyWith(
+                      isGuarenterImageUploading: false,
+                      guarenterImage: r,
+                      failureOrSuccess: some(right(unit)),
+                    ),
+                  );
+                },
               ),
             );
           }
 
           emit(state.copyWith(
+            isGuarenterImageUploading: false,
             guarenterImage: null,
             failureOrSuccess: some(
               left(
                 imageOption.fold((l) => l, (r) => null) ??
                     const MiscellaneousDetailsFailure.clientFailure(),
               ),
+            ),
+          ));
+        },
+        deleteImages: (_) async {
+          final deleteOption =
+              await _miscellaneousDetailsRepository.deleteImage(state.loanId!);
+
+          emit(deleteOption.fold(
+            (l) => state.copyWith(
+              applicantImage: null,
+              coApplicantImage: null,
+              guarenterImage: null,
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) => state.copyWith(
+              applicantImage: null,
+              coApplicantImage: null,
+              guarenterImage: null,
+              failureOrSuccess: some(right(r)),
             ),
           ));
         },
@@ -366,15 +506,9 @@ class MiscellaneousDetailsFormBloc
                 payoutDetails: state.payoutDetails,
                 referenceDetails: state.referenceDetails,
                 remarksAndMore: state.remarksAndMore,
-                applicantImage: state.applicantImage != null
-                    ? await state.applicantImage!.readAsBytes()
-                    : null,
-                coApplicantImage: state.coApplicantImage != null
-                    ? await state.coApplicantImage!.readAsBytes()
-                    : null,
-                guarenterImage: state.guarenterImage != null
-                    ? await state.guarenterImage!.readAsBytes()
-                    : null,
+                applicantImage: state.applicantImage,
+                coApplicantImage: state.coApplicantImage,
+                guarenterImage: state.guarenterImage,
               ),
             );
           }
