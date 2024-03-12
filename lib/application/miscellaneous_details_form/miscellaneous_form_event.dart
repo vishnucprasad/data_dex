@@ -2,7 +2,9 @@ part of 'miscellaneous_form_bloc.dart';
 
 @freezed
 class MiscellaneousDetailsFormEvent with _$MiscellaneousDetailsFormEvent {
-  const factory MiscellaneousDetailsFormEvent.initialized() = _Initialized;
+  const factory MiscellaneousDetailsFormEvent.initialized(
+    Option<Loan> initializeOption,
+  ) = _Initialized;
   const factory MiscellaneousDetailsFormEvent.loanIdChanged(
     UniqueId loanId,
   ) = _LoanIdChanged;

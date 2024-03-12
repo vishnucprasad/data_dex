@@ -11,32 +11,42 @@ class PayeeNameInputField extends HookWidget {
   Widget build(BuildContext context) {
     final controller = useTextEditingController();
 
-    return TextFormField(
-      controller: controller,
-      decoration: InputDecoration(
-        hintText: 'Payee name',
-        labelText: 'Payee name',
-        labelStyle: const TextStyle(
-          fontWeight: FontWeight.bold,
-        ),
-        floatingLabelStyle: const TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-        ),
-        filled: true,
-        fillColor: kSecondaryColor,
-        border: OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        contentPadding: const EdgeInsets.symmetric(
-          vertical: 4,
-          horizontal: 16,
-        ),
-      ),
-      onChanged: (payeeName) => context
-          .read<MiscellaneousDetailsFormBloc>()
-          .add(MiscellaneousDetailsFormEvent.payeeNameChanged(payeeName)),
+    return BlocBuilder<MiscellaneousDetailsFormBloc,
+        MiscellaneousDetailsFormState>(
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
+      builder: (context, state) {
+        if (state.isEditing) {
+          controller.text = state.payoutDetails.payeeName ?? '';
+        }
+
+        return TextFormField(
+          controller: controller,
+          decoration: InputDecoration(
+            hintText: 'Payee name',
+            labelText: 'Payee name',
+            labelStyle: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+            floatingLabelStyle: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+            filled: true,
+            fillColor: kSecondaryColor,
+            border: OutlineInputBorder(
+              borderSide: BorderSide.none,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            contentPadding: const EdgeInsets.symmetric(
+              vertical: 4,
+              horizontal: 16,
+            ),
+          ),
+          onChanged: (payeeName) => context
+              .read<MiscellaneousDetailsFormBloc>()
+              .add(MiscellaneousDetailsFormEvent.payeeNameChanged(payeeName)),
+        );
+      },
     );
   }
 }

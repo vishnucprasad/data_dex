@@ -14,12 +14,21 @@ class RemarksInputField extends HookWidget {
         MiscellaneousDetailsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.remarksAndMore.remarks != null
-            ? state.remarksAndMore.remarks!.value.getOrElse(() => '')
-            : '';
+        if (!state.isEditing) {
+          controller.text = state.remarksAndMore.remarks != null
+              ? state.remarksAndMore.remarks!.value.getOrElse(() => '')
+              : '';
+        }
       },
       buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing &&
+            state.remarksAndMore.remarks != null &&
+            state.remarksAndMore.remarks!.isValid()) {
+          controller.text =
+              state.remarksAndMore.remarks!.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           maxLength: 1000,

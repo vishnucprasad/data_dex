@@ -33,11 +33,20 @@ class EMIDetailsForm extends StatelessWidget {
               ),
             ).show(context),
             (_) {
-              context
-                  .read<MiscellaneousDetailsFormBloc>()
-                  .add(MiscellaneousDetailsFormEvent.loanIdChanged(
-                    state.loanId!,
-                  ));
+              if (state.isEditing) {
+                context
+                    .read<MiscellaneousDetailsFormBloc>()
+                    .add(MiscellaneousDetailsFormEvent.initialized(
+                      some(state.editingLoan!),
+                    ));
+              } else {
+                context
+                    .read<MiscellaneousDetailsFormBloc>()
+                    .add(MiscellaneousDetailsFormEvent.loanIdChanged(
+                      state.loanId!,
+                    ));
+              }
+
               context
                   .read<LoanParticularsFormBloc>()
                   .add(LoanParticularsFormEvent.initialized(none()));

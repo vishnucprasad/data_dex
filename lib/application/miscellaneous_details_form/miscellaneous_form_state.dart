@@ -4,6 +4,7 @@ part of 'miscellaneous_form_bloc.dart';
 class MiscellaneousDetailsFormState with _$MiscellaneousDetailsFormState {
   const factory MiscellaneousDetailsFormState({
     required bool isSaving,
+    required bool isEditing,
     required bool isApplicantImageUploading,
     required bool isCoApplicantImageUploading,
     required bool isGuarenterImageUploading,
@@ -16,6 +17,7 @@ class MiscellaneousDetailsFormState with _$MiscellaneousDetailsFormState {
     required CloudImage? guarenterImage,
     required RemarksAndMore remarksAndMore,
     required UniqueId? loanId,
+    required Loan? editingLoan,
     required Option<Either<MiscellaneousDetailsFailure, Unit>> failureOrSuccess,
     required Option<Either<MiscellaneousDetailsFailure, Unit>>
         saveFailureOrSuccess,
@@ -24,6 +26,7 @@ class MiscellaneousDetailsFormState with _$MiscellaneousDetailsFormState {
   factory MiscellaneousDetailsFormState.initial() {
     return MiscellaneousDetailsFormState(
       isSaving: false,
+      isEditing: false,
       isApplicantImageUploading: false,
       isCoApplicantImageUploading: false,
       isGuarenterImageUploading: false,
@@ -36,6 +39,7 @@ class MiscellaneousDetailsFormState with _$MiscellaneousDetailsFormState {
       guarenterImage: null,
       remarksAndMore: RemarksAndMore.empty(),
       loanId: null,
+      editingLoan: null,
       failureOrSuccess: none(),
       saveFailureOrSuccess: none(),
     );

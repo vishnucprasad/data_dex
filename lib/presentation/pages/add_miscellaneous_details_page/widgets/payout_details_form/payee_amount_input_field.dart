@@ -14,10 +14,18 @@ class PayeeAmountInputField extends HookWidget {
         MiscellaneousDetailsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text =
-            state.payoutDetails.payeeAmount.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.payoutDetails.payeeAmount.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.payoutDetails.payeeAmount.isValid()) {
+          controller.text =
+              state.payoutDetails.payeeAmount.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(
@@ -66,7 +74,8 @@ class PayeeAmountInputField extends HookWidget {
           onChanged: (payeeAmount) => context
               .read<MiscellaneousDetailsFormBloc>()
               .add(MiscellaneousDetailsFormEvent.payeeAmountChanged(
-                  payeeAmount)),
+                payeeAmount,
+              )),
         );
       },
     );

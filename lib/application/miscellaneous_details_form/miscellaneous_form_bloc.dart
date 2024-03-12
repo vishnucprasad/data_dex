@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
+import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/domain/miscellaneous_details/failures/miscellaneous_details_failure.dart';
 import 'package:data_dex/domain/miscellaneous_details/i_miscellaneous_details_repository.dart';
 import 'package:data_dex/domain/miscellaneous_details/models/miscellaneous_details.dart';
@@ -25,7 +26,23 @@ class MiscellaneousDetailsFormBloc
   ) : super(MiscellaneousDetailsFormState.initial()) {
     on<MiscellaneousDetailsFormEvent>((event, emit) async {
       await event.map(
-        initialized: (_) async => emit(MiscellaneousDetailsFormState.initial()),
+        initialized: (e) async => emit(e.initializeOption.fold(
+          () => MiscellaneousDetailsFormState.initial(),
+          (loan) => MiscellaneousDetailsFormState.initial().copyWith(
+            isEditing: true,
+            loanId: loan.id,
+            editingLoan: loan,
+            payoutDetails: loan.miscellaneousDetails?.payoutDetails ??
+                PayoutDetails.empty(),
+            referenceDetails: loan.miscellaneousDetails?.referenceDetails ??
+                ReferenceDetails.empty(),
+            applicantImage: loan.miscellaneousDetails?.applicantImage,
+            coApplicantImage: loan.miscellaneousDetails?.coApplicantImage,
+            guarenterImage: loan.miscellaneousDetails?.guarenterImage,
+            remarksAndMore: loan.miscellaneousDetails?.remarksAndMore ??
+                RemarksAndMore.empty(),
+          ),
+        )),
         loanIdChanged: (e) async => emit(state.copyWith(
           loanId: e.loanId,
         )),
@@ -115,7 +132,7 @@ class MiscellaneousDetailsFormBloc
                   final uploadOption =
                       await _miscellaneousDetailsRepository.uploadImage(
                     state.loanId!,
-                    'applicant_image.jpg',
+                    'applicant_image',
                     XFile.fromData(await r!.readAsBytes()),
                   );
 
@@ -176,7 +193,7 @@ class MiscellaneousDetailsFormBloc
                   final uploadOption =
                       await _miscellaneousDetailsRepository.uploadImage(
                     state.loanId!,
-                    'applicant_image.jpg',
+                    'applicant_image',
                     XFile.fromData(await r!.readAsBytes()),
                   );
 
@@ -237,7 +254,7 @@ class MiscellaneousDetailsFormBloc
                   final uploadOption =
                       await _miscellaneousDetailsRepository.uploadImage(
                     state.loanId!,
-                    'co_applicant_image.jpg',
+                    'co_applicant_image',
                     XFile.fromData(await r!.readAsBytes()),
                   );
 
@@ -298,7 +315,7 @@ class MiscellaneousDetailsFormBloc
                   final uploadOption =
                       await _miscellaneousDetailsRepository.uploadImage(
                     state.loanId!,
-                    'co_applicant_image.jpg',
+                    'co_applicant_image',
                     XFile.fromData(await r!.readAsBytes()),
                   );
 
@@ -359,7 +376,7 @@ class MiscellaneousDetailsFormBloc
                   final uploadOption =
                       await _miscellaneousDetailsRepository.uploadImage(
                     state.loanId!,
-                    'guarenter_image.jpg',
+                    'guarenter_image',
                     XFile.fromData(await r!.readAsBytes()),
                   );
 
@@ -420,7 +437,7 @@ class MiscellaneousDetailsFormBloc
                   final uploadOption =
                       await _miscellaneousDetailsRepository.uploadImage(
                     state.loanId!,
-                    'guarenter_image.jpg',
+                    'guarenter_image',
                     XFile.fromData(await r!.readAsBytes()),
                   );
 
@@ -453,6 +470,12 @@ class MiscellaneousDetailsFormBloc
           ));
         },
         deleteImages: (_) async {
+          if (state.isEditing) {
+            return emit(state.copyWith(
+              failureOrSuccess: none(),
+            ));
+          }
+
           final deleteOption =
               await _miscellaneousDetailsRepository.deleteImage(state.loanId!);
 

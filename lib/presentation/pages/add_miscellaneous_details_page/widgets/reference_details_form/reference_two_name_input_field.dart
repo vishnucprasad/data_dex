@@ -14,10 +14,19 @@ class ReferenceTwoNameInputField extends HookWidget {
         MiscellaneousDetailsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text =
-            state.referenceDetails.referenceTwoName.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.referenceDetails.referenceTwoName.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing &&
+            state.referenceDetails.referenceTwoName.isValid()) {
+          controller.text =
+              state.referenceDetails.referenceTwoName.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/miscellaneous_details_form/miscellaneous_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_back_button.dart';
@@ -20,7 +21,10 @@ class AddMiscellaneousDetailsPage extends StatelessWidget {
       onWillPop: () async {
         context
             .read<MiscellaneousDetailsFormBloc>()
-            .add(const MiscellaneousDetailsFormEvent.initialized());
+            .add(const MiscellaneousDetailsFormEvent.deleteImages());
+        context
+            .read<MiscellaneousDetailsFormBloc>()
+            .add(MiscellaneousDetailsFormEvent.initialized(none()));
 
         return true;
       },
@@ -32,17 +36,43 @@ class AddMiscellaneousDetailsPage extends StatelessWidget {
               child: Column(
                 children: [
                   kHeightMd,
-                  const Row(
+                  Row(
                     children: [
-                      BackButton(),
+                      const BackButton(),
                       Text(
-                        'Miscellaneous details',
-                        style: TextStyle(
+                        state.isEditing &&
+                                state.editingLoan?.miscellaneousDetails != null
+                            ? 'Edit miscellaneous details'
+                            : 'Miscellaneous details',
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1,
                         ),
                       ),
+                      const Spacer(),
+                      if (state.isEditing &&
+                          state.editingLoan!.loanParticulars != null)
+                        TextButton(
+                          onPressed: () {
+                            context.popRoute();
+                          },
+                          child: Row(
+                            children: [
+                              Text(
+                                'Skip',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.lightBlue.shade600,
+                                ),
+                              ),
+                              Icon(
+                                Icons.keyboard_arrow_right,
+                                color: Colors.lightBlue.shade600,
+                              ),
+                            ],
+                          ),
+                        ),
                     ],
                   ),
                   kHeightMd,

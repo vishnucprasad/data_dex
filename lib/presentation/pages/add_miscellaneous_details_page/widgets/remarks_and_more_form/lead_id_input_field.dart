@@ -14,9 +14,18 @@ class LeadIDInputField extends HookWidget {
         MiscellaneousDetailsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.remarksAndMore.leadId.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.remarksAndMore.leadId.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.remarksAndMore.leadId.isValid()) {
+          controller.text =
+              state.remarksAndMore.leadId.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           maxLength: 8,

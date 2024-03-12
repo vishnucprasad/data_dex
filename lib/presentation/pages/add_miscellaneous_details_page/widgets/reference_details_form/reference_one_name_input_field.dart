@@ -14,10 +14,19 @@ class ReferenceOneNameInputField extends HookWidget {
         MiscellaneousDetailsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text =
-            state.referenceDetails.referenceOneName.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.referenceDetails.referenceOneName.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing &&
+            state.referenceDetails.referenceOneName.isValid()) {
+          controller.text =
+              state.referenceDetails.referenceOneName.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

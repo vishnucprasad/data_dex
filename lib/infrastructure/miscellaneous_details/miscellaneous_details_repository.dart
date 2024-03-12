@@ -128,7 +128,7 @@ class MiscellaneousDetailsRepository
     try {
       final ref = _storage
           .ref()
-          .child('/${id.getOrCrash()}/miscellaneous_images/$name');
+          .child('/${id.getOrCrash()}/miscellaneous_images/$name.jpg');
       final uploadTask = ref.putData(await image.readAsBytes());
 
       final url = await (await uploadTask).ref.getDownloadURL();

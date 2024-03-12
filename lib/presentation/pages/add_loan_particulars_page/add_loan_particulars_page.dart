@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart';
+import 'package:data_dex/application/miscellaneous_details_form/miscellaneous_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_back_button.dart';
 import 'package:data_dex/presentation/core/widgets/stepper_next_button.dart';
@@ -48,11 +49,19 @@ class AddLoanParticularsPage extends StatelessWidget {
                       const Spacer(),
                       TextButton(
                         onPressed: () {
-                          context
-                              .read<LoanParticularsFormBloc>()
-                              .add(LoanParticularsFormEvent.loanIdChanged(
-                                state.loanId!,
-                              ));
+                          if (state.isEditing) {
+                            context
+                                .read<MiscellaneousDetailsFormBloc>()
+                                .add(MiscellaneousDetailsFormEvent.initialized(
+                                  some(state.editingLoan!),
+                                ));
+                          } else {
+                            context.read<MiscellaneousDetailsFormBloc>().add(
+                                    MiscellaneousDetailsFormEvent.loanIdChanged(
+                                  state.loanId!,
+                                ));
+                          }
+
                           context
                               .read<LoanParticularsFormBloc>()
                               .add(LoanParticularsFormEvent.initialized(

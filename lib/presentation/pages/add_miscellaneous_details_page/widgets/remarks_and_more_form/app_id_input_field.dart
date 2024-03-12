@@ -14,9 +14,18 @@ class AppIDInputField extends HookWidget {
         MiscellaneousDetailsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.remarksAndMore.appId.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.remarksAndMore.appId.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.remarksAndMore.appId.isValid()) {
+          controller.text =
+              state.remarksAndMore.appId.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           maxLength: 8,
