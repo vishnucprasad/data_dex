@@ -15,10 +15,11 @@ abstract class IApplicantRepository {
   Future<Either<ApplicantFailure, XFile?>> pickImage(
     ImageSource source,
   );
-  Future<Either<ApplicantFailure, CloudImage>> uploadImage(
-    UniqueId id,
-    XFile image,
-  );
+  Future<Either<ApplicantFailure, CloudImage>> uploadImage({
+    required UniqueId id,
+    required XFile image,
+    String? filename,
+  });
   Future<Either<ApplicantFailure, Unit>> deleteImage(
     CloudImage image,
   );

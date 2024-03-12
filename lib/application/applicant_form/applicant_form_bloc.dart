@@ -30,7 +30,20 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
   ) : super(ApplicantFormState.initial()) {
     on<ApplicantFormEvent>((event, emit) async {
       await event.map(
-        initialized: (_) async => emit(ApplicantFormState.initial()),
+        initialized: (e) async {
+          emit(e.initializeOption.fold(
+            () => ApplicantFormState.initial(),
+            (loan) => ApplicantFormState.initial().copyWith(
+              isEditing: true,
+              loanId: loan.id,
+              editingLoan: loan,
+              basicInfo: loan.applicant.basicInfo,
+              address: loan.applicant.address,
+              location: loan.applicant.location,
+              houseImage: loan.applicant.houseImage,
+            ),
+          ));
+        },
         formStepChanged: (e) async {
           if (e.index == 1 && state.basicInfo.failureOption.isSome()) {
             return emit(state.copyWith(
@@ -176,7 +189,6 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
         takeImage: (_) async {
           emit(state.copyWith(
             isImageUploading: true,
-            houseImage: null,
             failureOrSuccess: none(),
           ));
 
@@ -191,8 +203,11 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
               failureOrSuccess: some(left(l)),
             ),
             (r) async {
-              final uploadOption =
-                  await _applicantRepository.uploadImage(state.loanId, r!);
+              final uploadOption = await _applicantRepository.uploadImage(
+                id: state.loanId,
+                image: r!,
+                filename: state.houseImage?.name,
+              );
               return uploadOption.fold(
                 (l) => state.copyWith(
                   isImageUploading: false,
@@ -211,7 +226,6 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
         pickImage: (_) async {
           emit(state.copyWith(
             isImageUploading: true,
-            houseImage: null,
             failureOrSuccess: none(),
           ));
 
@@ -226,8 +240,11 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
               failureOrSuccess: some(left(l)),
             ),
             (r) async {
-              final uploadOption =
-                  await _applicantRepository.uploadImage(state.loanId, r!);
+              final uploadOption = await _applicantRepository.uploadImage(
+                id: state.loanId,
+                image: r!,
+                filename: state.houseImage?.name,
+              );
 
               return uploadOption.fold(
                 (l) => state.copyWith(
@@ -245,7 +262,7 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
           ));
         },
         deleteImage: (_) async {
-          if (state.houseImage == null) {
+          if (state.houseImage == null || state.isEditing) {
             return emit(state.copyWith(
               failureOrSuccess: none(),
             ));

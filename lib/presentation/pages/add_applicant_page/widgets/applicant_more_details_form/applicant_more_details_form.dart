@@ -1,5 +1,6 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart';
 import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
@@ -34,7 +35,7 @@ class ApplicantMoreDetailsForm extends StatelessWidget {
             (loanId) {
               context
                   .read<ApplicantFormBloc>()
-                  .add(const ApplicantFormEvent.initialized());
+                  .add(ApplicantFormEvent.initialized(none()));
               context
                   .read<CoApplicantFormBloc>()
                   .add(CoApplicantFormEvent.loanIdChanged(loanId));

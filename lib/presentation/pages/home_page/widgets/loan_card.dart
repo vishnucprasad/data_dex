@@ -1,9 +1,13 @@
 import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/app_action/app_action_cubit.dart';
+import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart';
 import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
+import 'package:data_dex/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -87,7 +91,12 @@ class LoanCard extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          context
+                              .read<ApplicantFormBloc>()
+                              .add(ApplicantFormEvent.initialized(some(loan)));
+                          context.pushRoute(const AddApplicantRoute());
+                        },
                         icon: const Icon(Icons.edit_square),
                       ),
                     ),

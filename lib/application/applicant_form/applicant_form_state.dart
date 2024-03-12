@@ -6,6 +6,7 @@ class ApplicantFormState with _$ApplicantFormState {
     required bool isSaving,
     required bool isLocationFetching,
     required bool isImageUploading,
+    required bool isEditing,
     required int formStep,
     required bool showValidationError,
     required BasicInfo basicInfo,
@@ -13,6 +14,7 @@ class ApplicantFormState with _$ApplicantFormState {
     required Location? location,
     required CloudImage? houseImage,
     required UniqueId loanId,
+    required Loan? editingLoan,
     required Option<Either<ApplicantFailure, Unit>> failureOrSuccess,
     required Option<Either<LoanFailure, UniqueId>> loanFailureOrSuccess,
   }) = _ApplicantFormState;
@@ -22,6 +24,7 @@ class ApplicantFormState with _$ApplicantFormState {
       isSaving: false,
       isLocationFetching: false,
       isImageUploading: false,
+      isEditing: false,
       formStep: 0,
       showValidationError: false,
       basicInfo: BasicInfo.empty(),
@@ -29,6 +32,7 @@ class ApplicantFormState with _$ApplicantFormState {
       location: null,
       houseImage: null,
       loanId: UniqueId(),
+      editingLoan: null,
       failureOrSuccess: none(),
       loanFailureOrSuccess: none(),
     );

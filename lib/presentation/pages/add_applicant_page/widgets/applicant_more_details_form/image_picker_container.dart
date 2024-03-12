@@ -30,26 +30,26 @@ class ImagePickerContainer extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              state.houseImage == null
-                  ? state.isImageUploading
-                      ? const SizedBox(
-                          width: double.infinity,
-                          child: Column(
-                            children: [
-                              kHeightMd,
-                              CircularProgressIndicator(),
-                              kHeightMd,
-                              Text(
-                                'Uploading... please wait',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              kHeightMd,
-                            ],
+              state.isImageUploading
+                  ? const SizedBox(
+                      width: double.infinity,
+                      child: Column(
+                        children: [
+                          kHeightMd,
+                          CircularProgressIndicator(),
+                          kHeightMd,
+                          Text(
+                            'Uploading... please wait',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        )
-                      : const SizedBox(
+                          kHeightMd,
+                        ],
+                      ),
+                    )
+                  : state.houseImage == null
+                      ? const SizedBox(
                           width: double.infinity,
                           child: Column(
                             children: [
@@ -69,10 +69,10 @@ class ImagePickerContainer extends StatelessWidget {
                             ],
                           ),
                         )
-                  : SizedBox(
-                      width: double.infinity,
-                      child: Image.network(state.houseImage!.url),
-                    ),
+                      : SizedBox(
+                          width: double.infinity,
+                          child: Image.network(state.houseImage!.url),
+                        ),
             ],
           );
         },

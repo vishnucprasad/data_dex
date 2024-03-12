@@ -107,14 +107,14 @@ class ApplicantRepository implements IApplicantRepository {
   }
 
   @override
-  Future<Either<ApplicantFailure, CloudImage>> uploadImage(
-    UniqueId id,
-    XFile image,
-  ) async {
+  Future<Either<ApplicantFailure, CloudImage>> uploadImage({
+    required UniqueId id,
+    required XFile image,
+    String? filename,
+  }) async {
     try {
-      final ref = _storage
-          .ref()
-          .child('/${id.getOrCrash()}/applicant/house/${image.name}');
+      final ref = _storage.ref().child(
+          '/${id.getOrCrash()}/applicant/house/${filename ?? image.name}');
       final uploadTask = ref.putData(await image.readAsBytes());
 
       final url = await (await uploadTask).ref.getDownloadURL();

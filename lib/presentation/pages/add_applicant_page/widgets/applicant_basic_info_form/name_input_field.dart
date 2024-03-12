@@ -15,9 +15,16 @@ class NameInputField extends HookWidget {
     return BlocConsumer<ApplicantFormBloc, ApplicantFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.basicInfo.name.value.getOrElse(() => '');
+        if (!state.isEditing) {
+          controller.text = state.basicInfo.name.value.getOrElse(() => '');
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.basicInfo.name.isValid()) {
+          controller.text = state.basicInfo.name.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

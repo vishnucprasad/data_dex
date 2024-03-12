@@ -13,9 +13,16 @@ class PincodeInputField extends HookWidget {
     return BlocConsumer<ApplicantFormBloc, ApplicantFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.address.pincode.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text = state.address.pincode.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.address.pincode.isValid()) {
+          controller.text = state.address.pincode.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           maxLength: 6,
