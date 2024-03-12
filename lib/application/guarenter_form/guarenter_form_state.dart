@@ -6,6 +6,7 @@ class GuarenterFormState with _$GuarenterFormState {
     required bool isSaving,
     required bool isLocationFetching,
     required bool isImageUploading,
+    required bool isEditing,
     required int formStep,
     required bool showValidationError,
     required BasicInfo basicInfo,
@@ -13,6 +14,7 @@ class GuarenterFormState with _$GuarenterFormState {
     required Location? location,
     required CloudImage? houseImage,
     required UniqueId? loanId,
+    required Loan? editingLoan,
     required Option<Either<GuarenterFailure, Unit>> failureOrSuccess,
     required Option<Either<GuarenterFailure, Unit>> guarenterFailureOrSuccess,
   }) = _GuarenterFormState;
@@ -22,6 +24,7 @@ class GuarenterFormState with _$GuarenterFormState {
       isSaving: false,
       isLocationFetching: false,
       isImageUploading: false,
+      isEditing: false,
       formStep: 0,
       showValidationError: false,
       basicInfo: BasicInfo.empty(),
@@ -29,6 +32,7 @@ class GuarenterFormState with _$GuarenterFormState {
       location: null,
       houseImage: null,
       loanId: null,
+      editingLoan: null,
       failureOrSuccess: none(),
       guarenterFailureOrSuccess: none(),
     );

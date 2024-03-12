@@ -49,8 +49,20 @@ class AddCoApplicantPage extends StatelessWidget {
                       const Spacer(),
                       TextButton(
                         onPressed: () {
-                          context.read<GuarenterFormBloc>().add(
-                              GuarenterFormEvent.loanIdChanged(state.loanId!));
+                          if (state.isEditing) {
+                            context
+                                .read<GuarenterFormBloc>()
+                                .add(GuarenterFormEvent.initialized(
+                                  some(state.editingLoan!),
+                                ));
+                          } else {
+                            context
+                                .read<GuarenterFormBloc>()
+                                .add(GuarenterFormEvent.loanIdChanged(
+                                  state.loanId!,
+                                ));
+                          }
+
                           context
                               .read<CoApplicantFormBloc>()
                               .add(CoApplicantFormEvent.initialized(none()));

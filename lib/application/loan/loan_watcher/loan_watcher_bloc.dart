@@ -32,7 +32,6 @@ class LoanWatcherBloc extends Bloc<LoanWatcherEvent, LoanWatcherState> {
           );
         },
         loansReceived: (e) async {
-          e.failureOrNotes.fold((l) => print(l), (r) => null);
           emit(e.failureOrNotes.fold(
             (f) => LoanWatcherState.loadFailure(f),
             (loans) => LoanWatcherState.loadSuccess(loans),

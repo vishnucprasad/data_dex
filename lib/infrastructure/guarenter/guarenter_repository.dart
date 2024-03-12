@@ -137,14 +137,14 @@ class GuarenterRepository implements IGuarenterRepository {
   }
 
   @override
-  Future<Either<GuarenterFailure, CloudImage>> uploadImage(
-    UniqueId id,
-    XFile image,
-  ) async {
+  Future<Either<GuarenterFailure, CloudImage>> uploadImage({
+    required UniqueId id,
+    required XFile image,
+    String? filename,
+  }) async {
     try {
-      final ref = _storage
-          .ref()
-          .child('/${id.getOrCrash()}/guarenter/house/${image.name}');
+      final ref = _storage.ref().child(
+          '/${id.getOrCrash()}/guarenter/house/${filename ?? image.name}');
       final uploadTask = ref.putData(await image.readAsBytes());
 
       final url = await (await uploadTask).ref.getDownloadURL();

@@ -1,5 +1,6 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart';
 import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
@@ -41,7 +42,7 @@ class GuarenterMoreDetailsForm extends StatelessWidget {
                   ));
               context
                   .read<GuarenterFormBloc>()
-                  .add(const GuarenterFormEvent.initialized());
+                  .add(GuarenterFormEvent.initialized(none()));
               context.replaceRoute(const AddLoanParticularsRoute());
             },
           ),

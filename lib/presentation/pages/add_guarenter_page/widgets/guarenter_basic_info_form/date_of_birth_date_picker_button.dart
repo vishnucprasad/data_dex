@@ -36,7 +36,12 @@ class DateOfBirthDatePickerButton extends StatelessWidget {
                 onPressed: () async {
                   final selectedDate = await showDatePicker(
                     context: context,
-                    initialDate: DateTime.now(),
+                    initialDate:
+                        state.isEditing && state.basicInfo.dateOfBirth.isValid()
+                            ? DateTime.parse(
+                                state.basicInfo.dateOfBirth.getOrCrash(),
+                              )
+                            : DateTime.now(),
                     firstDate: DateTime(1900),
                     lastDate: DateTime.now(),
                     builder: (context, child) {

@@ -1,5 +1,6 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart';
 import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
@@ -25,7 +26,7 @@ class AddGuarenterPage extends StatelessWidget {
             .add(const GuarenterFormEvent.deleteImage());
         context
             .read<GuarenterFormBloc>()
-            .add(const GuarenterFormEvent.initialized());
+            .add(GuarenterFormEvent.initialized(none()));
 
         return true;
       },
@@ -54,9 +55,11 @@ class AddGuarenterPage extends StatelessWidget {
                 Row(
                   children: [
                     const BackButton(),
-                    const Text(
-                      'Add guarenter',
-                      style: TextStyle(
+                    Text(
+                      state.isEditing && state.editingLoan?.guarenter != null
+                          ? 'Edit guarenter'
+                          : 'Add guarenter',
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1,
@@ -72,7 +75,7 @@ class AddGuarenterPage extends StatelessWidget {
                             ));
                         context
                             .read<GuarenterFormBloc>()
-                            .add(const GuarenterFormEvent.initialized());
+                            .add(GuarenterFormEvent.initialized(none()));
                         context.replaceRoute(const AddLoanParticularsRoute());
                       },
                       child: Row(

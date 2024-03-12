@@ -7,6 +7,7 @@ import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/guarenter/failures/guarenter_failure.dart';
 import 'package:data_dex/domain/guarenter/i_guarenter_repository.dart';
 import 'package:data_dex/domain/guarenter/models/guarenter.dart';
+import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
@@ -24,7 +25,20 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
   ) : super(GuarenterFormState.initial()) {
     on<GuarenterFormEvent>((event, emit) async {
       await event.map(
-        initialized: (e) async => emit(GuarenterFormState.initial()),
+        initialized: (e) async {
+          emit(e.initializeOption.fold(
+            () => GuarenterFormState.initial(),
+            (loan) => GuarenterFormState.initial().copyWith(
+              isEditing: true,
+              loanId: loan.id,
+              editingLoan: loan,
+              basicInfo: loan.guarenter?.basicInfo ?? BasicInfo.empty(),
+              address: loan.guarenter?.address ?? Address.empty(),
+              location: loan.guarenter?.location,
+              houseImage: loan.guarenter?.houseImage,
+            ),
+          ));
+        },
         loanIdChanged: (e) async => emit(state.copyWith(
           loanId: e.loanId,
           failureOrSuccess: none(),
@@ -188,8 +202,11 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
               failureOrSuccess: some(left(l)),
             ),
             (r) async {
-              final uploadOption =
-                  await _guarenterRepository.uploadImage(state.loanId!, r!);
+              final uploadOption = await _guarenterRepository.uploadImage(
+                id: state.loanId!,
+                image: r!,
+                filename: state.houseImage?.name,
+              );
 
               return uploadOption.fold(
                 (l) => state.copyWith(
@@ -223,8 +240,11 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
               failureOrSuccess: some(left(l)),
             ),
             (r) async {
-              final uploadOption =
-                  await _guarenterRepository.uploadImage(state.loanId!, r!);
+              final uploadOption = await _guarenterRepository.uploadImage(
+                id: state.loanId!,
+                image: r!,
+                filename: state.houseImage?.name,
+              );
 
               return uploadOption.fold(
                 (l) => state.copyWith(
@@ -242,7 +262,7 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
           ));
         },
         deleteImage: (_) async {
-          if (state.houseImage == null) {
+          if (state.houseImage == null || state.isEditing) {
             return emit(state.copyWith(
               failureOrSuccess: none(),
             ));

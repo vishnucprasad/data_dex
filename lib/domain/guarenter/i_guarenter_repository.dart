@@ -16,10 +16,11 @@ abstract class IGuarenterRepository {
   Future<Either<GuarenterFailure, XFile?>> pickImage(
     ImageSource source,
   );
-  Future<Either<GuarenterFailure, CloudImage>> uploadImage(
-    UniqueId id,
-    XFile image,
-  );
+  Future<Either<GuarenterFailure, CloudImage>> uploadImage({
+    required UniqueId id,
+    required XFile image,
+    String? filename,
+  });
   Future<Either<GuarenterFailure, Unit>> deleteImage(
     CloudImage image,
   );

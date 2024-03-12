@@ -13,9 +13,16 @@ class StreetNameInputField extends HookWidget {
     return BlocConsumer<GuarenterFormBloc, GuarenterFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.address.streetName.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text = state.address.streetName.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.address.streetName.isValid()) {
+          controller.text = state.address.streetName.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           maxLength: 60,

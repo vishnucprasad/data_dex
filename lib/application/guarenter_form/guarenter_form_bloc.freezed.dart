@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$GuarenterFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -39,7 +39,7 @@ mixin _$GuarenterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -60,7 +60,7 @@ mixin _$GuarenterFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -169,6 +169,8 @@ abstract class _$$InitializedImplCopyWith<$Res> {
   factory _$$InitializedImplCopyWith(
           _$InitializedImpl value, $Res Function(_$InitializedImpl) then) =
       __$$InitializedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Option<Loan> initializeOption});
 }
 
 /// @nodoc
@@ -178,31 +180,56 @@ class __$$InitializedImplCopyWithImpl<$Res>
   __$$InitializedImplCopyWithImpl(
       _$InitializedImpl _value, $Res Function(_$InitializedImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? initializeOption = null,
+  }) {
+    return _then(_$InitializedImpl(
+      null == initializeOption
+          ? _value.initializeOption
+          : initializeOption // ignore: cast_nullable_to_non_nullable
+              as Option<Loan>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$InitializedImpl implements _Initialized {
-  const _$InitializedImpl();
+  const _$InitializedImpl(this.initializeOption);
+
+  @override
+  final Option<Loan> initializeOption;
 
   @override
   String toString() {
-    return 'GuarenterFormEvent.initialized()';
+    return 'GuarenterFormEvent.initialized(initializeOption: $initializeOption)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitializedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$InitializedImpl &&
+            (identical(other.initializeOption, initializeOption) ||
+                other.initializeOption == initializeOption));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, initializeOption);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InitializedImplCopyWith<_$InitializedImpl> get copyWith =>
+      __$$InitializedImplCopyWithImpl<_$InitializedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -220,13 +247,13 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function() deleteImage,
     required TResult Function() saveGuarenter,
   }) {
-    return initialized();
+    return initialized(initializeOption);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -244,13 +271,13 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function()? deleteImage,
     TResult? Function()? saveGuarenter,
   }) {
-    return initialized?.call();
+    return initialized?.call(initializeOption);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -270,7 +297,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult orElse(),
   }) {
     if (initialized != null) {
-      return initialized();
+      return initialized(initializeOption);
     }
     return orElse();
   }
@@ -353,7 +380,13 @@ class _$InitializedImpl implements _Initialized {
 }
 
 abstract class _Initialized implements GuarenterFormEvent {
-  const factory _Initialized() = _$InitializedImpl;
+  const factory _Initialized(final Option<Loan> initializeOption) =
+      _$InitializedImpl;
+
+  Option<Loan> get initializeOption;
+  @JsonKey(ignore: true)
+  _$$InitializedImplCopyWith<_$InitializedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -420,7 +453,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -444,7 +477,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -468,7 +501,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -644,7 +677,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -668,7 +701,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -692,7 +725,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -867,7 +900,7 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -891,7 +924,7 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -915,7 +948,7 @@ class _$NameChangedImpl implements _NameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -1092,7 +1125,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -1116,7 +1149,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -1140,7 +1173,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -1316,7 +1349,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -1340,7 +1373,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -1364,7 +1397,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -1540,7 +1573,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -1564,7 +1597,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -1588,7 +1621,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -1766,7 +1799,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -1790,7 +1823,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -1814,7 +1847,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -1992,7 +2025,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -2016,7 +2049,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -2040,7 +2073,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -2218,7 +2251,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -2242,7 +2275,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -2266,7 +2299,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -2443,7 +2476,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -2467,7 +2500,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -2491,7 +2524,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -2640,7 +2673,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -2664,7 +2697,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -2688,7 +2721,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -2832,7 +2865,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -2856,7 +2889,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -2880,7 +2913,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -3024,7 +3057,7 @@ class _$TakeImageImpl implements _TakeImage {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -3048,7 +3081,7 @@ class _$TakeImageImpl implements _TakeImage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -3072,7 +3105,7 @@ class _$TakeImageImpl implements _TakeImage {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -3216,7 +3249,7 @@ class _$PickImageImpl implements _PickImage {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -3240,7 +3273,7 @@ class _$PickImageImpl implements _PickImage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -3264,7 +3297,7 @@ class _$PickImageImpl implements _PickImage {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -3408,7 +3441,7 @@ class _$DeleteImageImpl implements _DeleteImage {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -3432,7 +3465,7 @@ class _$DeleteImageImpl implements _DeleteImage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -3456,7 +3489,7 @@ class _$DeleteImageImpl implements _DeleteImage {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -3600,7 +3633,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String name) nameChanged,
@@ -3624,7 +3657,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String name)? nameChanged,
@@ -3648,7 +3681,7 @@ class _$SaveGuarenterImpl implements _SaveGuarenter {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String name)? nameChanged,
@@ -3759,6 +3792,7 @@ mixin _$GuarenterFormState {
   bool get isSaving => throw _privateConstructorUsedError;
   bool get isLocationFetching => throw _privateConstructorUsedError;
   bool get isImageUploading => throw _privateConstructorUsedError;
+  bool get isEditing => throw _privateConstructorUsedError;
   int get formStep => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   BasicInfo get basicInfo => throw _privateConstructorUsedError;
@@ -3766,6 +3800,7 @@ mixin _$GuarenterFormState {
   Location? get location => throw _privateConstructorUsedError;
   CloudImage? get houseImage => throw _privateConstructorUsedError;
   UniqueId? get loanId => throw _privateConstructorUsedError;
+  Loan? get editingLoan => throw _privateConstructorUsedError;
   Option<Either<GuarenterFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
   Option<Either<GuarenterFailure, Unit>> get guarenterFailureOrSuccess =>
@@ -3786,6 +3821,7 @@ abstract class $GuarenterFormStateCopyWith<$Res> {
       {bool isSaving,
       bool isLocationFetching,
       bool isImageUploading,
+      bool isEditing,
       int formStep,
       bool showValidationError,
       BasicInfo basicInfo,
@@ -3793,6 +3829,7 @@ abstract class $GuarenterFormStateCopyWith<$Res> {
       Location? location,
       CloudImage? houseImage,
       UniqueId? loanId,
+      Loan? editingLoan,
       Option<Either<GuarenterFailure, Unit>> failureOrSuccess,
       Option<Either<GuarenterFailure, Unit>> guarenterFailureOrSuccess});
 
@@ -3800,6 +3837,7 @@ abstract class $GuarenterFormStateCopyWith<$Res> {
   $AddressCopyWith<$Res> get address;
   $LocationCopyWith<$Res>? get location;
   $CloudImageCopyWith<$Res>? get houseImage;
+  $LoanCopyWith<$Res>? get editingLoan;
 }
 
 /// @nodoc
@@ -3818,6 +3856,7 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
     Object? isSaving = null,
     Object? isLocationFetching = null,
     Object? isImageUploading = null,
+    Object? isEditing = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
@@ -3825,6 +3864,7 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
     Object? location = freezed,
     Object? houseImage = freezed,
     Object? loanId = freezed,
+    Object? editingLoan = freezed,
     Object? failureOrSuccess = null,
     Object? guarenterFailureOrSuccess = null,
   }) {
@@ -3840,6 +3880,10 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
       isImageUploading: null == isImageUploading
           ? _value.isImageUploading
           : isImageUploading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEditing: null == isEditing
+          ? _value.isEditing
+          : isEditing // ignore: cast_nullable_to_non_nullable
               as bool,
       formStep: null == formStep
           ? _value.formStep
@@ -3869,6 +3913,10 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
           ? _value.loanId
           : loanId // ignore: cast_nullable_to_non_nullable
               as UniqueId?,
+      editingLoan: freezed == editingLoan
+          ? _value.editingLoan
+          : editingLoan // ignore: cast_nullable_to_non_nullable
+              as Loan?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -3919,6 +3967,18 @@ class _$GuarenterFormStateCopyWithImpl<$Res, $Val extends GuarenterFormState>
       return _then(_value.copyWith(houseImage: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $LoanCopyWith<$Res>? get editingLoan {
+    if (_value.editingLoan == null) {
+      return null;
+    }
+
+    return $LoanCopyWith<$Res>(_value.editingLoan!, (value) {
+      return _then(_value.copyWith(editingLoan: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -3933,6 +3993,7 @@ abstract class _$$GuarenterFormStateImplCopyWith<$Res>
       {bool isSaving,
       bool isLocationFetching,
       bool isImageUploading,
+      bool isEditing,
       int formStep,
       bool showValidationError,
       BasicInfo basicInfo,
@@ -3940,6 +4001,7 @@ abstract class _$$GuarenterFormStateImplCopyWith<$Res>
       Location? location,
       CloudImage? houseImage,
       UniqueId? loanId,
+      Loan? editingLoan,
       Option<Either<GuarenterFailure, Unit>> failureOrSuccess,
       Option<Either<GuarenterFailure, Unit>> guarenterFailureOrSuccess});
 
@@ -3951,6 +4013,8 @@ abstract class _$$GuarenterFormStateImplCopyWith<$Res>
   $LocationCopyWith<$Res>? get location;
   @override
   $CloudImageCopyWith<$Res>? get houseImage;
+  @override
+  $LoanCopyWith<$Res>? get editingLoan;
 }
 
 /// @nodoc
@@ -3967,6 +4031,7 @@ class __$$GuarenterFormStateImplCopyWithImpl<$Res>
     Object? isSaving = null,
     Object? isLocationFetching = null,
     Object? isImageUploading = null,
+    Object? isEditing = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? basicInfo = null,
@@ -3974,6 +4039,7 @@ class __$$GuarenterFormStateImplCopyWithImpl<$Res>
     Object? location = freezed,
     Object? houseImage = freezed,
     Object? loanId = freezed,
+    Object? editingLoan = freezed,
     Object? failureOrSuccess = null,
     Object? guarenterFailureOrSuccess = null,
   }) {
@@ -3989,6 +4055,10 @@ class __$$GuarenterFormStateImplCopyWithImpl<$Res>
       isImageUploading: null == isImageUploading
           ? _value.isImageUploading
           : isImageUploading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEditing: null == isEditing
+          ? _value.isEditing
+          : isEditing // ignore: cast_nullable_to_non_nullable
               as bool,
       formStep: null == formStep
           ? _value.formStep
@@ -4018,6 +4088,10 @@ class __$$GuarenterFormStateImplCopyWithImpl<$Res>
           ? _value.loanId
           : loanId // ignore: cast_nullable_to_non_nullable
               as UniqueId?,
+      editingLoan: freezed == editingLoan
+          ? _value.editingLoan
+          : editingLoan // ignore: cast_nullable_to_non_nullable
+              as Loan?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -4037,6 +4111,7 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
       {required this.isSaving,
       required this.isLocationFetching,
       required this.isImageUploading,
+      required this.isEditing,
       required this.formStep,
       required this.showValidationError,
       required this.basicInfo,
@@ -4044,6 +4119,7 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
       required this.location,
       required this.houseImage,
       required this.loanId,
+      required this.editingLoan,
       required this.failureOrSuccess,
       required this.guarenterFailureOrSuccess});
 
@@ -4053,6 +4129,8 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
   final bool isLocationFetching;
   @override
   final bool isImageUploading;
+  @override
+  final bool isEditing;
   @override
   final int formStep;
   @override
@@ -4068,13 +4146,15 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
   @override
   final UniqueId? loanId;
   @override
+  final Loan? editingLoan;
+  @override
   final Option<Either<GuarenterFailure, Unit>> failureOrSuccess;
   @override
   final Option<Either<GuarenterFailure, Unit>> guarenterFailureOrSuccess;
 
   @override
   String toString() {
-    return 'GuarenterFormState(isSaving: $isSaving, isLocationFetching: $isLocationFetching, isImageUploading: $isImageUploading, formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, location: $location, houseImage: $houseImage, loanId: $loanId, failureOrSuccess: $failureOrSuccess, guarenterFailureOrSuccess: $guarenterFailureOrSuccess)';
+    return 'GuarenterFormState(isSaving: $isSaving, isLocationFetching: $isLocationFetching, isImageUploading: $isImageUploading, isEditing: $isEditing, formStep: $formStep, showValidationError: $showValidationError, basicInfo: $basicInfo, address: $address, location: $location, houseImage: $houseImage, loanId: $loanId, editingLoan: $editingLoan, failureOrSuccess: $failureOrSuccess, guarenterFailureOrSuccess: $guarenterFailureOrSuccess)';
   }
 
   @override
@@ -4088,6 +4168,8 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
                 other.isLocationFetching == isLocationFetching) &&
             (identical(other.isImageUploading, isImageUploading) ||
                 other.isImageUploading == isImageUploading) &&
+            (identical(other.isEditing, isEditing) ||
+                other.isEditing == isEditing) &&
             (identical(other.formStep, formStep) ||
                 other.formStep == formStep) &&
             (identical(other.showValidationError, showValidationError) ||
@@ -4100,6 +4182,8 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
             (identical(other.houseImage, houseImage) ||
                 other.houseImage == houseImage) &&
             (identical(other.loanId, loanId) || other.loanId == loanId) &&
+            (identical(other.editingLoan, editingLoan) ||
+                other.editingLoan == editingLoan) &&
             (identical(other.failureOrSuccess, failureOrSuccess) ||
                 other.failureOrSuccess == failureOrSuccess) &&
             (identical(other.guarenterFailureOrSuccess,
@@ -4113,6 +4197,7 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
       isSaving,
       isLocationFetching,
       isImageUploading,
+      isEditing,
       formStep,
       showValidationError,
       basicInfo,
@@ -4120,6 +4205,7 @@ class _$GuarenterFormStateImpl implements _GuarenterFormState {
       location,
       houseImage,
       loanId,
+      editingLoan,
       failureOrSuccess,
       guarenterFailureOrSuccess);
 
@@ -4136,6 +4222,7 @@ abstract class _GuarenterFormState implements GuarenterFormState {
       {required final bool isSaving,
       required final bool isLocationFetching,
       required final bool isImageUploading,
+      required final bool isEditing,
       required final int formStep,
       required final bool showValidationError,
       required final BasicInfo basicInfo,
@@ -4143,6 +4230,7 @@ abstract class _GuarenterFormState implements GuarenterFormState {
       required final Location? location,
       required final CloudImage? houseImage,
       required final UniqueId? loanId,
+      required final Loan? editingLoan,
       required final Option<Either<GuarenterFailure, Unit>> failureOrSuccess,
       required final Option<Either<GuarenterFailure, Unit>>
           guarenterFailureOrSuccess}) = _$GuarenterFormStateImpl;
@@ -4153,6 +4241,8 @@ abstract class _GuarenterFormState implements GuarenterFormState {
   bool get isLocationFetching;
   @override
   bool get isImageUploading;
+  @override
+  bool get isEditing;
   @override
   int get formStep;
   @override
@@ -4167,6 +4257,8 @@ abstract class _GuarenterFormState implements GuarenterFormState {
   CloudImage? get houseImage;
   @override
   UniqueId? get loanId;
+  @override
+  Loan? get editingLoan;
   @override
   Option<Either<GuarenterFailure, Unit>> get failureOrSuccess;
   @override
