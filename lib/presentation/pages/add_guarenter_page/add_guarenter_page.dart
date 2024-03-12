@@ -68,11 +68,20 @@ class AddGuarenterPage extends StatelessWidget {
                     const Spacer(),
                     TextButton(
                       onPressed: () {
-                        context
-                            .read<LoanParticularsFormBloc>()
-                            .add(LoanParticularsFormEvent.loanIdChanged(
-                              state.loanId!,
-                            ));
+                        if (state.isEditing) {
+                          context
+                              .read<LoanParticularsFormBloc>()
+                              .add(LoanParticularsFormEvent.initialized(
+                                some(state.editingLoan!),
+                              ));
+                        } else {
+                          context
+                              .read<LoanParticularsFormBloc>()
+                              .add(LoanParticularsFormEvent.loanIdChanged(
+                                state.loanId!,
+                              ));
+                        }
+
                         context
                             .read<GuarenterFormBloc>()
                             .add(GuarenterFormEvent.initialized(none()));

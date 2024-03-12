@@ -13,9 +13,17 @@ class PacAmountInputField extends HookWidget {
     return BlocConsumer<LoanParticularsFormBloc, LoanParticularsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.loanDetails.pacAmount.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.loanDetails.pacAmount.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.loanDetails.pacAmount.isValid()) {
+          controller.text =
+              state.loanDetails.pacAmount.value.getOrElse(() => "");
+        }
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

@@ -13,9 +13,18 @@ class EMIAmountInputField extends HookWidget {
     return BlocConsumer<LoanParticularsFormBloc, LoanParticularsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.emiDetails.emiAmount.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.emiDetails.emiAmount.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.emiDetails.emiAmount.isValid()) {
+          controller.text =
+              state.emiDetails.emiAmount.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

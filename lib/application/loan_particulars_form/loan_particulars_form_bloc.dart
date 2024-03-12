@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
+import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/domain/loan_particulars/failures/loan_particulars_failure.dart';
 import 'package:data_dex/domain/loan_particulars/i_loan_particulars_repository.dart';
 import 'package:data_dex/domain/loan_particulars/models/emi_details/emi_details.dart';
@@ -23,7 +24,19 @@ class LoanParticularsFormBloc
   ) : super(LoanParticularsFormState.initial()) {
     on<LoanParticularsFormEvent>((event, emit) async {
       await event.map(
-        initialized: (_) async => emit(LoanParticularsFormState.initial()),
+        initialized: (e) async => emit(e.initializeOption.fold(
+          () => LoanParticularsFormState.initial(),
+          (loan) => LoanParticularsFormState.initial().copyWith(
+            isEditing: true,
+            loanId: loan.id,
+            editingLoan: loan,
+            vehicleDetails:
+                loan.loanParticulars?.vehicleDetails ?? VehicleDetails.empty(),
+            loanDetails:
+                loan.loanParticulars?.loanDetails ?? LoanDetails.empty(),
+            emiDetails: loan.loanParticulars?.emiDetails ?? EMIDetails.empty(),
+          ),
+        )),
         loanIdChanged: (e) async => emit(state.copyWith(
           loanId: e.loanId,
           failureOrSuccess: none(),

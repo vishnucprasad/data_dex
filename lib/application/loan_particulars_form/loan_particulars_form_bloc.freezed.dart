@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$LoanParticularsFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -48,7 +48,7 @@ mixin _$LoanParticularsFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -76,7 +76,7 @@ mixin _$LoanParticularsFormEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -221,6 +221,8 @@ abstract class _$$InitializedImplCopyWith<$Res> {
   factory _$$InitializedImplCopyWith(
           _$InitializedImpl value, $Res Function(_$InitializedImpl) then) =
       __$$InitializedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Option<Loan> initializeOption});
 }
 
 /// @nodoc
@@ -230,31 +232,56 @@ class __$$InitializedImplCopyWithImpl<$Res>
   __$$InitializedImplCopyWithImpl(
       _$InitializedImpl _value, $Res Function(_$InitializedImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? initializeOption = null,
+  }) {
+    return _then(_$InitializedImpl(
+      null == initializeOption
+          ? _value.initializeOption
+          : initializeOption // ignore: cast_nullable_to_non_nullable
+              as Option<Loan>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$InitializedImpl implements _Initialized {
-  const _$InitializedImpl();
+  const _$InitializedImpl(this.initializeOption);
+
+  @override
+  final Option<Loan> initializeOption;
 
   @override
   String toString() {
-    return 'LoanParticularsFormEvent.initialized()';
+    return 'LoanParticularsFormEvent.initialized(initializeOption: $initializeOption)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitializedImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$InitializedImpl &&
+            (identical(other.initializeOption, initializeOption) ||
+                other.initializeOption == initializeOption));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, initializeOption);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InitializedImplCopyWith<_$InitializedImpl> get copyWith =>
+      __$$InitializedImplCopyWithImpl<_$InitializedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -281,13 +308,13 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(String repaymentMode) repaymentModeChanged,
     required TResult Function() saveLoanParticulars,
   }) {
-    return initialized();
+    return initialized(initializeOption);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -312,13 +339,13 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(String repaymentMode)? repaymentModeChanged,
     TResult? Function()? saveLoanParticulars,
   }) {
-    return initialized?.call();
+    return initialized?.call(initializeOption);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -345,7 +372,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult orElse(),
   }) {
     if (initialized != null) {
-      return initialized();
+      return initialized(initializeOption);
     }
     return orElse();
   }
@@ -456,7 +483,13 @@ class _$InitializedImpl implements _Initialized {
 }
 
 abstract class _Initialized implements LoanParticularsFormEvent {
-  const factory _Initialized() = _$InitializedImpl;
+  const factory _Initialized(final Option<Loan> initializeOption) =
+      _$InitializedImpl;
+
+  Option<Loan> get initializeOption;
+  @JsonKey(ignore: true)
+  _$$InitializedImplCopyWith<_$InitializedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -523,7 +556,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -556,7 +589,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -587,7 +620,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -798,7 +831,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -831,7 +864,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -862,7 +895,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -1075,7 +1108,7 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -1108,7 +1141,7 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -1139,7 +1172,7 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -1354,7 +1387,7 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -1387,7 +1420,7 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -1418,7 +1451,7 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -1632,7 +1665,7 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -1665,7 +1698,7 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -1696,7 +1729,7 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -1910,7 +1943,7 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -1943,7 +1976,7 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -1974,7 +2007,7 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -2190,7 +2223,7 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -2223,7 +2256,7 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -2254,7 +2287,7 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -2468,7 +2501,7 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -2501,7 +2534,7 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -2532,7 +2565,7 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -2746,7 +2779,7 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -2779,7 +2812,7 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -2810,7 +2843,7 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -3021,7 +3054,7 @@ class _$LtvChangedImpl implements _LtvChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -3054,7 +3087,7 @@ class _$LtvChangedImpl implements _LtvChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -3085,7 +3118,7 @@ class _$LtvChangedImpl implements _LtvChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -3299,7 +3332,7 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -3332,7 +3365,7 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -3363,7 +3396,7 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -3579,7 +3612,7 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -3612,7 +3645,7 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -3643,7 +3676,7 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -3857,7 +3890,7 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -3890,7 +3923,7 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -3921,7 +3954,7 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -4134,7 +4167,7 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -4167,7 +4200,7 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -4198,7 +4231,7 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -4411,7 +4444,7 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -4444,7 +4477,7 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -4475,7 +4508,7 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -4691,7 +4724,7 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -4724,7 +4757,7 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -4755,7 +4788,7 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -4970,7 +5003,7 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -5003,7 +5036,7 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -5034,7 +5067,7 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -5247,7 +5280,7 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -5280,7 +5313,7 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -5311,7 +5344,7 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -5522,7 +5555,7 @@ class _$TenureChangedImpl implements _TenureChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -5555,7 +5588,7 @@ class _$TenureChangedImpl implements _TenureChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -5586,7 +5619,7 @@ class _$TenureChangedImpl implements _TenureChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -5799,7 +5832,7 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -5832,7 +5865,7 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -5863,7 +5896,7 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -6076,7 +6109,7 @@ class _$BankNameChangedImpl implements _BankNameChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -6109,7 +6142,7 @@ class _$BankNameChangedImpl implements _BankNameChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -6140,7 +6173,7 @@ class _$BankNameChangedImpl implements _BankNameChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -6354,7 +6387,7 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -6387,7 +6420,7 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -6418,7 +6451,7 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -6605,7 +6638,7 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() initialized,
+    required TResult Function(Option<Loan> initializeOption) initialized,
     required TResult Function(UniqueId loanId) loanIdChanged,
     required TResult Function(int index) formStepChanged,
     required TResult Function(String dealerName) dealerNameChanged,
@@ -6638,7 +6671,7 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialized,
+    TResult? Function(Option<Loan> initializeOption)? initialized,
     TResult? Function(UniqueId loanId)? loanIdChanged,
     TResult? Function(int index)? formStepChanged,
     TResult? Function(String dealerName)? dealerNameChanged,
@@ -6669,7 +6702,7 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialized,
+    TResult Function(Option<Loan> initializeOption)? initialized,
     TResult Function(UniqueId loanId)? loanIdChanged,
     TResult Function(int index)? formStepChanged,
     TResult Function(String dealerName)? dealerNameChanged,
@@ -6813,12 +6846,14 @@ abstract class _SaveLoanParticulars implements LoanParticularsFormEvent {
 /// @nodoc
 mixin _$LoanParticularsFormState {
   bool get isSaving => throw _privateConstructorUsedError;
+  bool get isEditing => throw _privateConstructorUsedError;
   int get formStep => throw _privateConstructorUsedError;
   bool get showValidationError => throw _privateConstructorUsedError;
   VehicleDetails get vehicleDetails => throw _privateConstructorUsedError;
   LoanDetails get loanDetails => throw _privateConstructorUsedError;
   EMIDetails get emiDetails => throw _privateConstructorUsedError;
   UniqueId? get loanId => throw _privateConstructorUsedError;
+  Loan? get editingLoan => throw _privateConstructorUsedError;
   Option<Either<LoanParticularsFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
 
@@ -6835,17 +6870,20 @@ abstract class $LoanParticularsFormStateCopyWith<$Res> {
   @useResult
   $Res call(
       {bool isSaving,
+      bool isEditing,
       int formStep,
       bool showValidationError,
       VehicleDetails vehicleDetails,
       LoanDetails loanDetails,
       EMIDetails emiDetails,
       UniqueId? loanId,
+      Loan? editingLoan,
       Option<Either<LoanParticularsFailure, Unit>> failureOrSuccess});
 
   $VehicleDetailsCopyWith<$Res> get vehicleDetails;
   $LoanDetailsCopyWith<$Res> get loanDetails;
   $EMIDetailsCopyWith<$Res> get emiDetails;
+  $LoanCopyWith<$Res>? get editingLoan;
 }
 
 /// @nodoc
@@ -6863,18 +6901,24 @@ class _$LoanParticularsFormStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? isSaving = null,
+    Object? isEditing = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? vehicleDetails = null,
     Object? loanDetails = null,
     Object? emiDetails = null,
     Object? loanId = freezed,
+    Object? editingLoan = freezed,
     Object? failureOrSuccess = null,
   }) {
     return _then(_value.copyWith(
       isSaving: null == isSaving
           ? _value.isSaving
           : isSaving // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEditing: null == isEditing
+          ? _value.isEditing
+          : isEditing // ignore: cast_nullable_to_non_nullable
               as bool,
       formStep: null == formStep
           ? _value.formStep
@@ -6900,6 +6944,10 @@ class _$LoanParticularsFormStateCopyWithImpl<$Res,
           ? _value.loanId
           : loanId // ignore: cast_nullable_to_non_nullable
               as UniqueId?,
+      editingLoan: freezed == editingLoan
+          ? _value.editingLoan
+          : editingLoan // ignore: cast_nullable_to_non_nullable
+              as Loan?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -6930,6 +6978,18 @@ class _$LoanParticularsFormStateCopyWithImpl<$Res,
       return _then(_value.copyWith(emiDetails: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $LoanCopyWith<$Res>? get editingLoan {
+    if (_value.editingLoan == null) {
+      return null;
+    }
+
+    return $LoanCopyWith<$Res>(_value.editingLoan!, (value) {
+      return _then(_value.copyWith(editingLoan: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -6943,12 +7003,14 @@ abstract class _$$LoanParticularsFormStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {bool isSaving,
+      bool isEditing,
       int formStep,
       bool showValidationError,
       VehicleDetails vehicleDetails,
       LoanDetails loanDetails,
       EMIDetails emiDetails,
       UniqueId? loanId,
+      Loan? editingLoan,
       Option<Either<LoanParticularsFailure, Unit>> failureOrSuccess});
 
   @override
@@ -6957,6 +7019,8 @@ abstract class _$$LoanParticularsFormStateImplCopyWith<$Res>
   $LoanDetailsCopyWith<$Res> get loanDetails;
   @override
   $EMIDetailsCopyWith<$Res> get emiDetails;
+  @override
+  $LoanCopyWith<$Res>? get editingLoan;
 }
 
 /// @nodoc
@@ -6973,18 +7037,24 @@ class __$$LoanParticularsFormStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isSaving = null,
+    Object? isEditing = null,
     Object? formStep = null,
     Object? showValidationError = null,
     Object? vehicleDetails = null,
     Object? loanDetails = null,
     Object? emiDetails = null,
     Object? loanId = freezed,
+    Object? editingLoan = freezed,
     Object? failureOrSuccess = null,
   }) {
     return _then(_$LoanParticularsFormStateImpl(
       isSaving: null == isSaving
           ? _value.isSaving
           : isSaving // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEditing: null == isEditing
+          ? _value.isEditing
+          : isEditing // ignore: cast_nullable_to_non_nullable
               as bool,
       formStep: null == formStep
           ? _value.formStep
@@ -7010,6 +7080,10 @@ class __$$LoanParticularsFormStateImplCopyWithImpl<$Res>
           ? _value.loanId
           : loanId // ignore: cast_nullable_to_non_nullable
               as UniqueId?,
+      editingLoan: freezed == editingLoan
+          ? _value.editingLoan
+          : editingLoan // ignore: cast_nullable_to_non_nullable
+              as Loan?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -7023,16 +7097,20 @@ class __$$LoanParticularsFormStateImplCopyWithImpl<$Res>
 class _$LoanParticularsFormStateImpl implements _LoanParticularsFormState {
   const _$LoanParticularsFormStateImpl(
       {required this.isSaving,
+      required this.isEditing,
       required this.formStep,
       required this.showValidationError,
       required this.vehicleDetails,
       required this.loanDetails,
       required this.emiDetails,
       required this.loanId,
+      required this.editingLoan,
       required this.failureOrSuccess});
 
   @override
   final bool isSaving;
+  @override
+  final bool isEditing;
   @override
   final int formStep;
   @override
@@ -7046,11 +7124,13 @@ class _$LoanParticularsFormStateImpl implements _LoanParticularsFormState {
   @override
   final UniqueId? loanId;
   @override
+  final Loan? editingLoan;
+  @override
   final Option<Either<LoanParticularsFailure, Unit>> failureOrSuccess;
 
   @override
   String toString() {
-    return 'LoanParticularsFormState(isSaving: $isSaving, formStep: $formStep, showValidationError: $showValidationError, vehicleDetails: $vehicleDetails, loanDetails: $loanDetails, emiDetails: $emiDetails, loanId: $loanId, failureOrSuccess: $failureOrSuccess)';
+    return 'LoanParticularsFormState(isSaving: $isSaving, isEditing: $isEditing, formStep: $formStep, showValidationError: $showValidationError, vehicleDetails: $vehicleDetails, loanDetails: $loanDetails, emiDetails: $emiDetails, loanId: $loanId, editingLoan: $editingLoan, failureOrSuccess: $failureOrSuccess)';
   }
 
   @override
@@ -7060,6 +7140,8 @@ class _$LoanParticularsFormStateImpl implements _LoanParticularsFormState {
             other is _$LoanParticularsFormStateImpl &&
             (identical(other.isSaving, isSaving) ||
                 other.isSaving == isSaving) &&
+            (identical(other.isEditing, isEditing) ||
+                other.isEditing == isEditing) &&
             (identical(other.formStep, formStep) ||
                 other.formStep == formStep) &&
             (identical(other.showValidationError, showValidationError) ||
@@ -7071,6 +7153,8 @@ class _$LoanParticularsFormStateImpl implements _LoanParticularsFormState {
             (identical(other.emiDetails, emiDetails) ||
                 other.emiDetails == emiDetails) &&
             (identical(other.loanId, loanId) || other.loanId == loanId) &&
+            (identical(other.editingLoan, editingLoan) ||
+                other.editingLoan == editingLoan) &&
             (identical(other.failureOrSuccess, failureOrSuccess) ||
                 other.failureOrSuccess == failureOrSuccess));
   }
@@ -7079,12 +7163,14 @@ class _$LoanParticularsFormStateImpl implements _LoanParticularsFormState {
   int get hashCode => Object.hash(
       runtimeType,
       isSaving,
+      isEditing,
       formStep,
       showValidationError,
       vehicleDetails,
       loanDetails,
       emiDetails,
       loanId,
+      editingLoan,
       failureOrSuccess);
 
   @JsonKey(ignore: true)
@@ -7098,17 +7184,21 @@ class _$LoanParticularsFormStateImpl implements _LoanParticularsFormState {
 abstract class _LoanParticularsFormState implements LoanParticularsFormState {
   const factory _LoanParticularsFormState(
       {required final bool isSaving,
+      required final bool isEditing,
       required final int formStep,
       required final bool showValidationError,
       required final VehicleDetails vehicleDetails,
       required final LoanDetails loanDetails,
       required final EMIDetails emiDetails,
       required final UniqueId? loanId,
+      required final Loan? editingLoan,
       required final Option<Either<LoanParticularsFailure, Unit>>
           failureOrSuccess}) = _$LoanParticularsFormStateImpl;
 
   @override
   bool get isSaving;
+  @override
+  bool get isEditing;
   @override
   int get formStep;
   @override
@@ -7121,6 +7211,8 @@ abstract class _LoanParticularsFormState implements LoanParticularsFormState {
   EMIDetails get emiDetails;
   @override
   UniqueId? get loanId;
+  @override
+  Loan? get editingLoan;
   @override
   Option<Either<LoanParticularsFailure, Unit>> get failureOrSuccess;
   @override

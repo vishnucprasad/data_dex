@@ -35,7 +35,12 @@ class FirstEMIDatePickerButton extends StatelessWidget {
                 onPressed: () async {
                   final selectedDate = await showDatePicker(
                     context: context,
-                    initialDate: DateTime.now(),
+                    initialDate: state.isEditing &&
+                            state.emiDetails.firstEMIDate.isValid()
+                        ? DateTime.parse(
+                            state.emiDetails.firstEMIDate.getOrCrash(),
+                          )
+                        : DateTime.now(),
                     firstDate: DateTime(1900),
                     lastDate: DateTime(2100),
                     builder: (context, child) {

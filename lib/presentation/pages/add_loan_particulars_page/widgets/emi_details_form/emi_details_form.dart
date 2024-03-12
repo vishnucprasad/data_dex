@@ -1,5 +1,6 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart';
 import 'package:data_dex/application/miscellaneous_details_form/miscellaneous_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
@@ -39,7 +40,7 @@ class EMIDetailsForm extends StatelessWidget {
                   ));
               context
                   .read<LoanParticularsFormBloc>()
-                  .add(const LoanParticularsFormEvent.initialized());
+                  .add(LoanParticularsFormEvent.initialized(none()));
               context.replaceRoute(const AddMiscellaneousDetailsRoute());
             },
           ),

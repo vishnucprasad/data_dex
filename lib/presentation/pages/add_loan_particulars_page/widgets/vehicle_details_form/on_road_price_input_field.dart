@@ -13,10 +13,18 @@ class OnRoadPriceInputField extends HookWidget {
     return BlocConsumer<LoanParticularsFormBloc, LoanParticularsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text =
-            state.vehicleDetails.onRoadPrice.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.vehicleDetails.onRoadPrice.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.vehicleDetails.onRoadPrice.isValid()) {
+          controller.text =
+              state.vehicleDetails.onRoadPrice.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

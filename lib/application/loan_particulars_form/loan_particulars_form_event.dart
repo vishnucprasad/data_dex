@@ -2,7 +2,9 @@ part of 'loan_particulars_form_bloc.dart';
 
 @freezed
 class LoanParticularsFormEvent with _$LoanParticularsFormEvent {
-  const factory LoanParticularsFormEvent.initialized() = _Initialized;
+  const factory LoanParticularsFormEvent.initialized(
+    Option<Loan> initializeOption,
+  ) = _Initialized;
   const factory LoanParticularsFormEvent.loanIdChanged(
     UniqueId loanId,
   ) = _LoanIdChanged;

@@ -13,10 +13,18 @@ class DateShiftingChargeInputField extends HookWidget {
     return BlocConsumer<LoanParticularsFormBloc, LoanParticularsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text =
-            state.loanDetails.dateShiftingCharge.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.loanDetails.dateShiftingCharge.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.loanDetails.dateShiftingCharge.isValid()) {
+          controller.text =
+              state.loanDetails.dateShiftingCharge.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

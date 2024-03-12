@@ -13,10 +13,17 @@ class ServiceChargeInputField extends HookWidget {
     return BlocConsumer<LoanParticularsFormBloc, LoanParticularsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text =
-            state.loanDetails.serviceCharge.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.loanDetails.serviceCharge.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.loanDetails.serviceCharge.isValid()) {
+          controller.text =
+              state.loanDetails.serviceCharge.value.getOrElse(() => "");
+        }
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

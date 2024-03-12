@@ -13,10 +13,18 @@ class ExShowroomPriceInputField extends HookWidget {
     return BlocConsumer<LoanParticularsFormBloc, LoanParticularsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text =
-            state.vehicleDetails.exShowroomPrice.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.vehicleDetails.exShowroomPrice.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.vehicleDetails.exShowroomPrice.isValid()) {
+          controller.text =
+              state.vehicleDetails.exShowroomPrice.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

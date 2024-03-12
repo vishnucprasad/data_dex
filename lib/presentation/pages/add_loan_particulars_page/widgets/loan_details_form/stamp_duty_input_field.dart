@@ -13,9 +13,18 @@ class StampDutyInputField extends HookWidget {
     return BlocConsumer<LoanParticularsFormBloc, LoanParticularsFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.loanDetails.stampDuty.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.loanDetails.stampDuty.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.loanDetails.stampDuty.isValid()) {
+          controller.text =
+              state.loanDetails.stampDuty.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(
