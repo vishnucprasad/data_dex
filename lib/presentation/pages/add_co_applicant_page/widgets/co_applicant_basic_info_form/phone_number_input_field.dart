@@ -15,9 +15,18 @@ class PhoneNumberInputField extends HookWidget {
     return BlocConsumer<CoApplicantFormBloc, CoApplicantFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.basicInfo.phoneNumber.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text =
+              state.basicInfo.phoneNumber.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.basicInfo.phoneNumber.isValid()) {
+          controller.text =
+              state.basicInfo.phoneNumber.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           decoration: InputDecoration(

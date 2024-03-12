@@ -33,12 +33,21 @@ class ApplicantMoreDetailsForm extends StatelessWidget {
               ),
             ).show(context),
             (loanId) {
+              if (state.isEditing) {
+                context
+                    .read<CoApplicantFormBloc>()
+                    .add(CoApplicantFormEvent.initialized(some(
+                      state.editingLoan!,
+                    )));
+              } else {
+                context
+                    .read<CoApplicantFormBloc>()
+                    .add(CoApplicantFormEvent.loanIdChanged(loanId));
+              }
+
               context
                   .read<ApplicantFormBloc>()
                   .add(ApplicantFormEvent.initialized(none()));
-              context
-                  .read<CoApplicantFormBloc>()
-                  .add(CoApplicantFormEvent.loanIdChanged(loanId));
               context.replaceRoute(const AddCoApplicantRoute());
             },
           ),

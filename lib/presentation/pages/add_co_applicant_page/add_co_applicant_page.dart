@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart';
 import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
@@ -20,7 +21,7 @@ class AddCoApplicantPage extends StatelessWidget {
       onWillPop: () async {
         context
             .read<CoApplicantFormBloc>()
-            .add(const CoApplicantFormEvent.initialized());
+            .add(CoApplicantFormEvent.initialized(none()));
 
         return true;
       },
@@ -49,7 +50,7 @@ class AddCoApplicantPage extends StatelessWidget {
                               GuarenterFormEvent.loanIdChanged(state.loanId!));
                           context
                               .read<CoApplicantFormBloc>()
-                              .add(const CoApplicantFormEvent.initialized());
+                              .add(CoApplicantFormEvent.initialized(none()));
                           context.replaceRoute(const AddGuarenterRoute());
                         },
                         child: Row(

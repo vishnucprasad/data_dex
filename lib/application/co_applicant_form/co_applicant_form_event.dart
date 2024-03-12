@@ -2,7 +2,9 @@ part of 'co_applicant_form_bloc.dart';
 
 @freezed
 class CoApplicantFormEvent with _$CoApplicantFormEvent {
-  const factory CoApplicantFormEvent.initialized() = _Initialized;
+  const factory CoApplicantFormEvent.initialized(
+    Option<Loan> initializeOption,
+  ) = _Initialized;
   const factory CoApplicantFormEvent.loanIdChanged(
     UniqueId loanId,
   ) = _LoanIdChanged;

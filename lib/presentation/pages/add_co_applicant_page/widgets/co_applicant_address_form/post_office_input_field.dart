@@ -13,9 +13,16 @@ class PostOfficeInputField extends HookWidget {
     return BlocConsumer<CoApplicantFormBloc, CoApplicantFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.address.postOffice.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text = state.address.postOffice.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.address.postOffice.isValid()) {
+          controller.text = state.address.postOffice.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           maxLength: 60,

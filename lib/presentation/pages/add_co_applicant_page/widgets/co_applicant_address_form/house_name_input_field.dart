@@ -13,9 +13,16 @@ class HouseNameInputField extends HookWidget {
     return BlocConsumer<CoApplicantFormBloc, CoApplicantFormState>(
       listenWhen: (p, c) => p.showValidationError != c.showValidationError,
       listener: (context, state) {
-        controller.text = state.address.houseName.value.getOrElse(() => "");
+        if (!state.isEditing) {
+          controller.text = state.address.houseName.value.getOrElse(() => "");
+        }
       },
+      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
       builder: (context, state) {
+        if (state.isEditing && state.address.houseName.isValid()) {
+          controller.text = state.address.houseName.value.getOrElse(() => "");
+        }
+
         return TextFormField(
           controller: controller,
           maxLength: 60,

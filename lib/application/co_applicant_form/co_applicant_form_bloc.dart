@@ -5,6 +5,7 @@ import 'package:data_dex/domain/co_applicant/models/co_applicant.dart';
 import 'package:data_dex/domain/core/models/address/address.dart';
 import 'package:data_dex/domain/core/models/basic_info/basic_info.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
+import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -22,7 +23,18 @@ class CoApplicantFormBloc
   ) : super(CoApplicantFormState.initial()) {
     on<CoApplicantFormEvent>((event, emit) async {
       await event.map(
-        initialized: (e) async => emit(CoApplicantFormState.initial()),
+        initialized: (e) async {
+          emit(e.initializeOption.fold(
+            () => CoApplicantFormState.initial(),
+            (loan) => CoApplicantFormState.initial().copyWith(
+              isEditing: true,
+              loanId: loan.id,
+              editingLoan: loan,
+              basicInfo: loan.coApplicant?.basicInfo ?? BasicInfo.empty(),
+              address: loan.coApplicant?.address ?? Address.empty(),
+            ),
+          ));
+        },
         loanIdChanged: (e) async => emit(state.copyWith(
           loanId: e.loanId,
           failureOrSuccess: none(),

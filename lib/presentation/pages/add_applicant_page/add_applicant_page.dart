@@ -2,6 +2,7 @@ import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart';
+import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_address_form/applicant_address_form.dart';
 import 'package:data_dex/presentation/pages/add_applicant_page/widgets/applicant_basic_info_form/applicant_basic_info_form.dart';
@@ -69,6 +70,20 @@ class AddApplicantPage extends StatelessWidget {
                     if (state.isEditing)
                       TextButton(
                         onPressed: () {
+                          if (state.isEditing) {
+                            context
+                                .read<CoApplicantFormBloc>()
+                                .add(CoApplicantFormEvent.initialized(some(
+                                  state.editingLoan!,
+                                )));
+                          } else {
+                            context
+                                .read<CoApplicantFormBloc>()
+                                .add(CoApplicantFormEvent.loanIdChanged(
+                                  state.loanId,
+                                ));
+                          }
+
                           context
                               .read<ApplicantFormBloc>()
                               .add(ApplicantFormEvent.initialized(none()));
