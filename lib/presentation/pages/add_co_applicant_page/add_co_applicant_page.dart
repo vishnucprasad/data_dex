@@ -35,9 +35,12 @@ class AddCoApplicantPage extends StatelessWidget {
                   Row(
                     children: [
                       const BackButton(),
-                      const Text(
-                        'Add coapplicant',
-                        style: TextStyle(
+                      Text(
+                        state.isEditing &&
+                                state.editingLoan?.coApplicant != null
+                            ? 'Edit coapplicant'
+                            : 'Add coapplicant',
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1,

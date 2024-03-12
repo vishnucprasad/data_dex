@@ -1,8 +1,13 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/domain/applicant/failures/applicant_failure.dart';
 import 'package:data_dex/domain/applicant/i_applicant_repository.dart';
+import 'package:data_dex/domain/applicant/models/applicant.dart';
 import 'package:data_dex/domain/core/models/cloud_image/cloud_image.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
+import 'package:data_dex/domain/loan/failures/loan_failure.dart';
+import 'package:data_dex/infrastructure/applicant/dto/applicant_dto.dart';
+import 'package:data_dex/infrastructure/core/firestore_helpers.dart';
 import 'package:data_dex/injection.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
@@ -13,6 +18,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 @LazySingleton(as: IApplicantRepository)
 class ApplicantRepository implements IApplicantRepository {
+  final _firestore = getIt<FirebaseFirestore>();
   final _storage = getIt<FirebaseStorage>();
 
   @override
@@ -127,6 +133,30 @@ class ApplicantRepository implements IApplicantRepository {
         return left(const ApplicantFailure.permissionDenied());
       }
       return left(const ApplicantFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<LoanFailure, Unit>> updateApplicant(
+    UniqueId id,
+    Applicant applicant,
+  ) async {
+    try {
+      final userDoc = await _firestore.userDocument();
+      final applicantDto = ApplicantDto.fromDomain(applicant);
+
+      await userDoc.loansCollection
+          .doc(id.getOrCrash())
+          .update({'applicant': applicantDto.toJson()});
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message != null) {
+        if (e.message!.contains('PERMISSION_DENIED')) {
+          return left(const LoanFailure.permissionDenied());
+        }
+        return left(const LoanFailure.unableToUpdate());
+      }
+      return left(const LoanFailure.unexpected());
     }
   }
 }

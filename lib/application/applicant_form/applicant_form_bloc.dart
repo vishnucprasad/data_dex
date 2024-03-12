@@ -301,7 +301,12 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
             applicant: applicant,
           );
 
-          final loanOption = await _loanRepository.create(loan);
+          final loanOption = state.isEditing
+              ? await _applicantRepository.updateApplicant(
+                  state.loanId,
+                  applicant,
+                )
+              : await _loanRepository.create(loan);
 
           emit(loanOption.fold(
             (l) => state.copyWith(
