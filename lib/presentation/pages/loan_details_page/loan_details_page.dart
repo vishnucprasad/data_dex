@@ -2,10 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:data_dex/application/app_action/app_action_cubit.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
-import 'package:data_dex/presentation/pages/loan_details_page/widgets/address_card.dart';
-import 'package:data_dex/presentation/pages/loan_details_page/widgets/basic_info_card.dart';
-import 'package:data_dex/presentation/pages/loan_details_page/widgets/image_and_location_card.dart';
-import 'package:data_dex/presentation/pages/loan_details_page/widgets/loan_details_divider.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/applicant_details_section.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/co_applicant_details_section.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/loan_details_head.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,40 +30,38 @@ class LoanDetailsPage extends StatelessWidget {
         foregroundColor: kLightColor,
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            const LoanDetailsHead(),
-            Expanded(
-              child: ListView(
-                padding: const EdgeInsets.all(16),
-                children: [
-                  const LoanDetailsDivider(text: 'Applicant Details'),
-                  kHeight,
-                  BlocBuilder<AppActionCubit, AppActionState>(
-                    builder: (context, state) {
-                      return Column(
-                        children: [
-                          BasicInfoCard(
-                            basicInfo: state.selectedLoan!.applicant.basicInfo,
-                          ),
-                          kHeightMd,
-                          AddressCard(
-                            address: state.selectedLoan!.applicant.address,
-                          ),
-                          kHeightMd,
-                          ImageAndLocationCard(
-                            houseImage:
-                                state.selectedLoan!.applicant.houseImage,
-                            location: state.selectedLoan!.applicant.location,
-                          ),
-                        ],
-                      );
-                    },
-                  )
-                ],
-              ),
-            ),
-          ],
+        child: BlocBuilder<AppActionCubit, AppActionState>(
+          builder: (context, state) {
+            if (state.selectedLoan == null) {
+              return Center(
+                child: Text(
+                  'Loan details not found',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.error,
+                  ),
+                ),
+              );
+            }
+
+            return Column(
+              children: [
+                const LoanDetailsHead(),
+                Expanded(
+                  child: ListView(
+                    padding: const EdgeInsets.all(16),
+                    children: [
+                      ApplicantDetailsSection(
+                        applicant: state.selectedLoan!.applicant,
+                      ),
+                      kHeight,
+                      CoApplicantDetailsSection(
+                          coApplicant: state.selectedLoan!.coApplicant)
+                    ],
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );

@@ -16,17 +16,6 @@ class LoanDetailsHead extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AppActionCubit, AppActionState>(
       builder: (context, state) {
-        if (state.selectedLoan == null) {
-          return Center(
-            child: Text(
-              'Loan details not found',
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.error,
-              ),
-            ),
-          );
-        }
-
         return Container(
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 16),

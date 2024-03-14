@@ -2,6 +2,7 @@ import 'package:data_dex/domain/core/models/basic_info/basic_info.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class BasicInfoCard extends StatelessWidget {
   const BasicInfoCard({
@@ -87,7 +88,9 @@ class BasicInfoCard extends StatelessWidget {
               ),
               kWidthMd,
               Text(
-                basicInfo.phoneNumber.getOrCrash(),
+                DateFormat.yMMMMd().format(
+                  DateTime.parse(basicInfo.dateOfBirth.getOrCrash()),
+                ),
               ),
             ],
           ),
