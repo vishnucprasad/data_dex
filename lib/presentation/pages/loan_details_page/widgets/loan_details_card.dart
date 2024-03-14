@@ -6,10 +6,14 @@ import 'package:flutter/material.dart';
 class LoanDetailsCard extends StatelessWidget {
   const LoanDetailsCard({
     required this.loanDetails,
+    required this.ddAmount,
+    required this.downPayment,
     super.key,
   });
 
   final LoanDetails loanDetails;
+  final double? ddAmount;
+  final double? downPayment;
 
   @override
   Widget build(BuildContext context) {
@@ -183,6 +187,40 @@ class LoanDetailsCard extends StatelessWidget {
                       ? loanDetails.counterAmount.getOrCrash()
                       : '0',
                 ).toStringAsFixed(2)}',
+              ),
+            ],
+          ),
+          kHeightMd,
+          Row(
+            children: [
+              Text(
+                'DD amount:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.lightBlue.shade600,
+                ),
+              ),
+              kWidthMd,
+              Text(
+                '₹ ${(ddAmount ?? 0).toStringAsFixed(2)}',
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          kHeightMd,
+          Row(
+            children: [
+              Text(
+                'Downpayment:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.lightBlue.shade600,
+                ),
+              ),
+              kWidthMd,
+              Text(
+                '₹ ${(downPayment ?? 0).toStringAsFixed(2)}',
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
           ),

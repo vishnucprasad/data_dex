@@ -11,5 +11,7 @@ class LoanParticulars with _$LoanParticulars {
     required VehicleDetails vehicleDetails,
     required LoanDetails loanDetails,
     required EMIDetails emiDetails,
+    double? ddAmount,
+    double? downPayment,
   }) = _LoanParticulars;
 }

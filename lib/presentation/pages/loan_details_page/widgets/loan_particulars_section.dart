@@ -69,6 +69,8 @@ class LoanParticularsSection extends StatelessWidget {
                   kHeightMd,
                   LoanDetailsCard(
                     loanDetails: loanParticulars!.loanDetails,
+                    ddAmount: loanParticulars!.ddAmount,
+                    downPayment: loanParticulars!.downPayment,
                   ),
                   kHeightMd,
                   EMIDetailsCard(

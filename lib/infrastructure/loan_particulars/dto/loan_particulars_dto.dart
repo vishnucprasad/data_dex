@@ -35,6 +35,8 @@ class LoanParticularsDto with _$LoanParticularsDto {
       vehicleDetails: vehicleDetails.toDomain(),
       loanDetails: loanDetails.toDomain(),
       emiDetails: emiDetails.toDomain(),
+      ddAmount: calculateDD(loanDetails),
+      downPayment: calculateDownpayment(vehicleDetails, loanDetails),
     );
   }
 
@@ -45,5 +47,24 @@ class LoanParticularsDto with _$LoanParticularsDto {
     DocumentSnapshot<Map<String, dynamic>> doc,
   ) {
     return LoanParticularsDto.fromJson(doc.data() as Map<String, dynamic>);
+  }
+
+  double calculateDD(LoanDetailsDto loanDetails) {
+    final double deductions = ((loanDetails.serviceCharge) +
+        (loanDetails.documentationCharge ?? 0) +
+        (loanDetails.lifeAmount ?? 0) +
+        (loanDetails.pacAmount ?? 0) +
+        (loanDetails.stampDuty) +
+        (loanDetails.dateShiftingCharge ?? 0));
+
+    return loanDetails.loanAmount - deductions;
+  }
+
+  double calculateDownpayment(
+    VehicleDetailsDto vehicleDetails,
+    LoanDetailsDto loanDetails,
+  ) {
+    final dd = calculateDD(loanDetails);
+    return (vehicleDetails.onRoadPrice - dd) + (loanDetails.counterAmount ?? 0);
   }
 }
