@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$AppActionState {
   int get bottomNavIndex => throw _privateConstructorUsedError;
+  Loan? get selectedLoan => throw _privateConstructorUsedError;
   Option<Either<CommonFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
 
@@ -33,7 +34,10 @@ abstract class $AppActionStateCopyWith<$Res> {
   @useResult
   $Res call(
       {int bottomNavIndex,
+      Loan? selectedLoan,
       Option<Either<CommonFailure, Unit>> failureOrSuccess});
+
+  $LoanCopyWith<$Res>? get selectedLoan;
 }
 
 /// @nodoc
@@ -50,6 +54,7 @@ class _$AppActionStateCopyWithImpl<$Res, $Val extends AppActionState>
   @override
   $Res call({
     Object? bottomNavIndex = null,
+    Object? selectedLoan = freezed,
     Object? failureOrSuccess = null,
   }) {
     return _then(_value.copyWith(
@@ -57,11 +62,27 @@ class _$AppActionStateCopyWithImpl<$Res, $Val extends AppActionState>
           ? _value.bottomNavIndex
           : bottomNavIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      selectedLoan: freezed == selectedLoan
+          ? _value.selectedLoan
+          : selectedLoan // ignore: cast_nullable_to_non_nullable
+              as Loan?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
               as Option<Either<CommonFailure, Unit>>,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $LoanCopyWith<$Res>? get selectedLoan {
+    if (_value.selectedLoan == null) {
+      return null;
+    }
+
+    return $LoanCopyWith<$Res>(_value.selectedLoan!, (value) {
+      return _then(_value.copyWith(selectedLoan: value) as $Val);
+    });
   }
 }
 
@@ -75,7 +96,11 @@ abstract class _$$AppActionStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {int bottomNavIndex,
+      Loan? selectedLoan,
       Option<Either<CommonFailure, Unit>> failureOrSuccess});
+
+  @override
+  $LoanCopyWith<$Res>? get selectedLoan;
 }
 
 /// @nodoc
@@ -90,6 +115,7 @@ class __$$AppActionStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? bottomNavIndex = null,
+    Object? selectedLoan = freezed,
     Object? failureOrSuccess = null,
   }) {
     return _then(_$AppActionStateImpl(
@@ -97,6 +123,10 @@ class __$$AppActionStateImplCopyWithImpl<$Res>
           ? _value.bottomNavIndex
           : bottomNavIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      selectedLoan: freezed == selectedLoan
+          ? _value.selectedLoan
+          : selectedLoan // ignore: cast_nullable_to_non_nullable
+              as Loan?,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -109,16 +139,20 @@ class __$$AppActionStateImplCopyWithImpl<$Res>
 
 class _$AppActionStateImpl implements _AppActionState {
   const _$AppActionStateImpl(
-      {required this.bottomNavIndex, required this.failureOrSuccess});
+      {required this.bottomNavIndex,
+      required this.selectedLoan,
+      required this.failureOrSuccess});
 
   @override
   final int bottomNavIndex;
+  @override
+  final Loan? selectedLoan;
   @override
   final Option<Either<CommonFailure, Unit>> failureOrSuccess;
 
   @override
   String toString() {
-    return 'AppActionState(bottomNavIndex: $bottomNavIndex, failureOrSuccess: $failureOrSuccess)';
+    return 'AppActionState(bottomNavIndex: $bottomNavIndex, selectedLoan: $selectedLoan, failureOrSuccess: $failureOrSuccess)';
   }
 
   @override
@@ -128,13 +162,15 @@ class _$AppActionStateImpl implements _AppActionState {
             other is _$AppActionStateImpl &&
             (identical(other.bottomNavIndex, bottomNavIndex) ||
                 other.bottomNavIndex == bottomNavIndex) &&
+            (identical(other.selectedLoan, selectedLoan) ||
+                other.selectedLoan == selectedLoan) &&
             (identical(other.failureOrSuccess, failureOrSuccess) ||
                 other.failureOrSuccess == failureOrSuccess));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, bottomNavIndex, failureOrSuccess);
+      Object.hash(runtimeType, bottomNavIndex, selectedLoan, failureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -147,11 +183,14 @@ class _$AppActionStateImpl implements _AppActionState {
 abstract class _AppActionState implements AppActionState {
   const factory _AppActionState(
       {required final int bottomNavIndex,
+      required final Loan? selectedLoan,
       required final Option<Either<CommonFailure, Unit>>
           failureOrSuccess}) = _$AppActionStateImpl;
 
   @override
   int get bottomNavIndex;
+  @override
+  Loan? get selectedLoan;
   @override
   Option<Either<CommonFailure, Unit>> get failureOrSuccess;
   @override

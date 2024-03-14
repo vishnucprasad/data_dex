@@ -20,32 +20,44 @@ mixin _$CommonFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String msg) clientFailure,
+    required TResult Function(String msg) locationFailure,
+    required TResult Function(String msg) shareFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String msg)? clientFailure,
+    TResult? Function(String msg)? locationFailure,
+    TResult? Function(String msg)? shareFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String msg)? clientFailure,
+    TResult Function(String msg)? locationFailure,
+    TResult Function(String msg)? shareFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_ShareFailure value) shareFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_LocationFailure value)? locationFailure,
+    TResult? Function(_ShareFailure value)? shareFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_ShareFailure value)? shareFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -155,6 +167,8 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String msg) clientFailure,
+    required TResult Function(String msg) locationFailure,
+    required TResult Function(String msg) shareFailure,
   }) {
     return clientFailure(msg);
   }
@@ -163,6 +177,8 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String msg)? clientFailure,
+    TResult? Function(String msg)? locationFailure,
+    TResult? Function(String msg)? shareFailure,
   }) {
     return clientFailure?.call(msg);
   }
@@ -171,6 +187,8 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String msg)? clientFailure,
+    TResult Function(String msg)? locationFailure,
+    TResult Function(String msg)? shareFailure,
     required TResult orElse(),
   }) {
     if (clientFailure != null) {
@@ -183,6 +201,8 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_ShareFailure value) shareFailure,
   }) {
     return clientFailure(this);
   }
@@ -191,6 +211,8 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_LocationFailure value)? locationFailure,
+    TResult? Function(_ShareFailure value)? shareFailure,
   }) {
     return clientFailure?.call(this);
   }
@@ -199,6 +221,8 @@ class _$ClientFailureImpl implements _ClientFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_ShareFailure value)? shareFailure,
     required TResult orElse(),
   }) {
     if (clientFailure != null) {
@@ -216,5 +240,292 @@ abstract class _ClientFailure implements CommonFailure {
   @override
   @JsonKey(ignore: true)
   _$$ClientFailureImplCopyWith<_$ClientFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LocationFailureImplCopyWith<$Res>
+    implements $CommonFailureCopyWith<$Res> {
+  factory _$$LocationFailureImplCopyWith(_$LocationFailureImpl value,
+          $Res Function(_$LocationFailureImpl) then) =
+      __$$LocationFailureImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String msg});
+}
+
+/// @nodoc
+class __$$LocationFailureImplCopyWithImpl<$Res>
+    extends _$CommonFailureCopyWithImpl<$Res, _$LocationFailureImpl>
+    implements _$$LocationFailureImplCopyWith<$Res> {
+  __$$LocationFailureImplCopyWithImpl(
+      _$LocationFailureImpl _value, $Res Function(_$LocationFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? msg = null,
+  }) {
+    return _then(_$LocationFailureImpl(
+      null == msg
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LocationFailureImpl implements _LocationFailure {
+  const _$LocationFailureImpl(this.msg);
+
+  @override
+  final String msg;
+
+  @override
+  String toString() {
+    return 'CommonFailure.locationFailure(msg: $msg)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LocationFailureImpl &&
+            (identical(other.msg, msg) || other.msg == msg));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, msg);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LocationFailureImplCopyWith<_$LocationFailureImpl> get copyWith =>
+      __$$LocationFailureImplCopyWithImpl<_$LocationFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String msg) clientFailure,
+    required TResult Function(String msg) locationFailure,
+    required TResult Function(String msg) shareFailure,
+  }) {
+    return locationFailure(msg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String msg)? clientFailure,
+    TResult? Function(String msg)? locationFailure,
+    TResult? Function(String msg)? shareFailure,
+  }) {
+    return locationFailure?.call(msg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String msg)? clientFailure,
+    TResult Function(String msg)? locationFailure,
+    TResult Function(String msg)? shareFailure,
+    required TResult orElse(),
+  }) {
+    if (locationFailure != null) {
+      return locationFailure(msg);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_ShareFailure value) shareFailure,
+  }) {
+    return locationFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_LocationFailure value)? locationFailure,
+    TResult? Function(_ShareFailure value)? shareFailure,
+  }) {
+    return locationFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_ShareFailure value)? shareFailure,
+    required TResult orElse(),
+  }) {
+    if (locationFailure != null) {
+      return locationFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LocationFailure implements CommonFailure {
+  const factory _LocationFailure(final String msg) = _$LocationFailureImpl;
+
+  @override
+  String get msg;
+  @override
+  @JsonKey(ignore: true)
+  _$$LocationFailureImplCopyWith<_$LocationFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ShareFailureImplCopyWith<$Res>
+    implements $CommonFailureCopyWith<$Res> {
+  factory _$$ShareFailureImplCopyWith(
+          _$ShareFailureImpl value, $Res Function(_$ShareFailureImpl) then) =
+      __$$ShareFailureImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String msg});
+}
+
+/// @nodoc
+class __$$ShareFailureImplCopyWithImpl<$Res>
+    extends _$CommonFailureCopyWithImpl<$Res, _$ShareFailureImpl>
+    implements _$$ShareFailureImplCopyWith<$Res> {
+  __$$ShareFailureImplCopyWithImpl(
+      _$ShareFailureImpl _value, $Res Function(_$ShareFailureImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? msg = null,
+  }) {
+    return _then(_$ShareFailureImpl(
+      null == msg
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ShareFailureImpl implements _ShareFailure {
+  const _$ShareFailureImpl(this.msg);
+
+  @override
+  final String msg;
+
+  @override
+  String toString() {
+    return 'CommonFailure.shareFailure(msg: $msg)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShareFailureImpl &&
+            (identical(other.msg, msg) || other.msg == msg));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, msg);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ShareFailureImplCopyWith<_$ShareFailureImpl> get copyWith =>
+      __$$ShareFailureImplCopyWithImpl<_$ShareFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String msg) clientFailure,
+    required TResult Function(String msg) locationFailure,
+    required TResult Function(String msg) shareFailure,
+  }) {
+    return shareFailure(msg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String msg)? clientFailure,
+    TResult? Function(String msg)? locationFailure,
+    TResult? Function(String msg)? shareFailure,
+  }) {
+    return shareFailure?.call(msg);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String msg)? clientFailure,
+    TResult Function(String msg)? locationFailure,
+    TResult Function(String msg)? shareFailure,
+    required TResult orElse(),
+  }) {
+    if (shareFailure != null) {
+      return shareFailure(msg);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ClientFailure value) clientFailure,
+    required TResult Function(_LocationFailure value) locationFailure,
+    required TResult Function(_ShareFailure value) shareFailure,
+  }) {
+    return shareFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ClientFailure value)? clientFailure,
+    TResult? Function(_LocationFailure value)? locationFailure,
+    TResult? Function(_ShareFailure value)? shareFailure,
+  }) {
+    return shareFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ClientFailure value)? clientFailure,
+    TResult Function(_LocationFailure value)? locationFailure,
+    TResult Function(_ShareFailure value)? shareFailure,
+    required TResult orElse(),
+  }) {
+    if (shareFailure != null) {
+      return shareFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShareFailure implements CommonFailure {
+  const factory _ShareFailure(final String msg) = _$ShareFailureImpl;
+
+  @override
+  String get msg;
+  @override
+  @JsonKey(ignore: true)
+  _$$ShareFailureImplCopyWith<_$ShareFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
