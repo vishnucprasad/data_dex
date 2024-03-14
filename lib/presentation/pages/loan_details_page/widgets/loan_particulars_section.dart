@@ -1,28 +1,27 @@
-import 'package:data_dex/application/app_action/app_action_cubit.dart';
-import 'package:data_dex/domain/co_applicant/models/co_applicant.dart';
+import 'package:data_dex/domain/loan_particulars/models/loan_particulars.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
-import 'package:data_dex/presentation/pages/loan_details_page/widgets/address_card.dart';
-import 'package:data_dex/presentation/pages/loan_details_page/widgets/basic_info_card.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/emi_details_card.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/loan_details_card.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/loan_details_divider.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/vehicle_details_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CoApplicantDetailsSection extends StatelessWidget {
-  const CoApplicantDetailsSection({
-    required this.coApplicant,
+class LoanParticularsSection extends StatelessWidget {
+  const LoanParticularsSection({
+    required this.loanParticulars,
     super.key,
   });
 
-  final CoApplicant? coApplicant;
+  final LoanParticulars? loanParticulars;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const LoanDetailsDivider(text: 'Coapplicant Details'),
+        const LoanDetailsDivider(text: 'Loan particulars'),
         kHeight,
-        coApplicant == null
+        loanParticulars == null
             ? Container(
                 height: 170,
                 width: double.infinity,
@@ -39,12 +38,12 @@ class CoApplicantDetailsSection extends StatelessWidget {
                       size: 36,
                     ),
                     kHeightMd,
-                    const Text('Coapplicant information not provided'),
+                    const Text('Loan particulars not provided'),
                     kHeightMd,
                     ElevatedButton.icon(
                       onPressed: () {},
                       icon: const Icon(Icons.add),
-                      label: const Text('Add coapplicant'),
+                      label: const Text('Add loan particulars'),
                       style: ButtonStyle(
                         elevation: const MaterialStatePropertyAll<double>(0),
                         backgroundColor: MaterialStatePropertyAll<Color>(
@@ -64,22 +63,19 @@ class CoApplicantDetailsSection extends StatelessWidget {
               )
             : Column(
                 children: [
-                  BlocBuilder<AppActionCubit, AppActionState>(
-                    builder: (context, state) {
-                      return BasicInfoCard(
-                        basicInfo: coApplicant!.basicInfo,
-                        showProfile: true,
-                        image: state.selectedLoan!.miscellaneousDetails
-                            ?.coApplicantImage,
-                      );
-                    },
+                  VehicleDetailsCard(
+                    vehicleDetails: loanParticulars!.vehicleDetails,
                   ),
                   kHeightMd,
-                  AddressCard(
-                    address: coApplicant!.address,
+                  LoanDetailsCard(
+                    loanDetails: loanParticulars!.loanDetails,
                   ),
+                  kHeightMd,
+                  EMIDetailsCard(
+                    emiDetails: loanParticulars!.emiDetails,
+                  )
                 ],
-              )
+              ),
       ],
     );
   }

@@ -1,28 +1,29 @@
 import 'package:data_dex/application/app_action/app_action_cubit.dart';
-import 'package:data_dex/domain/co_applicant/models/co_applicant.dart';
+import 'package:data_dex/domain/guarenter/models/guarenter.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/address_card.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/basic_info_card.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/image_and_location_card.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/loan_details_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CoApplicantDetailsSection extends StatelessWidget {
-  const CoApplicantDetailsSection({
-    required this.coApplicant,
+class GuarenterDetailsSection extends StatelessWidget {
+  const GuarenterDetailsSection({
+    required this.guarenter,
     super.key,
   });
 
-  final CoApplicant? coApplicant;
+  final Guarenter? guarenter;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const LoanDetailsDivider(text: 'Coapplicant Details'),
+        const LoanDetailsDivider(text: 'Guarenter Details'),
         kHeight,
-        coApplicant == null
+        guarenter == null
             ? Container(
                 height: 170,
                 width: double.infinity,
@@ -39,12 +40,12 @@ class CoApplicantDetailsSection extends StatelessWidget {
                       size: 36,
                     ),
                     kHeightMd,
-                    const Text('Coapplicant information not provided'),
+                    const Text('Guarenter information not provided'),
                     kHeightMd,
                     ElevatedButton.icon(
                       onPressed: () {},
                       icon: const Icon(Icons.add),
-                      label: const Text('Add coapplicant'),
+                      label: const Text('Add guarenter'),
                       style: ButtonStyle(
                         elevation: const MaterialStatePropertyAll<double>(0),
                         backgroundColor: MaterialStatePropertyAll<Color>(
@@ -67,16 +68,21 @@ class CoApplicantDetailsSection extends StatelessWidget {
                   BlocBuilder<AppActionCubit, AppActionState>(
                     builder: (context, state) {
                       return BasicInfoCard(
-                        basicInfo: coApplicant!.basicInfo,
+                        basicInfo: guarenter!.basicInfo,
                         showProfile: true,
-                        image: state.selectedLoan!.miscellaneousDetails
-                            ?.coApplicantImage,
+                        image: state
+                            .selectedLoan!.miscellaneousDetails?.guarenterImage,
                       );
                     },
                   ),
                   kHeightMd,
                   AddressCard(
-                    address: coApplicant!.address,
+                    address: guarenter!.address,
+                  ),
+                  kHeightMd,
+                  ImageAndLocationCard(
+                    houseImage: guarenter!.houseImage,
+                    location: guarenter!.location,
                   ),
                 ],
               )
