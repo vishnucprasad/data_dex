@@ -5,6 +5,7 @@ class LoanParticularsFormState with _$LoanParticularsFormState {
   const factory LoanParticularsFormState({
     required bool isSaving,
     required bool isEditing,
+    required bool closeAfterSave,
     required int formStep,
     required bool showValidationError,
     required VehicleDetails vehicleDetails,
@@ -19,6 +20,7 @@ class LoanParticularsFormState with _$LoanParticularsFormState {
     return LoanParticularsFormState(
       isSaving: false,
       isEditing: false,
+      closeAfterSave: false,
       formStep: 0,
       showValidationError: false,
       vehicleDetails: VehicleDetails.empty(),

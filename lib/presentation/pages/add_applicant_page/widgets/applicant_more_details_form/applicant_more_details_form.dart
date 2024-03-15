@@ -36,9 +36,9 @@ class ApplicantMoreDetailsForm extends StatelessWidget {
               if (state.isEditing) {
                 context
                     .read<CoApplicantFormBloc>()
-                    .add(CoApplicantFormEvent.initialized(some(
-                      state.editingLoan!,
-                    )));
+                    .add(CoApplicantFormEvent.initialized(
+                      initializeOption: some(state.editingLoan!),
+                    ));
               } else {
                 context
                     .read<CoApplicantFormBloc>()

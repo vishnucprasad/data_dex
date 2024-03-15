@@ -1,32 +1,33 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/app_action/app_action_cubit.dart';
-import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart';
-import 'package:data_dex/domain/co_applicant/models/co_applicant.dart';
+import 'package:data_dex/application/miscellaneous_details_form/miscellaneous_form_bloc.dart';
+import 'package:data_dex/domain/miscellaneous_details/models/miscellaneous_details.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
-import 'package:data_dex/presentation/pages/loan_details_page/widgets/address_card.dart';
-import 'package:data_dex/presentation/pages/loan_details_page/widgets/basic_info_card.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/loan_details_divider.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/payout_details_card.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/reference_details_card.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/remarks_card.dart';
 import 'package:data_dex/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CoApplicantDetailsSection extends StatelessWidget {
-  const CoApplicantDetailsSection({
-    required this.coApplicant,
+class MiscellaneousDetailsSection extends StatelessWidget {
+  const MiscellaneousDetailsSection({
+    required this.miscellaneousDetails,
     super.key,
   });
 
-  final CoApplicant? coApplicant;
+  final MiscellaneousDetails? miscellaneousDetails;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const LoanDetailsDivider(text: 'Coapplicant Details'),
+        const LoanDetailsDivider(text: 'Miscellaneous details'),
         kHeight,
-        coApplicant == null
+        miscellaneousDetails == null
             ? Container(
                 height: 170,
                 width: double.infinity,
@@ -43,19 +44,20 @@ class CoApplicantDetailsSection extends StatelessWidget {
                       size: 36,
                     ),
                     kHeightMd,
-                    const Text('Coapplicant information not provided'),
+                    const Text('Miscellaneous details not provided'),
                     kHeightMd,
                     BlocBuilder<AppActionCubit, AppActionState>(
                       builder: (context, state) {
                         return ElevatedButton.icon(
                           onPressed: () {
                             context
-                                .read<CoApplicantFormBloc>()
-                                .add(CoApplicantFormEvent.initialized(
-                                  initializeOption: some(state.selectedLoan!),
-                                  closeAfterSave: true,
+                                .read<MiscellaneousDetailsFormBloc>()
+                                .add(MiscellaneousDetailsFormEvent.initialized(
+                                  some(state.selectedLoan!),
                                 ));
-                            context.pushRoute(const AddCoApplicantRoute());
+                            context.pushRoute(
+                              const AddMiscellaneousDetailsRoute(),
+                            );
                           },
                           icon: const Icon(Icons.add),
                           label: const Text('ADD NOW'),
@@ -83,22 +85,19 @@ class CoApplicantDetailsSection extends StatelessWidget {
               )
             : Column(
                 children: [
-                  BlocBuilder<AppActionCubit, AppActionState>(
-                    builder: (context, state) {
-                      return BasicInfoCard(
-                        basicInfo: coApplicant!.basicInfo,
-                        showProfile: true,
-                        image: state.selectedLoan!.miscellaneousDetails
-                            ?.coApplicantImage,
-                      );
-                    },
+                  PayoutDetailsCard(
+                    payoutDetails: miscellaneousDetails!.payoutDetails,
                   ),
                   kHeightMd,
-                  AddressCard(
-                    address: coApplicant!.address,
+                  ReferenceDetailsCard(
+                    referenceDetails: miscellaneousDetails!.referenceDetails,
                   ),
+                  kHeightMd,
+                  RemarksCard(
+                    remarks: miscellaneousDetails!.remarksAndMore.remarks,
+                  )
                 ],
-              )
+              ),
       ],
     );
   }

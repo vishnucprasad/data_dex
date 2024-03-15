@@ -5,6 +5,7 @@ class CoApplicantFormState with _$CoApplicantFormState {
   const factory CoApplicantFormState({
     required bool isSaving,
     required bool isEditing,
+    required bool closeAfterSave,
     required int formStep,
     required bool showValidationError,
     required BasicInfo basicInfo,
@@ -18,6 +19,7 @@ class CoApplicantFormState with _$CoApplicantFormState {
     return CoApplicantFormState(
       isSaving: false,
       isEditing: false,
+      closeAfterSave: false,
       formStep: 0,
       showValidationError: false,
       basicInfo: BasicInfo.empty(),

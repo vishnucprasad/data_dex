@@ -50,29 +50,6 @@ class AddMiscellaneousDetailsPage extends StatelessWidget {
                           letterSpacing: 1,
                         ),
                       ),
-                      const Spacer(),
-                      if (state.isEditing &&
-                          state.editingLoan!.loanParticulars != null)
-                        TextButton(
-                          onPressed: () {
-                            context.popRoute();
-                          },
-                          child: Row(
-                            children: [
-                              Text(
-                                'Skip',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.lightBlue.shade600,
-                                ),
-                              ),
-                              Icon(
-                                Icons.keyboard_arrow_right,
-                                color: Colors.lightBlue.shade600,
-                              ),
-                            ],
-                          ),
-                        ),
                     ],
                   ),
                   kHeightMd,

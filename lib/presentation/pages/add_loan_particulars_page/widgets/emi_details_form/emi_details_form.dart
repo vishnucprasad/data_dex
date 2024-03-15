@@ -33,6 +33,10 @@ class EMIDetailsForm extends StatelessWidget {
               ),
             ).show(context),
             (_) {
+              if (state.closeAfterSave) {
+                return context.maybePop();
+              }
+
               if (state.isEditing) {
                 context
                     .read<MiscellaneousDetailsFormBloc>()
@@ -49,7 +53,9 @@ class EMIDetailsForm extends StatelessWidget {
 
               context
                   .read<LoanParticularsFormBloc>()
-                  .add(LoanParticularsFormEvent.initialized(none()));
+                  .add(LoanParticularsFormEvent.initialized(
+                    initializeOption: none(),
+                  ));
               context.replaceRoute(const AddMiscellaneousDetailsRoute());
             },
           ),

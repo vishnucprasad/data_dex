@@ -21,7 +21,7 @@ class AddCoApplicantPage extends StatelessWidget {
       onWillPop: () async {
         context
             .read<CoApplicantFormBloc>()
-            .add(CoApplicantFormEvent.initialized(none()));
+            .add(CoApplicantFormEvent.initialized(initializeOption: none()));
 
         return true;
       },
@@ -47,43 +47,46 @@ class AddCoApplicantPage extends StatelessWidget {
                         ),
                       ),
                       const Spacer(),
-                      TextButton(
-                        onPressed: () {
-                          if (state.isEditing) {
-                            context
-                                .read<GuarenterFormBloc>()
-                                .add(GuarenterFormEvent.initialized(
-                                  some(state.editingLoan!),
-                                ));
-                          } else {
-                            context
-                                .read<GuarenterFormBloc>()
-                                .add(GuarenterFormEvent.loanIdChanged(
-                                  state.loanId!,
-                                ));
-                          }
+                      if (!state.closeAfterSave)
+                        TextButton(
+                          onPressed: () {
+                            if (state.isEditing) {
+                              context
+                                  .read<GuarenterFormBloc>()
+                                  .add(GuarenterFormEvent.initialized(
+                                    initializeOption: some(state.editingLoan!),
+                                  ));
+                            } else {
+                              context
+                                  .read<GuarenterFormBloc>()
+                                  .add(GuarenterFormEvent.loanIdChanged(
+                                    state.loanId!,
+                                  ));
+                            }
 
-                          context
-                              .read<CoApplicantFormBloc>()
-                              .add(CoApplicantFormEvent.initialized(none()));
-                          context.replaceRoute(const AddGuarenterRoute());
-                        },
-                        child: Row(
-                          children: [
-                            Text(
-                              'Skip',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                            context
+                                .read<CoApplicantFormBloc>()
+                                .add(CoApplicantFormEvent.initialized(
+                                  initializeOption: none(),
+                                ));
+                            context.replaceRoute(const AddGuarenterRoute());
+                          },
+                          child: Row(
+                            children: [
+                              Text(
+                                'Skip',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.lightBlue.shade600,
+                                ),
+                              ),
+                              Icon(
+                                Icons.keyboard_arrow_right,
                                 color: Colors.lightBlue.shade600,
                               ),
-                            ),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: Colors.lightBlue.shade600,
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
                     ],
                   ),
                   kHeightMd,

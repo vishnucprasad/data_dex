@@ -35,11 +35,15 @@ class GuarenterMoreDetailsForm extends StatelessWidget {
               ),
             ).show(context),
             (_) {
+              if (state.closeAfterSave) {
+                return context.maybePop();
+              }
+
               if (state.isEditing) {
                 context
                     .read<LoanParticularsFormBloc>()
                     .add(LoanParticularsFormEvent.initialized(
-                      some(state.editingLoan!),
+                      initializeOption: some(state.editingLoan!),
                     ));
               } else {
                 context
@@ -51,7 +55,9 @@ class GuarenterMoreDetailsForm extends StatelessWidget {
 
               context
                   .read<GuarenterFormBloc>()
-                  .add(GuarenterFormEvent.initialized(none()));
+                  .add(GuarenterFormEvent.initialized(
+                    initializeOption: none(),
+                  ));
               context.replaceRoute(const AddLoanParticularsRoute());
             },
           ),

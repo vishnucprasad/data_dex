@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:data_dex/application/app_action/app_action_cubit.dart';
+import 'package:data_dex/application/loan/loan_watcher/loan_watcher_bloc.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/applicant_details_section.dart';
@@ -7,8 +8,10 @@ import 'package:data_dex/presentation/pages/loan_details_page/widgets/co_applica
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/guarenter_details_section.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/loan_details_head.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/widgets/loan_particulars_section.dart';
+import 'package:data_dex/presentation/pages/loan_details_page/widgets/miscellaneous_details_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kt_dart/kt.dart';
 
 @RoutePage()
 class LoanDetailsPage extends StatelessWidget {
@@ -28,6 +31,19 @@ class LoanDetailsPage extends StatelessWidget {
             letterSpacing: 1,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.edit_square),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.delete,
+              color: Colors.red,
+            ),
+          ),
+        ],
         backgroundColor: Colors.lightBlue.shade600,
         foregroundColor: kLightColor,
       ),
@@ -45,32 +61,51 @@ class LoanDetailsPage extends StatelessWidget {
               );
             }
 
-            return Column(
-              children: [
-                const LoanDetailsHead(),
-                Expanded(
-                  child: ListView(
-                    padding: const EdgeInsets.all(16),
-                    children: [
-                      ApplicantDetailsSection(
-                        applicant: state.selectedLoan!.applicant,
-                      ),
-                      kHeight,
-                      CoApplicantDetailsSection(
-                        coApplicant: state.selectedLoan!.coApplicant,
-                      ),
-                      kHeight,
-                      GuarenterDetailsSection(
-                        guarenter: state.selectedLoan!.guarenter,
-                      ),
-                      kHeight,
-                      LoanParticularsSection(
-                        loanParticulars: state.selectedLoan!.loanParticulars,
-                      ),
-                    ],
+            return BlocListener<LoanWatcherBloc, LoanWatcherState>(
+              listener: (context, loanState) {
+                loanState.maybeMap(
+                  loadSuccess: (successState) {
+                    final loan = successState.loans.first(
+                      (loan) => loan.id == state.selectedLoan?.id,
+                    );
+
+                    context.read<AppActionCubit>().loanSelected(loan);
+                  },
+                  orElse: () => null,
+                );
+              },
+              child: Column(
+                children: [
+                  const LoanDetailsHead(),
+                  Expanded(
+                    child: ListView(
+                      padding: const EdgeInsets.all(16),
+                      children: [
+                        ApplicantDetailsSection(
+                          applicant: state.selectedLoan!.applicant,
+                        ),
+                        kHeight,
+                        CoApplicantDetailsSection(
+                          coApplicant: state.selectedLoan!.coApplicant,
+                        ),
+                        kHeight,
+                        GuarenterDetailsSection(
+                          guarenter: state.selectedLoan!.guarenter,
+                        ),
+                        kHeight,
+                        LoanParticularsSection(
+                          loanParticulars: state.selectedLoan!.loanParticulars,
+                        ),
+                        kHeight,
+                        MiscellaneousDetailsSection(
+                          miscellaneousDetails:
+                              state.selectedLoan!.miscellaneousDetails,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             );
           },
         ),

@@ -27,7 +27,7 @@ class RemarksAndMoreForm extends StatelessWidget {
               ),
             ).show(context),
             (_) {
-              context.popRoute();
+              context.maybePop();
             },
           ),
         );

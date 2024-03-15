@@ -26,7 +26,7 @@ class AddGuarenterPage extends StatelessWidget {
             .add(const GuarenterFormEvent.deleteImage());
         context
             .read<GuarenterFormBloc>()
-            .add(GuarenterFormEvent.initialized(none()));
+            .add(GuarenterFormEvent.initialized(initializeOption: none()));
 
         return true;
       },
@@ -66,43 +66,46 @@ class AddGuarenterPage extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    TextButton(
-                      onPressed: () {
-                        if (state.isEditing) {
-                          context
-                              .read<LoanParticularsFormBloc>()
-                              .add(LoanParticularsFormEvent.initialized(
-                                some(state.editingLoan!),
-                              ));
-                        } else {
-                          context
-                              .read<LoanParticularsFormBloc>()
-                              .add(LoanParticularsFormEvent.loanIdChanged(
-                                state.loanId!,
-                              ));
-                        }
+                    if (!state.closeAfterSave)
+                      TextButton(
+                        onPressed: () {
+                          if (state.isEditing) {
+                            context
+                                .read<LoanParticularsFormBloc>()
+                                .add(LoanParticularsFormEvent.initialized(
+                                  initializeOption: some(state.editingLoan!),
+                                ));
+                          } else {
+                            context
+                                .read<LoanParticularsFormBloc>()
+                                .add(LoanParticularsFormEvent.loanIdChanged(
+                                  state.loanId!,
+                                ));
+                          }
 
-                        context
-                            .read<GuarenterFormBloc>()
-                            .add(GuarenterFormEvent.initialized(none()));
-                        context.replaceRoute(const AddLoanParticularsRoute());
-                      },
-                      child: Row(
-                        children: [
-                          Text(
-                            'Skip',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                          context
+                              .read<GuarenterFormBloc>()
+                              .add(GuarenterFormEvent.initialized(
+                                initializeOption: none(),
+                              ));
+                          context.replaceRoute(const AddLoanParticularsRoute());
+                        },
+                        child: Row(
+                          children: [
+                            Text(
+                              'Skip',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.lightBlue.shade600,
+                              ),
+                            ),
+                            Icon(
+                              Icons.keyboard_arrow_right,
                               color: Colors.lightBlue.shade600,
                             ),
-                          ),
-                          Icon(
-                            Icons.keyboard_arrow_right,
-                            color: Colors.lightBlue.shade600,
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
                   ],
                 ),
                 kHeightMd,

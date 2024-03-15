@@ -2,9 +2,10 @@ part of 'guarenter_form_bloc.dart';
 
 @freezed
 class GuarenterFormEvent with _$GuarenterFormEvent {
-  const factory GuarenterFormEvent.initialized(
-    Option<Loan> initializeOption,
-  ) = _Initialized;
+  const factory GuarenterFormEvent.initialized({
+    required Option<Loan> initializeOption,
+    bool? closeAfterSave,
+  }) = _Initialized;
   const factory GuarenterFormEvent.loanIdChanged(
     UniqueId loanId,
   ) = _LoanIdChanged;

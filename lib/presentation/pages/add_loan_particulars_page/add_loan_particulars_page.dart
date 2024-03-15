@@ -22,7 +22,9 @@ class AddLoanParticularsPage extends StatelessWidget {
       onWillPop: () async {
         context
             .read<LoanParticularsFormBloc>()
-            .add(LoanParticularsFormEvent.initialized(none()));
+            .add(LoanParticularsFormEvent.initialized(
+              initializeOption: none(),
+            ));
         return true;
       },
       child: BlocBuilder<LoanParticularsFormBloc, LoanParticularsFormState>(
@@ -47,46 +49,47 @@ class AddLoanParticularsPage extends StatelessWidget {
                         ),
                       ),
                       const Spacer(),
-                      TextButton(
-                        onPressed: () {
-                          if (state.isEditing) {
-                            context
-                                .read<MiscellaneousDetailsFormBloc>()
-                                .add(MiscellaneousDetailsFormEvent.initialized(
-                                  some(state.editingLoan!),
-                                ));
-                          } else {
-                            context.read<MiscellaneousDetailsFormBloc>().add(
-                                    MiscellaneousDetailsFormEvent.loanIdChanged(
-                                  state.loanId!,
-                                ));
-                          }
+                      if (!state.closeAfterSave)
+                        TextButton(
+                          onPressed: () {
+                            if (state.isEditing) {
+                              context.read<MiscellaneousDetailsFormBloc>().add(
+                                      MiscellaneousDetailsFormEvent.initialized(
+                                    some(state.editingLoan!),
+                                  ));
+                            } else {
+                              context.read<MiscellaneousDetailsFormBloc>().add(
+                                      MiscellaneousDetailsFormEvent
+                                          .loanIdChanged(
+                                    state.loanId!,
+                                  ));
+                            }
 
-                          context
-                              .read<LoanParticularsFormBloc>()
-                              .add(LoanParticularsFormEvent.initialized(
-                                none(),
-                              ));
-                          context.replaceRoute(
-                            const AddMiscellaneousDetailsRoute(),
-                          );
-                        },
-                        child: Row(
-                          children: [
-                            Text(
-                              'Skip',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                            context
+                                .read<LoanParticularsFormBloc>()
+                                .add(LoanParticularsFormEvent.initialized(
+                                  initializeOption: none(),
+                                ));
+                            context.replaceRoute(
+                              const AddMiscellaneousDetailsRoute(),
+                            );
+                          },
+                          child: Row(
+                            children: [
+                              Text(
+                                'Skip',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.lightBlue.shade600,
+                                ),
+                              ),
+                              Icon(
+                                Icons.keyboard_arrow_right,
                                 color: Colors.lightBlue.shade600,
                               ),
-                            ),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: Colors.lightBlue.shade600,
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
                     ],
                   ),
                   kHeightMd,

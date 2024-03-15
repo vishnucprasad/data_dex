@@ -32,11 +32,15 @@ class CoApplicantAddressForm extends StatelessWidget {
               ),
             ).show(context),
             (_) {
+              if (state.closeAfterSave) {
+                return context.maybePop();
+              }
+
               if (state.isEditing) {
                 context
                     .read<GuarenterFormBloc>()
                     .add(GuarenterFormEvent.initialized(
-                      some(state.editingLoan!),
+                      initializeOption: some(state.editingLoan!),
                     ));
               } else {
                 context
@@ -48,7 +52,9 @@ class CoApplicantAddressForm extends StatelessWidget {
 
               context
                   .read<CoApplicantFormBloc>()
-                  .add(CoApplicantFormEvent.initialized(none()));
+                  .add(CoApplicantFormEvent.initialized(
+                    initializeOption: none(),
+                  ));
               context.replaceRoute(const AddGuarenterRoute());
             },
           ),

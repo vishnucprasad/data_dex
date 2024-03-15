@@ -166,7 +166,49 @@ class LoanDetailsHead extends StatelessWidget {
                   ),
                 ],
               ),
-              kHeight,
+              kHeightSm,
+              if (state.selectedLoan!.miscellaneousDetails != null)
+                Row(
+                  children: [
+                    kWidth,
+                    const Text(
+                      'App ID:',
+                      style: TextStyle(
+                        color: kLightColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    kWidthMd,
+                    Text(
+                      state.selectedLoan!.miscellaneousDetails!.remarksAndMore
+                          .appId
+                          .getOrCrash(),
+                      style: const TextStyle(
+                        color: kLightColor,
+                      ),
+                    ),
+                    const Spacer(),
+                    const Text(
+                      'Lead ID:',
+                      style: TextStyle(
+                        color: kLightColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    kWidthMd,
+                    Text(
+                      state.selectedLoan!.miscellaneousDetails?.remarksAndMore
+                              .leadId
+                              .getOrCrash() ??
+                          'NILL',
+                      style: const TextStyle(
+                        color: kLightColor,
+                      ),
+                    ),
+                    kWidth,
+                  ],
+                ),
+              kHeightMd,
             ],
           ),
         );

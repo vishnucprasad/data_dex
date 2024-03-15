@@ -28,6 +28,7 @@ class LoanParticularsFormBloc
           () => LoanParticularsFormState.initial(),
           (loan) => LoanParticularsFormState.initial().copyWith(
             isEditing: true,
+            closeAfterSave: e.closeAfterSave ?? false,
             loanId: loan.id,
             editingLoan: loan,
             vehicleDetails:

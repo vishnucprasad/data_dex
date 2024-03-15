@@ -41,7 +41,7 @@ class ImageAndLocationCard extends StatelessWidget {
           Row(
             children: [
               houseImage != null
-                  ? Flexible(
+                  ? Expanded(
                       child: SizedBox(
                         height: 128,
                         child: Image.network(
@@ -49,10 +49,12 @@ class ImageAndLocationCard extends StatelessWidget {
                         ),
                       ),
                     )
-                  : const SizedBox(
-                      height: 128,
-                      child: Center(
-                        child: Text('Image not found'),
+                  : const Expanded(
+                      child: SizedBox(
+                        height: 128,
+                        child: Center(
+                          child: Text('Image not found'),
+                        ),
                       ),
                     ),
               kWidthMd,

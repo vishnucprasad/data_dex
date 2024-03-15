@@ -30,6 +30,7 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
             () => GuarenterFormState.initial(),
             (loan) => GuarenterFormState.initial().copyWith(
               isEditing: true,
+              closeAfterSave: e.closeAfterSave ?? false,
               loanId: loan.id,
               editingLoan: loan,
               basicInfo: loan.guarenter?.basicInfo ?? BasicInfo.empty(),

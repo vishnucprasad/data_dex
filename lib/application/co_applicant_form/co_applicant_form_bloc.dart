@@ -28,6 +28,7 @@ class CoApplicantFormBloc
             () => CoApplicantFormState.initial(),
             (loan) => CoApplicantFormState.initial().copyWith(
               isEditing: true,
+              closeAfterSave: e.closeAfterSave ?? false,
               loanId: loan.id,
               editingLoan: loan,
               basicInfo: loan.coApplicant?.basicInfo ?? BasicInfo.empty(),
