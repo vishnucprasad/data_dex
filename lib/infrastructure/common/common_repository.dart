@@ -70,6 +70,7 @@ class CommonRepository implements ICommonRepository {
       File file = await File('${directory.path}/Image.png')
           .writeAsBytes(response.bodyBytes);
       await Share.shareXFiles([XFile(file.path)], text: 'Share');
+      directory.delete(recursive: true);
 
       return right(unit);
     } catch (_) {
