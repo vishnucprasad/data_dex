@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/core/constants.dart';
+import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan/failures/loan_failure.dart';
 import 'package:data_dex/domain/loan/i_loan_repository.dart';
 import 'package:data_dex/domain/loan/models/loan.dart';
@@ -47,6 +49,25 @@ class LoanRepository implements ILoanRepository {
       final loanDto = LoanDto.fromDomain(loan);
 
       await userDoc.loansCollection.doc(loanDto.id).set(loanDto.toJson());
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {
+        return left(const LoanFailure.permissionDenied());
+      }
+      return left(const LoanFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<LoanFailure, Unit>> dropLoan(
+    UniqueId id,
+  ) async {
+    try {
+      final userDoc = await _firestore.userDocument();
+
+      await userDoc.loansCollection
+          .doc(id.getOrCrash())
+          .update({'loanStatusIndex': LoanStatus.dropped.index});
       return right(unit);
     } on PlatformException catch (e) {
       if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {

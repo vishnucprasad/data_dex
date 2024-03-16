@@ -8,21 +8,23 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:data_dex/application/app_action/app_action_cubit.dart' as _i23;
+import 'package:data_dex/application/app_action/app_action_cubit.dart' as _i24;
 import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart'
-    as _i24;
-import 'package:data_dex/application/auth/auth_bloc.dart' as _i25;
-import 'package:data_dex/application/auth/signin/signin_bloc.dart' as _i22;
+    as _i25;
+import 'package:data_dex/application/auth/auth_bloc.dart' as _i26;
+import 'package:data_dex/application/auth/signin/signin_bloc.dart' as _i23;
 import 'package:data_dex/application/co_applicant_form/co_applicant_form_bloc.dart'
-    as _i26;
-import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart'
     as _i27;
-import 'package:data_dex/application/loan/loan_watcher/loan_watcher_bloc.dart'
-    as _i20;
-import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart'
+import 'package:data_dex/application/guarenter_form/guarenter_form_bloc.dart'
+    as _i28;
+import 'package:data_dex/application/loan/loan_actor/loan_actor_bloc.dart'
     as _i19;
-import 'package:data_dex/application/miscellaneous_details_form/miscellaneous_form_bloc.dart'
+import 'package:data_dex/application/loan/loan_watcher/loan_watcher_bloc.dart'
     as _i21;
+import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart'
+    as _i20;
+import 'package:data_dex/application/miscellaneous_details_form/miscellaneous_form_bloc.dart'
+    as _i22;
 import 'package:data_dex/domain/applicant/i_applicant_repository.dart' as _i3;
 import 'package:data_dex/domain/auth/i_auth_facade.dart' as _i5;
 import 'package:data_dex/domain/co_applicant/i_co_applicant_repository.dart'
@@ -73,25 +75,27 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i15.ILoanRepository>(() => _i16.LoanRepository());
     gh.lazySingleton<_i17.IMiscellaneousDetailsRepository>(
         () => _i18.MiscellaneousDetailsRepository());
-    gh.factory<_i19.LoanParticularsFormBloc>(() =>
-        _i19.LoanParticularsFormBloc(gh<_i13.ILoanParticularsRepository>()));
-    gh.factory<_i20.LoanWatcherBloc>(
-        () => _i20.LoanWatcherBloc(gh<_i15.ILoanRepository>()));
-    gh.factory<_i21.MiscellaneousDetailsFormBloc>(() =>
-        _i21.MiscellaneousDetailsFormBloc(
+    gh.factory<_i19.LoanActorBloc>(
+        () => _i19.LoanActorBloc(gh<_i15.ILoanRepository>()));
+    gh.factory<_i20.LoanParticularsFormBloc>(() =>
+        _i20.LoanParticularsFormBloc(gh<_i13.ILoanParticularsRepository>()));
+    gh.factory<_i21.LoanWatcherBloc>(
+        () => _i21.LoanWatcherBloc(gh<_i15.ILoanRepository>()));
+    gh.factory<_i22.MiscellaneousDetailsFormBloc>(() =>
+        _i22.MiscellaneousDetailsFormBloc(
             gh<_i17.IMiscellaneousDetailsRepository>()));
-    gh.factory<_i22.SigninBloc>(() => _i22.SigninBloc(gh<_i5.IAuthFacade>()));
-    gh.factory<_i23.AppActionCubit>(
-        () => _i23.AppActionCubit(gh<_i9.ICommonRepository>()));
-    gh.factory<_i24.ApplicantFormBloc>(() => _i24.ApplicantFormBloc(
+    gh.factory<_i23.SigninBloc>(() => _i23.SigninBloc(gh<_i5.IAuthFacade>()));
+    gh.factory<_i24.AppActionCubit>(
+        () => _i24.AppActionCubit(gh<_i9.ICommonRepository>()));
+    gh.factory<_i25.ApplicantFormBloc>(() => _i25.ApplicantFormBloc(
           gh<_i3.IApplicantRepository>(),
           gh<_i15.ILoanRepository>(),
         ));
-    gh.factory<_i25.AuthBloc>(() => _i25.AuthBloc(gh<_i5.IAuthFacade>()));
-    gh.factory<_i26.CoApplicantFormBloc>(
-        () => _i26.CoApplicantFormBloc(gh<_i7.ICoApplicantRepository>()));
-    gh.factory<_i27.GuarenterFormBloc>(
-        () => _i27.GuarenterFormBloc(gh<_i11.IGuarenterRepository>()));
+    gh.factory<_i26.AuthBloc>(() => _i26.AuthBloc(gh<_i5.IAuthFacade>()));
+    gh.factory<_i27.CoApplicantFormBloc>(
+        () => _i27.CoApplicantFormBloc(gh<_i7.ICoApplicantRepository>()));
+    gh.factory<_i28.GuarenterFormBloc>(
+        () => _i28.GuarenterFormBloc(gh<_i11.IGuarenterRepository>()));
     return this;
   }
 }

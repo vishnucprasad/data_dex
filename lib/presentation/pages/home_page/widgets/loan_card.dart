@@ -109,25 +109,57 @@ class LoanCard extends StatelessWidget {
                       ),
                     ],
                   )
-                : Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Disbursment date:',
-                        style: TextStyle(
-                          color: kSecondaryColor,
+                : LoanStatus.values[loan.loanStatusIndex] == LoanStatus.dropped
+                    ? ElevatedButton.icon(
+                        style: ButtonStyle(
+                          elevation: const MaterialStatePropertyAll<double>(0),
+                          backgroundColor:
+                              const MaterialStatePropertyAll<Color>(
+                            Colors.transparent,
+                          ),
+                          foregroundColor:
+                              const MaterialStatePropertyAll<Color>(
+                            kSecondaryColor,
+                          ),
+                          shape:
+                              MaterialStatePropertyAll<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                              side: const BorderSide(
+                                width: 2,
+                                color: kSecondaryColor,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                      Text(
-                        DateFormat.yMMMMEEEEd().format(DateTime.now()),
-                        style: const TextStyle(
-                          color: kLightColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                        onPressed: () {},
+                        label: const Text(
+                          'Restore',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
+                        icon: const Icon(Icons.restore),
+                      )
+                    : Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Disbursment date:',
+                            style: TextStyle(
+                              color: kSecondaryColor,
+                            ),
+                          ),
+                          Text(
+                            DateFormat.yMMMMEEEEd().format(DateTime.now()),
+                            style: const TextStyle(
+                              color: kLightColor,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
           ),
           Container(
             padding: const EdgeInsets.all(16),
@@ -193,58 +225,63 @@ class LoanCard extends StatelessWidget {
                   ],
                 ),
                 kHeightMd,
-                Row(
-                  children: [
-                    Expanded(
-                      child: ElevatedButton.icon(
-                        style: ButtonStyle(
-                          elevation: const MaterialStatePropertyAll<double>(0),
-                          backgroundColor: MaterialStatePropertyAll<Color>(
-                            Colors.lightBlue.shade600,
-                          ),
-                          foregroundColor:
-                              const MaterialStatePropertyAll<Color>(
-                            kLightColor,
-                          ),
-                        ),
-                        onPressed: () => context
-                            .read<AppActionCubit>()
-                            .openPhoneNumberInDialer(
-                              loan.applicant.basicInfo.phoneNumber.getOrCrash(),
+                if (LoanStatus.values[loan.loanStatusIndex] !=
+                    LoanStatus.dropped)
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          style: ButtonStyle(
+                            elevation:
+                                const MaterialStatePropertyAll<double>(0),
+                            backgroundColor: MaterialStatePropertyAll<Color>(
+                              Colors.lightBlue.shade600,
                             ),
-                        label: const Text('Call'),
-                        icon: const Icon(Icons.call),
-                      ),
-                    ),
-                    kWidth,
-                    Expanded(
-                      child: ElevatedButton.icon(
-                        style: ButtonStyle(
-                          elevation: const MaterialStatePropertyAll<double>(0),
-                          backgroundColor: MaterialStatePropertyAll<Color>(
-                            kPrimaryColor.withOpacity(0.125),
+                            foregroundColor:
+                                const MaterialStatePropertyAll<Color>(
+                              kLightColor,
+                            ),
                           ),
-                          foregroundColor:
-                              const MaterialStatePropertyAll<Color>(
-                            kPrimaryColor,
-                          ),
+                          onPressed: () => context
+                              .read<AppActionCubit>()
+                              .openPhoneNumberInDialer(
+                                loan.applicant.basicInfo.phoneNumber
+                                    .getOrCrash(),
+                              ),
+                          label: const Text('Call'),
+                          icon: const Icon(Icons.call),
                         ),
-                        onPressed: () => Clipboard.setData(
-                          ClipboardData(
-                            text: loan.applicant.basicInfo.phoneNumber
-                                .getOrCrash(),
-                          ),
-                        ).then(
-                          (_) => FlushbarHelper.createSuccess(
-                            message: 'Phone number copied!',
-                          ).show(context),
-                        ),
-                        label: const Text('Copy'),
-                        icon: const Icon(Icons.copy),
                       ),
-                    ),
-                  ],
-                ),
+                      kWidth,
+                      Expanded(
+                        child: ElevatedButton.icon(
+                          style: ButtonStyle(
+                            elevation:
+                                const MaterialStatePropertyAll<double>(0),
+                            backgroundColor: MaterialStatePropertyAll<Color>(
+                              kPrimaryColor.withOpacity(0.125),
+                            ),
+                            foregroundColor:
+                                const MaterialStatePropertyAll<Color>(
+                              kPrimaryColor,
+                            ),
+                          ),
+                          onPressed: () => Clipboard.setData(
+                            ClipboardData(
+                              text: loan.applicant.basicInfo.phoneNumber
+                                  .getOrCrash(),
+                            ),
+                          ).then(
+                            (_) => FlushbarHelper.createSuccess(
+                              message: 'Phone number copied!',
+                            ).show(context),
+                          ),
+                          label: const Text('Copy'),
+                          icon: const Icon(Icons.copy),
+                        ),
+                      ),
+                    ],
+                  ),
               ],
             ),
           ),
