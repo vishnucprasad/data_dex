@@ -76,4 +76,25 @@ class LoanRepository implements ILoanRepository {
       return left(const LoanFailure.unexpected());
     }
   }
+
+  @override
+  Future<Either<LoanFailure, Unit>> disburse(
+    UniqueId id,
+    String disbursementDate,
+  ) async {
+    try {
+      final userDoc = await _firestore.userDocument();
+
+      await userDoc.loansCollection.doc(id.getOrCrash()).update({
+        'loanStatusIndex': LoanStatus.completed.index,
+        'disbursementDate': disbursementDate,
+      });
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {
+        return left(const LoanFailure.permissionDenied());
+      }
+      return left(const LoanFailure.unexpected());
+    }
+  }
 }

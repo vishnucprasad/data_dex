@@ -8,4 +8,8 @@ abstract class ILoanRepository {
   Stream<Either<LoanFailure, KtList<Loan>>> watchAll();
   Future<Either<LoanFailure, Unit>> create(Loan loan);
   Future<Either<LoanFailure, Unit>> dropLoan(UniqueId id);
+  Future<Either<LoanFailure, Unit>> disburse(
+    UniqueId id,
+    String disbursementDate,
+  );
 }

@@ -18,5 +18,6 @@ class Loan with _$Loan {
     Guarenter? guarenter,
     LoanParticulars? loanParticulars,
     MiscellaneousDetails? miscellaneousDetails,
+    String? disbursementDate,
   }) = _Loan;
 }

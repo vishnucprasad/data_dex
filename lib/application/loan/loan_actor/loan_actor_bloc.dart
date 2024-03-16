@@ -37,6 +37,28 @@ class LoanActorBloc extends Bloc<LoanActorEvent, LoanActorState> {
             ),
           ));
         },
+        disburse: (e) async {
+          emit(state.copyWith(
+            isLoading: true,
+            failureOrSuccess: none(),
+          ));
+
+          final disburseOption = await _loanRepository.disburse(
+            e.id,
+            e.date.toIso8601String(),
+          );
+
+          emit(disburseOption.fold(
+            (l) => state.copyWith(
+              isLoading: false,
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) => state.copyWith(
+              isLoading: false,
+              failureOrSuccess: some(right(r)),
+            ),
+          ));
+        },
       );
     });
   }

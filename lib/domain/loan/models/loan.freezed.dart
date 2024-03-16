@@ -24,6 +24,7 @@ mixin _$Loan {
   LoanParticulars? get loanParticulars => throw _privateConstructorUsedError;
   MiscellaneousDetails? get miscellaneousDetails =>
       throw _privateConstructorUsedError;
+  String? get disbursementDate => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LoanCopyWith<Loan> get copyWith => throw _privateConstructorUsedError;
@@ -41,7 +42,8 @@ abstract class $LoanCopyWith<$Res> {
       CoApplicant? coApplicant,
       Guarenter? guarenter,
       LoanParticulars? loanParticulars,
-      MiscellaneousDetails? miscellaneousDetails});
+      MiscellaneousDetails? miscellaneousDetails,
+      String? disbursementDate});
 
   $ApplicantCopyWith<$Res> get applicant;
   $CoApplicantCopyWith<$Res>? get coApplicant;
@@ -70,6 +72,7 @@ class _$LoanCopyWithImpl<$Res, $Val extends Loan>
     Object? guarenter = freezed,
     Object? loanParticulars = freezed,
     Object? miscellaneousDetails = freezed,
+    Object? disbursementDate = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -100,6 +103,10 @@ class _$LoanCopyWithImpl<$Res, $Val extends Loan>
           ? _value.miscellaneousDetails
           : miscellaneousDetails // ignore: cast_nullable_to_non_nullable
               as MiscellaneousDetails?,
+      disbursementDate: freezed == disbursementDate
+          ? _value.disbursementDate
+          : disbursementDate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 
@@ -175,7 +182,8 @@ abstract class _$$LoanImplCopyWith<$Res> implements $LoanCopyWith<$Res> {
       CoApplicant? coApplicant,
       Guarenter? guarenter,
       LoanParticulars? loanParticulars,
-      MiscellaneousDetails? miscellaneousDetails});
+      MiscellaneousDetails? miscellaneousDetails,
+      String? disbursementDate});
 
   @override
   $ApplicantCopyWith<$Res> get applicant;
@@ -206,6 +214,7 @@ class __$$LoanImplCopyWithImpl<$Res>
     Object? guarenter = freezed,
     Object? loanParticulars = freezed,
     Object? miscellaneousDetails = freezed,
+    Object? disbursementDate = freezed,
   }) {
     return _then(_$LoanImpl(
       id: null == id
@@ -236,6 +245,10 @@ class __$$LoanImplCopyWithImpl<$Res>
           ? _value.miscellaneousDetails
           : miscellaneousDetails // ignore: cast_nullable_to_non_nullable
               as MiscellaneousDetails?,
+      disbursementDate: freezed == disbursementDate
+          ? _value.disbursementDate
+          : disbursementDate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -250,7 +263,8 @@ class _$LoanImpl implements _Loan {
       this.coApplicant,
       this.guarenter,
       this.loanParticulars,
-      this.miscellaneousDetails});
+      this.miscellaneousDetails,
+      this.disbursementDate});
 
   @override
   final UniqueId id;
@@ -266,10 +280,12 @@ class _$LoanImpl implements _Loan {
   final LoanParticulars? loanParticulars;
   @override
   final MiscellaneousDetails? miscellaneousDetails;
+  @override
+  final String? disbursementDate;
 
   @override
   String toString() {
-    return 'Loan(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, coApplicant: $coApplicant, guarenter: $guarenter, loanParticulars: $loanParticulars, miscellaneousDetails: $miscellaneousDetails)';
+    return 'Loan(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, coApplicant: $coApplicant, guarenter: $guarenter, loanParticulars: $loanParticulars, miscellaneousDetails: $miscellaneousDetails, disbursementDate: $disbursementDate)';
   }
 
   @override
@@ -289,12 +305,22 @@ class _$LoanImpl implements _Loan {
             (identical(other.loanParticulars, loanParticulars) ||
                 other.loanParticulars == loanParticulars) &&
             (identical(other.miscellaneousDetails, miscellaneousDetails) ||
-                other.miscellaneousDetails == miscellaneousDetails));
+                other.miscellaneousDetails == miscellaneousDetails) &&
+            (identical(other.disbursementDate, disbursementDate) ||
+                other.disbursementDate == disbursementDate));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, loanStatusIndex, applicant,
-      coApplicant, guarenter, loanParticulars, miscellaneousDetails);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      loanStatusIndex,
+      applicant,
+      coApplicant,
+      guarenter,
+      loanParticulars,
+      miscellaneousDetails,
+      disbursementDate);
 
   @JsonKey(ignore: true)
   @override
@@ -311,7 +337,8 @@ abstract class _Loan implements Loan {
       final CoApplicant? coApplicant,
       final Guarenter? guarenter,
       final LoanParticulars? loanParticulars,
-      final MiscellaneousDetails? miscellaneousDetails}) = _$LoanImpl;
+      final MiscellaneousDetails? miscellaneousDetails,
+      final String? disbursementDate}) = _$LoanImpl;
 
   @override
   UniqueId get id;
@@ -327,6 +354,8 @@ abstract class _Loan implements Loan {
   LoanParticulars? get loanParticulars;
   @override
   MiscellaneousDetails? get miscellaneousDetails;
+  @override
+  String? get disbursementDate;
   @override
   @JsonKey(ignore: true)
   _$$LoanImplCopyWith<_$LoanImpl> get copyWith =>

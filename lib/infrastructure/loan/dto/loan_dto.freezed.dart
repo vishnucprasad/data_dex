@@ -29,6 +29,7 @@ mixin _$LoanDto {
   LoanParticularsDto? get loanParticulars => throw _privateConstructorUsedError;
   MiscellaneousDetailsDto? get miscellaneousDetails =>
       throw _privateConstructorUsedError;
+  String? get disbursementDate => throw _privateConstructorUsedError;
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp => throw _privateConstructorUsedError;
 
@@ -50,6 +51,7 @@ abstract class $LoanDtoCopyWith<$Res> {
       GuarenterDto? guarenter,
       LoanParticularsDto? loanParticulars,
       MiscellaneousDetailsDto? miscellaneousDetails,
+      String? disbursementDate,
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 
   $ApplicantDtoCopyWith<$Res> get applicant;
@@ -79,6 +81,7 @@ class _$LoanDtoCopyWithImpl<$Res, $Val extends LoanDto>
     Object? guarenter = freezed,
     Object? loanParticulars = freezed,
     Object? miscellaneousDetails = freezed,
+    Object? disbursementDate = freezed,
     Object? serverTimeStamp = null,
   }) {
     return _then(_value.copyWith(
@@ -110,6 +113,10 @@ class _$LoanDtoCopyWithImpl<$Res, $Val extends LoanDto>
           ? _value.miscellaneousDetails
           : miscellaneousDetails // ignore: cast_nullable_to_non_nullable
               as MiscellaneousDetailsDto?,
+      disbursementDate: freezed == disbursementDate
+          ? _value.disbursementDate
+          : disbursementDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       serverTimeStamp: null == serverTimeStamp
           ? _value.serverTimeStamp
           : serverTimeStamp // ignore: cast_nullable_to_non_nullable
@@ -190,6 +197,7 @@ abstract class _$$LoanDtoImplCopyWith<$Res> implements $LoanDtoCopyWith<$Res> {
       GuarenterDto? guarenter,
       LoanParticularsDto? loanParticulars,
       MiscellaneousDetailsDto? miscellaneousDetails,
+      String? disbursementDate,
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 
   @override
@@ -222,6 +230,7 @@ class __$$LoanDtoImplCopyWithImpl<$Res>
     Object? guarenter = freezed,
     Object? loanParticulars = freezed,
     Object? miscellaneousDetails = freezed,
+    Object? disbursementDate = freezed,
     Object? serverTimeStamp = null,
   }) {
     return _then(_$LoanDtoImpl(
@@ -253,6 +262,10 @@ class __$$LoanDtoImplCopyWithImpl<$Res>
           ? _value.miscellaneousDetails
           : miscellaneousDetails // ignore: cast_nullable_to_non_nullable
               as MiscellaneousDetailsDto?,
+      disbursementDate: freezed == disbursementDate
+          ? _value.disbursementDate
+          : disbursementDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       serverTimeStamp: null == serverTimeStamp
           ? _value.serverTimeStamp
           : serverTimeStamp // ignore: cast_nullable_to_non_nullable
@@ -273,6 +286,7 @@ class _$LoanDtoImpl extends _LoanDto {
       required this.guarenter,
       required this.loanParticulars,
       required this.miscellaneousDetails,
+      required this.disbursementDate,
       @ServerTimeStampConverter() required this.serverTimeStamp})
       : super._();
 
@@ -295,12 +309,14 @@ class _$LoanDtoImpl extends _LoanDto {
   @override
   final MiscellaneousDetailsDto? miscellaneousDetails;
   @override
+  final String? disbursementDate;
+  @override
   @ServerTimeStampConverter()
   final FieldValue serverTimeStamp;
 
   @override
   String toString() {
-    return 'LoanDto(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, coApplicant: $coApplicant, guarenter: $guarenter, loanParticulars: $loanParticulars, miscellaneousDetails: $miscellaneousDetails, serverTimeStamp: $serverTimeStamp)';
+    return 'LoanDto(id: $id, loanStatusIndex: $loanStatusIndex, applicant: $applicant, coApplicant: $coApplicant, guarenter: $guarenter, loanParticulars: $loanParticulars, miscellaneousDetails: $miscellaneousDetails, disbursementDate: $disbursementDate, serverTimeStamp: $serverTimeStamp)';
   }
 
   @override
@@ -321,6 +337,8 @@ class _$LoanDtoImpl extends _LoanDto {
                 other.loanParticulars == loanParticulars) &&
             (identical(other.miscellaneousDetails, miscellaneousDetails) ||
                 other.miscellaneousDetails == miscellaneousDetails) &&
+            (identical(other.disbursementDate, disbursementDate) ||
+                other.disbursementDate == disbursementDate) &&
             (identical(other.serverTimeStamp, serverTimeStamp) ||
                 other.serverTimeStamp == serverTimeStamp));
   }
@@ -336,6 +354,7 @@ class _$LoanDtoImpl extends _LoanDto {
       guarenter,
       loanParticulars,
       miscellaneousDetails,
+      disbursementDate,
       serverTimeStamp);
 
   @JsonKey(ignore: true)
@@ -361,6 +380,7 @@ abstract class _LoanDto extends LoanDto {
       required final GuarenterDto? guarenter,
       required final LoanParticularsDto? loanParticulars,
       required final MiscellaneousDetailsDto? miscellaneousDetails,
+      required final String? disbursementDate,
       @ServerTimeStampConverter()
       required final FieldValue serverTimeStamp}) = _$LoanDtoImpl;
   const _LoanDto._() : super._();
@@ -382,6 +402,8 @@ abstract class _LoanDto extends LoanDto {
   LoanParticularsDto? get loanParticulars;
   @override
   MiscellaneousDetailsDto? get miscellaneousDetails;
+  @override
+  String? get disbursementDate;
   @override
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;

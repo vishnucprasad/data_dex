@@ -26,6 +26,7 @@ _$LoanDtoImpl _$$LoanDtoImplFromJson(Map<String, dynamic> json) =>
           ? null
           : MiscellaneousDetailsDto.fromJson(
               json['miscellaneousDetails'] as Map<String, dynamic>),
+      disbursementDate: json['disbursementDate'] as String?,
       serverTimeStamp: const ServerTimeStampConverter()
           .fromJson(json['serverTimeStamp'] as Object),
     );
@@ -38,6 +39,7 @@ Map<String, dynamic> _$$LoanDtoImplToJson(_$LoanDtoImpl instance) =>
       'guarenter': instance.guarenter?.toJson(),
       'loanParticulars': instance.loanParticulars?.toJson(),
       'miscellaneousDetails': instance.miscellaneousDetails?.toJson(),
+      'disbursementDate': instance.disbursementDate,
       'serverTimeStamp':
           const ServerTimeStampConverter().toJson(instance.serverTimeStamp),
     };

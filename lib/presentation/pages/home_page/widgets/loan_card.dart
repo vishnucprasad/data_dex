@@ -3,6 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:dartz/dartz.dart';
 import 'package:data_dex/application/app_action/app_action_cubit.dart';
 import 'package:data_dex/application/applicant_form/applicant_form_bloc.dart';
+import 'package:data_dex/application/loan/loan_actor/loan_actor_bloc.dart';
 import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/injection.dart';
@@ -68,7 +69,56 @@ class LoanCard extends StatelessWidget {
                               ),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () async {
+                            if (loan.loanParticulars == null) {
+                              return FlushbarHelper.createError(
+                                message:
+                                    'Loan disbursement failed: Loan particulars not provided',
+                              ).show(context);
+                            }
+                            if (loan.miscellaneousDetails == null) {
+                              return FlushbarHelper.createError(
+                                message:
+                                    'Loan disbursement failed: Reference details not provided',
+                              ).show(context);
+                            }
+
+                            final selectedDate = await showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(1900),
+                              lastDate: DateTime.now(),
+                              builder: (context, child) {
+                                return Theme(
+                                  data: Theme.of(context).copyWith(
+                                    colorScheme: ColorScheme.light(
+                                      primary: Colors.lightBlue.shade600,
+                                      onPrimary: kLightColor,
+                                      onSurface: kDarkColor,
+                                      surfaceTint: Colors.transparent,
+                                    ),
+                                    textButtonTheme: TextButtonThemeData(
+                                      style: TextButton.styleFrom(
+                                        foregroundColor: Colors.lightBlue
+                                            .shade600, // button text color
+                                      ),
+                                    ),
+                                  ),
+                                  child: child!,
+                                );
+                              },
+                            );
+
+                            if (selectedDate != null) {
+                              // ignore: use_build_context_synchronously
+                              context
+                                  .read<LoanActorBloc>()
+                                  .add(LoanActorEvent.disburse(
+                                    loan.id,
+                                    selectedDate,
+                                  ));
+                            }
+                          },
                           label: const Text(
                             'Disburse',
                             style: TextStyle(
@@ -151,7 +201,8 @@ class LoanCard extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            DateFormat.yMMMMEEEEd().format(DateTime.now()),
+                            DateFormat.yMMMMEEEEd()
+                                .format(DateTime.parse(loan.disbursementDate!)),
                             style: const TextStyle(
                               color: kLightColor,
                               fontSize: 18,
@@ -193,34 +244,51 @@ class LoanCard extends StatelessWidget {
                               ),
                             ),
                           )
-                        : Container(
-                            height: 80,
-                            width: 80,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(28),
-                              image: const DecorationImage(
-                                image: NetworkImage(
-                                  'https://avatars.githubusercontent.com/u/81964443?v=4',
+                        : loan.miscellaneousDetails?.applicantImage == null
+                            ? Container(
+                                height: 80,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: kLightColor,
+                                    width: 2,
+                                  ),
+                                  borderRadius: BorderRadius.circular(28),
+                                  color: kLightColor,
+                                ),
+                                child: const Center(
+                                  child: Icon(
+                                    Icons.person,
+                                    size: 48,
+                                  ),
+                                ),
+                              )
+                            : Container(
+                                height: 80,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(28),
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: NetworkImage(
+                                      loan.miscellaneousDetails!.applicantImage!
+                                          .url,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
                     kWidth,
-                    SizedBox(
-                      width: 180,
-                      child: Text(
-                        loan.applicant.basicInfo.name.getOrCrash(),
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                    Expanded(
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: Text(
+                          loan.applicant.basicInfo.name.getOrCrash(),
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ),
-                    const Spacer(),
-                    Icon(
-                      Icons.info_outline,
-                      size: 36,
-                      color: Colors.lightBlue.shade600,
                     ),
                   ],
                 ),

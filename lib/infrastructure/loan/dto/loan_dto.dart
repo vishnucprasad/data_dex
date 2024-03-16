@@ -26,6 +26,7 @@ class LoanDto with _$LoanDto {
     required GuarenterDto? guarenter,
     required LoanParticularsDto? loanParticulars,
     required MiscellaneousDetailsDto? miscellaneousDetails,
+    required String? disbursementDate,
     @ServerTimeStampConverter() required FieldValue serverTimeStamp,
   }) = _LoanDto;
 
@@ -46,6 +47,7 @@ class LoanDto with _$LoanDto {
       miscellaneousDetails: loan.miscellaneousDetails != null
           ? MiscellaneousDetailsDto.fromDomain(loan.miscellaneousDetails!)
           : null,
+      disbursementDate: loan.disbursementDate,
       serverTimeStamp: FieldValue.serverTimestamp(),
     );
   }
@@ -59,6 +61,7 @@ class LoanDto with _$LoanDto {
       guarenter: guarenter?.toDomain(),
       loanParticulars: loanParticulars?.toDomain(),
       miscellaneousDetails: miscellaneousDetails?.toDomain(),
+      disbursementDate: disbursementDate,
     );
   }
 
