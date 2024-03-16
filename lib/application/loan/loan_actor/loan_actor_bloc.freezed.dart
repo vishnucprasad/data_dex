@@ -21,18 +21,21 @@ mixin _$LoanActorEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
+    required TResult Function(UniqueId id) restore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
+    TResult? Function(UniqueId id)? restore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
+    TResult Function(UniqueId id)? restore,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -40,18 +43,21 @@ mixin _$LoanActorEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
+    required TResult Function(_RestoreDropped value) restore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
+    TResult? Function(_RestoreDropped value)? restore,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
+    TResult Function(_RestoreDropped value)? restore,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -162,6 +168,7 @@ class _$DropLoanImpl implements _DropLoan {
   TResult when<TResult extends Object?>({
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
+    required TResult Function(UniqueId id) restore,
   }) {
     return dropLoan(id);
   }
@@ -171,6 +178,7 @@ class _$DropLoanImpl implements _DropLoan {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
+    TResult? Function(UniqueId id)? restore,
   }) {
     return dropLoan?.call(id);
   }
@@ -180,6 +188,7 @@ class _$DropLoanImpl implements _DropLoan {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
+    TResult Function(UniqueId id)? restore,
     required TResult orElse(),
   }) {
     if (dropLoan != null) {
@@ -193,6 +202,7 @@ class _$DropLoanImpl implements _DropLoan {
   TResult map<TResult extends Object?>({
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
+    required TResult Function(_RestoreDropped value) restore,
   }) {
     return dropLoan(this);
   }
@@ -202,6 +212,7 @@ class _$DropLoanImpl implements _DropLoan {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
+    TResult? Function(_RestoreDropped value)? restore,
   }) {
     return dropLoan?.call(this);
   }
@@ -211,6 +222,7 @@ class _$DropLoanImpl implements _DropLoan {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
+    TResult Function(_RestoreDropped value)? restore,
     required TResult orElse(),
   }) {
     if (dropLoan != null) {
@@ -307,6 +319,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
   TResult when<TResult extends Object?>({
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
+    required TResult Function(UniqueId id) restore,
   }) {
     return disburse(id, date);
   }
@@ -316,6 +329,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
+    TResult? Function(UniqueId id)? restore,
   }) {
     return disburse?.call(id, date);
   }
@@ -325,6 +339,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
+    TResult Function(UniqueId id)? restore,
     required TResult orElse(),
   }) {
     if (disburse != null) {
@@ -338,6 +353,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
   TResult map<TResult extends Object?>({
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
+    required TResult Function(_RestoreDropped value) restore,
   }) {
     return disburse(this);
   }
@@ -347,6 +363,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
+    TResult? Function(_RestoreDropped value)? restore,
   }) {
     return disburse?.call(this);
   }
@@ -356,6 +373,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
+    TResult Function(_RestoreDropped value)? restore,
     required TResult orElse(),
   }) {
     if (disburse != null) {
@@ -375,6 +393,150 @@ abstract class _DisburseLoan implements LoanActorEvent {
   @override
   @JsonKey(ignore: true)
   _$$DisburseLoanImplCopyWith<_$DisburseLoanImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$RestoreDroppedImplCopyWith<$Res>
+    implements $LoanActorEventCopyWith<$Res> {
+  factory _$$RestoreDroppedImplCopyWith(_$RestoreDroppedImpl value,
+          $Res Function(_$RestoreDroppedImpl) then) =
+      __$$RestoreDroppedImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({UniqueId id});
+}
+
+/// @nodoc
+class __$$RestoreDroppedImplCopyWithImpl<$Res>
+    extends _$LoanActorEventCopyWithImpl<$Res, _$RestoreDroppedImpl>
+    implements _$$RestoreDroppedImplCopyWith<$Res> {
+  __$$RestoreDroppedImplCopyWithImpl(
+      _$RestoreDroppedImpl _value, $Res Function(_$RestoreDroppedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$RestoreDroppedImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as UniqueId,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$RestoreDroppedImpl implements _RestoreDropped {
+  const _$RestoreDroppedImpl(this.id);
+
+  @override
+  final UniqueId id;
+
+  @override
+  String toString() {
+    return 'LoanActorEvent.restore(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RestoreDroppedImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$RestoreDroppedImplCopyWith<_$RestoreDroppedImpl> get copyWith =>
+      __$$RestoreDroppedImplCopyWithImpl<_$RestoreDroppedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(UniqueId id) dropLoan,
+    required TResult Function(UniqueId id, DateTime date) disburse,
+    required TResult Function(UniqueId id) restore,
+  }) {
+    return restore(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(UniqueId id)? dropLoan,
+    TResult? Function(UniqueId id, DateTime date)? disburse,
+    TResult? Function(UniqueId id)? restore,
+  }) {
+    return restore?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(UniqueId id)? dropLoan,
+    TResult Function(UniqueId id, DateTime date)? disburse,
+    TResult Function(UniqueId id)? restore,
+    required TResult orElse(),
+  }) {
+    if (restore != null) {
+      return restore(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DropLoan value) dropLoan,
+    required TResult Function(_DisburseLoan value) disburse,
+    required TResult Function(_RestoreDropped value) restore,
+  }) {
+    return restore(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DropLoan value)? dropLoan,
+    TResult? Function(_DisburseLoan value)? disburse,
+    TResult? Function(_RestoreDropped value)? restore,
+  }) {
+    return restore?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DropLoan value)? dropLoan,
+    TResult Function(_DisburseLoan value)? disburse,
+    TResult Function(_RestoreDropped value)? restore,
+    required TResult orElse(),
+  }) {
+    if (restore != null) {
+      return restore(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RestoreDropped implements LoanActorEvent {
+  const factory _RestoreDropped(final UniqueId id) = _$RestoreDroppedImpl;
+
+  @override
+  UniqueId get id;
+  @override
+  @JsonKey(ignore: true)
+  _$$RestoreDroppedImplCopyWith<_$RestoreDroppedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

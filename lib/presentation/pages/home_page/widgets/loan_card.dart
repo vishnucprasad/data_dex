@@ -110,13 +110,28 @@ class LoanCard extends StatelessWidget {
                             );
 
                             if (selectedDate != null) {
-                              // ignore: use_build_context_synchronously
-                              context
-                                  .read<LoanActorBloc>()
-                                  .add(LoanActorEvent.disburse(
-                                    loan.id,
-                                    selectedDate,
-                                  ));
+                              FlushbarHelper.createAction(
+                                duration: const Duration(seconds: 10),
+                                message:
+                                    'Are you sure you want to proceed with the loan disbursement scheduled for ${DateFormat.yMMMd().format(selectedDate)} ?',
+                                button: TextButton(
+                                  child: Text(
+                                    'DISBURSE',
+                                    style: TextStyle(
+                                      color: Colors.lightBlue.shade600,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    context
+                                        .read<LoanActorBloc>()
+                                        .add(LoanActorEvent.disburse(
+                                          loan.id,
+                                          selectedDate,
+                                        ));
+                                    context.maybePop();
+                                  },
+                                ),
+                              ).show(context);
                             }
                           },
                           label: const Text(
@@ -182,7 +197,23 @@ class LoanCard extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () => FlushbarHelper.createAction(
+                          message:
+                              'Are you sure you want to restore this loan ?',
+                          button: TextButton(
+                            child: Text(
+                              'RESTORE',
+                              style: TextStyle(
+                                color: Colors.lightBlue.shade600,
+                              ),
+                            ),
+                            onPressed: () {
+                              context
+                                  .read<LoanActorBloc>()
+                                  .add(LoanActorEvent.restore(loan.id));
+                            },
+                          ),
+                        ).show(context),
                         label: const Text(
                           'Restore',
                           style: TextStyle(

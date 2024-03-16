@@ -12,4 +12,5 @@ abstract class ILoanRepository {
     UniqueId id,
     String disbursementDate,
   );
+  Future<Either<LoanFailure, Unit>> restore(UniqueId id);
 }

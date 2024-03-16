@@ -9,4 +9,7 @@ class LoanActorEvent with _$LoanActorEvent {
     UniqueId id,
     DateTime date,
   ) = _DisburseLoan;
+  const factory LoanActorEvent.restore(
+    UniqueId id,
+  ) = _RestoreDropped;
 }
