@@ -1,10 +1,13 @@
 import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan/failures/loan_failure.dart';
 import 'package:data_dex/domain/loan/i_loan_repository.dart';
+import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:kt_dart/kt.dart';
 
 part 'loan_actor_event.dart';
 part 'loan_actor_state.dart';
@@ -75,6 +78,33 @@ class LoanActorBloc extends Bloc<LoanActorEvent, LoanActorState> {
             (r) => state.copyWith(
               isLoading: false,
               failureOrSuccess: some(right(r)),
+            ),
+          ));
+        },
+        findFollowUps: (e) async {
+          emit(state.copyWith(
+            isLoading: true,
+            failureOrSuccess: none(),
+          ));
+
+          final followUpsOption = await _loanRepository.findFollowUps(
+            e.loans
+                .where(
+                  (loan) => loan.loanStatusIndex == LoanStatus.completed.index,
+                )
+                .toList(),
+          );
+
+          emit(followUpsOption.fold(
+            (l) => state.copyWith(
+              isLoading: false,
+              followUps: const KtList<Loan>.empty(),
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) => state.copyWith(
+              isLoading: false,
+              followUps: r,
+              failureOrSuccess: some(right(unit)),
             ),
           ));
         },

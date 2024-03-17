@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan_particulars/models/emi_details/emi_details.dart';
+import 'package:data_dex/infrastructure/core/datetime_helpers.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'emi_details_dto.freezed.dart';
@@ -33,6 +34,7 @@ class EMIDetailsDto with _$EMIDetailsDto {
       emiAmount: RequiredPrice(emiAmount.toString()),
       tenure: Tenure(tenure.toString()),
       firstEMIDate: EMIDate(firstEMIDate),
+      lastEMIDate: findLastEMIDate(firstEMIDate, tenure),
       bankName: Name(bankName),
       repaymentMode: RepaymentMode(repaymentMode),
     );
@@ -45,5 +47,9 @@ class EMIDetailsDto with _$EMIDetailsDto {
     DocumentSnapshot<Map<String, dynamic>> doc,
   ) {
     return EMIDetailsDto.fromJson(doc.data() as Map<String, dynamic>);
+  }
+
+  DateTime findLastEMIDate(String firstEMIDate, int tenure) {
+    return DateTime.parse(firstEMIDate).addMonths(tenure - 1);
   }
 }

@@ -12,6 +12,7 @@ class EMIDetails with _$EMIDetails {
     required RequiredPrice emiAmount,
     required Tenure tenure,
     required EMIDate firstEMIDate,
+    required DateTime? lastEMIDate,
     required Name bankName,
     required RepaymentMode repaymentMode,
   }) = _EMIDetails;
@@ -21,6 +22,7 @@ class EMIDetails with _$EMIDetails {
       emiAmount: RequiredPrice(''),
       tenure: Tenure(''),
       firstEMIDate: EMIDate(''),
+      lastEMIDate: null,
       bankName: Name(''),
       repaymentMode: RepaymentMode(''),
     );

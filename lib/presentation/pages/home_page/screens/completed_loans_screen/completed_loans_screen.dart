@@ -27,12 +27,18 @@ class CompletedLoansScreen extends StatelessWidget {
                     child: CircularProgressIndicator(),
                   ),
                   loadSuccess: (state) {
-                    final pendingLoans = state.loans.asList().where((loan) {
+                    final completedLoans = state.loans.asList().where((loan) {
                       return LoanStatus.values[loan.loanStatusIndex] ==
                           LoanStatus.completed;
                     }).toList();
 
-                    return pendingLoans.isEmpty
+                    completedLoans.sort(
+                      (a, b) => DateTime.parse(b.disbursementDate!).compareTo(
+                        DateTime.parse(a.disbursementDate!),
+                      ),
+                    );
+
+                    return completedLoans.isEmpty
                         ? const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -48,10 +54,10 @@ class CompletedLoansScreen extends StatelessWidget {
                           )
                         : ListView.separated(
                             itemBuilder: (context, index) {
-                              return LoanCard(loan: pendingLoans[index]);
+                              return LoanCard(loan: completedLoans[index]);
                             },
                             separatorBuilder: (context, index) => kHeight,
-                            itemCount: pendingLoans.length,
+                            itemCount: completedLoans.length,
                           );
                   },
                   loadFailure: (_) => Center(

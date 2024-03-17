@@ -16,12 +16,12 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$LoanActorEvent {
-  UniqueId get id => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(List<Loan> loans) findFollowUps,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,6 +29,7 @@ mixin _$LoanActorEvent {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(List<Loan> loans)? findFollowUps,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +37,7 @@ mixin _$LoanActorEvent {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +46,7 @@ mixin _$LoanActorEvent {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_findFollowUps value) findFollowUps,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +54,7 @@ mixin _$LoanActorEvent {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_findFollowUps value)? findFollowUps,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,12 +62,9 @@ mixin _$LoanActorEvent {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $LoanActorEventCopyWith<LoanActorEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -72,8 +73,6 @@ abstract class $LoanActorEventCopyWith<$Res> {
   factory $LoanActorEventCopyWith(
           LoanActorEvent value, $Res Function(LoanActorEvent) then) =
       _$LoanActorEventCopyWithImpl<$Res, LoanActorEvent>;
-  @useResult
-  $Res call({UniqueId id});
 }
 
 /// @nodoc
@@ -85,28 +84,13 @@ class _$LoanActorEventCopyWithImpl<$Res, $Val extends LoanActorEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as UniqueId,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$DropLoanImplCopyWith<$Res>
-    implements $LoanActorEventCopyWith<$Res> {
+abstract class _$$DropLoanImplCopyWith<$Res> {
   factory _$$DropLoanImplCopyWith(
           _$DropLoanImpl value, $Res Function(_$DropLoanImpl) then) =
       __$$DropLoanImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({UniqueId id});
 }
@@ -169,6 +153,7 @@ class _$DropLoanImpl implements _DropLoan {
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(List<Loan> loans) findFollowUps,
   }) {
     return dropLoan(id);
   }
@@ -179,6 +164,7 @@ class _$DropLoanImpl implements _DropLoan {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(List<Loan> loans)? findFollowUps,
   }) {
     return dropLoan?.call(id);
   }
@@ -189,6 +175,7 @@ class _$DropLoanImpl implements _DropLoan {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) {
     if (dropLoan != null) {
@@ -203,6 +190,7 @@ class _$DropLoanImpl implements _DropLoan {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_findFollowUps value) findFollowUps,
   }) {
     return dropLoan(this);
   }
@@ -213,6 +201,7 @@ class _$DropLoanImpl implements _DropLoan {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_findFollowUps value)? findFollowUps,
   }) {
     return dropLoan?.call(this);
   }
@@ -223,6 +212,7 @@ class _$DropLoanImpl implements _DropLoan {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) {
     if (dropLoan != null) {
@@ -235,21 +225,17 @@ class _$DropLoanImpl implements _DropLoan {
 abstract class _DropLoan implements LoanActorEvent {
   const factory _DropLoan(final UniqueId id) = _$DropLoanImpl;
 
-  @override
   UniqueId get id;
-  @override
   @JsonKey(ignore: true)
   _$$DropLoanImplCopyWith<_$DropLoanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$DisburseLoanImplCopyWith<$Res>
-    implements $LoanActorEventCopyWith<$Res> {
+abstract class _$$DisburseLoanImplCopyWith<$Res> {
   factory _$$DisburseLoanImplCopyWith(
           _$DisburseLoanImpl value, $Res Function(_$DisburseLoanImpl) then) =
       __$$DisburseLoanImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({UniqueId id, DateTime date});
 }
@@ -320,6 +306,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(List<Loan> loans) findFollowUps,
   }) {
     return disburse(id, date);
   }
@@ -330,6 +317,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(List<Loan> loans)? findFollowUps,
   }) {
     return disburse?.call(id, date);
   }
@@ -340,6 +328,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) {
     if (disburse != null) {
@@ -354,6 +343,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_findFollowUps value) findFollowUps,
   }) {
     return disburse(this);
   }
@@ -364,6 +354,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_findFollowUps value)? findFollowUps,
   }) {
     return disburse?.call(this);
   }
@@ -374,6 +365,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) {
     if (disburse != null) {
@@ -387,22 +379,18 @@ abstract class _DisburseLoan implements LoanActorEvent {
   const factory _DisburseLoan(final UniqueId id, final DateTime date) =
       _$DisburseLoanImpl;
 
-  @override
   UniqueId get id;
   DateTime get date;
-  @override
   @JsonKey(ignore: true)
   _$$DisburseLoanImplCopyWith<_$DisburseLoanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RestoreDroppedImplCopyWith<$Res>
-    implements $LoanActorEventCopyWith<$Res> {
+abstract class _$$RestoreDroppedImplCopyWith<$Res> {
   factory _$$RestoreDroppedImplCopyWith(_$RestoreDroppedImpl value,
           $Res Function(_$RestoreDroppedImpl) then) =
       __$$RestoreDroppedImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({UniqueId id});
 }
@@ -466,6 +454,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(List<Loan> loans) findFollowUps,
   }) {
     return restore(id);
   }
@@ -476,6 +465,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(List<Loan> loans)? findFollowUps,
   }) {
     return restore?.call(id);
   }
@@ -486,6 +476,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) {
     if (restore != null) {
@@ -500,6 +491,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_findFollowUps value) findFollowUps,
   }) {
     return restore(this);
   }
@@ -510,6 +502,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_findFollowUps value)? findFollowUps,
   }) {
     return restore?.call(this);
   }
@@ -520,6 +513,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) {
     if (restore != null) {
@@ -532,17 +526,167 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
 abstract class _RestoreDropped implements LoanActorEvent {
   const factory _RestoreDropped(final UniqueId id) = _$RestoreDroppedImpl;
 
-  @override
   UniqueId get id;
-  @override
   @JsonKey(ignore: true)
   _$$RestoreDroppedImplCopyWith<_$RestoreDroppedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
+abstract class _$$findFollowUpsImplCopyWith<$Res> {
+  factory _$$findFollowUpsImplCopyWith(
+          _$findFollowUpsImpl value, $Res Function(_$findFollowUpsImpl) then) =
+      __$$findFollowUpsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Loan> loans});
+}
+
+/// @nodoc
+class __$$findFollowUpsImplCopyWithImpl<$Res>
+    extends _$LoanActorEventCopyWithImpl<$Res, _$findFollowUpsImpl>
+    implements _$$findFollowUpsImplCopyWith<$Res> {
+  __$$findFollowUpsImplCopyWithImpl(
+      _$findFollowUpsImpl _value, $Res Function(_$findFollowUpsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? loans = null,
+  }) {
+    return _then(_$findFollowUpsImpl(
+      null == loans
+          ? _value._loans
+          : loans // ignore: cast_nullable_to_non_nullable
+              as List<Loan>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$findFollowUpsImpl implements _findFollowUps {
+  const _$findFollowUpsImpl(final List<Loan> loans) : _loans = loans;
+
+  final List<Loan> _loans;
+  @override
+  List<Loan> get loans {
+    if (_loans is EqualUnmodifiableListView) return _loans;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_loans);
+  }
+
+  @override
+  String toString() {
+    return 'LoanActorEvent.findFollowUps(loans: $loans)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$findFollowUpsImpl &&
+            const DeepCollectionEquality().equals(other._loans, _loans));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_loans));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$findFollowUpsImplCopyWith<_$findFollowUpsImpl> get copyWith =>
+      __$$findFollowUpsImplCopyWithImpl<_$findFollowUpsImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(UniqueId id) dropLoan,
+    required TResult Function(UniqueId id, DateTime date) disburse,
+    required TResult Function(UniqueId id) restore,
+    required TResult Function(List<Loan> loans) findFollowUps,
+  }) {
+    return findFollowUps(loans);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(UniqueId id)? dropLoan,
+    TResult? Function(UniqueId id, DateTime date)? disburse,
+    TResult? Function(UniqueId id)? restore,
+    TResult? Function(List<Loan> loans)? findFollowUps,
+  }) {
+    return findFollowUps?.call(loans);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(UniqueId id)? dropLoan,
+    TResult Function(UniqueId id, DateTime date)? disburse,
+    TResult Function(UniqueId id)? restore,
+    TResult Function(List<Loan> loans)? findFollowUps,
+    required TResult orElse(),
+  }) {
+    if (findFollowUps != null) {
+      return findFollowUps(loans);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DropLoan value) dropLoan,
+    required TResult Function(_DisburseLoan value) disburse,
+    required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_findFollowUps value) findFollowUps,
+  }) {
+    return findFollowUps(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DropLoan value)? dropLoan,
+    TResult? Function(_DisburseLoan value)? disburse,
+    TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_findFollowUps value)? findFollowUps,
+  }) {
+    return findFollowUps?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DropLoan value)? dropLoan,
+    TResult Function(_DisburseLoan value)? disburse,
+    TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_findFollowUps value)? findFollowUps,
+    required TResult orElse(),
+  }) {
+    if (findFollowUps != null) {
+      return findFollowUps(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _findFollowUps implements LoanActorEvent {
+  const factory _findFollowUps(final List<Loan> loans) = _$findFollowUpsImpl;
+
+  List<Loan> get loans;
+  @JsonKey(ignore: true)
+  _$$findFollowUpsImplCopyWith<_$findFollowUpsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$LoanActorState {
   bool get isLoading => throw _privateConstructorUsedError;
+  KtList<Loan> get followUps => throw _privateConstructorUsedError;
   Option<Either<LoanFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
 
@@ -558,7 +702,9 @@ abstract class $LoanActorStateCopyWith<$Res> {
       _$LoanActorStateCopyWithImpl<$Res, LoanActorState>;
   @useResult
   $Res call(
-      {bool isLoading, Option<Either<LoanFailure, Unit>> failureOrSuccess});
+      {bool isLoading,
+      KtList<Loan> followUps,
+      Option<Either<LoanFailure, Unit>> failureOrSuccess});
 }
 
 /// @nodoc
@@ -575,6 +721,7 @@ class _$LoanActorStateCopyWithImpl<$Res, $Val extends LoanActorState>
   @override
   $Res call({
     Object? isLoading = null,
+    Object? followUps = null,
     Object? failureOrSuccess = null,
   }) {
     return _then(_value.copyWith(
@@ -582,6 +729,10 @@ class _$LoanActorStateCopyWithImpl<$Res, $Val extends LoanActorState>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      followUps: null == followUps
+          ? _value.followUps
+          : followUps // ignore: cast_nullable_to_non_nullable
+              as KtList<Loan>,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -599,7 +750,9 @@ abstract class _$$LoanActorStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool isLoading, Option<Either<LoanFailure, Unit>> failureOrSuccess});
+      {bool isLoading,
+      KtList<Loan> followUps,
+      Option<Either<LoanFailure, Unit>> failureOrSuccess});
 }
 
 /// @nodoc
@@ -614,6 +767,7 @@ class __$$LoanActorStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isLoading = null,
+    Object? followUps = null,
     Object? failureOrSuccess = null,
   }) {
     return _then(_$LoanActorStateImpl(
@@ -621,6 +775,10 @@ class __$$LoanActorStateImplCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
+      followUps: null == followUps
+          ? _value.followUps
+          : followUps // ignore: cast_nullable_to_non_nullable
+              as KtList<Loan>,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -633,16 +791,20 @@ class __$$LoanActorStateImplCopyWithImpl<$Res>
 
 class _$LoanActorStateImpl implements _LoanActorState {
   const _$LoanActorStateImpl(
-      {required this.isLoading, required this.failureOrSuccess});
+      {required this.isLoading,
+      required this.followUps,
+      required this.failureOrSuccess});
 
   @override
   final bool isLoading;
+  @override
+  final KtList<Loan> followUps;
   @override
   final Option<Either<LoanFailure, Unit>> failureOrSuccess;
 
   @override
   String toString() {
-    return 'LoanActorState(isLoading: $isLoading, failureOrSuccess: $failureOrSuccess)';
+    return 'LoanActorState(isLoading: $isLoading, followUps: $followUps, failureOrSuccess: $failureOrSuccess)';
   }
 
   @override
@@ -652,12 +814,15 @@ class _$LoanActorStateImpl implements _LoanActorState {
             other is _$LoanActorStateImpl &&
             (identical(other.isLoading, isLoading) ||
                 other.isLoading == isLoading) &&
+            (identical(other.followUps, followUps) ||
+                other.followUps == followUps) &&
             (identical(other.failureOrSuccess, failureOrSuccess) ||
                 other.failureOrSuccess == failureOrSuccess));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isLoading, failureOrSuccess);
+  int get hashCode =>
+      Object.hash(runtimeType, isLoading, followUps, failureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -670,11 +835,14 @@ class _$LoanActorStateImpl implements _LoanActorState {
 abstract class _LoanActorState implements LoanActorState {
   const factory _LoanActorState(
           {required final bool isLoading,
+          required final KtList<Loan> followUps,
           required final Option<Either<LoanFailure, Unit>> failureOrSuccess}) =
       _$LoanActorStateImpl;
 
   @override
   bool get isLoading;
+  @override
+  KtList<Loan> get followUps;
   @override
   Option<Either<LoanFailure, Unit>> get failureOrSuccess;
   @override

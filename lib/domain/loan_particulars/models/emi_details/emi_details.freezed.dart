@@ -19,6 +19,7 @@ mixin _$EMIDetails {
   RequiredPrice get emiAmount => throw _privateConstructorUsedError;
   Tenure get tenure => throw _privateConstructorUsedError;
   EMIDate get firstEMIDate => throw _privateConstructorUsedError;
+  DateTime? get lastEMIDate => throw _privateConstructorUsedError;
   Name get bankName => throw _privateConstructorUsedError;
   RepaymentMode get repaymentMode => throw _privateConstructorUsedError;
 
@@ -37,6 +38,7 @@ abstract class $EMIDetailsCopyWith<$Res> {
       {RequiredPrice emiAmount,
       Tenure tenure,
       EMIDate firstEMIDate,
+      DateTime? lastEMIDate,
       Name bankName,
       RepaymentMode repaymentMode});
 }
@@ -57,6 +59,7 @@ class _$EMIDetailsCopyWithImpl<$Res, $Val extends EMIDetails>
     Object? emiAmount = null,
     Object? tenure = null,
     Object? firstEMIDate = null,
+    Object? lastEMIDate = freezed,
     Object? bankName = null,
     Object? repaymentMode = null,
   }) {
@@ -73,6 +76,10 @@ class _$EMIDetailsCopyWithImpl<$Res, $Val extends EMIDetails>
           ? _value.firstEMIDate
           : firstEMIDate // ignore: cast_nullable_to_non_nullable
               as EMIDate,
+      lastEMIDate: freezed == lastEMIDate
+          ? _value.lastEMIDate
+          : lastEMIDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       bankName: null == bankName
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
@@ -97,6 +104,7 @@ abstract class _$$EMIDetailsImplCopyWith<$Res>
       {RequiredPrice emiAmount,
       Tenure tenure,
       EMIDate firstEMIDate,
+      DateTime? lastEMIDate,
       Name bankName,
       RepaymentMode repaymentMode});
 }
@@ -115,6 +123,7 @@ class __$$EMIDetailsImplCopyWithImpl<$Res>
     Object? emiAmount = null,
     Object? tenure = null,
     Object? firstEMIDate = null,
+    Object? lastEMIDate = freezed,
     Object? bankName = null,
     Object? repaymentMode = null,
   }) {
@@ -131,6 +140,10 @@ class __$$EMIDetailsImplCopyWithImpl<$Res>
           ? _value.firstEMIDate
           : firstEMIDate // ignore: cast_nullable_to_non_nullable
               as EMIDate,
+      lastEMIDate: freezed == lastEMIDate
+          ? _value.lastEMIDate
+          : lastEMIDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       bankName: null == bankName
           ? _value.bankName
           : bankName // ignore: cast_nullable_to_non_nullable
@@ -150,6 +163,7 @@ class _$EMIDetailsImpl extends _EMIDetails {
       {required this.emiAmount,
       required this.tenure,
       required this.firstEMIDate,
+      required this.lastEMIDate,
       required this.bankName,
       required this.repaymentMode})
       : super._();
@@ -161,13 +175,15 @@ class _$EMIDetailsImpl extends _EMIDetails {
   @override
   final EMIDate firstEMIDate;
   @override
+  final DateTime? lastEMIDate;
+  @override
   final Name bankName;
   @override
   final RepaymentMode repaymentMode;
 
   @override
   String toString() {
-    return 'EMIDetails(emiAmount: $emiAmount, tenure: $tenure, firstEMIDate: $firstEMIDate, bankName: $bankName, repaymentMode: $repaymentMode)';
+    return 'EMIDetails(emiAmount: $emiAmount, tenure: $tenure, firstEMIDate: $firstEMIDate, lastEMIDate: $lastEMIDate, bankName: $bankName, repaymentMode: $repaymentMode)';
   }
 
   @override
@@ -180,6 +196,8 @@ class _$EMIDetailsImpl extends _EMIDetails {
             (identical(other.tenure, tenure) || other.tenure == tenure) &&
             (identical(other.firstEMIDate, firstEMIDate) ||
                 other.firstEMIDate == firstEMIDate) &&
+            (identical(other.lastEMIDate, lastEMIDate) ||
+                other.lastEMIDate == lastEMIDate) &&
             (identical(other.bankName, bankName) ||
                 other.bankName == bankName) &&
             (identical(other.repaymentMode, repaymentMode) ||
@@ -187,8 +205,8 @@ class _$EMIDetailsImpl extends _EMIDetails {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, emiAmount, tenure, firstEMIDate, bankName, repaymentMode);
+  int get hashCode => Object.hash(runtimeType, emiAmount, tenure, firstEMIDate,
+      lastEMIDate, bankName, repaymentMode);
 
   @JsonKey(ignore: true)
   @override
@@ -202,6 +220,7 @@ abstract class _EMIDetails extends EMIDetails {
       {required final RequiredPrice emiAmount,
       required final Tenure tenure,
       required final EMIDate firstEMIDate,
+      required final DateTime? lastEMIDate,
       required final Name bankName,
       required final RepaymentMode repaymentMode}) = _$EMIDetailsImpl;
   const _EMIDetails._() : super._();
@@ -212,6 +231,8 @@ abstract class _EMIDetails extends EMIDetails {
   Tenure get tenure;
   @override
   EMIDate get firstEMIDate;
+  @override
+  DateTime? get lastEMIDate;
   @override
   Name get bankName;
   @override

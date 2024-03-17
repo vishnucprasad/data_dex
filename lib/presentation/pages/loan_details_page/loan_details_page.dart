@@ -144,7 +144,9 @@ class LoanDetailsPage extends StatelessWidget {
                             ApplicantDetailsSection(
                               applicant: state.selectedLoan!.applicant,
                             ),
-                            if (state.selectedLoan!.coApplicant != null)
+                            if (state.selectedLoan!.coApplicant != null ||
+                                state.selectedLoan!.loanStatusIndex ==
+                                    LoanStatus.pending.index)
                               Column(
                                 children: [
                                   kHeight,
@@ -154,7 +156,9 @@ class LoanDetailsPage extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                            if (state.selectedLoan!.guarenter != null)
+                            if (state.selectedLoan!.guarenter != null ||
+                                state.selectedLoan!.loanStatusIndex ==
+                                    LoanStatus.pending.index)
                               Column(
                                 children: [
                                   kHeight,
@@ -163,7 +167,9 @@ class LoanDetailsPage extends StatelessWidget {
                                   )
                                 ],
                               ),
-                            if (state.selectedLoan!.loanParticulars != null)
+                            if (state.selectedLoan!.loanParticulars != null ||
+                                state.selectedLoan!.loanStatusIndex ==
+                                    LoanStatus.pending.index)
                               Column(
                                 children: [
                                   kHeight,
@@ -174,7 +180,9 @@ class LoanDetailsPage extends StatelessWidget {
                                 ],
                               ),
                             if (state.selectedLoan!.miscellaneousDetails !=
-                                null)
+                                    null ||
+                                state.selectedLoan!.loanStatusIndex ==
+                                    LoanStatus.pending.index)
                               Column(
                                 children: [
                                   kHeight,

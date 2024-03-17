@@ -23,6 +23,19 @@ class LoanCard extends StatelessWidget {
 
   final Loan loan;
 
+  int _differenceInMonths(DateTime startDate, DateTime endDate) {
+    int months = ((endDate.year - startDate.year) * 12 +
+            endDate.month -
+            startDate.month) +
+        1;
+
+    if (endDate.day < startDate.day) {
+      months--;
+    }
+
+    return months;
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -222,25 +235,73 @@ class LoanCard extends StatelessWidget {
                         ),
                         icon: const Icon(Icons.restore),
                       )
-                    : Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Disbursment date:',
-                            style: TextStyle(
-                              color: kSecondaryColor,
-                            ),
-                          ),
-                          Text(
-                            DateFormat.yMMMMEEEEd()
-                                .format(DateTime.parse(loan.disbursementDate!)),
-                            style: const TextStyle(
-                              color: kLightColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
+                    : BlocBuilder<AppActionCubit, AppActionState>(
+                        builder: (context, state) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    state.bottomNavIndex == 0
+                                        ? 'Disbursment date:'
+                                        : 'Next EMI date:',
+                                    style: const TextStyle(
+                                      color: kSecondaryColor,
+                                    ),
+                                  ),
+                                  kWidthMd,
+                                  Text(
+                                    state.bottomNavIndex == 0
+                                        ? DateFormat.yMMMEd().format(
+                                            DateTime.parse(
+                                                loan.disbursementDate!))
+                                        : DateFormat.yMMMEd().format(
+                                            DateTime(
+                                              DateTime.now().year,
+                                              DateTime.now().month,
+                                              DateTime.parse(loan
+                                                      .loanParticulars!
+                                                      .emiDetails
+                                                      .firstEMIDate
+                                                      .getOrCrash())
+                                                  .day,
+                                            ),
+                                          ),
+                                    style: const TextStyle(
+                                      color: kLightColor,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  const Text(
+                                    "Remaining EMI's:",
+                                    style: TextStyle(
+                                      color: kSecondaryColor,
+                                    ),
+                                  ),
+                                  kWidthMd,
+                                  Text(
+                                    _differenceInMonths(
+                                      DateTime.now(),
+                                      loan.loanParticulars!.emiDetails
+                                          .lastEMIDate!,
+                                    ).toString(),
+                                    style: const TextStyle(
+                                      color: kLightColor,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          );
+                        },
                       ),
           ),
           Container(

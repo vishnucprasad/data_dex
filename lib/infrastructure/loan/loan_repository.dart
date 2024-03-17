@@ -114,4 +114,101 @@ class LoanRepository implements ILoanRepository {
       return left(const LoanFailure.unexpected());
     }
   }
+
+  @override
+  Future<Either<LoanFailure, KtList<Loan>>> findFollowUps(
+    List<Loan> loans,
+  ) async {
+    try {
+      final today = DateTime.now();
+
+      if (today.day <= 5) {
+        return right(loans
+            .where(
+              (loan) =>
+                  DateTime.parse(
+                        loan.loanParticulars!.emiDetails.firstEMIDate
+                            .getOrCrash(),
+                      ).day ==
+                      5 &&
+                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+            )
+            .toImmutableList());
+      }
+
+      if (today.day > 5 && today.day <= 10) {
+        return right(loans
+            .where(
+              (loan) =>
+                  DateTime.parse(
+                        loan.loanParticulars!.emiDetails.firstEMIDate
+                            .getOrCrash(),
+                      ).day ==
+                      10 &&
+                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+            )
+            .toImmutableList());
+      }
+
+      if (today.day > 10 && today.day <= 15) {
+        return right(loans
+            .where(
+              (loan) =>
+                  DateTime.parse(
+                        loan.loanParticulars!.emiDetails.firstEMIDate
+                            .getOrCrash(),
+                      ).day ==
+                      15 &&
+                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+            )
+            .toImmutableList());
+      }
+
+      if (today.day > 15 && today.day <= 20) {
+        return right(loans
+            .where(
+              (loan) =>
+                  DateTime.parse(
+                        loan.loanParticulars!.emiDetails.firstEMIDate
+                            .getOrCrash(),
+                      ).day ==
+                      20 &&
+                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+            )
+            .toImmutableList());
+      }
+
+      if (today.day > 20 && today.day <= 25) {
+        return right(loans
+            .where(
+              (loan) =>
+                  DateTime.parse(
+                        loan.loanParticulars!.emiDetails.firstEMIDate
+                            .getOrCrash(),
+                      ).day ==
+                      25 &&
+                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+            )
+            .toImmutableList());
+      }
+
+      if (today.day > 25) {
+        return right(loans
+            .where(
+              (loan) =>
+                  DateTime.parse(
+                        loan.loanParticulars!.emiDetails.firstEMIDate
+                            .getOrCrash(),
+                      ).day ==
+                      28 &&
+                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+            )
+            .toImmutableList());
+      }
+
+      return left(const LoanFailure.unexpected());
+    } catch (_) {
+      return left(const LoanFailure.unexpected());
+    }
+  }
 }
