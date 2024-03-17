@@ -11,6 +11,7 @@ import 'package:data_dex/injection.dart';
 import 'package:data_dex/presentation/router/app_router.dart';
 import 'package:data_dex/presentation/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DataDexApp extends StatelessWidget {
@@ -18,6 +19,10 @@ class DataDexApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.lightBlue.shade600,
+    ));
+
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => getIt<AppActionCubit>()),

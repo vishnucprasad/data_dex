@@ -6,6 +6,7 @@ import 'package:data_dex/presentation/pages/add_loan_particulars_page/add_loan_p
 import 'package:data_dex/presentation/pages/add_miscellaneous_details_page/add_miscellaneous_details_page.dart';
 import 'package:data_dex/presentation/pages/home_page/home_page.dart';
 import 'package:data_dex/presentation/pages/loan_details_page/loan_details_page.dart';
+import 'package:data_dex/presentation/pages/search_results_page/search_results_page.dart';
 import 'package:data_dex/presentation/pages/signin_page/signin_page.dart';
 import 'package:data_dex/presentation/pages/splash_page.dart/splash_page.dart';
 
@@ -50,6 +51,10 @@ class AppRouter extends _$AppRouter {
       ),
       CustomRoute(
         page: LoanDetailsRoute.page,
+        transitionsBuilder: TransitionsBuilders.slideLeftWithFade,
+      ),
+      CustomRoute(
+        page: SearchResultsRoute.page,
         transitionsBuilder: TransitionsBuilders.slideLeftWithFade,
       ),
     ];

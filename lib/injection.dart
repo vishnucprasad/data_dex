@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:data_dex/domain/core/debouncer.dart';
 import 'package:data_dex/presentation/router/app_router.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -15,6 +16,7 @@ final getIt = GetIt.instance;
 Future<void> configureDependencies() async {
   getIt.registerSingleton<AppRouter>(AppRouter());
   getIt.registerSingleton<ImagePicker>(ImagePicker());
+  getIt.registerSingleton<Debouncer>(Debouncer(milliseconds: 1000));
   getIt.registerLazySingleton<FirebaseAuth>(() => FirebaseAuth.instance);
   getIt.registerLazySingleton<GoogleSignIn>(() => GoogleSignIn());
   getIt.registerLazySingleton<FirebaseFirestore>(

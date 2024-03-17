@@ -96,4 +96,6 @@ class AppActionCubit extends Cubit<AppActionState> {
       ),
     ));
   }
+
+  void searchTextChanged(String text) => emit(state.copyWith(searchText: text));
 }

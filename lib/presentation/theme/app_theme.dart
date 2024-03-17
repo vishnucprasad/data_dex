@@ -10,5 +10,9 @@ ThemeData buildLightTheme() {
     scaffoldBackgroundColor: kLightColor,
     canvasColor: Colors.transparent,
     fontFamily: GoogleFonts.outfit().fontFamily,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.lightBlue.shade600,
+      foregroundColor: kLightColor,
+    ),
   );
 }

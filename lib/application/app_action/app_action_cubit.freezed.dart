@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AppActionState {
   int get bottomNavIndex => throw _privateConstructorUsedError;
   Loan? get selectedLoan => throw _privateConstructorUsedError;
+  String get searchText => throw _privateConstructorUsedError;
   Option<Either<CommonFailure, Unit>> get failureOrSuccess =>
       throw _privateConstructorUsedError;
 
@@ -35,6 +36,7 @@ abstract class $AppActionStateCopyWith<$Res> {
   $Res call(
       {int bottomNavIndex,
       Loan? selectedLoan,
+      String searchText,
       Option<Either<CommonFailure, Unit>> failureOrSuccess});
 
   $LoanCopyWith<$Res>? get selectedLoan;
@@ -55,6 +57,7 @@ class _$AppActionStateCopyWithImpl<$Res, $Val extends AppActionState>
   $Res call({
     Object? bottomNavIndex = null,
     Object? selectedLoan = freezed,
+    Object? searchText = null,
     Object? failureOrSuccess = null,
   }) {
     return _then(_value.copyWith(
@@ -66,6 +69,10 @@ class _$AppActionStateCopyWithImpl<$Res, $Val extends AppActionState>
           ? _value.selectedLoan
           : selectedLoan // ignore: cast_nullable_to_non_nullable
               as Loan?,
+      searchText: null == searchText
+          ? _value.searchText
+          : searchText // ignore: cast_nullable_to_non_nullable
+              as String,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -97,6 +104,7 @@ abstract class _$$AppActionStateImplCopyWith<$Res>
   $Res call(
       {int bottomNavIndex,
       Loan? selectedLoan,
+      String searchText,
       Option<Either<CommonFailure, Unit>> failureOrSuccess});
 
   @override
@@ -116,6 +124,7 @@ class __$$AppActionStateImplCopyWithImpl<$Res>
   $Res call({
     Object? bottomNavIndex = null,
     Object? selectedLoan = freezed,
+    Object? searchText = null,
     Object? failureOrSuccess = null,
   }) {
     return _then(_$AppActionStateImpl(
@@ -127,6 +136,10 @@ class __$$AppActionStateImplCopyWithImpl<$Res>
           ? _value.selectedLoan
           : selectedLoan // ignore: cast_nullable_to_non_nullable
               as Loan?,
+      searchText: null == searchText
+          ? _value.searchText
+          : searchText // ignore: cast_nullable_to_non_nullable
+              as String,
       failureOrSuccess: null == failureOrSuccess
           ? _value.failureOrSuccess
           : failureOrSuccess // ignore: cast_nullable_to_non_nullable
@@ -141,6 +154,7 @@ class _$AppActionStateImpl implements _AppActionState {
   const _$AppActionStateImpl(
       {required this.bottomNavIndex,
       required this.selectedLoan,
+      required this.searchText,
       required this.failureOrSuccess});
 
   @override
@@ -148,11 +162,13 @@ class _$AppActionStateImpl implements _AppActionState {
   @override
   final Loan? selectedLoan;
   @override
+  final String searchText;
+  @override
   final Option<Either<CommonFailure, Unit>> failureOrSuccess;
 
   @override
   String toString() {
-    return 'AppActionState(bottomNavIndex: $bottomNavIndex, selectedLoan: $selectedLoan, failureOrSuccess: $failureOrSuccess)';
+    return 'AppActionState(bottomNavIndex: $bottomNavIndex, selectedLoan: $selectedLoan, searchText: $searchText, failureOrSuccess: $failureOrSuccess)';
   }
 
   @override
@@ -164,13 +180,15 @@ class _$AppActionStateImpl implements _AppActionState {
                 other.bottomNavIndex == bottomNavIndex) &&
             (identical(other.selectedLoan, selectedLoan) ||
                 other.selectedLoan == selectedLoan) &&
+            (identical(other.searchText, searchText) ||
+                other.searchText == searchText) &&
             (identical(other.failureOrSuccess, failureOrSuccess) ||
                 other.failureOrSuccess == failureOrSuccess));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, bottomNavIndex, selectedLoan, failureOrSuccess);
+  int get hashCode => Object.hash(
+      runtimeType, bottomNavIndex, selectedLoan, searchText, failureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -184,6 +202,7 @@ abstract class _AppActionState implements AppActionState {
   const factory _AppActionState(
       {required final int bottomNavIndex,
       required final Loan? selectedLoan,
+      required final String searchText,
       required final Option<Either<CommonFailure, Unit>>
           failureOrSuccess}) = _$AppActionStateImpl;
 
@@ -191,6 +210,8 @@ abstract class _AppActionState implements AppActionState {
   int get bottomNavIndex;
   @override
   Loan? get selectedLoan;
+  @override
+  String get searchText;
   @override
   Option<Either<CommonFailure, Unit>> get failureOrSuccess;
   @override
