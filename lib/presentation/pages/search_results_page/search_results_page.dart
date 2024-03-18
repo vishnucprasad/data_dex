@@ -17,8 +17,14 @@ class SearchResultsPage extends StatelessWidget {
         context.read<AppActionCubit>().searchTextChanged('');
         return true;
       },
-      child: const Scaffold(
-        body: SafeArea(
+      child: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(0), // Set AppBar height to zero
+          child: Container(
+            color: Colors.lightBlue.shade600,
+          ),
+        ),
+        body: const SafeArea(
           child: Column(
             children: [
               Column(

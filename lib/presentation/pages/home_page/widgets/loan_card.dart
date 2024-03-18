@@ -302,10 +302,7 @@ class LoanCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    LoanStatus.values[loan.loanStatusIndex] ==
-                                LoanStatus.pending ||
-                            LoanStatus.values[loan.loanStatusIndex] ==
-                                LoanStatus.dropped
+                    loan.miscellaneousDetails?.applicantImage == null
                         ? Container(
                             height: 80,
                             width: 80,

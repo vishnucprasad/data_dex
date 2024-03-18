@@ -28,6 +28,13 @@ class AddCoApplicantPage extends StatelessWidget {
       child: BlocBuilder<CoApplicantFormBloc, CoApplicantFormState>(
         builder: (context, state) {
           return Scaffold(
+            appBar: PreferredSize(
+              preferredSize:
+                  const Size.fromHeight(0), // Set AppBar height to zero
+              child: Container(
+                color: Colors.lightBlue.shade600,
+              ),
+            ),
             body: SafeArea(
               child: Column(
                 children: [

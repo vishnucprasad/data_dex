@@ -8,8 +8,14 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SizedBox(
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(0), // Set AppBar height to zero
+        child: Container(
+          color: Colors.lightBlue.shade600,
+        ),
+      ),
+      body: const SizedBox(
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

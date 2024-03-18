@@ -31,6 +31,12 @@ class AddGuarenterPage extends StatelessWidget {
         return true;
       },
       child: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(0), // Set AppBar height to zero
+          child: Container(
+            color: Colors.lightBlue.shade600,
+          ),
+        ),
         body: SafeArea(
           child: BlocConsumer<GuarenterFormBloc, GuarenterFormState>(
             listenWhen: (p, c) => p.failureOrSuccess != c.failureOrSuccess,

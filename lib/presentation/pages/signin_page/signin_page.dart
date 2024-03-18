@@ -50,6 +50,13 @@ class SigninPage extends StatelessWidget {
           );
         },
         child: Scaffold(
+          appBar: PreferredSize(
+            preferredSize:
+                const Size.fromHeight(0), // Set AppBar height to zero
+            child: Container(
+              color: Colors.lightBlue.shade600,
+            ),
+          ),
           backgroundColor: kSecondaryColor,
           body: SingleChildScrollView(
             child: Column(
