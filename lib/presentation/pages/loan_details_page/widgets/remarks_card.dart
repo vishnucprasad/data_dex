@@ -35,7 +35,7 @@ class RemarksCard extends StatelessWidget {
           if (remarks == null || remarks!.getOrCrash().isEmpty)
             const Text('Remarks not provided')
           else
-            Flexible(child: Text(remarks!.getOrCrash())),
+            Text(remarks!.getOrCrash()),
         ],
       ),
     );

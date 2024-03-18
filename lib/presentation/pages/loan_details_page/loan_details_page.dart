@@ -116,7 +116,44 @@ class LoanDetailsPage extends StatelessWidget {
                                 ),
                               ),
                       ]
-                    : [],
+                    : LoanStatus.values[state.selectedLoan!.loanStatusIndex] ==
+                            LoanStatus.completed
+                        ? [
+                            loanActorState.isLoading
+                                ? const SizedBox(
+                                    width: 30,
+                                    height: 30,
+                                    child: CircularProgressIndicator(
+                                      color: kLightColor,
+                                    ),
+                                  )
+                                : IconButton(
+                                    onPressed: () =>
+                                        FlushbarHelper.createAction(
+                                      message:
+                                          'Are you sure you want to send this loan to the pending list ?',
+                                      button: TextButton(
+                                        child: Text(
+                                          'SEND TO PENDING',
+                                          style: TextStyle(
+                                            color: Colors.lightBlue.shade600,
+                                          ),
+                                        ),
+                                        onPressed: () {
+                                          context
+                                              .read<LoanActorBloc>()
+                                              .add(LoanActorEvent.restore(
+                                                state.selectedLoan!.id,
+                                              ));
+                                        },
+                                      ),
+                                    ).show(context),
+                                    icon: const Icon(
+                                      Icons.restore,
+                                    ),
+                                  ),
+                          ]
+                        : [],
                 backgroundColor: Colors.lightBlue.shade600,
                 foregroundColor: kLightColor,
               ),

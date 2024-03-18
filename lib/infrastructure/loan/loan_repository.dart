@@ -6,6 +6,7 @@ import 'package:data_dex/domain/loan/failures/loan_failure.dart';
 import 'package:data_dex/domain/loan/i_loan_repository.dart';
 import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/infrastructure/core/firestore_helpers.dart';
+import 'package:data_dex/infrastructure/core/loan_helpers.dart';
 import 'package:data_dex/infrastructure/loan/dto/loan_dto.dart';
 import 'package:data_dex/injection.dart';
 import 'package:flutter/services.dart';
@@ -126,12 +127,11 @@ class LoanRepository implements ILoanRepository {
         return right(loans
             .where(
               (loan) =>
-                  DateTime.parse(
-                        loan.loanParticulars!.emiDetails.firstEMIDate
-                            .getOrCrash(),
-                      ).day ==
-                      5 &&
-                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+                  loan.firstEMIDate!.day == 5 &&
+                  ((loan.firstEMIDate!.year == today.year &&
+                          loan.firstEMIDate!.month == today.month) ||
+                      loan.firstEMIDate!.isBefore(today)) &&
+                  loan.lastEMIDate!.isAfter(today),
             )
             .toImmutableList());
       }
@@ -140,12 +140,11 @@ class LoanRepository implements ILoanRepository {
         return right(loans
             .where(
               (loan) =>
-                  DateTime.parse(
-                        loan.loanParticulars!.emiDetails.firstEMIDate
-                            .getOrCrash(),
-                      ).day ==
-                      10 &&
-                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+                  loan.firstEMIDate!.day == 10 &&
+                  ((loan.firstEMIDate!.year == today.year &&
+                          loan.firstEMIDate!.month == today.month) ||
+                      loan.firstEMIDate!.isBefore(today)) &&
+                  loan.lastEMIDate!.isAfter(today),
             )
             .toImmutableList());
       }
@@ -154,12 +153,11 @@ class LoanRepository implements ILoanRepository {
         return right(loans
             .where(
               (loan) =>
-                  DateTime.parse(
-                        loan.loanParticulars!.emiDetails.firstEMIDate
-                            .getOrCrash(),
-                      ).day ==
-                      15 &&
-                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+                  loan.firstEMIDate!.day == 15 &&
+                  ((loan.firstEMIDate!.year == today.year &&
+                          loan.firstEMIDate!.month == today.month) ||
+                      loan.firstEMIDate!.isBefore(today)) &&
+                  loan.lastEMIDate!.isAfter(today),
             )
             .toImmutableList());
       }
@@ -168,12 +166,11 @@ class LoanRepository implements ILoanRepository {
         return right(loans
             .where(
               (loan) =>
-                  DateTime.parse(
-                        loan.loanParticulars!.emiDetails.firstEMIDate
-                            .getOrCrash(),
-                      ).day ==
-                      20 &&
-                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+                  loan.firstEMIDate!.day == 20 &&
+                  ((loan.firstEMIDate!.year == today.year &&
+                          loan.firstEMIDate!.month == today.month) ||
+                      loan.firstEMIDate!.isBefore(today)) &&
+                  loan.lastEMIDate!.isAfter(today),
             )
             .toImmutableList());
       }
@@ -182,12 +179,11 @@ class LoanRepository implements ILoanRepository {
         return right(loans
             .where(
               (loan) =>
-                  DateTime.parse(
-                        loan.loanParticulars!.emiDetails.firstEMIDate
-                            .getOrCrash(),
-                      ).day ==
-                      25 &&
-                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+                  loan.firstEMIDate!.day == 25 &&
+                  ((loan.firstEMIDate!.year == today.year &&
+                          loan.firstEMIDate!.month == today.month) ||
+                      loan.firstEMIDate!.isBefore(today)) &&
+                  loan.lastEMIDate!.isAfter(today),
             )
             .toImmutableList());
       }
@@ -196,12 +192,11 @@ class LoanRepository implements ILoanRepository {
         return right(loans
             .where(
               (loan) =>
-                  DateTime.parse(
-                        loan.loanParticulars!.emiDetails.firstEMIDate
-                            .getOrCrash(),
-                      ).day ==
-                      28 &&
-                  loan.loanParticulars!.emiDetails.lastEMIDate!.isAfter(today),
+                  loan.firstEMIDate!.day == 28 &&
+                  ((loan.firstEMIDate!.year == today.year &&
+                          loan.firstEMIDate!.month == today.month) ||
+                      loan.firstEMIDate!.isBefore(today)) &&
+                  loan.lastEMIDate!.isAfter(today),
             )
             .toImmutableList());
       }

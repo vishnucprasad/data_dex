@@ -9,6 +9,7 @@ import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/injection.dart';
 import 'package:data_dex/presentation/core/colors.dart';
 import 'package:data_dex/presentation/core/constants.dart';
+import 'package:data_dex/presentation/core/extensions/loan_extension.dart';
 import 'package:data_dex/presentation/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -22,19 +23,6 @@ class LoanCard extends StatelessWidget {
   });
 
   final Loan loan;
-
-  int _differenceInMonths(DateTime startDate, DateTime endDate) {
-    int months = ((endDate.year - startDate.year) * 12 +
-            endDate.month -
-            startDate.month) +
-        1;
-
-    if (endDate.day < startDate.day) {
-      months--;
-    }
-
-    return months;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -286,11 +274,7 @@ class LoanCard extends StatelessWidget {
                                   ),
                                   kWidthMd,
                                   Text(
-                                    _differenceInMonths(
-                                      DateTime.now(),
-                                      loan.loanParticulars!.emiDetails
-                                          .lastEMIDate!,
-                                    ).toString(),
+                                    '${loan.calculateRemainingEMI()}',
                                     style: const TextStyle(
                                       color: kLightColor,
                                       fontSize: 16,
