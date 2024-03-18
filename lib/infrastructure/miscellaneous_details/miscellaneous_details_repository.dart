@@ -6,6 +6,7 @@ import 'package:data_dex/domain/miscellaneous_details/failures/miscellaneous_det
 import 'package:data_dex/domain/miscellaneous_details/i_miscellaneous_details_repository.dart';
 import 'package:data_dex/domain/miscellaneous_details/models/miscellaneous_details.dart';
 import 'package:data_dex/infrastructure/core/firestore_helpers.dart';
+import 'package:data_dex/infrastructure/core/storage_helpers.dart';
 import 'package:data_dex/infrastructure/miscellaneous_details/dto/miscellaneous_details_dto.dart';
 import 'package:data_dex/injection.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -106,7 +107,8 @@ class MiscellaneousDetailsRepository
     UniqueId id,
   ) async {
     try {
-      await _storage.ref('/${id.getOrCrash()}/miscellaneous_images').delete();
+      final userRef = await _storage.userRef();
+      await userRef.child('/${id.getOrCrash()}/miscellaneous_images').delete();
       return right(unit);
     } on PlatformException catch (e) {
       if (e.message != null) {
@@ -126,9 +128,11 @@ class MiscellaneousDetailsRepository
     XFile image,
   ) async {
     try {
-      final ref = _storage
-          .ref()
-          .child('/${id.getOrCrash()}/miscellaneous_images/$name.jpg');
+      final userRef = await _storage.userRef();
+      final ref = userRef.child(
+        '/${id.getOrCrash()}/miscellaneous_images/$name.jpg',
+      );
+
       final uploadTask = ref.putData(await image.readAsBytes());
 
       final url = await (await uploadTask).ref.getDownloadURL();

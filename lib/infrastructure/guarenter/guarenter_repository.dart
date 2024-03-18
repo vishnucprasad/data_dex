@@ -6,6 +6,7 @@ import 'package:data_dex/domain/guarenter/failures/guarenter_failure.dart';
 import 'package:data_dex/domain/guarenter/i_guarenter_repository.dart';
 import 'package:data_dex/domain/guarenter/models/guarenter.dart';
 import 'package:data_dex/infrastructure/core/firestore_helpers.dart';
+import 'package:data_dex/infrastructure/core/storage_helpers.dart';
 import 'package:data_dex/infrastructure/guarenter/dto/guarenter_dto.dart';
 import 'package:data_dex/injection.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -143,8 +144,11 @@ class GuarenterRepository implements IGuarenterRepository {
     String? filename,
   }) async {
     try {
-      final ref = _storage.ref().child(
-          '/${id.getOrCrash()}/guarenter/house/${filename ?? image.name}');
+      final userRef = await _storage.userRef();
+      final ref = userRef.child(
+        '/${id.getOrCrash()}/guarenter/house/${filename ?? image.name}',
+      );
+
       final uploadTask = ref.putData(await image.readAsBytes());
 
       final url = await (await uploadTask).ref.getDownloadURL();

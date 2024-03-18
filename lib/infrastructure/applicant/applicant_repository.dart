@@ -8,6 +8,7 @@ import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan/failures/loan_failure.dart';
 import 'package:data_dex/infrastructure/applicant/dto/applicant_dto.dart';
 import 'package:data_dex/infrastructure/core/firestore_helpers.dart';
+import 'package:data_dex/infrastructure/core/storage_helpers.dart';
 import 'package:data_dex/injection.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
@@ -119,8 +120,11 @@ class ApplicantRepository implements IApplicantRepository {
     String? filename,
   }) async {
     try {
-      final ref = _storage.ref().child(
-          '/${id.getOrCrash()}/applicant/house/${filename ?? image.name}');
+      final userRef = await _storage.userRef();
+      final ref = userRef.child(
+        '/${id.getOrCrash()}/applicant/house/${filename ?? image.name}',
+      );
+
       final uploadTask = ref.putData(await image.readAsBytes());
 
       final url = await (await uploadTask).ref.getDownloadURL();
