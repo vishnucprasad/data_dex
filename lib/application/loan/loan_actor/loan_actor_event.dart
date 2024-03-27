@@ -12,6 +12,9 @@ class LoanActorEvent with _$LoanActorEvent {
   const factory LoanActorEvent.restore(
     UniqueId id,
   ) = _RestoreDropped;
+  const factory LoanActorEvent.deleteLoan(
+    UniqueId id,
+  ) = _DeleteLoan;
   const factory LoanActorEvent.findFollowUps(
     List<Loan> loans,
   ) = _findFollowUps;

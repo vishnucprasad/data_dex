@@ -7,8 +7,10 @@ import 'package:data_dex/domain/loan/i_loan_repository.dart';
 import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/infrastructure/core/firestore_helpers.dart';
 import 'package:data_dex/infrastructure/core/loan_helpers.dart';
+import 'package:data_dex/infrastructure/core/storage_helpers.dart';
 import 'package:data_dex/infrastructure/loan/dto/loan_dto.dart';
 import 'package:data_dex/injection.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kt_dart/kt.dart';
@@ -17,6 +19,7 @@ import 'package:rxdart/rxdart.dart';
 @LazySingleton(as: ILoanRepository)
 class LoanRepository implements ILoanRepository {
   final FirebaseFirestore _firestore = getIt<FirebaseFirestore>();
+  final FirebaseStorage _storage = getIt<FirebaseStorage>();
 
   @override
   Stream<Either<LoanFailure, KtList<Loan>>> watchAll() async* {
@@ -107,6 +110,23 @@ class LoanRepository implements ILoanRepository {
       await userDoc.loansCollection
           .doc(id.getOrCrash())
           .update({'loanStatusIndex': LoanStatus.pending.index});
+      return right(unit);
+    } on PlatformException catch (e) {
+      if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {
+        return left(const LoanFailure.permissionDenied());
+      }
+      return left(const LoanFailure.unexpected());
+    }
+  }
+
+  @override
+  Future<Either<LoanFailure, Unit>> deleteLoan(UniqueId id) async {
+    try {
+      final userDoc = await _firestore.userDocument();
+      final userRef = await _storage.userRef();
+
+      await userDoc.loansCollection.doc(id.getOrCrash()).delete();
+      await _storage.deleteFiles(userRef.child(id.getOrCrash()));
       return right(unit);
     } on PlatformException catch (e) {
       if (e.message != null && e.message!.contains('PERMISSION_DENIED')) {

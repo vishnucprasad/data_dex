@@ -81,6 +81,25 @@ class LoanActorBloc extends Bloc<LoanActorEvent, LoanActorState> {
             ),
           ));
         },
+        deleteLoan: (e) async {
+          emit(state.copyWith(
+            isLoading: true,
+            failureOrSuccess: none(),
+          ));
+
+          final deleteLoanOption = await _loanRepository.deleteLoan(e.id);
+
+          emit(deleteLoanOption.fold(
+            (l) => state.copyWith(
+              isLoading: false,
+              failureOrSuccess: some(left(l)),
+            ),
+            (r) => state.copyWith(
+              isLoading: false,
+              failureOrSuccess: some(right(r)),
+            ),
+          ));
+        },
         findFollowUps: (e) async {
           emit(state.copyWith(
             isLoading: true,

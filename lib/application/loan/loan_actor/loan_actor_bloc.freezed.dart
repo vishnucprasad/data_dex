@@ -21,6 +21,7 @@ mixin _$LoanActorEvent {
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(UniqueId id) deleteLoan,
     required TResult Function(List<Loan> loans) findFollowUps,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,6 +30,7 @@ mixin _$LoanActorEvent {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(UniqueId id)? deleteLoan,
     TResult? Function(List<Loan> loans)? findFollowUps,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,6 +39,7 @@ mixin _$LoanActorEvent {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(UniqueId id)? deleteLoan,
     TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) =>
@@ -46,6 +49,7 @@ mixin _$LoanActorEvent {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_DeleteLoan value) deleteLoan,
     required TResult Function(_findFollowUps value) findFollowUps,
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +58,7 @@ mixin _$LoanActorEvent {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_DeleteLoan value)? deleteLoan,
     TResult? Function(_findFollowUps value)? findFollowUps,
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +67,7 @@ mixin _$LoanActorEvent {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_DeleteLoan value)? deleteLoan,
     TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) =>
@@ -153,6 +159,7 @@ class _$DropLoanImpl implements _DropLoan {
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(UniqueId id) deleteLoan,
     required TResult Function(List<Loan> loans) findFollowUps,
   }) {
     return dropLoan(id);
@@ -164,6 +171,7 @@ class _$DropLoanImpl implements _DropLoan {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(UniqueId id)? deleteLoan,
     TResult? Function(List<Loan> loans)? findFollowUps,
   }) {
     return dropLoan?.call(id);
@@ -175,6 +183,7 @@ class _$DropLoanImpl implements _DropLoan {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(UniqueId id)? deleteLoan,
     TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) {
@@ -190,6 +199,7 @@ class _$DropLoanImpl implements _DropLoan {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_DeleteLoan value) deleteLoan,
     required TResult Function(_findFollowUps value) findFollowUps,
   }) {
     return dropLoan(this);
@@ -201,6 +211,7 @@ class _$DropLoanImpl implements _DropLoan {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_DeleteLoan value)? deleteLoan,
     TResult? Function(_findFollowUps value)? findFollowUps,
   }) {
     return dropLoan?.call(this);
@@ -212,6 +223,7 @@ class _$DropLoanImpl implements _DropLoan {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_DeleteLoan value)? deleteLoan,
     TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) {
@@ -306,6 +318,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(UniqueId id) deleteLoan,
     required TResult Function(List<Loan> loans) findFollowUps,
   }) {
     return disburse(id, date);
@@ -317,6 +330,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(UniqueId id)? deleteLoan,
     TResult? Function(List<Loan> loans)? findFollowUps,
   }) {
     return disburse?.call(id, date);
@@ -328,6 +342,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(UniqueId id)? deleteLoan,
     TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) {
@@ -343,6 +358,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_DeleteLoan value) deleteLoan,
     required TResult Function(_findFollowUps value) findFollowUps,
   }) {
     return disburse(this);
@@ -354,6 +370,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_DeleteLoan value)? deleteLoan,
     TResult? Function(_findFollowUps value)? findFollowUps,
   }) {
     return disburse?.call(this);
@@ -365,6 +382,7 @@ class _$DisburseLoanImpl implements _DisburseLoan {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_DeleteLoan value)? deleteLoan,
     TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) {
@@ -454,6 +472,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(UniqueId id) deleteLoan,
     required TResult Function(List<Loan> loans) findFollowUps,
   }) {
     return restore(id);
@@ -465,6 +484,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(UniqueId id)? deleteLoan,
     TResult? Function(List<Loan> loans)? findFollowUps,
   }) {
     return restore?.call(id);
@@ -476,6 +496,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(UniqueId id)? deleteLoan,
     TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) {
@@ -491,6 +512,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_DeleteLoan value) deleteLoan,
     required TResult Function(_findFollowUps value) findFollowUps,
   }) {
     return restore(this);
@@ -502,6 +524,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_DeleteLoan value)? deleteLoan,
     TResult? Function(_findFollowUps value)? findFollowUps,
   }) {
     return restore?.call(this);
@@ -513,6 +536,7 @@ class _$RestoreDroppedImpl implements _RestoreDropped {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_DeleteLoan value)? deleteLoan,
     TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) {
@@ -529,6 +553,157 @@ abstract class _RestoreDropped implements LoanActorEvent {
   UniqueId get id;
   @JsonKey(ignore: true)
   _$$RestoreDroppedImplCopyWith<_$RestoreDroppedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteLoanImplCopyWith<$Res> {
+  factory _$$DeleteLoanImplCopyWith(
+          _$DeleteLoanImpl value, $Res Function(_$DeleteLoanImpl) then) =
+      __$$DeleteLoanImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UniqueId id});
+}
+
+/// @nodoc
+class __$$DeleteLoanImplCopyWithImpl<$Res>
+    extends _$LoanActorEventCopyWithImpl<$Res, _$DeleteLoanImpl>
+    implements _$$DeleteLoanImplCopyWith<$Res> {
+  __$$DeleteLoanImplCopyWithImpl(
+      _$DeleteLoanImpl _value, $Res Function(_$DeleteLoanImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$DeleteLoanImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as UniqueId,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DeleteLoanImpl implements _DeleteLoan {
+  const _$DeleteLoanImpl(this.id);
+
+  @override
+  final UniqueId id;
+
+  @override
+  String toString() {
+    return 'LoanActorEvent.deleteLoan(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteLoanImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DeleteLoanImplCopyWith<_$DeleteLoanImpl> get copyWith =>
+      __$$DeleteLoanImplCopyWithImpl<_$DeleteLoanImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(UniqueId id) dropLoan,
+    required TResult Function(UniqueId id, DateTime date) disburse,
+    required TResult Function(UniqueId id) restore,
+    required TResult Function(UniqueId id) deleteLoan,
+    required TResult Function(List<Loan> loans) findFollowUps,
+  }) {
+    return deleteLoan(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(UniqueId id)? dropLoan,
+    TResult? Function(UniqueId id, DateTime date)? disburse,
+    TResult? Function(UniqueId id)? restore,
+    TResult? Function(UniqueId id)? deleteLoan,
+    TResult? Function(List<Loan> loans)? findFollowUps,
+  }) {
+    return deleteLoan?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(UniqueId id)? dropLoan,
+    TResult Function(UniqueId id, DateTime date)? disburse,
+    TResult Function(UniqueId id)? restore,
+    TResult Function(UniqueId id)? deleteLoan,
+    TResult Function(List<Loan> loans)? findFollowUps,
+    required TResult orElse(),
+  }) {
+    if (deleteLoan != null) {
+      return deleteLoan(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DropLoan value) dropLoan,
+    required TResult Function(_DisburseLoan value) disburse,
+    required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_DeleteLoan value) deleteLoan,
+    required TResult Function(_findFollowUps value) findFollowUps,
+  }) {
+    return deleteLoan(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DropLoan value)? dropLoan,
+    TResult? Function(_DisburseLoan value)? disburse,
+    TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_DeleteLoan value)? deleteLoan,
+    TResult? Function(_findFollowUps value)? findFollowUps,
+  }) {
+    return deleteLoan?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DropLoan value)? dropLoan,
+    TResult Function(_DisburseLoan value)? disburse,
+    TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_DeleteLoan value)? deleteLoan,
+    TResult Function(_findFollowUps value)? findFollowUps,
+    required TResult orElse(),
+  }) {
+    if (deleteLoan != null) {
+      return deleteLoan(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteLoan implements LoanActorEvent {
+  const factory _DeleteLoan(final UniqueId id) = _$DeleteLoanImpl;
+
+  UniqueId get id;
+  @JsonKey(ignore: true)
+  _$$DeleteLoanImplCopyWith<_$DeleteLoanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -605,6 +780,7 @@ class _$findFollowUpsImpl implements _findFollowUps {
     required TResult Function(UniqueId id) dropLoan,
     required TResult Function(UniqueId id, DateTime date) disburse,
     required TResult Function(UniqueId id) restore,
+    required TResult Function(UniqueId id) deleteLoan,
     required TResult Function(List<Loan> loans) findFollowUps,
   }) {
     return findFollowUps(loans);
@@ -616,6 +792,7 @@ class _$findFollowUpsImpl implements _findFollowUps {
     TResult? Function(UniqueId id)? dropLoan,
     TResult? Function(UniqueId id, DateTime date)? disburse,
     TResult? Function(UniqueId id)? restore,
+    TResult? Function(UniqueId id)? deleteLoan,
     TResult? Function(List<Loan> loans)? findFollowUps,
   }) {
     return findFollowUps?.call(loans);
@@ -627,6 +804,7 @@ class _$findFollowUpsImpl implements _findFollowUps {
     TResult Function(UniqueId id)? dropLoan,
     TResult Function(UniqueId id, DateTime date)? disburse,
     TResult Function(UniqueId id)? restore,
+    TResult Function(UniqueId id)? deleteLoan,
     TResult Function(List<Loan> loans)? findFollowUps,
     required TResult orElse(),
   }) {
@@ -642,6 +820,7 @@ class _$findFollowUpsImpl implements _findFollowUps {
     required TResult Function(_DropLoan value) dropLoan,
     required TResult Function(_DisburseLoan value) disburse,
     required TResult Function(_RestoreDropped value) restore,
+    required TResult Function(_DeleteLoan value) deleteLoan,
     required TResult Function(_findFollowUps value) findFollowUps,
   }) {
     return findFollowUps(this);
@@ -653,6 +832,7 @@ class _$findFollowUpsImpl implements _findFollowUps {
     TResult? Function(_DropLoan value)? dropLoan,
     TResult? Function(_DisburseLoan value)? disburse,
     TResult? Function(_RestoreDropped value)? restore,
+    TResult? Function(_DeleteLoan value)? deleteLoan,
     TResult? Function(_findFollowUps value)? findFollowUps,
   }) {
     return findFollowUps?.call(this);
@@ -664,6 +844,7 @@ class _$findFollowUpsImpl implements _findFollowUps {
     TResult Function(_DropLoan value)? dropLoan,
     TResult Function(_DisburseLoan value)? disburse,
     TResult Function(_RestoreDropped value)? restore,
+    TResult Function(_DeleteLoan value)? deleteLoan,
     TResult Function(_findFollowUps value)? findFollowUps,
     required TResult orElse(),
   }) {

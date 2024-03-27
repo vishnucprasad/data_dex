@@ -13,5 +13,6 @@ abstract class ILoanRepository {
     String disbursementDate,
   );
   Future<Either<LoanFailure, Unit>> restore(UniqueId id);
+  Future<Either<LoanFailure, Unit>> deleteLoan(UniqueId id);
   Future<Either<LoanFailure, KtList<Loan>>> findFollowUps(List<Loan> loans);
 }

@@ -86,7 +86,9 @@ class LoanCard extends StatelessWidget {
 
                             final selectedDate = await showDatePicker(
                               context: context,
-                              initialDate: DateTime.now(),
+                              initialDate: loan.disbursementDate == null
+                                  ? DateTime.now()
+                                  : DateTime.parse(loan.disbursementDate!),
                               firstDate: DateTime(1900),
                               lastDate: DateTime.now(),
                               builder: (context, child) {
@@ -176,52 +178,99 @@ class LoanCard extends StatelessWidget {
                     ],
                   )
                 : LoanStatus.values[loan.loanStatusIndex] == LoanStatus.dropped
-                    ? ElevatedButton.icon(
-                        style: ButtonStyle(
-                          elevation: const MaterialStatePropertyAll<double>(0),
-                          backgroundColor:
-                              const MaterialStatePropertyAll<Color>(
-                            Colors.transparent,
-                          ),
-                          foregroundColor:
-                              const MaterialStatePropertyAll<Color>(
-                            kSecondaryColor,
-                          ),
-                          shape:
-                              MaterialStatePropertyAll<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
-                              side: const BorderSide(
-                                width: 2,
-                                color: kSecondaryColor,
+                    ? Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton.icon(
+                              style: ButtonStyle(
+                                elevation:
+                                    const MaterialStatePropertyAll<double>(0),
+                                backgroundColor:
+                                    const MaterialStatePropertyAll<Color>(
+                                  Colors.transparent,
+                                ),
+                                foregroundColor:
+                                    const MaterialStatePropertyAll<Color>(
+                                  kSecondaryColor,
+                                ),
+                                shape: MaterialStatePropertyAll<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                    side: const BorderSide(
+                                      width: 2,
+                                      color: kSecondaryColor,
+                                    ),
+                                  ),
+                                ),
                               ),
+                              onPressed: () => FlushbarHelper.createAction(
+                                message:
+                                    'Are you sure you want to restore this loan ?',
+                                button: TextButton(
+                                  child: Text(
+                                    'RESTORE',
+                                    style: TextStyle(
+                                      color: Colors.lightBlue.shade600,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    context
+                                        .read<LoanActorBloc>()
+                                        .add(LoanActorEvent.restore(loan.id));
+                                  },
+                                ),
+                              ).show(context),
+                              label: const Text(
+                                'Restore',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              icon: const Icon(Icons.restore),
                             ),
                           ),
-                        ),
-                        onPressed: () => FlushbarHelper.createAction(
-                          message:
-                              'Are you sure you want to restore this loan ?',
-                          button: TextButton(
-                            child: Text(
-                              'RESTORE',
-                              style: TextStyle(
-                                color: Colors.lightBlue.shade600,
+                          kWidthMd,
+                          SizedBox(
+                            width: 75,
+                            child: IconButton(
+                              style: ButtonStyle(
+                                elevation:
+                                    const MaterialStatePropertyAll<double>(0),
+                                backgroundColor:
+                                    const MaterialStatePropertyAll<Color>(
+                                  kSecondaryColor,
+                                ),
+                                foregroundColor:
+                                    const MaterialStatePropertyAll<Color>(
+                                  Colors.red,
+                                ),
+                                shape: MaterialStatePropertyAll<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
                               ),
+                              onPressed: () => FlushbarHelper.createAction(
+                                message:
+                                    'Are you sure you want to permanently delete this loan ?',
+                                button: TextButton(
+                                  child: const Text(
+                                    'DELETE',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                  onPressed: () => context
+                                      .read<LoanActorBloc>()
+                                      .add(LoanActorEvent.deleteLoan(loan.id)),
+                                ),
+                              ).show(context),
+                              icon: const Icon(Icons.delete),
                             ),
-                            onPressed: () {
-                              context
-                                  .read<LoanActorBloc>()
-                                  .add(LoanActorEvent.restore(loan.id));
-                            },
                           ),
-                        ).show(context),
-                        label: const Text(
-                          'Restore',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        icon: const Icon(Icons.restore),
+                        ],
                       )
                     : BlocBuilder<AppActionCubit, AppActionState>(
                         builder: (context, state) {
@@ -294,8 +343,8 @@ class LoanCard extends StatelessWidget {
             decoration: const BoxDecoration(
               color: kSecondaryColor,
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(32),
-                bottomRight: Radius.circular(32),
+                bottomLeft: Radius.circular(16),
+                bottomRight: Radius.circular(16),
               ),
             ),
             child: Column(
