@@ -506,6 +506,19 @@ class MiscellaneousDetailsFormBloc
           ),
           failureOrSuccess: none(),
         )),
+        agreementNumberChanged: (e) async => emit(state.copyWith(
+          remarksAndMore: state.remarksAndMore.copyWith(
+            agreementNumber:
+                e.agreementNumber.isEmpty ? null : e.agreementNumber,
+          ),
+          failureOrSuccess: none(),
+        )),
+        vehicleNumberChanged: (e) async => emit(state.copyWith(
+          remarksAndMore: state.remarksAndMore.copyWith(
+            vehicleNumber: e.vehicleNumber.isEmpty ? null : e.vehicleNumber,
+          ),
+          failureOrSuccess: none(),
+        )),
         remarksChanged: (e) async => emit(state.copyWith(
           remarksAndMore: state.remarksAndMore.copyWith(
             remarks: Remarks(e.remarks),

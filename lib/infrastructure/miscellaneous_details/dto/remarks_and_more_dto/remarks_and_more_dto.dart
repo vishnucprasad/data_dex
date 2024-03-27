@@ -13,6 +13,8 @@ class RemarksAndMoreDto with _$RemarksAndMoreDto {
   const factory RemarksAndMoreDto({
     required String appId,
     required String leadId,
+    required String? agreementNumber,
+    required String? vehicleNumber,
     required String? remarks,
   }) = _RemarksAndMoreDto;
 
@@ -20,6 +22,8 @@ class RemarksAndMoreDto with _$RemarksAndMoreDto {
     return RemarksAndMoreDto(
       appId: remarksAndMore.appId.getOrCrash(),
       leadId: remarksAndMore.leadId.getOrCrash(),
+      agreementNumber: remarksAndMore.agreementNumber,
+      vehicleNumber: remarksAndMore.vehicleNumber,
       remarks: remarksAndMore.remarks?.getOrCrash(),
     );
   }
@@ -28,6 +32,8 @@ class RemarksAndMoreDto with _$RemarksAndMoreDto {
     return RemarksAndMore(
       appId: AppId(appId),
       leadId: LeadId(leadId),
+      agreementNumber: agreementNumber,
+      vehicleNumber: vehicleNumber,
       remarks: remarks != null ? Remarks(remarks!) : null,
     );
   }

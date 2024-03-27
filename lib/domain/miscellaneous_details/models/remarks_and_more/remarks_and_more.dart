@@ -11,6 +11,8 @@ class RemarksAndMore with _$RemarksAndMore {
   const factory RemarksAndMore({
     required AppId appId,
     required LeadId leadId,
+    required String? agreementNumber,
+    required String? vehicleNumber,
     required Remarks? remarks,
   }) = _RemarksAndMore;
 
@@ -18,6 +20,8 @@ class RemarksAndMore with _$RemarksAndMore {
     return RemarksAndMore(
       appId: AppId(""),
       leadId: LeadId(""),
+      agreementNumber: null,
+      vehicleNumber: null,
       remarks: null,
     );
   }

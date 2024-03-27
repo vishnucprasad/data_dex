@@ -48,6 +48,11 @@ class MiscellaneousDetailsFormEvent with _$MiscellaneousDetailsFormEvent {
   const factory MiscellaneousDetailsFormEvent.leadIdChanged(
     String leadId,
   ) = _LeadIdChanged;
+  const factory MiscellaneousDetailsFormEvent.agreementNumberChanged(
+    String agreementNumber,
+  ) = _AgreementNumberChanged;
+  const factory MiscellaneousDetailsFormEvent.vehicleNumberChanged(
+      String vehicleNumber) = _VehicleNumberChanged;
   const factory MiscellaneousDetailsFormEvent.remarksChanged(
     String remarks,
   ) = _RemarksChanged;

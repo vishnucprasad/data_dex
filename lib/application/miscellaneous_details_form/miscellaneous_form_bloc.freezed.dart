@@ -38,6 +38,8 @@ mixin _$MiscellaneousDetailsFormEvent {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) =>
@@ -64,6 +66,8 @@ mixin _$MiscellaneousDetailsFormEvent {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) =>
@@ -90,6 +94,8 @@ mixin _$MiscellaneousDetailsFormEvent {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -119,6 +125,9 @@ mixin _$MiscellaneousDetailsFormEvent {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -146,6 +155,8 @@ mixin _$MiscellaneousDetailsFormEvent {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -173,6 +184,8 @@ mixin _$MiscellaneousDetailsFormEvent {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -286,6 +299,8 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -315,6 +330,8 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -344,6 +361,8 @@ class _$InitializedImpl implements _Initialized {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -379,6 +398,9 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -409,6 +431,8 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -439,6 +463,8 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -544,6 +570,8 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -573,6 +601,8 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -602,6 +632,8 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -637,6 +669,9 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -667,6 +702,8 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -697,6 +734,8 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -802,6 +841,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -831,6 +872,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -860,6 +903,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -895,6 +940,9 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -925,6 +973,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -955,6 +1005,8 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -1062,6 +1114,8 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -1091,6 +1145,8 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -1120,6 +1176,8 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -1155,6 +1213,9 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -1185,6 +1246,8 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -1215,6 +1278,8 @@ class _$PayeeNameChangedImpl implements _PayeeNameChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -1323,6 +1388,8 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -1352,6 +1419,8 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -1381,6 +1450,8 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -1416,6 +1487,9 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -1446,6 +1520,8 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -1476,6 +1552,8 @@ class _$PayeeAmountChangedImpl implements _PayeeAmountChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -1586,6 +1664,8 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -1615,6 +1695,8 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -1644,6 +1726,8 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -1679,6 +1763,9 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -1709,6 +1796,8 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -1739,6 +1828,8 @@ class _$ReferenceOneNameChangedImpl implements _ReferenceOneNameChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -1853,6 +1944,8 @@ class _$ReferenceOnePhoneNumberChangedImpl
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -1882,6 +1975,8 @@ class _$ReferenceOnePhoneNumberChangedImpl
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -1911,6 +2006,8 @@ class _$ReferenceOnePhoneNumberChangedImpl
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -1946,6 +2043,9 @@ class _$ReferenceOnePhoneNumberChangedImpl
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -1976,6 +2076,8 @@ class _$ReferenceOnePhoneNumberChangedImpl
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -2006,6 +2108,8 @@ class _$ReferenceOnePhoneNumberChangedImpl
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -2119,6 +2223,8 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -2148,6 +2254,8 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -2177,6 +2285,8 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -2212,6 +2322,9 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -2242,6 +2355,8 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -2272,6 +2387,8 @@ class _$ReferenceTwoNameChangedImpl implements _ReferenceTwoNameChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -2386,6 +2503,8 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -2415,6 +2534,8 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -2444,6 +2565,8 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -2479,6 +2602,9 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -2509,6 +2635,8 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -2539,6 +2667,8 @@ class _$ReferenceTwoPhoneNumberChangedImpl
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -2622,6 +2752,8 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -2651,6 +2783,8 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -2680,6 +2814,8 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -2715,6 +2851,9 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -2745,6 +2884,8 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -2775,6 +2916,8 @@ class _$PickApplicantImageImpl implements _PickApplicantImage {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -2849,6 +2992,8 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -2878,6 +3023,8 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -2907,6 +3054,8 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -2942,6 +3091,9 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -2972,6 +3124,8 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -3002,6 +3156,8 @@ class _$TakeApplicantImageImpl implements _TakeApplicantImage {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3077,6 +3233,8 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -3106,6 +3264,8 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -3135,6 +3295,8 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3170,6 +3332,9 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -3200,6 +3365,8 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -3230,6 +3397,8 @@ class _$PickCoApplicantImageImpl implements _PickCoApplicantImage {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3305,6 +3474,8 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -3334,6 +3505,8 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -3363,6 +3536,8 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3398,6 +3573,9 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -3428,6 +3606,8 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -3458,6 +3638,8 @@ class _$TakeCoApplicantImageImpl implements _TakeCoApplicantImage {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3532,6 +3714,8 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -3561,6 +3745,8 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -3590,6 +3776,8 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3625,6 +3813,9 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -3655,6 +3846,8 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -3685,6 +3878,8 @@ class _$PickGuarenterImageImpl implements _PickGuarenterImage {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3759,6 +3954,8 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -3788,6 +3985,8 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -3817,6 +4016,8 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3852,6 +4053,9 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -3882,6 +4086,8 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -3912,6 +4118,8 @@ class _$TakeGuarenterImageImpl implements _TakeGuarenterImage {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -3985,6 +4193,8 @@ class _$DeleteImagesImpl implements _DeleteImages {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -4014,6 +4224,8 @@ class _$DeleteImagesImpl implements _DeleteImages {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -4043,6 +4255,8 @@ class _$DeleteImagesImpl implements _DeleteImages {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -4078,6 +4292,9 @@ class _$DeleteImagesImpl implements _DeleteImages {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -4108,6 +4325,8 @@ class _$DeleteImagesImpl implements _DeleteImages {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -4138,6 +4357,8 @@ class _$DeleteImagesImpl implements _DeleteImages {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -4237,6 +4458,8 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -4266,6 +4489,8 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -4295,6 +4520,8 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -4330,6 +4557,9 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -4360,6 +4590,8 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -4390,6 +4622,8 @@ class _$AppIdChangedImpl implements _AppIdChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -4494,6 +4728,8 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -4523,6 +4759,8 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -4552,6 +4790,8 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -4587,6 +4827,9 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -4617,6 +4860,8 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -4647,6 +4892,8 @@ class _$LeadIdChangedImpl implements _LeadIdChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -4665,6 +4912,558 @@ abstract class _LeadIdChanged implements MiscellaneousDetailsFormEvent {
   @JsonKey(ignore: true)
   _$$LeadIdChangedImplCopyWith<_$LeadIdChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AgreementNumberChangedImplCopyWith<$Res> {
+  factory _$$AgreementNumberChangedImplCopyWith(
+          _$AgreementNumberChangedImpl value,
+          $Res Function(_$AgreementNumberChangedImpl) then) =
+      __$$AgreementNumberChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String agreementNumber});
+}
+
+/// @nodoc
+class __$$AgreementNumberChangedImplCopyWithImpl<$Res>
+    extends _$MiscellaneousDetailsFormEventCopyWithImpl<$Res,
+        _$AgreementNumberChangedImpl>
+    implements _$$AgreementNumberChangedImplCopyWith<$Res> {
+  __$$AgreementNumberChangedImplCopyWithImpl(
+      _$AgreementNumberChangedImpl _value,
+      $Res Function(_$AgreementNumberChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? agreementNumber = null,
+  }) {
+    return _then(_$AgreementNumberChangedImpl(
+      null == agreementNumber
+          ? _value.agreementNumber
+          : agreementNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AgreementNumberChangedImpl implements _AgreementNumberChanged {
+  const _$AgreementNumberChangedImpl(this.agreementNumber);
+
+  @override
+  final String agreementNumber;
+
+  @override
+  String toString() {
+    return 'MiscellaneousDetailsFormEvent.agreementNumberChanged(agreementNumber: $agreementNumber)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AgreementNumberChangedImpl &&
+            (identical(other.agreementNumber, agreementNumber) ||
+                other.agreementNumber == agreementNumber));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, agreementNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AgreementNumberChangedImplCopyWith<_$AgreementNumberChangedImpl>
+      get copyWith => __$$AgreementNumberChangedImplCopyWithImpl<
+          _$AgreementNumberChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Loan> initializeOption) initialized,
+    required TResult Function(UniqueId loanId) loanIdChanged,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String payeeName) payeeNameChanged,
+    required TResult Function(String payeeAmount) payeeAmountChanged,
+    required TResult Function(String referenceOneName) referenceOneNameChanged,
+    required TResult Function(String referenceOnePhoneNumber)
+        referenceOnePhoneNumberChanged,
+    required TResult Function(String referenceTwoName) referenceTwoNameChanged,
+    required TResult Function(String referenceTwoPhoneNumber)
+        referenceTwoPhoneNumberChanged,
+    required TResult Function() pickApplicantImage,
+    required TResult Function() takeApplicantImage,
+    required TResult Function() pickCoApplicantImage,
+    required TResult Function() takeCoApplicantImage,
+    required TResult Function() pickGuarenterImage,
+    required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
+    required TResult Function(String appId) appIdChanged,
+    required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
+    required TResult Function(String remarks) remarksChanged,
+    required TResult Function() saveMiscellaneousDetails,
+  }) {
+    return agreementNumberChanged(agreementNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Loan> initializeOption)? initialized,
+    TResult? Function(UniqueId loanId)? loanIdChanged,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String payeeName)? payeeNameChanged,
+    TResult? Function(String payeeAmount)? payeeAmountChanged,
+    TResult? Function(String referenceOneName)? referenceOneNameChanged,
+    TResult? Function(String referenceOnePhoneNumber)?
+        referenceOnePhoneNumberChanged,
+    TResult? Function(String referenceTwoName)? referenceTwoNameChanged,
+    TResult? Function(String referenceTwoPhoneNumber)?
+        referenceTwoPhoneNumberChanged,
+    TResult? Function()? pickApplicantImage,
+    TResult? Function()? takeApplicantImage,
+    TResult? Function()? pickCoApplicantImage,
+    TResult? Function()? takeCoApplicantImage,
+    TResult? Function()? pickGuarenterImage,
+    TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
+    TResult? Function(String appId)? appIdChanged,
+    TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
+    TResult? Function(String remarks)? remarksChanged,
+    TResult? Function()? saveMiscellaneousDetails,
+  }) {
+    return agreementNumberChanged?.call(agreementNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Loan> initializeOption)? initialized,
+    TResult Function(UniqueId loanId)? loanIdChanged,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String payeeName)? payeeNameChanged,
+    TResult Function(String payeeAmount)? payeeAmountChanged,
+    TResult Function(String referenceOneName)? referenceOneNameChanged,
+    TResult Function(String referenceOnePhoneNumber)?
+        referenceOnePhoneNumberChanged,
+    TResult Function(String referenceTwoName)? referenceTwoNameChanged,
+    TResult Function(String referenceTwoPhoneNumber)?
+        referenceTwoPhoneNumberChanged,
+    TResult Function()? pickApplicantImage,
+    TResult Function()? takeApplicantImage,
+    TResult Function()? pickCoApplicantImage,
+    TResult Function()? takeCoApplicantImage,
+    TResult Function()? pickGuarenterImage,
+    TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
+    TResult Function(String appId)? appIdChanged,
+    TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
+    TResult Function(String remarks)? remarksChanged,
+    TResult Function()? saveMiscellaneousDetails,
+    required TResult orElse(),
+  }) {
+    if (agreementNumberChanged != null) {
+      return agreementNumberChanged(agreementNumber);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_LoanIdChanged value) loanIdChanged,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_PayeeNameChanged value) payeeNameChanged,
+    required TResult Function(_PayeeAmountChanged value) payeeAmountChanged,
+    required TResult Function(_ReferenceOneNameChanged value)
+        referenceOneNameChanged,
+    required TResult Function(_ReferenceOnePhoneNumberChanged value)
+        referenceOnePhoneNumberChanged,
+    required TResult Function(_ReferenceTwoNameChanged value)
+        referenceTwoNameChanged,
+    required TResult Function(_ReferenceTwoPhoneNumberChanged value)
+        referenceTwoPhoneNumberChanged,
+    required TResult Function(_PickApplicantImage value) pickApplicantImage,
+    required TResult Function(_TakeApplicantImage value) takeApplicantImage,
+    required TResult Function(_PickCoApplicantImage value) pickCoApplicantImage,
+    required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
+    required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
+    required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
+    required TResult Function(_AppIdChanged value) appIdChanged,
+    required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
+    required TResult Function(_RemarksChanged value) remarksChanged,
+    required TResult Function(_SaveMiscellaneousDetails value)
+        saveMiscellaneousDetails,
+  }) {
+    return agreementNumberChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_LoanIdChanged value)? loanIdChanged,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_PayeeNameChanged value)? payeeNameChanged,
+    TResult? Function(_PayeeAmountChanged value)? payeeAmountChanged,
+    TResult? Function(_ReferenceOneNameChanged value)? referenceOneNameChanged,
+    TResult? Function(_ReferenceOnePhoneNumberChanged value)?
+        referenceOnePhoneNumberChanged,
+    TResult? Function(_ReferenceTwoNameChanged value)? referenceTwoNameChanged,
+    TResult? Function(_ReferenceTwoPhoneNumberChanged value)?
+        referenceTwoPhoneNumberChanged,
+    TResult? Function(_PickApplicantImage value)? pickApplicantImage,
+    TResult? Function(_TakeApplicantImage value)? takeApplicantImage,
+    TResult? Function(_PickCoApplicantImage value)? pickCoApplicantImage,
+    TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
+    TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
+    TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
+    TResult? Function(_AppIdChanged value)? appIdChanged,
+    TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
+    TResult? Function(_RemarksChanged value)? remarksChanged,
+    TResult? Function(_SaveMiscellaneousDetails value)?
+        saveMiscellaneousDetails,
+  }) {
+    return agreementNumberChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_LoanIdChanged value)? loanIdChanged,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_PayeeNameChanged value)? payeeNameChanged,
+    TResult Function(_PayeeAmountChanged value)? payeeAmountChanged,
+    TResult Function(_ReferenceOneNameChanged value)? referenceOneNameChanged,
+    TResult Function(_ReferenceOnePhoneNumberChanged value)?
+        referenceOnePhoneNumberChanged,
+    TResult Function(_ReferenceTwoNameChanged value)? referenceTwoNameChanged,
+    TResult Function(_ReferenceTwoPhoneNumberChanged value)?
+        referenceTwoPhoneNumberChanged,
+    TResult Function(_PickApplicantImage value)? pickApplicantImage,
+    TResult Function(_TakeApplicantImage value)? takeApplicantImage,
+    TResult Function(_PickCoApplicantImage value)? pickCoApplicantImage,
+    TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
+    TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
+    TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
+    TResult Function(_AppIdChanged value)? appIdChanged,
+    TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
+    TResult Function(_RemarksChanged value)? remarksChanged,
+    TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
+    required TResult orElse(),
+  }) {
+    if (agreementNumberChanged != null) {
+      return agreementNumberChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AgreementNumberChanged
+    implements MiscellaneousDetailsFormEvent {
+  const factory _AgreementNumberChanged(final String agreementNumber) =
+      _$AgreementNumberChangedImpl;
+
+  String get agreementNumber;
+  @JsonKey(ignore: true)
+  _$$AgreementNumberChangedImplCopyWith<_$AgreementNumberChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$VehicleNumberChangedImplCopyWith<$Res> {
+  factory _$$VehicleNumberChangedImplCopyWith(_$VehicleNumberChangedImpl value,
+          $Res Function(_$VehicleNumberChangedImpl) then) =
+      __$$VehicleNumberChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String vehicleNumber});
+}
+
+/// @nodoc
+class __$$VehicleNumberChangedImplCopyWithImpl<$Res>
+    extends _$MiscellaneousDetailsFormEventCopyWithImpl<$Res,
+        _$VehicleNumberChangedImpl>
+    implements _$$VehicleNumberChangedImplCopyWith<$Res> {
+  __$$VehicleNumberChangedImplCopyWithImpl(_$VehicleNumberChangedImpl _value,
+      $Res Function(_$VehicleNumberChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? vehicleNumber = null,
+  }) {
+    return _then(_$VehicleNumberChangedImpl(
+      null == vehicleNumber
+          ? _value.vehicleNumber
+          : vehicleNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$VehicleNumberChangedImpl implements _VehicleNumberChanged {
+  const _$VehicleNumberChangedImpl(this.vehicleNumber);
+
+  @override
+  final String vehicleNumber;
+
+  @override
+  String toString() {
+    return 'MiscellaneousDetailsFormEvent.vehicleNumberChanged(vehicleNumber: $vehicleNumber)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$VehicleNumberChangedImpl &&
+            (identical(other.vehicleNumber, vehicleNumber) ||
+                other.vehicleNumber == vehicleNumber));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, vehicleNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$VehicleNumberChangedImplCopyWith<_$VehicleNumberChangedImpl>
+      get copyWith =>
+          __$$VehicleNumberChangedImplCopyWithImpl<_$VehicleNumberChangedImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Loan> initializeOption) initialized,
+    required TResult Function(UniqueId loanId) loanIdChanged,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String payeeName) payeeNameChanged,
+    required TResult Function(String payeeAmount) payeeAmountChanged,
+    required TResult Function(String referenceOneName) referenceOneNameChanged,
+    required TResult Function(String referenceOnePhoneNumber)
+        referenceOnePhoneNumberChanged,
+    required TResult Function(String referenceTwoName) referenceTwoNameChanged,
+    required TResult Function(String referenceTwoPhoneNumber)
+        referenceTwoPhoneNumberChanged,
+    required TResult Function() pickApplicantImage,
+    required TResult Function() takeApplicantImage,
+    required TResult Function() pickCoApplicantImage,
+    required TResult Function() takeCoApplicantImage,
+    required TResult Function() pickGuarenterImage,
+    required TResult Function() takeGuarenterImage,
+    required TResult Function() deleteImages,
+    required TResult Function(String appId) appIdChanged,
+    required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
+    required TResult Function(String remarks) remarksChanged,
+    required TResult Function() saveMiscellaneousDetails,
+  }) {
+    return vehicleNumberChanged(vehicleNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Loan> initializeOption)? initialized,
+    TResult? Function(UniqueId loanId)? loanIdChanged,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String payeeName)? payeeNameChanged,
+    TResult? Function(String payeeAmount)? payeeAmountChanged,
+    TResult? Function(String referenceOneName)? referenceOneNameChanged,
+    TResult? Function(String referenceOnePhoneNumber)?
+        referenceOnePhoneNumberChanged,
+    TResult? Function(String referenceTwoName)? referenceTwoNameChanged,
+    TResult? Function(String referenceTwoPhoneNumber)?
+        referenceTwoPhoneNumberChanged,
+    TResult? Function()? pickApplicantImage,
+    TResult? Function()? takeApplicantImage,
+    TResult? Function()? pickCoApplicantImage,
+    TResult? Function()? takeCoApplicantImage,
+    TResult? Function()? pickGuarenterImage,
+    TResult? Function()? takeGuarenterImage,
+    TResult? Function()? deleteImages,
+    TResult? Function(String appId)? appIdChanged,
+    TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
+    TResult? Function(String remarks)? remarksChanged,
+    TResult? Function()? saveMiscellaneousDetails,
+  }) {
+    return vehicleNumberChanged?.call(vehicleNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Loan> initializeOption)? initialized,
+    TResult Function(UniqueId loanId)? loanIdChanged,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String payeeName)? payeeNameChanged,
+    TResult Function(String payeeAmount)? payeeAmountChanged,
+    TResult Function(String referenceOneName)? referenceOneNameChanged,
+    TResult Function(String referenceOnePhoneNumber)?
+        referenceOnePhoneNumberChanged,
+    TResult Function(String referenceTwoName)? referenceTwoNameChanged,
+    TResult Function(String referenceTwoPhoneNumber)?
+        referenceTwoPhoneNumberChanged,
+    TResult Function()? pickApplicantImage,
+    TResult Function()? takeApplicantImage,
+    TResult Function()? pickCoApplicantImage,
+    TResult Function()? takeCoApplicantImage,
+    TResult Function()? pickGuarenterImage,
+    TResult Function()? takeGuarenterImage,
+    TResult Function()? deleteImages,
+    TResult Function(String appId)? appIdChanged,
+    TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
+    TResult Function(String remarks)? remarksChanged,
+    TResult Function()? saveMiscellaneousDetails,
+    required TResult orElse(),
+  }) {
+    if (vehicleNumberChanged != null) {
+      return vehicleNumberChanged(vehicleNumber);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_LoanIdChanged value) loanIdChanged,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_PayeeNameChanged value) payeeNameChanged,
+    required TResult Function(_PayeeAmountChanged value) payeeAmountChanged,
+    required TResult Function(_ReferenceOneNameChanged value)
+        referenceOneNameChanged,
+    required TResult Function(_ReferenceOnePhoneNumberChanged value)
+        referenceOnePhoneNumberChanged,
+    required TResult Function(_ReferenceTwoNameChanged value)
+        referenceTwoNameChanged,
+    required TResult Function(_ReferenceTwoPhoneNumberChanged value)
+        referenceTwoPhoneNumberChanged,
+    required TResult Function(_PickApplicantImage value) pickApplicantImage,
+    required TResult Function(_TakeApplicantImage value) takeApplicantImage,
+    required TResult Function(_PickCoApplicantImage value) pickCoApplicantImage,
+    required TResult Function(_TakeCoApplicantImage value) takeCoApplicantImage,
+    required TResult Function(_PickGuarenterImage value) pickGuarenterImage,
+    required TResult Function(_TakeGuarenterImage value) takeGuarenterImage,
+    required TResult Function(_DeleteImages value) deleteImages,
+    required TResult Function(_AppIdChanged value) appIdChanged,
+    required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
+    required TResult Function(_RemarksChanged value) remarksChanged,
+    required TResult Function(_SaveMiscellaneousDetails value)
+        saveMiscellaneousDetails,
+  }) {
+    return vehicleNumberChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_LoanIdChanged value)? loanIdChanged,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_PayeeNameChanged value)? payeeNameChanged,
+    TResult? Function(_PayeeAmountChanged value)? payeeAmountChanged,
+    TResult? Function(_ReferenceOneNameChanged value)? referenceOneNameChanged,
+    TResult? Function(_ReferenceOnePhoneNumberChanged value)?
+        referenceOnePhoneNumberChanged,
+    TResult? Function(_ReferenceTwoNameChanged value)? referenceTwoNameChanged,
+    TResult? Function(_ReferenceTwoPhoneNumberChanged value)?
+        referenceTwoPhoneNumberChanged,
+    TResult? Function(_PickApplicantImage value)? pickApplicantImage,
+    TResult? Function(_TakeApplicantImage value)? takeApplicantImage,
+    TResult? Function(_PickCoApplicantImage value)? pickCoApplicantImage,
+    TResult? Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
+    TResult? Function(_PickGuarenterImage value)? pickGuarenterImage,
+    TResult? Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult? Function(_DeleteImages value)? deleteImages,
+    TResult? Function(_AppIdChanged value)? appIdChanged,
+    TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
+    TResult? Function(_RemarksChanged value)? remarksChanged,
+    TResult? Function(_SaveMiscellaneousDetails value)?
+        saveMiscellaneousDetails,
+  }) {
+    return vehicleNumberChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_LoanIdChanged value)? loanIdChanged,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_PayeeNameChanged value)? payeeNameChanged,
+    TResult Function(_PayeeAmountChanged value)? payeeAmountChanged,
+    TResult Function(_ReferenceOneNameChanged value)? referenceOneNameChanged,
+    TResult Function(_ReferenceOnePhoneNumberChanged value)?
+        referenceOnePhoneNumberChanged,
+    TResult Function(_ReferenceTwoNameChanged value)? referenceTwoNameChanged,
+    TResult Function(_ReferenceTwoPhoneNumberChanged value)?
+        referenceTwoPhoneNumberChanged,
+    TResult Function(_PickApplicantImage value)? pickApplicantImage,
+    TResult Function(_TakeApplicantImage value)? takeApplicantImage,
+    TResult Function(_PickCoApplicantImage value)? pickCoApplicantImage,
+    TResult Function(_TakeCoApplicantImage value)? takeCoApplicantImage,
+    TResult Function(_PickGuarenterImage value)? pickGuarenterImage,
+    TResult Function(_TakeGuarenterImage value)? takeGuarenterImage,
+    TResult Function(_DeleteImages value)? deleteImages,
+    TResult Function(_AppIdChanged value)? appIdChanged,
+    TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
+    TResult Function(_RemarksChanged value)? remarksChanged,
+    TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
+    required TResult orElse(),
+  }) {
+    if (vehicleNumberChanged != null) {
+      return vehicleNumberChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VehicleNumberChanged implements MiscellaneousDetailsFormEvent {
+  const factory _VehicleNumberChanged(final String vehicleNumber) =
+      _$VehicleNumberChangedImpl;
+
+  String get vehicleNumber;
+  @JsonKey(ignore: true)
+  _$$VehicleNumberChangedImplCopyWith<_$VehicleNumberChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4752,6 +5551,8 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -4781,6 +5582,8 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -4810,6 +5613,8 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -4845,6 +5650,9 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -4875,6 +5683,8 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -4905,6 +5715,8 @@ class _$RemarksChangedImpl implements _RemarksChanged {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -4987,6 +5799,8 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     required TResult Function() deleteImages,
     required TResult Function(String appId) appIdChanged,
     required TResult Function(String leadId) leadIdChanged,
+    required TResult Function(String agreementNumber) agreementNumberChanged,
+    required TResult Function(String vehicleNumber) vehicleNumberChanged,
     required TResult Function(String remarks) remarksChanged,
     required TResult Function() saveMiscellaneousDetails,
   }) {
@@ -5016,6 +5830,8 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     TResult? Function()? deleteImages,
     TResult? Function(String appId)? appIdChanged,
     TResult? Function(String leadId)? leadIdChanged,
+    TResult? Function(String agreementNumber)? agreementNumberChanged,
+    TResult? Function(String vehicleNumber)? vehicleNumberChanged,
     TResult? Function(String remarks)? remarksChanged,
     TResult? Function()? saveMiscellaneousDetails,
   }) {
@@ -5045,6 +5861,8 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     TResult Function()? deleteImages,
     TResult Function(String appId)? appIdChanged,
     TResult Function(String leadId)? leadIdChanged,
+    TResult Function(String agreementNumber)? agreementNumberChanged,
+    TResult Function(String vehicleNumber)? vehicleNumberChanged,
     TResult Function(String remarks)? remarksChanged,
     TResult Function()? saveMiscellaneousDetails,
     required TResult orElse(),
@@ -5080,6 +5898,9 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     required TResult Function(_DeleteImages value) deleteImages,
     required TResult Function(_AppIdChanged value) appIdChanged,
     required TResult Function(_LeadIdChanged value) leadIdChanged,
+    required TResult Function(_AgreementNumberChanged value)
+        agreementNumberChanged,
+    required TResult Function(_VehicleNumberChanged value) vehicleNumberChanged,
     required TResult Function(_RemarksChanged value) remarksChanged,
     required TResult Function(_SaveMiscellaneousDetails value)
         saveMiscellaneousDetails,
@@ -5110,6 +5931,8 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     TResult? Function(_DeleteImages value)? deleteImages,
     TResult? Function(_AppIdChanged value)? appIdChanged,
     TResult? Function(_LeadIdChanged value)? leadIdChanged,
+    TResult? Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult? Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult? Function(_RemarksChanged value)? remarksChanged,
     TResult? Function(_SaveMiscellaneousDetails value)?
         saveMiscellaneousDetails,
@@ -5140,6 +5963,8 @@ class _$SaveMiscellaneousDetailsImpl implements _SaveMiscellaneousDetails {
     TResult Function(_DeleteImages value)? deleteImages,
     TResult Function(_AppIdChanged value)? appIdChanged,
     TResult Function(_LeadIdChanged value)? leadIdChanged,
+    TResult Function(_AgreementNumberChanged value)? agreementNumberChanged,
+    TResult Function(_VehicleNumberChanged value)? vehicleNumberChanged,
     TResult Function(_RemarksChanged value)? remarksChanged,
     TResult Function(_SaveMiscellaneousDetails value)? saveMiscellaneousDetails,
     required TResult orElse(),

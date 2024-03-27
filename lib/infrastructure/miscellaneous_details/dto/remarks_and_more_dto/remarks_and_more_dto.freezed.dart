@@ -22,6 +22,8 @@ RemarksAndMoreDto _$RemarksAndMoreDtoFromJson(Map<String, dynamic> json) {
 mixin _$RemarksAndMoreDto {
   String get appId => throw _privateConstructorUsedError;
   String get leadId => throw _privateConstructorUsedError;
+  String? get agreementNumber => throw _privateConstructorUsedError;
+  String? get vehicleNumber => throw _privateConstructorUsedError;
   String? get remarks => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -36,7 +38,12 @@ abstract class $RemarksAndMoreDtoCopyWith<$Res> {
           RemarksAndMoreDto value, $Res Function(RemarksAndMoreDto) then) =
       _$RemarksAndMoreDtoCopyWithImpl<$Res, RemarksAndMoreDto>;
   @useResult
-  $Res call({String appId, String leadId, String? remarks});
+  $Res call(
+      {String appId,
+      String leadId,
+      String? agreementNumber,
+      String? vehicleNumber,
+      String? remarks});
 }
 
 /// @nodoc
@@ -54,6 +61,8 @@ class _$RemarksAndMoreDtoCopyWithImpl<$Res, $Val extends RemarksAndMoreDto>
   $Res call({
     Object? appId = null,
     Object? leadId = null,
+    Object? agreementNumber = freezed,
+    Object? vehicleNumber = freezed,
     Object? remarks = freezed,
   }) {
     return _then(_value.copyWith(
@@ -65,6 +74,14 @@ class _$RemarksAndMoreDtoCopyWithImpl<$Res, $Val extends RemarksAndMoreDto>
           ? _value.leadId
           : leadId // ignore: cast_nullable_to_non_nullable
               as String,
+      agreementNumber: freezed == agreementNumber
+          ? _value.agreementNumber
+          : agreementNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      vehicleNumber: freezed == vehicleNumber
+          ? _value.vehicleNumber
+          : vehicleNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
       remarks: freezed == remarks
           ? _value.remarks
           : remarks // ignore: cast_nullable_to_non_nullable
@@ -81,7 +98,12 @@ abstract class _$$RemarksAndMoreDtoImplCopyWith<$Res>
       __$$RemarksAndMoreDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String appId, String leadId, String? remarks});
+  $Res call(
+      {String appId,
+      String leadId,
+      String? agreementNumber,
+      String? vehicleNumber,
+      String? remarks});
 }
 
 /// @nodoc
@@ -97,6 +119,8 @@ class __$$RemarksAndMoreDtoImplCopyWithImpl<$Res>
   $Res call({
     Object? appId = null,
     Object? leadId = null,
+    Object? agreementNumber = freezed,
+    Object? vehicleNumber = freezed,
     Object? remarks = freezed,
   }) {
     return _then(_$RemarksAndMoreDtoImpl(
@@ -108,6 +132,14 @@ class __$$RemarksAndMoreDtoImplCopyWithImpl<$Res>
           ? _value.leadId
           : leadId // ignore: cast_nullable_to_non_nullable
               as String,
+      agreementNumber: freezed == agreementNumber
+          ? _value.agreementNumber
+          : agreementNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      vehicleNumber: freezed == vehicleNumber
+          ? _value.vehicleNumber
+          : vehicleNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
       remarks: freezed == remarks
           ? _value.remarks
           : remarks // ignore: cast_nullable_to_non_nullable
@@ -120,7 +152,11 @@ class __$$RemarksAndMoreDtoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RemarksAndMoreDtoImpl extends _RemarksAndMoreDto {
   const _$RemarksAndMoreDtoImpl(
-      {required this.appId, required this.leadId, required this.remarks})
+      {required this.appId,
+      required this.leadId,
+      required this.agreementNumber,
+      required this.vehicleNumber,
+      required this.remarks})
       : super._();
 
   factory _$RemarksAndMoreDtoImpl.fromJson(Map<String, dynamic> json) =>
@@ -131,11 +167,15 @@ class _$RemarksAndMoreDtoImpl extends _RemarksAndMoreDto {
   @override
   final String leadId;
   @override
+  final String? agreementNumber;
+  @override
+  final String? vehicleNumber;
+  @override
   final String? remarks;
 
   @override
   String toString() {
-    return 'RemarksAndMoreDto(appId: $appId, leadId: $leadId, remarks: $remarks)';
+    return 'RemarksAndMoreDto(appId: $appId, leadId: $leadId, agreementNumber: $agreementNumber, vehicleNumber: $vehicleNumber, remarks: $remarks)';
   }
 
   @override
@@ -145,12 +185,17 @@ class _$RemarksAndMoreDtoImpl extends _RemarksAndMoreDto {
             other is _$RemarksAndMoreDtoImpl &&
             (identical(other.appId, appId) || other.appId == appId) &&
             (identical(other.leadId, leadId) || other.leadId == leadId) &&
+            (identical(other.agreementNumber, agreementNumber) ||
+                other.agreementNumber == agreementNumber) &&
+            (identical(other.vehicleNumber, vehicleNumber) ||
+                other.vehicleNumber == vehicleNumber) &&
             (identical(other.remarks, remarks) || other.remarks == remarks));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, appId, leadId, remarks);
+  int get hashCode => Object.hash(
+      runtimeType, appId, leadId, agreementNumber, vehicleNumber, remarks);
 
   @JsonKey(ignore: true)
   @override
@@ -171,6 +216,8 @@ abstract class _RemarksAndMoreDto extends RemarksAndMoreDto {
   const factory _RemarksAndMoreDto(
       {required final String appId,
       required final String leadId,
+      required final String? agreementNumber,
+      required final String? vehicleNumber,
       required final String? remarks}) = _$RemarksAndMoreDtoImpl;
   const _RemarksAndMoreDto._() : super._();
 
@@ -181,6 +228,10 @@ abstract class _RemarksAndMoreDto extends RemarksAndMoreDto {
   String get appId;
   @override
   String get leadId;
+  @override
+  String? get agreementNumber;
+  @override
+  String? get vehicleNumber;
   @override
   String? get remarks;
   @override

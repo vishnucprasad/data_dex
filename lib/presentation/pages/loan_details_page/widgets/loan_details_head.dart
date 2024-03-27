@@ -167,44 +167,110 @@ class LoanDetailsHead extends StatelessWidget {
               ),
               kHeightSm,
               if (state.selectedLoan!.miscellaneousDetails != null)
-                Row(
+                Column(
                   children: [
-                    kWidth,
-                    const Text(
-                      'App ID:',
-                      style: TextStyle(
-                        color: kLightColor,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    kWidthMd,
-                    Text(
-                      state.selectedLoan!.miscellaneousDetails!.remarksAndMore
-                          .appId
-                          .getOrCrash(),
-                      style: const TextStyle(
+                    if (state.selectedLoan!.miscellaneousDetails!.remarksAndMore
+                                .agreementNumber !=
+                            null ||
+                        state.selectedLoan!.miscellaneousDetails!.remarksAndMore
+                                .vehicleNumber !=
+                            null)
+                      const Divider(
                         color: kLightColor,
                       ),
-                    ),
-                    const Spacer(),
-                    const Text(
-                      'Lead ID:',
-                      style: TextStyle(
-                        color: kLightColor,
-                        fontWeight: FontWeight.bold,
+                    if (state.selectedLoan!.miscellaneousDetails!.remarksAndMore
+                            .agreementNumber !=
+                        null)
+                      Row(
+                        children: [
+                          kWidth,
+                          const Text(
+                            'Agreement number:',
+                            style: TextStyle(
+                              color: kLightColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          kWidthMd,
+                          Text(
+                            state.selectedLoan!.miscellaneousDetails
+                                    ?.remarksAndMore.agreementNumber ??
+                                'NILL',
+                            style: const TextStyle(
+                              color: kLightColor,
+                            ),
+                          ),
+                          kWidth,
+                        ],
                       ),
-                    ),
-                    kWidthMd,
-                    Text(
-                      state.selectedLoan!.miscellaneousDetails?.remarksAndMore
-                              .leadId
-                              .getOrCrash() ??
-                          'NILL',
-                      style: const TextStyle(
-                        color: kLightColor,
+                    if (state.selectedLoan!.miscellaneousDetails!.remarksAndMore
+                            .vehicleNumber !=
+                        null)
+                      Row(
+                        children: [
+                          kWidth,
+                          const Text(
+                            'Vehicle number:',
+                            style: TextStyle(
+                              color: kLightColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          kWidthMd,
+                          Text(
+                            state.selectedLoan!.miscellaneousDetails
+                                    ?.remarksAndMore.vehicleNumber ??
+                                'NILL',
+                            style: const TextStyle(
+                              color: kLightColor,
+                            ),
+                          ),
+                          kWidth,
+                        ],
                       ),
+                    const Divider(
+                      color: kLightColor,
                     ),
-                    kWidth,
+                    Row(
+                      children: [
+                        kWidth,
+                        const Text(
+                          'App ID:',
+                          style: TextStyle(
+                            color: kLightColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        kWidthMd,
+                        Text(
+                          state.selectedLoan!.miscellaneousDetails!
+                              .remarksAndMore.appId
+                              .getOrCrash(),
+                          style: const TextStyle(
+                            color: kLightColor,
+                          ),
+                        ),
+                        const Spacer(),
+                        const Text(
+                          'Lead ID:',
+                          style: TextStyle(
+                            color: kLightColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        kWidthMd,
+                        Text(
+                          state.selectedLoan!.miscellaneousDetails
+                                  ?.remarksAndMore.leadId
+                                  .getOrCrash() ??
+                              'NILL',
+                          style: const TextStyle(
+                            color: kLightColor,
+                          ),
+                        ),
+                        kWidth,
+                      ],
+                    ),
                   ],
                 ),
               kHeightMd,

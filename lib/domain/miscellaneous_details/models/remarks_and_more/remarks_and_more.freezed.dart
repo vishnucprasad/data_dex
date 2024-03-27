@@ -18,6 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$RemarksAndMore {
   AppId get appId => throw _privateConstructorUsedError;
   LeadId get leadId => throw _privateConstructorUsedError;
+  String? get agreementNumber => throw _privateConstructorUsedError;
+  String? get vehicleNumber => throw _privateConstructorUsedError;
   Remarks? get remarks => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -31,7 +33,12 @@ abstract class $RemarksAndMoreCopyWith<$Res> {
           RemarksAndMore value, $Res Function(RemarksAndMore) then) =
       _$RemarksAndMoreCopyWithImpl<$Res, RemarksAndMore>;
   @useResult
-  $Res call({AppId appId, LeadId leadId, Remarks? remarks});
+  $Res call(
+      {AppId appId,
+      LeadId leadId,
+      String? agreementNumber,
+      String? vehicleNumber,
+      Remarks? remarks});
 }
 
 /// @nodoc
@@ -49,6 +56,8 @@ class _$RemarksAndMoreCopyWithImpl<$Res, $Val extends RemarksAndMore>
   $Res call({
     Object? appId = null,
     Object? leadId = null,
+    Object? agreementNumber = freezed,
+    Object? vehicleNumber = freezed,
     Object? remarks = freezed,
   }) {
     return _then(_value.copyWith(
@@ -60,6 +69,14 @@ class _$RemarksAndMoreCopyWithImpl<$Res, $Val extends RemarksAndMore>
           ? _value.leadId
           : leadId // ignore: cast_nullable_to_non_nullable
               as LeadId,
+      agreementNumber: freezed == agreementNumber
+          ? _value.agreementNumber
+          : agreementNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      vehicleNumber: freezed == vehicleNumber
+          ? _value.vehicleNumber
+          : vehicleNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
       remarks: freezed == remarks
           ? _value.remarks
           : remarks // ignore: cast_nullable_to_non_nullable
@@ -76,7 +93,12 @@ abstract class _$$RemarksAndMoreImplCopyWith<$Res>
       __$$RemarksAndMoreImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AppId appId, LeadId leadId, Remarks? remarks});
+  $Res call(
+      {AppId appId,
+      LeadId leadId,
+      String? agreementNumber,
+      String? vehicleNumber,
+      Remarks? remarks});
 }
 
 /// @nodoc
@@ -92,6 +114,8 @@ class __$$RemarksAndMoreImplCopyWithImpl<$Res>
   $Res call({
     Object? appId = null,
     Object? leadId = null,
+    Object? agreementNumber = freezed,
+    Object? vehicleNumber = freezed,
     Object? remarks = freezed,
   }) {
     return _then(_$RemarksAndMoreImpl(
@@ -103,6 +127,14 @@ class __$$RemarksAndMoreImplCopyWithImpl<$Res>
           ? _value.leadId
           : leadId // ignore: cast_nullable_to_non_nullable
               as LeadId,
+      agreementNumber: freezed == agreementNumber
+          ? _value.agreementNumber
+          : agreementNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      vehicleNumber: freezed == vehicleNumber
+          ? _value.vehicleNumber
+          : vehicleNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
       remarks: freezed == remarks
           ? _value.remarks
           : remarks // ignore: cast_nullable_to_non_nullable
@@ -115,7 +147,11 @@ class __$$RemarksAndMoreImplCopyWithImpl<$Res>
 
 class _$RemarksAndMoreImpl extends _RemarksAndMore {
   const _$RemarksAndMoreImpl(
-      {required this.appId, required this.leadId, required this.remarks})
+      {required this.appId,
+      required this.leadId,
+      required this.agreementNumber,
+      required this.vehicleNumber,
+      required this.remarks})
       : super._();
 
   @override
@@ -123,11 +159,15 @@ class _$RemarksAndMoreImpl extends _RemarksAndMore {
   @override
   final LeadId leadId;
   @override
+  final String? agreementNumber;
+  @override
+  final String? vehicleNumber;
+  @override
   final Remarks? remarks;
 
   @override
   String toString() {
-    return 'RemarksAndMore(appId: $appId, leadId: $leadId, remarks: $remarks)';
+    return 'RemarksAndMore(appId: $appId, leadId: $leadId, agreementNumber: $agreementNumber, vehicleNumber: $vehicleNumber, remarks: $remarks)';
   }
 
   @override
@@ -137,11 +177,16 @@ class _$RemarksAndMoreImpl extends _RemarksAndMore {
             other is _$RemarksAndMoreImpl &&
             (identical(other.appId, appId) || other.appId == appId) &&
             (identical(other.leadId, leadId) || other.leadId == leadId) &&
+            (identical(other.agreementNumber, agreementNumber) ||
+                other.agreementNumber == agreementNumber) &&
+            (identical(other.vehicleNumber, vehicleNumber) ||
+                other.vehicleNumber == vehicleNumber) &&
             (identical(other.remarks, remarks) || other.remarks == remarks));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, appId, leadId, remarks);
+  int get hashCode => Object.hash(
+      runtimeType, appId, leadId, agreementNumber, vehicleNumber, remarks);
 
   @JsonKey(ignore: true)
   @override
@@ -155,6 +200,8 @@ abstract class _RemarksAndMore extends RemarksAndMore {
   const factory _RemarksAndMore(
       {required final AppId appId,
       required final LeadId leadId,
+      required final String? agreementNumber,
+      required final String? vehicleNumber,
       required final Remarks? remarks}) = _$RemarksAndMoreImpl;
   const _RemarksAndMore._() : super._();
 
@@ -162,6 +209,10 @@ abstract class _RemarksAndMore extends RemarksAndMore {
   AppId get appId;
   @override
   LeadId get leadId;
+  @override
+  String? get agreementNumber;
+  @override
+  String? get vehicleNumber;
   @override
   Remarks? get remarks;
   @override
