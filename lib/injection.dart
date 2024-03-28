@@ -7,6 +7,7 @@ import 'package:get_it/get_it.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 import 'injection.config.dart';
 
@@ -17,6 +18,7 @@ Future<void> configureDependencies() async {
   getIt.registerSingleton<AppRouter>(AppRouter());
   getIt.registerSingleton<ImagePicker>(ImagePicker());
   getIt.registerSingleton<Debouncer>(Debouncer(milliseconds: 1000));
+  getIt.registerSingleton<PackageInfo>(await PackageInfo.fromPlatform());
   getIt.registerLazySingleton<FirebaseAuth>(() => FirebaseAuth.instance);
   getIt.registerLazySingleton<GoogleSignIn>(() => GoogleSignIn());
   getIt.registerLazySingleton<FirebaseFirestore>(
