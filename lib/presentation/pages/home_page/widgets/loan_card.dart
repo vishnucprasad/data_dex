@@ -332,6 +332,28 @@ class LoanCard extends StatelessWidget {
                                   ),
                                 ],
                               ),
+                              if (loan.miscellaneousDetails?.remarksAndMore
+                                      .agreementNumber !=
+                                  null)
+                                Row(
+                                  children: [
+                                    const Text(
+                                      "Agreement number:",
+                                      style: TextStyle(
+                                        color: kSecondaryColor,
+                                      ),
+                                    ),
+                                    kWidthMd,
+                                    Text(
+                                      '${loan.miscellaneousDetails!.remarksAndMore.agreementNumber}',
+                                      style: const TextStyle(
+                                        color: kLightColor,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                             ],
                           );
                         },
