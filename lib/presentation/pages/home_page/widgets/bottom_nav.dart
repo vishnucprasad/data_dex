@@ -17,22 +17,26 @@ class BottomNav extends StatelessWidget {
               context.read<AppActionCubit>().bottomNavIndexChanged(index),
           items: [
             SalomonBottomBarItem(
-              icon: const Icon(Icons.checklist_sharp),
+              icon: const Icon(Icons.checklist),
+              activeIcon: const Icon(Icons.checklist_rtl),
               title: const Text("Completed"),
               selectedColor: kPrimaryColor,
             ),
             SalomonBottomBarItem(
-              icon: const Icon(Icons.pending_actions),
+              icon: const Icon(Icons.hourglass_top),
+              activeIcon: const Icon(Icons.hourglass_bottom),
               title: const Text("Pending"),
               selectedColor: kPrimaryColor,
             ),
             SalomonBottomBarItem(
-              icon: const Icon(Icons.error_outline),
+              icon: const Icon(Icons.delete_sweep_outlined),
+              activeIcon: const Icon(Icons.delete_sweep),
               title: const Text("Dropped"),
               selectedColor: kPrimaryColor,
             ),
             SalomonBottomBarItem(
-              icon: const Icon(Icons.schedule),
+              icon: const Icon(Icons.access_time),
+              activeIcon: const Icon(Icons.access_time_filled),
               title: const Text("Follow up"),
               selectedColor: kPrimaryColor,
             ),

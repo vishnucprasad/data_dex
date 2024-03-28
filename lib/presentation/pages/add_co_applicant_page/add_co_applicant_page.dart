@@ -113,11 +113,13 @@ class AddCoApplicantPage extends StatelessWidget {
                               StepperNextButton(
                                 isSaving: state.isSaving,
                                 isLastStep: isLastStep,
+                                isActive: true,
                                 onPressed: details.onStepContinue,
                               ),
                               if (state.formStep != 0) kWidth,
                               if (state.formStep != 0)
                                 StepperBackButton(
+                                  isActive: true,
                                   onPressed: details.onStepCancel,
                                 ),
                             ],

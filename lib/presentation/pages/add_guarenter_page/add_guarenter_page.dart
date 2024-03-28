@@ -131,12 +131,17 @@ class AddGuarenterPage extends StatelessWidget {
                             StepperNextButton(
                               isLastStep: isLastStep,
                               isSaving: state.isSaving,
+                              isActive: !state.isImageUploading &&
+                                  !state.isLocationFetching,
                               onPressed: details.onStepContinue,
                             ),
                             if (state.formStep != 0) kWidthMd,
                             if (state.formStep != 0)
                               StepperBackButton(
-                                  onPressed: details.onStepCancel),
+                                onPressed: details.onStepCancel,
+                                isActive: !state.isImageUploading &&
+                                    !state.isLocationFetching,
+                              ),
                           ],
                         );
                       },
@@ -145,11 +150,13 @@ class AddGuarenterPage extends StatelessWidget {
                               state.formStep - 1)),
                       onStepContinue: () {
                         bool isLastStep = (state.formStep == 2);
-                        if (isLastStep) {
+                        if (isLastStep &&
+                            !state.isLocationFetching &&
+                            !state.isImageUploading) {
                           context
                               .read<GuarenterFormBloc>()
                               .add(const GuarenterFormEvent.saveGuarenter());
-                        } else {
+                        } else if (!isLastStep) {
                           context.read<GuarenterFormBloc>().add(
                               GuarenterFormEvent.formStepChanged(
                                   state.formStep + 1));

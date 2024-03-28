@@ -6,11 +6,13 @@ class StepperNextButton extends StatelessWidget {
     super.key,
     required this.isLastStep,
     required this.isSaving,
+    required this.isActive,
     required this.onPressed,
   });
 
   final bool isLastStep;
   final bool isSaving;
+  final bool isActive;
   final void Function()? onPressed;
 
   @override
@@ -20,7 +22,7 @@ class StepperNextButton extends StatelessWidget {
         style: ButtonStyle(
           elevation: const MaterialStatePropertyAll<double>(0),
           backgroundColor: MaterialStatePropertyAll<Color>(
-            Colors.lightBlue.shade600,
+            isActive ? Colors.lightBlue.shade600 : kGreyColor,
           ),
           foregroundColor: const MaterialStatePropertyAll<Color>(
             kLightColor,

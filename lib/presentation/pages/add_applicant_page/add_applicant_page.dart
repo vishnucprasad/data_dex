@@ -130,12 +130,17 @@ class AddApplicantPage extends StatelessWidget {
                             StepperNextButton(
                               isLastStep: isLastStep,
                               isSaving: state.isSaving,
+                              isActive: !state.isImageUploading &&
+                                  !state.isLocationFetching,
                               onPressed: details.onStepContinue,
                             ),
                             if (state.formStep != 0) kWidth,
                             if (state.formStep != 0)
                               StepperBackButton(
-                                  onPressed: details.onStepCancel),
+                                isActive: !state.isImageUploading &&
+                                    !state.isLocationFetching,
+                                onPressed: details.onStepCancel,
+                              ),
                           ],
                         );
                       },
@@ -144,11 +149,13 @@ class AddApplicantPage extends StatelessWidget {
                               state.formStep - 1)),
                       onStepContinue: () {
                         bool isLastStep = (state.formStep == 2);
-                        if (isLastStep) {
+                        if (isLastStep &&
+                            !state.isLocationFetching &&
+                            !state.isImageUploading) {
                           context
                               .read<ApplicantFormBloc>()
                               .add(const ApplicantFormEvent.saveApplicant());
-                        } else {
+                        } else if (!isLastStep) {
                           context.read<ApplicantFormBloc>().add(
                               ApplicantFormEvent.formStepChanged(
                                   state.formStep + 1));

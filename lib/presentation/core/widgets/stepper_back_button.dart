@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 class StepperBackButton extends StatelessWidget {
   const StepperBackButton({
     super.key,
+    required this.isActive,
     required this.onPressed,
   });
 
+  final bool isActive;
   final void Function()? onPressed;
 
   @override
@@ -16,10 +18,10 @@ class StepperBackButton extends StatelessWidget {
         style: ButtonStyle(
           elevation: const MaterialStatePropertyAll<double>(0),
           backgroundColor: MaterialStatePropertyAll<Color>(
-            kPrimaryColor.withOpacity(0.125),
+            isActive ? kPrimaryColor.withOpacity(0.125) : kGreyColor,
           ),
-          foregroundColor: const MaterialStatePropertyAll<Color>(
-            kPrimaryColor,
+          foregroundColor: MaterialStatePropertyAll<Color>(
+            isActive ? kPrimaryColor : kLightColor,
           ),
           shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
             RoundedRectangleBorder(

@@ -76,11 +76,17 @@ class AddMiscellaneousDetailsPage extends StatelessWidget {
                               StepperNextButton(
                                 isSaving: state.isSaving,
                                 isLastStep: isLastStep,
+                                isActive: !state.isApplicantImageUploading &&
+                                    !state.isCoApplicantImageUploading &&
+                                    !state.isGuarenterImageUploading,
                                 onPressed: details.onStepContinue,
                               ),
                               if (state.formStep != 0) kWidthMd,
                               if (state.formStep != 0)
                                 StepperBackButton(
+                                  isActive: !state.isApplicantImageUploading &&
+                                      !state.isCoApplicantImageUploading &&
+                                      !state.isGuarenterImageUploading,
                                   onPressed: details.onStepCancel,
                                 ),
                             ],
@@ -96,7 +102,9 @@ class AddMiscellaneousDetailsPage extends StatelessWidget {
                             context.read<MiscellaneousDetailsFormBloc>().add(
                                 const MiscellaneousDetailsFormEvent
                                     .saveMiscellaneousDetails());
-                          } else {
+                          } else if (!state.isApplicantImageUploading &&
+                              !state.isCoApplicantImageUploading &&
+                              !state.isGuarenterImageUploading) {
                             context.read<MiscellaneousDetailsFormBloc>().add(
                                 MiscellaneousDetailsFormEvent.formStepChanged(
                                     state.formStep + 1));

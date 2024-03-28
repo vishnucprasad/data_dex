@@ -116,12 +116,14 @@ class AddLoanParticularsPage extends StatelessWidget {
                               StepperNextButton(
                                 isSaving: state.isSaving,
                                 isLastStep: isLastStep,
+                                isActive: true,
                                 onPressed: details.onStepContinue,
                               ),
                               if (state.formStep != 0) kWidthMd,
                               if (state.formStep != 0)
                                 StepperBackButton(
                                   onPressed: details.onStepCancel,
+                                  isActive: true,
                                 ),
                             ],
                           );

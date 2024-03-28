@@ -262,9 +262,11 @@ class LoanCard extends StatelessWidget {
                                       color: Colors.red,
                                     ),
                                   ),
-                                  onPressed: () => context
-                                      .read<LoanActorBloc>()
-                                      .add(LoanActorEvent.deleteLoan(loan.id)),
+                                  onPressed: () {
+                                    context.read<LoanActorBloc>().add(
+                                        LoanActorEvent.deleteLoan(loan.id));
+                                    context.maybePop();
+                                  },
                                 ),
                               ).show(context),
                               icon: const Icon(Icons.delete),
