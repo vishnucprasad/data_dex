@@ -29,6 +29,8 @@ mixin _$LoanDetailsDto {
   double get stampDuty => throw _privateConstructorUsedError;
   double? get dateShiftingCharge => throw _privateConstructorUsedError;
   double? get counterAmount => throw _privateConstructorUsedError;
+  int? get loanScheme => throw _privateConstructorUsedError;
+  List<int>? get fundedChargesList => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -51,7 +53,9 @@ abstract class $LoanDetailsDtoCopyWith<$Res> {
       double? pacAmount,
       double stampDuty,
       double? dateShiftingCharge,
-      double? counterAmount});
+      double? counterAmount,
+      int? loanScheme,
+      List<int>? fundedChargesList});
 }
 
 /// @nodoc
@@ -76,6 +80,8 @@ class _$LoanDetailsDtoCopyWithImpl<$Res, $Val extends LoanDetailsDto>
     Object? stampDuty = null,
     Object? dateShiftingCharge = freezed,
     Object? counterAmount = freezed,
+    Object? loanScheme = freezed,
+    Object? fundedChargesList = freezed,
   }) {
     return _then(_value.copyWith(
       loanAmount: null == loanAmount
@@ -114,6 +120,14 @@ class _$LoanDetailsDtoCopyWithImpl<$Res, $Val extends LoanDetailsDto>
           ? _value.counterAmount
           : counterAmount // ignore: cast_nullable_to_non_nullable
               as double?,
+      loanScheme: freezed == loanScheme
+          ? _value.loanScheme
+          : loanScheme // ignore: cast_nullable_to_non_nullable
+              as int?,
+      fundedChargesList: freezed == fundedChargesList
+          ? _value.fundedChargesList
+          : fundedChargesList // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
     ) as $Val);
   }
 }
@@ -135,7 +149,9 @@ abstract class _$$LoanDetailsDtoImplCopyWith<$Res>
       double? pacAmount,
       double stampDuty,
       double? dateShiftingCharge,
-      double? counterAmount});
+      double? counterAmount,
+      int? loanScheme,
+      List<int>? fundedChargesList});
 }
 
 /// @nodoc
@@ -158,6 +174,8 @@ class __$$LoanDetailsDtoImplCopyWithImpl<$Res>
     Object? stampDuty = null,
     Object? dateShiftingCharge = freezed,
     Object? counterAmount = freezed,
+    Object? loanScheme = freezed,
+    Object? fundedChargesList = freezed,
   }) {
     return _then(_$LoanDetailsDtoImpl(
       loanAmount: null == loanAmount
@@ -196,6 +214,14 @@ class __$$LoanDetailsDtoImplCopyWithImpl<$Res>
           ? _value.counterAmount
           : counterAmount // ignore: cast_nullable_to_non_nullable
               as double?,
+      loanScheme: freezed == loanScheme
+          ? _value.loanScheme
+          : loanScheme // ignore: cast_nullable_to_non_nullable
+              as int?,
+      fundedChargesList: freezed == fundedChargesList
+          ? _value._fundedChargesList
+          : fundedChargesList // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
     ));
   }
 }
@@ -212,8 +238,11 @@ class _$LoanDetailsDtoImpl extends _LoanDetailsDto {
       required this.pacAmount,
       required this.stampDuty,
       required this.dateShiftingCharge,
-      required this.counterAmount})
-      : super._();
+      required this.counterAmount,
+      required this.loanScheme,
+      required final List<int>? fundedChargesList})
+      : _fundedChargesList = fundedChargesList,
+        super._();
 
   factory _$LoanDetailsDtoImpl.fromJson(Map<String, dynamic> json) =>
       _$$LoanDetailsDtoImplFromJson(json);
@@ -236,10 +265,22 @@ class _$LoanDetailsDtoImpl extends _LoanDetailsDto {
   final double? dateShiftingCharge;
   @override
   final double? counterAmount;
+  @override
+  final int? loanScheme;
+  final List<int>? _fundedChargesList;
+  @override
+  List<int>? get fundedChargesList {
+    final value = _fundedChargesList;
+    if (value == null) return null;
+    if (_fundedChargesList is EqualUnmodifiableListView)
+      return _fundedChargesList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'LoanDetailsDto(loanAmount: $loanAmount, ltv: $ltv, serviceCharge: $serviceCharge, documentationCharge: $documentationCharge, lifeAmount: $lifeAmount, pacAmount: $pacAmount, stampDuty: $stampDuty, dateShiftingCharge: $dateShiftingCharge, counterAmount: $counterAmount)';
+    return 'LoanDetailsDto(loanAmount: $loanAmount, ltv: $ltv, serviceCharge: $serviceCharge, documentationCharge: $documentationCharge, lifeAmount: $lifeAmount, pacAmount: $pacAmount, stampDuty: $stampDuty, dateShiftingCharge: $dateShiftingCharge, counterAmount: $counterAmount, loanScheme: $loanScheme, fundedChargesList: $fundedChargesList)';
   }
 
   @override
@@ -263,7 +304,11 @@ class _$LoanDetailsDtoImpl extends _LoanDetailsDto {
             (identical(other.dateShiftingCharge, dateShiftingCharge) ||
                 other.dateShiftingCharge == dateShiftingCharge) &&
             (identical(other.counterAmount, counterAmount) ||
-                other.counterAmount == counterAmount));
+                other.counterAmount == counterAmount) &&
+            (identical(other.loanScheme, loanScheme) ||
+                other.loanScheme == loanScheme) &&
+            const DeepCollectionEquality()
+                .equals(other._fundedChargesList, _fundedChargesList));
   }
 
   @JsonKey(ignore: true)
@@ -278,7 +323,9 @@ class _$LoanDetailsDtoImpl extends _LoanDetailsDto {
       pacAmount,
       stampDuty,
       dateShiftingCharge,
-      counterAmount);
+      counterAmount,
+      loanScheme,
+      const DeepCollectionEquality().hash(_fundedChargesList));
 
   @JsonKey(ignore: true)
   @override
@@ -305,7 +352,9 @@ abstract class _LoanDetailsDto extends LoanDetailsDto {
       required final double? pacAmount,
       required final double stampDuty,
       required final double? dateShiftingCharge,
-      required final double? counterAmount}) = _$LoanDetailsDtoImpl;
+      required final double? counterAmount,
+      required final int? loanScheme,
+      required final List<int>? fundedChargesList}) = _$LoanDetailsDtoImpl;
   const _LoanDetailsDto._() : super._();
 
   factory _LoanDetailsDto.fromJson(Map<String, dynamic> json) =
@@ -329,6 +378,10 @@ abstract class _LoanDetailsDto extends LoanDetailsDto {
   double? get dateShiftingCharge;
   @override
   double? get counterAmount;
+  @override
+  int? get loanScheme;
+  @override
+  List<int>? get fundedChargesList;
   @override
   @JsonKey(ignore: true)
   _$$LoanDetailsDtoImplCopyWith<_$LoanDetailsDtoImpl> get copyWith =>

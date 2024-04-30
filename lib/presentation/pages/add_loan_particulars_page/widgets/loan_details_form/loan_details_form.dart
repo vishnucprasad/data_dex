@@ -3,6 +3,7 @@ import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/lo
 import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/loan_details_form/date_shifting_charge_input_field.dart';
 import 'package:data_dex/presentation/core/widgets/form_divider.dart';
 import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/loan_details_form/documentation_charge_input_field.dart';
+import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/loan_details_form/loan_scheme_switch.dart';
 import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/loan_details_form/life_amount_input_field.dart';
 import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/loan_details_form/loan_amount_input_field.dart';
 import 'package:data_dex/presentation/pages/add_loan_particulars_page/widgets/loan_details_form/ltv_input_field.dart';
@@ -22,6 +23,10 @@ class LoanDetailsForm extends StatelessWidget {
         LoanAmountInputField(),
         kHeightMd,
         LTVInputField(),
+        kHeightMd,
+        FormDivider(text: 'Loan scheme'),
+        kHeightMd,
+        LoanSchemeSwitch(),
         kHeightMd,
         FormDivider(text: 'Deductions'),
         kHeightMd,

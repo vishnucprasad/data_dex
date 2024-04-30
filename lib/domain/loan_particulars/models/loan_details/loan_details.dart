@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/domain/core/value_failure.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -18,6 +19,8 @@ class LoanDetails with _$LoanDetails {
     required RequiredPrice stampDuty,
     required OptionalPrice dateShiftingCharge,
     required OptionalPrice counterAmount,
+    required LoanScheme? loanScheme,
+    required List<int>? fundedChargesList,
   }) = _LoanDetails;
 
   factory LoanDetails.empty() {
@@ -31,6 +34,8 @@ class LoanDetails with _$LoanDetails {
       stampDuty: RequiredPrice(''),
       dateShiftingCharge: OptionalPrice(''),
       counterAmount: OptionalPrice(''),
+      loanScheme: LoanScheme.nonFunded,
+      fundedChargesList: null,
     );
   }
 

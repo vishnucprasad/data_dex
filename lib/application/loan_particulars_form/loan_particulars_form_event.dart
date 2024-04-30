@@ -36,6 +36,15 @@ class LoanParticularsFormEvent with _$LoanParticularsFormEvent {
   const factory LoanParticularsFormEvent.ltvChanged(
     String ltv,
   ) = _LtvChanged;
+  const factory LoanParticularsFormEvent.loanSchemeChanged(
+    LoanScheme loanScheme,
+  ) = _LoanSchemeChanged;
+  const factory LoanParticularsFormEvent.fundAdded(
+    FundOptions fund,
+  ) = _fundAdded;
+  const factory LoanParticularsFormEvent.fundRemoved(
+    FundOptions fund,
+  ) = _fundRemoved;
   const factory LoanParticularsFormEvent.serviceChargeChanged(
     String serviceCharge,
   ) = _ServiceChargeChanged;

@@ -31,6 +31,9 @@ mixin _$LoanParticularsFormEvent {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -62,6 +65,9 @@ mixin _$LoanParticularsFormEvent {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -91,6 +97,9 @@ mixin _$LoanParticularsFormEvent {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -121,6 +130,9 @@ mixin _$LoanParticularsFormEvent {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -151,6 +163,9 @@ mixin _$LoanParticularsFormEvent {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -181,6 +196,9 @@ mixin _$LoanParticularsFormEvent {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -309,6 +327,9 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -343,6 +364,9 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -375,6 +399,9 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -411,6 +438,9 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -444,6 +474,9 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -477,6 +510,9 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -590,6 +626,9 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -624,6 +663,9 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -656,6 +698,9 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -692,6 +737,9 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -725,6 +773,9 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -758,6 +809,9 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -869,6 +923,9 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -903,6 +960,9 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -935,6 +995,9 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -971,6 +1034,9 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -1004,6 +1070,9 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -1037,6 +1106,9 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -1150,6 +1222,9 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -1184,6 +1259,9 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -1216,6 +1294,9 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -1252,6 +1333,9 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -1285,6 +1369,9 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -1318,6 +1405,9 @@ class _$DealerNameChangedImpl implements _DealerNameChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -1433,6 +1523,9 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -1467,6 +1560,9 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -1499,6 +1595,9 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -1535,6 +1634,9 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -1568,6 +1670,9 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -1601,6 +1706,9 @@ class _$SubDealerNameChangedImpl implements _SubDealerNameChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -1715,6 +1823,9 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -1749,6 +1860,9 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -1781,6 +1895,9 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -1817,6 +1934,9 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -1850,6 +1970,9 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -1883,6 +2006,9 @@ class _$BrokerNameChangedImpl implements _BrokerNameChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -1997,6 +2123,9 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -2031,6 +2160,9 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -2063,6 +2195,9 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -2099,6 +2234,9 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -2132,6 +2270,9 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -2165,6 +2306,9 @@ class _$VehicleNameChangedImpl implements _VehicleNameChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -2281,6 +2425,9 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -2315,6 +2462,9 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -2347,6 +2497,9 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -2383,6 +2536,9 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -2416,6 +2572,9 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -2449,6 +2608,9 @@ class _$ExShowroomPriceChangedImpl implements _ExShowroomPriceChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -2563,6 +2725,9 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -2597,6 +2762,9 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -2629,6 +2797,9 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -2665,6 +2836,9 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -2698,6 +2872,9 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -2731,6 +2908,9 @@ class _$OnRoadPriceChangedImpl implements _OnRoadPriceChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -2845,6 +3025,9 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -2879,6 +3062,9 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -2911,6 +3097,9 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -2947,6 +3136,9 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -2980,6 +3172,9 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -3013,6 +3208,9 @@ class _$LoanAmountChangedImpl implements _LoanAmountChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -3124,6 +3322,9 @@ class _$LtvChangedImpl implements _LtvChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -3158,6 +3359,9 @@ class _$LtvChangedImpl implements _LtvChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -3190,6 +3394,9 @@ class _$LtvChangedImpl implements _LtvChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -3226,6 +3433,9 @@ class _$LtvChangedImpl implements _LtvChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -3259,6 +3469,9 @@ class _$LtvChangedImpl implements _LtvChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -3292,6 +3505,9 @@ class _$LtvChangedImpl implements _LtvChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -3322,6 +3538,898 @@ abstract class _LtvChanged implements LoanParticularsFormEvent {
   String get ltv;
   @JsonKey(ignore: true)
   _$$LtvChangedImplCopyWith<_$LtvChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoanSchemeChangedImplCopyWith<$Res> {
+  factory _$$LoanSchemeChangedImplCopyWith(_$LoanSchemeChangedImpl value,
+          $Res Function(_$LoanSchemeChangedImpl) then) =
+      __$$LoanSchemeChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({LoanScheme loanScheme});
+}
+
+/// @nodoc
+class __$$LoanSchemeChangedImplCopyWithImpl<$Res>
+    extends _$LoanParticularsFormEventCopyWithImpl<$Res,
+        _$LoanSchemeChangedImpl>
+    implements _$$LoanSchemeChangedImplCopyWith<$Res> {
+  __$$LoanSchemeChangedImplCopyWithImpl(_$LoanSchemeChangedImpl _value,
+      $Res Function(_$LoanSchemeChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? loanScheme = null,
+  }) {
+    return _then(_$LoanSchemeChangedImpl(
+      null == loanScheme
+          ? _value.loanScheme
+          : loanScheme // ignore: cast_nullable_to_non_nullable
+              as LoanScheme,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoanSchemeChangedImpl implements _LoanSchemeChanged {
+  const _$LoanSchemeChangedImpl(this.loanScheme);
+
+  @override
+  final LoanScheme loanScheme;
+
+  @override
+  String toString() {
+    return 'LoanParticularsFormEvent.loanSchemeChanged(loanScheme: $loanScheme)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoanSchemeChangedImpl &&
+            (identical(other.loanScheme, loanScheme) ||
+                other.loanScheme == loanScheme));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, loanScheme);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoanSchemeChangedImplCopyWith<_$LoanSchemeChangedImpl> get copyWith =>
+      __$$LoanSchemeChangedImplCopyWithImpl<_$LoanSchemeChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<Loan> initializeOption, bool? closeAfterSave)
+        initialized,
+    required TResult Function(UniqueId loanId) loanIdChanged,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String dealerName) dealerNameChanged,
+    required TResult Function(String subDealerName) subDealerNameChanged,
+    required TResult Function(String brokerName) brokerNameChanged,
+    required TResult Function(String vehicleName) vehicleNameChanged,
+    required TResult Function(String exShowroomPrice) exShowroomPriceChanged,
+    required TResult Function(String onRoadPrice) onRoadPriceChanged,
+    required TResult Function(String loanAmount) loanAmountChanged,
+    required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
+    required TResult Function(String serviceCharge) serviceChargeChanged,
+    required TResult Function(String documentationCharge)
+        documentationChargeChanged,
+    required TResult Function(String lifeAmount) lifeAmountChanged,
+    required TResult Function(String pacAmount) pacAmountChanged,
+    required TResult Function(String stampDuty) stampDutyChanged,
+    required TResult Function(String dateShiftingCharge)
+        dateShiftingChargeChanged,
+    required TResult Function(String counterAmount) counterAmountChanged,
+    required TResult Function(String emiAmount) emiAmountChanged,
+    required TResult Function(String tenure) tenureChanged,
+    required TResult Function(DateTime firstEMIDate) firstEMIDateChanged,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String repaymentMode) repaymentModeChanged,
+    required TResult Function() saveLoanParticulars,
+  }) {
+    return loanSchemeChanged(loanScheme);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Loan> initializeOption, bool? closeAfterSave)?
+        initialized,
+    TResult? Function(UniqueId loanId)? loanIdChanged,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String dealerName)? dealerNameChanged,
+    TResult? Function(String subDealerName)? subDealerNameChanged,
+    TResult? Function(String brokerName)? brokerNameChanged,
+    TResult? Function(String vehicleName)? vehicleNameChanged,
+    TResult? Function(String exShowroomPrice)? exShowroomPriceChanged,
+    TResult? Function(String onRoadPrice)? onRoadPriceChanged,
+    TResult? Function(String loanAmount)? loanAmountChanged,
+    TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
+    TResult? Function(String serviceCharge)? serviceChargeChanged,
+    TResult? Function(String documentationCharge)? documentationChargeChanged,
+    TResult? Function(String lifeAmount)? lifeAmountChanged,
+    TResult? Function(String pacAmount)? pacAmountChanged,
+    TResult? Function(String stampDuty)? stampDutyChanged,
+    TResult? Function(String dateShiftingCharge)? dateShiftingChargeChanged,
+    TResult? Function(String counterAmount)? counterAmountChanged,
+    TResult? Function(String emiAmount)? emiAmountChanged,
+    TResult? Function(String tenure)? tenureChanged,
+    TResult? Function(DateTime firstEMIDate)? firstEMIDateChanged,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String repaymentMode)? repaymentModeChanged,
+    TResult? Function()? saveLoanParticulars,
+  }) {
+    return loanSchemeChanged?.call(loanScheme);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Loan> initializeOption, bool? closeAfterSave)?
+        initialized,
+    TResult Function(UniqueId loanId)? loanIdChanged,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String dealerName)? dealerNameChanged,
+    TResult Function(String subDealerName)? subDealerNameChanged,
+    TResult Function(String brokerName)? brokerNameChanged,
+    TResult Function(String vehicleName)? vehicleNameChanged,
+    TResult Function(String exShowroomPrice)? exShowroomPriceChanged,
+    TResult Function(String onRoadPrice)? onRoadPriceChanged,
+    TResult Function(String loanAmount)? loanAmountChanged,
+    TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
+    TResult Function(String serviceCharge)? serviceChargeChanged,
+    TResult Function(String documentationCharge)? documentationChargeChanged,
+    TResult Function(String lifeAmount)? lifeAmountChanged,
+    TResult Function(String pacAmount)? pacAmountChanged,
+    TResult Function(String stampDuty)? stampDutyChanged,
+    TResult Function(String dateShiftingCharge)? dateShiftingChargeChanged,
+    TResult Function(String counterAmount)? counterAmountChanged,
+    TResult Function(String emiAmount)? emiAmountChanged,
+    TResult Function(String tenure)? tenureChanged,
+    TResult Function(DateTime firstEMIDate)? firstEMIDateChanged,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String repaymentMode)? repaymentModeChanged,
+    TResult Function()? saveLoanParticulars,
+    required TResult orElse(),
+  }) {
+    if (loanSchemeChanged != null) {
+      return loanSchemeChanged(loanScheme);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_LoanIdChanged value) loanIdChanged,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_DealerNameChanged value) dealerNameChanged,
+    required TResult Function(_SubDealerNameChanged value) subDealerNameChanged,
+    required TResult Function(_BrokerNameChanged value) brokerNameChanged,
+    required TResult Function(_VehicleNameChanged value) vehicleNameChanged,
+    required TResult Function(_ExShowroomPriceChanged value)
+        exShowroomPriceChanged,
+    required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
+    required TResult Function(_LoanAmountChanged value) loanAmountChanged,
+    required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
+    required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
+    required TResult Function(_DocumentationChargeChanged value)
+        documentationChargeChanged,
+    required TResult Function(_LifeAmountChanged value) lifeAmountChanged,
+    required TResult Function(_PacAmountChanged value) pacAmountChanged,
+    required TResult Function(_StampDutyChanged value) stampDutyChanged,
+    required TResult Function(_DateShiftingChargeChanged value)
+        dateShiftingChargeChanged,
+    required TResult Function(_CounterAmountChanged value) counterAmountChanged,
+    required TResult Function(_EMIAmountChanged value) emiAmountChanged,
+    required TResult Function(_TenureChanged value) tenureChanged,
+    required TResult Function(_FirstEMIDateChanged value) firstEMIDateChanged,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_RepaymentModeChanged value) repaymentModeChanged,
+    required TResult Function(_SaveLoanParticulars value) saveLoanParticulars,
+  }) {
+    return loanSchemeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_LoanIdChanged value)? loanIdChanged,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_DealerNameChanged value)? dealerNameChanged,
+    TResult? Function(_SubDealerNameChanged value)? subDealerNameChanged,
+    TResult? Function(_BrokerNameChanged value)? brokerNameChanged,
+    TResult? Function(_VehicleNameChanged value)? vehicleNameChanged,
+    TResult? Function(_ExShowroomPriceChanged value)? exShowroomPriceChanged,
+    TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
+    TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
+    TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
+    TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
+    TResult? Function(_DocumentationChargeChanged value)?
+        documentationChargeChanged,
+    TResult? Function(_LifeAmountChanged value)? lifeAmountChanged,
+    TResult? Function(_PacAmountChanged value)? pacAmountChanged,
+    TResult? Function(_StampDutyChanged value)? stampDutyChanged,
+    TResult? Function(_DateShiftingChargeChanged value)?
+        dateShiftingChargeChanged,
+    TResult? Function(_CounterAmountChanged value)? counterAmountChanged,
+    TResult? Function(_EMIAmountChanged value)? emiAmountChanged,
+    TResult? Function(_TenureChanged value)? tenureChanged,
+    TResult? Function(_FirstEMIDateChanged value)? firstEMIDateChanged,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_RepaymentModeChanged value)? repaymentModeChanged,
+    TResult? Function(_SaveLoanParticulars value)? saveLoanParticulars,
+  }) {
+    return loanSchemeChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_LoanIdChanged value)? loanIdChanged,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_DealerNameChanged value)? dealerNameChanged,
+    TResult Function(_SubDealerNameChanged value)? subDealerNameChanged,
+    TResult Function(_BrokerNameChanged value)? brokerNameChanged,
+    TResult Function(_VehicleNameChanged value)? vehicleNameChanged,
+    TResult Function(_ExShowroomPriceChanged value)? exShowroomPriceChanged,
+    TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
+    TResult Function(_LoanAmountChanged value)? loanAmountChanged,
+    TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
+    TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
+    TResult Function(_DocumentationChargeChanged value)?
+        documentationChargeChanged,
+    TResult Function(_LifeAmountChanged value)? lifeAmountChanged,
+    TResult Function(_PacAmountChanged value)? pacAmountChanged,
+    TResult Function(_StampDutyChanged value)? stampDutyChanged,
+    TResult Function(_DateShiftingChargeChanged value)?
+        dateShiftingChargeChanged,
+    TResult Function(_CounterAmountChanged value)? counterAmountChanged,
+    TResult Function(_EMIAmountChanged value)? emiAmountChanged,
+    TResult Function(_TenureChanged value)? tenureChanged,
+    TResult Function(_FirstEMIDateChanged value)? firstEMIDateChanged,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_RepaymentModeChanged value)? repaymentModeChanged,
+    TResult Function(_SaveLoanParticulars value)? saveLoanParticulars,
+    required TResult orElse(),
+  }) {
+    if (loanSchemeChanged != null) {
+      return loanSchemeChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoanSchemeChanged implements LoanParticularsFormEvent {
+  const factory _LoanSchemeChanged(final LoanScheme loanScheme) =
+      _$LoanSchemeChangedImpl;
+
+  LoanScheme get loanScheme;
+  @JsonKey(ignore: true)
+  _$$LoanSchemeChangedImplCopyWith<_$LoanSchemeChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$fundAddedImplCopyWith<$Res> {
+  factory _$$fundAddedImplCopyWith(
+          _$fundAddedImpl value, $Res Function(_$fundAddedImpl) then) =
+      __$$fundAddedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({FundOptions fund});
+}
+
+/// @nodoc
+class __$$fundAddedImplCopyWithImpl<$Res>
+    extends _$LoanParticularsFormEventCopyWithImpl<$Res, _$fundAddedImpl>
+    implements _$$fundAddedImplCopyWith<$Res> {
+  __$$fundAddedImplCopyWithImpl(
+      _$fundAddedImpl _value, $Res Function(_$fundAddedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? fund = null,
+  }) {
+    return _then(_$fundAddedImpl(
+      null == fund
+          ? _value.fund
+          : fund // ignore: cast_nullable_to_non_nullable
+              as FundOptions,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$fundAddedImpl implements _fundAdded {
+  const _$fundAddedImpl(this.fund);
+
+  @override
+  final FundOptions fund;
+
+  @override
+  String toString() {
+    return 'LoanParticularsFormEvent.fundAdded(fund: $fund)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$fundAddedImpl &&
+            (identical(other.fund, fund) || other.fund == fund));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, fund);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$fundAddedImplCopyWith<_$fundAddedImpl> get copyWith =>
+      __$$fundAddedImplCopyWithImpl<_$fundAddedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<Loan> initializeOption, bool? closeAfterSave)
+        initialized,
+    required TResult Function(UniqueId loanId) loanIdChanged,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String dealerName) dealerNameChanged,
+    required TResult Function(String subDealerName) subDealerNameChanged,
+    required TResult Function(String brokerName) brokerNameChanged,
+    required TResult Function(String vehicleName) vehicleNameChanged,
+    required TResult Function(String exShowroomPrice) exShowroomPriceChanged,
+    required TResult Function(String onRoadPrice) onRoadPriceChanged,
+    required TResult Function(String loanAmount) loanAmountChanged,
+    required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
+    required TResult Function(String serviceCharge) serviceChargeChanged,
+    required TResult Function(String documentationCharge)
+        documentationChargeChanged,
+    required TResult Function(String lifeAmount) lifeAmountChanged,
+    required TResult Function(String pacAmount) pacAmountChanged,
+    required TResult Function(String stampDuty) stampDutyChanged,
+    required TResult Function(String dateShiftingCharge)
+        dateShiftingChargeChanged,
+    required TResult Function(String counterAmount) counterAmountChanged,
+    required TResult Function(String emiAmount) emiAmountChanged,
+    required TResult Function(String tenure) tenureChanged,
+    required TResult Function(DateTime firstEMIDate) firstEMIDateChanged,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String repaymentMode) repaymentModeChanged,
+    required TResult Function() saveLoanParticulars,
+  }) {
+    return fundAdded(fund);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Loan> initializeOption, bool? closeAfterSave)?
+        initialized,
+    TResult? Function(UniqueId loanId)? loanIdChanged,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String dealerName)? dealerNameChanged,
+    TResult? Function(String subDealerName)? subDealerNameChanged,
+    TResult? Function(String brokerName)? brokerNameChanged,
+    TResult? Function(String vehicleName)? vehicleNameChanged,
+    TResult? Function(String exShowroomPrice)? exShowroomPriceChanged,
+    TResult? Function(String onRoadPrice)? onRoadPriceChanged,
+    TResult? Function(String loanAmount)? loanAmountChanged,
+    TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
+    TResult? Function(String serviceCharge)? serviceChargeChanged,
+    TResult? Function(String documentationCharge)? documentationChargeChanged,
+    TResult? Function(String lifeAmount)? lifeAmountChanged,
+    TResult? Function(String pacAmount)? pacAmountChanged,
+    TResult? Function(String stampDuty)? stampDutyChanged,
+    TResult? Function(String dateShiftingCharge)? dateShiftingChargeChanged,
+    TResult? Function(String counterAmount)? counterAmountChanged,
+    TResult? Function(String emiAmount)? emiAmountChanged,
+    TResult? Function(String tenure)? tenureChanged,
+    TResult? Function(DateTime firstEMIDate)? firstEMIDateChanged,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String repaymentMode)? repaymentModeChanged,
+    TResult? Function()? saveLoanParticulars,
+  }) {
+    return fundAdded?.call(fund);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Loan> initializeOption, bool? closeAfterSave)?
+        initialized,
+    TResult Function(UniqueId loanId)? loanIdChanged,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String dealerName)? dealerNameChanged,
+    TResult Function(String subDealerName)? subDealerNameChanged,
+    TResult Function(String brokerName)? brokerNameChanged,
+    TResult Function(String vehicleName)? vehicleNameChanged,
+    TResult Function(String exShowroomPrice)? exShowroomPriceChanged,
+    TResult Function(String onRoadPrice)? onRoadPriceChanged,
+    TResult Function(String loanAmount)? loanAmountChanged,
+    TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
+    TResult Function(String serviceCharge)? serviceChargeChanged,
+    TResult Function(String documentationCharge)? documentationChargeChanged,
+    TResult Function(String lifeAmount)? lifeAmountChanged,
+    TResult Function(String pacAmount)? pacAmountChanged,
+    TResult Function(String stampDuty)? stampDutyChanged,
+    TResult Function(String dateShiftingCharge)? dateShiftingChargeChanged,
+    TResult Function(String counterAmount)? counterAmountChanged,
+    TResult Function(String emiAmount)? emiAmountChanged,
+    TResult Function(String tenure)? tenureChanged,
+    TResult Function(DateTime firstEMIDate)? firstEMIDateChanged,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String repaymentMode)? repaymentModeChanged,
+    TResult Function()? saveLoanParticulars,
+    required TResult orElse(),
+  }) {
+    if (fundAdded != null) {
+      return fundAdded(fund);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_LoanIdChanged value) loanIdChanged,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_DealerNameChanged value) dealerNameChanged,
+    required TResult Function(_SubDealerNameChanged value) subDealerNameChanged,
+    required TResult Function(_BrokerNameChanged value) brokerNameChanged,
+    required TResult Function(_VehicleNameChanged value) vehicleNameChanged,
+    required TResult Function(_ExShowroomPriceChanged value)
+        exShowroomPriceChanged,
+    required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
+    required TResult Function(_LoanAmountChanged value) loanAmountChanged,
+    required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
+    required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
+    required TResult Function(_DocumentationChargeChanged value)
+        documentationChargeChanged,
+    required TResult Function(_LifeAmountChanged value) lifeAmountChanged,
+    required TResult Function(_PacAmountChanged value) pacAmountChanged,
+    required TResult Function(_StampDutyChanged value) stampDutyChanged,
+    required TResult Function(_DateShiftingChargeChanged value)
+        dateShiftingChargeChanged,
+    required TResult Function(_CounterAmountChanged value) counterAmountChanged,
+    required TResult Function(_EMIAmountChanged value) emiAmountChanged,
+    required TResult Function(_TenureChanged value) tenureChanged,
+    required TResult Function(_FirstEMIDateChanged value) firstEMIDateChanged,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_RepaymentModeChanged value) repaymentModeChanged,
+    required TResult Function(_SaveLoanParticulars value) saveLoanParticulars,
+  }) {
+    return fundAdded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_LoanIdChanged value)? loanIdChanged,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_DealerNameChanged value)? dealerNameChanged,
+    TResult? Function(_SubDealerNameChanged value)? subDealerNameChanged,
+    TResult? Function(_BrokerNameChanged value)? brokerNameChanged,
+    TResult? Function(_VehicleNameChanged value)? vehicleNameChanged,
+    TResult? Function(_ExShowroomPriceChanged value)? exShowroomPriceChanged,
+    TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
+    TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
+    TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
+    TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
+    TResult? Function(_DocumentationChargeChanged value)?
+        documentationChargeChanged,
+    TResult? Function(_LifeAmountChanged value)? lifeAmountChanged,
+    TResult? Function(_PacAmountChanged value)? pacAmountChanged,
+    TResult? Function(_StampDutyChanged value)? stampDutyChanged,
+    TResult? Function(_DateShiftingChargeChanged value)?
+        dateShiftingChargeChanged,
+    TResult? Function(_CounterAmountChanged value)? counterAmountChanged,
+    TResult? Function(_EMIAmountChanged value)? emiAmountChanged,
+    TResult? Function(_TenureChanged value)? tenureChanged,
+    TResult? Function(_FirstEMIDateChanged value)? firstEMIDateChanged,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_RepaymentModeChanged value)? repaymentModeChanged,
+    TResult? Function(_SaveLoanParticulars value)? saveLoanParticulars,
+  }) {
+    return fundAdded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_LoanIdChanged value)? loanIdChanged,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_DealerNameChanged value)? dealerNameChanged,
+    TResult Function(_SubDealerNameChanged value)? subDealerNameChanged,
+    TResult Function(_BrokerNameChanged value)? brokerNameChanged,
+    TResult Function(_VehicleNameChanged value)? vehicleNameChanged,
+    TResult Function(_ExShowroomPriceChanged value)? exShowroomPriceChanged,
+    TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
+    TResult Function(_LoanAmountChanged value)? loanAmountChanged,
+    TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
+    TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
+    TResult Function(_DocumentationChargeChanged value)?
+        documentationChargeChanged,
+    TResult Function(_LifeAmountChanged value)? lifeAmountChanged,
+    TResult Function(_PacAmountChanged value)? pacAmountChanged,
+    TResult Function(_StampDutyChanged value)? stampDutyChanged,
+    TResult Function(_DateShiftingChargeChanged value)?
+        dateShiftingChargeChanged,
+    TResult Function(_CounterAmountChanged value)? counterAmountChanged,
+    TResult Function(_EMIAmountChanged value)? emiAmountChanged,
+    TResult Function(_TenureChanged value)? tenureChanged,
+    TResult Function(_FirstEMIDateChanged value)? firstEMIDateChanged,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_RepaymentModeChanged value)? repaymentModeChanged,
+    TResult Function(_SaveLoanParticulars value)? saveLoanParticulars,
+    required TResult orElse(),
+  }) {
+    if (fundAdded != null) {
+      return fundAdded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _fundAdded implements LoanParticularsFormEvent {
+  const factory _fundAdded(final FundOptions fund) = _$fundAddedImpl;
+
+  FundOptions get fund;
+  @JsonKey(ignore: true)
+  _$$fundAddedImplCopyWith<_$fundAddedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$fundRemovedImplCopyWith<$Res> {
+  factory _$$fundRemovedImplCopyWith(
+          _$fundRemovedImpl value, $Res Function(_$fundRemovedImpl) then) =
+      __$$fundRemovedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({FundOptions fund});
+}
+
+/// @nodoc
+class __$$fundRemovedImplCopyWithImpl<$Res>
+    extends _$LoanParticularsFormEventCopyWithImpl<$Res, _$fundRemovedImpl>
+    implements _$$fundRemovedImplCopyWith<$Res> {
+  __$$fundRemovedImplCopyWithImpl(
+      _$fundRemovedImpl _value, $Res Function(_$fundRemovedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? fund = null,
+  }) {
+    return _then(_$fundRemovedImpl(
+      null == fund
+          ? _value.fund
+          : fund // ignore: cast_nullable_to_non_nullable
+              as FundOptions,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$fundRemovedImpl implements _fundRemoved {
+  const _$fundRemovedImpl(this.fund);
+
+  @override
+  final FundOptions fund;
+
+  @override
+  String toString() {
+    return 'LoanParticularsFormEvent.fundRemoved(fund: $fund)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$fundRemovedImpl &&
+            (identical(other.fund, fund) || other.fund == fund));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, fund);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$fundRemovedImplCopyWith<_$fundRemovedImpl> get copyWith =>
+      __$$fundRemovedImplCopyWithImpl<_$fundRemovedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<Loan> initializeOption, bool? closeAfterSave)
+        initialized,
+    required TResult Function(UniqueId loanId) loanIdChanged,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String dealerName) dealerNameChanged,
+    required TResult Function(String subDealerName) subDealerNameChanged,
+    required TResult Function(String brokerName) brokerNameChanged,
+    required TResult Function(String vehicleName) vehicleNameChanged,
+    required TResult Function(String exShowroomPrice) exShowroomPriceChanged,
+    required TResult Function(String onRoadPrice) onRoadPriceChanged,
+    required TResult Function(String loanAmount) loanAmountChanged,
+    required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
+    required TResult Function(String serviceCharge) serviceChargeChanged,
+    required TResult Function(String documentationCharge)
+        documentationChargeChanged,
+    required TResult Function(String lifeAmount) lifeAmountChanged,
+    required TResult Function(String pacAmount) pacAmountChanged,
+    required TResult Function(String stampDuty) stampDutyChanged,
+    required TResult Function(String dateShiftingCharge)
+        dateShiftingChargeChanged,
+    required TResult Function(String counterAmount) counterAmountChanged,
+    required TResult Function(String emiAmount) emiAmountChanged,
+    required TResult Function(String tenure) tenureChanged,
+    required TResult Function(DateTime firstEMIDate) firstEMIDateChanged,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String repaymentMode) repaymentModeChanged,
+    required TResult Function() saveLoanParticulars,
+  }) {
+    return fundRemoved(fund);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Loan> initializeOption, bool? closeAfterSave)?
+        initialized,
+    TResult? Function(UniqueId loanId)? loanIdChanged,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String dealerName)? dealerNameChanged,
+    TResult? Function(String subDealerName)? subDealerNameChanged,
+    TResult? Function(String brokerName)? brokerNameChanged,
+    TResult? Function(String vehicleName)? vehicleNameChanged,
+    TResult? Function(String exShowroomPrice)? exShowroomPriceChanged,
+    TResult? Function(String onRoadPrice)? onRoadPriceChanged,
+    TResult? Function(String loanAmount)? loanAmountChanged,
+    TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
+    TResult? Function(String serviceCharge)? serviceChargeChanged,
+    TResult? Function(String documentationCharge)? documentationChargeChanged,
+    TResult? Function(String lifeAmount)? lifeAmountChanged,
+    TResult? Function(String pacAmount)? pacAmountChanged,
+    TResult? Function(String stampDuty)? stampDutyChanged,
+    TResult? Function(String dateShiftingCharge)? dateShiftingChargeChanged,
+    TResult? Function(String counterAmount)? counterAmountChanged,
+    TResult? Function(String emiAmount)? emiAmountChanged,
+    TResult? Function(String tenure)? tenureChanged,
+    TResult? Function(DateTime firstEMIDate)? firstEMIDateChanged,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String repaymentMode)? repaymentModeChanged,
+    TResult? Function()? saveLoanParticulars,
+  }) {
+    return fundRemoved?.call(fund);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Loan> initializeOption, bool? closeAfterSave)?
+        initialized,
+    TResult Function(UniqueId loanId)? loanIdChanged,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String dealerName)? dealerNameChanged,
+    TResult Function(String subDealerName)? subDealerNameChanged,
+    TResult Function(String brokerName)? brokerNameChanged,
+    TResult Function(String vehicleName)? vehicleNameChanged,
+    TResult Function(String exShowroomPrice)? exShowroomPriceChanged,
+    TResult Function(String onRoadPrice)? onRoadPriceChanged,
+    TResult Function(String loanAmount)? loanAmountChanged,
+    TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
+    TResult Function(String serviceCharge)? serviceChargeChanged,
+    TResult Function(String documentationCharge)? documentationChargeChanged,
+    TResult Function(String lifeAmount)? lifeAmountChanged,
+    TResult Function(String pacAmount)? pacAmountChanged,
+    TResult Function(String stampDuty)? stampDutyChanged,
+    TResult Function(String dateShiftingCharge)? dateShiftingChargeChanged,
+    TResult Function(String counterAmount)? counterAmountChanged,
+    TResult Function(String emiAmount)? emiAmountChanged,
+    TResult Function(String tenure)? tenureChanged,
+    TResult Function(DateTime firstEMIDate)? firstEMIDateChanged,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String repaymentMode)? repaymentModeChanged,
+    TResult Function()? saveLoanParticulars,
+    required TResult orElse(),
+  }) {
+    if (fundRemoved != null) {
+      return fundRemoved(fund);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_LoanIdChanged value) loanIdChanged,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_DealerNameChanged value) dealerNameChanged,
+    required TResult Function(_SubDealerNameChanged value) subDealerNameChanged,
+    required TResult Function(_BrokerNameChanged value) brokerNameChanged,
+    required TResult Function(_VehicleNameChanged value) vehicleNameChanged,
+    required TResult Function(_ExShowroomPriceChanged value)
+        exShowroomPriceChanged,
+    required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
+    required TResult Function(_LoanAmountChanged value) loanAmountChanged,
+    required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
+    required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
+    required TResult Function(_DocumentationChargeChanged value)
+        documentationChargeChanged,
+    required TResult Function(_LifeAmountChanged value) lifeAmountChanged,
+    required TResult Function(_PacAmountChanged value) pacAmountChanged,
+    required TResult Function(_StampDutyChanged value) stampDutyChanged,
+    required TResult Function(_DateShiftingChargeChanged value)
+        dateShiftingChargeChanged,
+    required TResult Function(_CounterAmountChanged value) counterAmountChanged,
+    required TResult Function(_EMIAmountChanged value) emiAmountChanged,
+    required TResult Function(_TenureChanged value) tenureChanged,
+    required TResult Function(_FirstEMIDateChanged value) firstEMIDateChanged,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_RepaymentModeChanged value) repaymentModeChanged,
+    required TResult Function(_SaveLoanParticulars value) saveLoanParticulars,
+  }) {
+    return fundRemoved(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_LoanIdChanged value)? loanIdChanged,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_DealerNameChanged value)? dealerNameChanged,
+    TResult? Function(_SubDealerNameChanged value)? subDealerNameChanged,
+    TResult? Function(_BrokerNameChanged value)? brokerNameChanged,
+    TResult? Function(_VehicleNameChanged value)? vehicleNameChanged,
+    TResult? Function(_ExShowroomPriceChanged value)? exShowroomPriceChanged,
+    TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
+    TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
+    TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
+    TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
+    TResult? Function(_DocumentationChargeChanged value)?
+        documentationChargeChanged,
+    TResult? Function(_LifeAmountChanged value)? lifeAmountChanged,
+    TResult? Function(_PacAmountChanged value)? pacAmountChanged,
+    TResult? Function(_StampDutyChanged value)? stampDutyChanged,
+    TResult? Function(_DateShiftingChargeChanged value)?
+        dateShiftingChargeChanged,
+    TResult? Function(_CounterAmountChanged value)? counterAmountChanged,
+    TResult? Function(_EMIAmountChanged value)? emiAmountChanged,
+    TResult? Function(_TenureChanged value)? tenureChanged,
+    TResult? Function(_FirstEMIDateChanged value)? firstEMIDateChanged,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_RepaymentModeChanged value)? repaymentModeChanged,
+    TResult? Function(_SaveLoanParticulars value)? saveLoanParticulars,
+  }) {
+    return fundRemoved?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_LoanIdChanged value)? loanIdChanged,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_DealerNameChanged value)? dealerNameChanged,
+    TResult Function(_SubDealerNameChanged value)? subDealerNameChanged,
+    TResult Function(_BrokerNameChanged value)? brokerNameChanged,
+    TResult Function(_VehicleNameChanged value)? vehicleNameChanged,
+    TResult Function(_ExShowroomPriceChanged value)? exShowroomPriceChanged,
+    TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
+    TResult Function(_LoanAmountChanged value)? loanAmountChanged,
+    TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
+    TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
+    TResult Function(_DocumentationChargeChanged value)?
+        documentationChargeChanged,
+    TResult Function(_LifeAmountChanged value)? lifeAmountChanged,
+    TResult Function(_PacAmountChanged value)? pacAmountChanged,
+    TResult Function(_StampDutyChanged value)? stampDutyChanged,
+    TResult Function(_DateShiftingChargeChanged value)?
+        dateShiftingChargeChanged,
+    TResult Function(_CounterAmountChanged value)? counterAmountChanged,
+    TResult Function(_EMIAmountChanged value)? emiAmountChanged,
+    TResult Function(_TenureChanged value)? tenureChanged,
+    TResult Function(_FirstEMIDateChanged value)? firstEMIDateChanged,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_RepaymentModeChanged value)? repaymentModeChanged,
+    TResult Function(_SaveLoanParticulars value)? saveLoanParticulars,
+    required TResult orElse(),
+  }) {
+    if (fundRemoved != null) {
+      return fundRemoved(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _fundRemoved implements LoanParticularsFormEvent {
+  const factory _fundRemoved(final FundOptions fund) = _$fundRemovedImpl;
+
+  FundOptions get fund;
+  @JsonKey(ignore: true)
+  _$$fundRemovedImplCopyWith<_$fundRemovedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3406,6 +4514,9 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -3440,6 +4551,9 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -3472,6 +4586,9 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -3508,6 +4625,9 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -3541,6 +4661,9 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -3574,6 +4697,9 @@ class _$ServiceChargeChangedImpl implements _ServiceChargeChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -3690,6 +4816,9 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -3724,6 +4853,9 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -3756,6 +4888,9 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -3792,6 +4927,9 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -3825,6 +4963,9 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -3858,6 +4999,9 @@ class _$DocumentationChargeChangedImpl implements _DocumentationChargeChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -3972,6 +5116,9 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -4006,6 +5153,9 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -4038,6 +5188,9 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -4074,6 +5227,9 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -4107,6 +5263,9 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -4140,6 +5299,9 @@ class _$LifeAmountChangedImpl implements _LifeAmountChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -4253,6 +5415,9 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -4287,6 +5452,9 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -4319,6 +5487,9 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -4355,6 +5526,9 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -4388,6 +5562,9 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -4421,6 +5598,9 @@ class _$PacAmountChangedImpl implements _PacAmountChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -4534,6 +5714,9 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -4568,6 +5751,9 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -4600,6 +5786,9 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -4636,6 +5825,9 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -4669,6 +5861,9 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -4702,6 +5897,9 @@ class _$StampDutyChangedImpl implements _StampDutyChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -4818,6 +6016,9 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -4852,6 +6053,9 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -4884,6 +6088,9 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -4920,6 +6127,9 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -4953,6 +6163,9 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -4986,6 +6199,9 @@ class _$DateShiftingChargeChangedImpl implements _DateShiftingChargeChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -5101,6 +6317,9 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -5135,6 +6354,9 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -5167,6 +6389,9 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -5203,6 +6428,9 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -5236,6 +6464,9 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -5269,6 +6500,9 @@ class _$CounterAmountChangedImpl implements _CounterAmountChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -5382,6 +6616,9 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -5416,6 +6653,9 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -5448,6 +6688,9 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -5484,6 +6727,9 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -5517,6 +6763,9 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -5550,6 +6799,9 @@ class _$EMIAmountChangedImpl implements _EMIAmountChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -5661,6 +6913,9 @@ class _$TenureChangedImpl implements _TenureChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -5695,6 +6950,9 @@ class _$TenureChangedImpl implements _TenureChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -5727,6 +6985,9 @@ class _$TenureChangedImpl implements _TenureChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -5763,6 +7024,9 @@ class _$TenureChangedImpl implements _TenureChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -5796,6 +7060,9 @@ class _$TenureChangedImpl implements _TenureChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -5829,6 +7096,9 @@ class _$TenureChangedImpl implements _TenureChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -5942,6 +7212,9 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -5976,6 +7249,9 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -6008,6 +7284,9 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -6044,6 +7323,9 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -6077,6 +7359,9 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -6110,6 +7395,9 @@ class _$FirstEMIDateChangedImpl implements _FirstEMIDateChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -6223,6 +7511,9 @@ class _$BankNameChangedImpl implements _BankNameChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -6257,6 +7548,9 @@ class _$BankNameChangedImpl implements _BankNameChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -6289,6 +7583,9 @@ class _$BankNameChangedImpl implements _BankNameChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -6325,6 +7622,9 @@ class _$BankNameChangedImpl implements _BankNameChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -6358,6 +7658,9 @@ class _$BankNameChangedImpl implements _BankNameChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -6391,6 +7694,9 @@ class _$BankNameChangedImpl implements _BankNameChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -6505,6 +7811,9 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -6539,6 +7848,9 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -6571,6 +7883,9 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -6607,6 +7922,9 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -6640,6 +7958,9 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -6673,6 +7994,9 @@ class _$RepaymentModeChangedImpl implements _RepaymentModeChanged {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -6760,6 +8084,9 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
     required TResult Function(String onRoadPrice) onRoadPriceChanged,
     required TResult Function(String loanAmount) loanAmountChanged,
     required TResult Function(String ltv) ltvChanged,
+    required TResult Function(LoanScheme loanScheme) loanSchemeChanged,
+    required TResult Function(FundOptions fund) fundAdded,
+    required TResult Function(FundOptions fund) fundRemoved,
     required TResult Function(String serviceCharge) serviceChargeChanged,
     required TResult Function(String documentationCharge)
         documentationChargeChanged,
@@ -6794,6 +8121,9 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
     TResult? Function(String onRoadPrice)? onRoadPriceChanged,
     TResult? Function(String loanAmount)? loanAmountChanged,
     TResult? Function(String ltv)? ltvChanged,
+    TResult? Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult? Function(FundOptions fund)? fundAdded,
+    TResult? Function(FundOptions fund)? fundRemoved,
     TResult? Function(String serviceCharge)? serviceChargeChanged,
     TResult? Function(String documentationCharge)? documentationChargeChanged,
     TResult? Function(String lifeAmount)? lifeAmountChanged,
@@ -6826,6 +8156,9 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
     TResult Function(String onRoadPrice)? onRoadPriceChanged,
     TResult Function(String loanAmount)? loanAmountChanged,
     TResult Function(String ltv)? ltvChanged,
+    TResult Function(LoanScheme loanScheme)? loanSchemeChanged,
+    TResult Function(FundOptions fund)? fundAdded,
+    TResult Function(FundOptions fund)? fundRemoved,
     TResult Function(String serviceCharge)? serviceChargeChanged,
     TResult Function(String documentationCharge)? documentationChargeChanged,
     TResult Function(String lifeAmount)? lifeAmountChanged,
@@ -6862,6 +8195,9 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
     required TResult Function(_OnRoadPriceChanged value) onRoadPriceChanged,
     required TResult Function(_LoanAmountChanged value) loanAmountChanged,
     required TResult Function(_LtvChanged value) ltvChanged,
+    required TResult Function(_LoanSchemeChanged value) loanSchemeChanged,
+    required TResult Function(_fundAdded value) fundAdded,
+    required TResult Function(_fundRemoved value) fundRemoved,
     required TResult Function(_ServiceChargeChanged value) serviceChargeChanged,
     required TResult Function(_DocumentationChargeChanged value)
         documentationChargeChanged,
@@ -6895,6 +8231,9 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
     TResult? Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult? Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult? Function(_LtvChanged value)? ltvChanged,
+    TResult? Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult? Function(_fundAdded value)? fundAdded,
+    TResult? Function(_fundRemoved value)? fundRemoved,
     TResult? Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult? Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,
@@ -6928,6 +8267,9 @@ class _$SaveLoanParticularsImpl implements _SaveLoanParticulars {
     TResult Function(_OnRoadPriceChanged value)? onRoadPriceChanged,
     TResult Function(_LoanAmountChanged value)? loanAmountChanged,
     TResult Function(_LtvChanged value)? ltvChanged,
+    TResult Function(_LoanSchemeChanged value)? loanSchemeChanged,
+    TResult Function(_fundAdded value)? fundAdded,
+    TResult Function(_fundRemoved value)? fundRemoved,
     TResult Function(_ServiceChargeChanged value)? serviceChargeChanged,
     TResult Function(_DocumentationChargeChanged value)?
         documentationChargeChanged,

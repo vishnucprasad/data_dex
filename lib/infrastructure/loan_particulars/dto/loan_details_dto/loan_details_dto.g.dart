@@ -17,6 +17,10 @@ _$LoanDetailsDtoImpl _$$LoanDetailsDtoImplFromJson(Map<String, dynamic> json) =>
       stampDuty: (json['stampDuty'] as num).toDouble(),
       dateShiftingCharge: (json['dateShiftingCharge'] as num?)?.toDouble(),
       counterAmount: (json['counterAmount'] as num?)?.toDouble(),
+      loanScheme: json['loanScheme'] as int?,
+      fundedChargesList: (json['fundedChargesList'] as List<dynamic>?)
+          ?.map((e) => e as int)
+          .toList(),
     );
 
 Map<String, dynamic> _$$LoanDetailsDtoImplToJson(
@@ -31,4 +35,6 @@ Map<String, dynamic> _$$LoanDetailsDtoImplToJson(
       'stampDuty': instance.stampDuty,
       'dateShiftingCharge': instance.dateShiftingCharge,
       'counterAmount': instance.counterAmount,
+      'loanScheme': instance.loanScheme,
+      'fundedChargesList': instance.fundedChargesList,
     };

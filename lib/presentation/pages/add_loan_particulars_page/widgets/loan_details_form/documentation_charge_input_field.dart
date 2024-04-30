@@ -1,5 +1,7 @@
 import 'package:data_dex/application/loan_particulars_form/loan_particulars_form_bloc.dart';
+import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/presentation/core/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -18,7 +20,10 @@ class DocumentationChargeInputField extends HookWidget {
               state.loanDetails.documentationCharge.value.getOrElse(() => "");
         }
       },
-      buildWhen: (p, c) => p.showValidationError != c.showValidationError,
+      buildWhen: (p, c) =>
+          p.showValidationError != c.showValidationError ||
+          p.loanDetails.loanScheme != c.loanDetails.loanScheme ||
+          p.loanDetails.fundedChargesList != c.loanDetails.fundedChargesList,
       builder: (context, state) {
         if (state.isEditing &&
             state.loanDetails.documentationCharge.isValid()) {
@@ -49,6 +54,29 @@ class DocumentationChargeInputField extends HookWidget {
               vertical: 4,
               horizontal: 16,
             ),
+            suffixIcon: state.loanDetails.loanScheme == LoanScheme.funded
+                ? Transform.scale(
+                    scale: 0.75,
+                    child: CupertinoSwitch(
+                      value: state.loanDetails.fundedChargesList?.contains(
+                            FundOptions.documentation.index,
+                          ) ??
+                          false,
+                      onChanged: (isFunded) {
+                        context.read<LoanParticularsFormBloc>().add(
+                              isFunded
+                                  ? const LoanParticularsFormEvent.fundAdded(
+                                      FundOptions.documentation,
+                                    )
+                                  : const LoanParticularsFormEvent.fundRemoved(
+                                      FundOptions.documentation,
+                                    ),
+                            );
+                      },
+                      activeColor: Colors.lightBlue.shade600,
+                    ),
+                  )
+                : null,
           ),
           keyboardType: TextInputType.number,
           autovalidateMode: state.showValidationError

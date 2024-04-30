@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan/models/loan.dart';
 import 'package:data_dex/domain/loan_particulars/failures/loan_particulars_failure.dart';
@@ -110,6 +111,29 @@ class LoanParticularsFormBloc
             ltv: LTVData(e.ltv),
           ),
           failureOrSuccess: none(),
+        )),
+        loanSchemeChanged: (e) async => emit(state.copyWith(
+          loanDetails: state.loanDetails.copyWith(
+            loanScheme: e.loanScheme,
+            fundedChargesList: e.loanScheme == LoanScheme.funded
+                ? [FundOptions.service.index]
+                : null,
+          ),
+        )),
+        fundAdded: (e) async => emit(state.copyWith(
+          loanDetails: state.loanDetails.copyWith(
+            fundedChargesList: [
+              ...state.loanDetails.fundedChargesList!,
+              e.fund.index,
+            ],
+          ),
+        )),
+        fundRemoved: (e) async => emit(state.copyWith(
+          loanDetails: state.loanDetails.copyWith(
+            fundedChargesList: state.loanDetails.fundedChargesList!
+                .where((fundIndex) => fundIndex != e.fund.index)
+                .toList(),
+          ),
         )),
         serviceChargeChanged: (e) async => emit(state.copyWith(
           loanDetails: state.loanDetails.copyWith(

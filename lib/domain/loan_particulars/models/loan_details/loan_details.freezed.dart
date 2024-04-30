@@ -25,6 +25,8 @@ mixin _$LoanDetails {
   RequiredPrice get stampDuty => throw _privateConstructorUsedError;
   OptionalPrice get dateShiftingCharge => throw _privateConstructorUsedError;
   OptionalPrice get counterAmount => throw _privateConstructorUsedError;
+  LoanScheme? get loanScheme => throw _privateConstructorUsedError;
+  List<int>? get fundedChargesList => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LoanDetailsCopyWith<LoanDetails> get copyWith =>
@@ -46,7 +48,9 @@ abstract class $LoanDetailsCopyWith<$Res> {
       OptionalPrice pacAmount,
       RequiredPrice stampDuty,
       OptionalPrice dateShiftingCharge,
-      OptionalPrice counterAmount});
+      OptionalPrice counterAmount,
+      LoanScheme? loanScheme,
+      List<int>? fundedChargesList});
 }
 
 /// @nodoc
@@ -71,6 +75,8 @@ class _$LoanDetailsCopyWithImpl<$Res, $Val extends LoanDetails>
     Object? stampDuty = null,
     Object? dateShiftingCharge = null,
     Object? counterAmount = null,
+    Object? loanScheme = freezed,
+    Object? fundedChargesList = freezed,
   }) {
     return _then(_value.copyWith(
       loanAmount: null == loanAmount
@@ -109,6 +115,14 @@ class _$LoanDetailsCopyWithImpl<$Res, $Val extends LoanDetails>
           ? _value.counterAmount
           : counterAmount // ignore: cast_nullable_to_non_nullable
               as OptionalPrice,
+      loanScheme: freezed == loanScheme
+          ? _value.loanScheme
+          : loanScheme // ignore: cast_nullable_to_non_nullable
+              as LoanScheme?,
+      fundedChargesList: freezed == fundedChargesList
+          ? _value.fundedChargesList
+          : fundedChargesList // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
     ) as $Val);
   }
 }
@@ -130,7 +144,9 @@ abstract class _$$LoanDetailsImplCopyWith<$Res>
       OptionalPrice pacAmount,
       RequiredPrice stampDuty,
       OptionalPrice dateShiftingCharge,
-      OptionalPrice counterAmount});
+      OptionalPrice counterAmount,
+      LoanScheme? loanScheme,
+      List<int>? fundedChargesList});
 }
 
 /// @nodoc
@@ -153,6 +169,8 @@ class __$$LoanDetailsImplCopyWithImpl<$Res>
     Object? stampDuty = null,
     Object? dateShiftingCharge = null,
     Object? counterAmount = null,
+    Object? loanScheme = freezed,
+    Object? fundedChargesList = freezed,
   }) {
     return _then(_$LoanDetailsImpl(
       loanAmount: null == loanAmount
@@ -191,6 +209,14 @@ class __$$LoanDetailsImplCopyWithImpl<$Res>
           ? _value.counterAmount
           : counterAmount // ignore: cast_nullable_to_non_nullable
               as OptionalPrice,
+      loanScheme: freezed == loanScheme
+          ? _value.loanScheme
+          : loanScheme // ignore: cast_nullable_to_non_nullable
+              as LoanScheme?,
+      fundedChargesList: freezed == fundedChargesList
+          ? _value._fundedChargesList
+          : fundedChargesList // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
     ));
   }
 }
@@ -207,8 +233,11 @@ class _$LoanDetailsImpl extends _LoanDetails {
       required this.pacAmount,
       required this.stampDuty,
       required this.dateShiftingCharge,
-      required this.counterAmount})
-      : super._();
+      required this.counterAmount,
+      required this.loanScheme,
+      required final List<int>? fundedChargesList})
+      : _fundedChargesList = fundedChargesList,
+        super._();
 
   @override
   final RequiredPrice loanAmount;
@@ -228,10 +257,22 @@ class _$LoanDetailsImpl extends _LoanDetails {
   final OptionalPrice dateShiftingCharge;
   @override
   final OptionalPrice counterAmount;
+  @override
+  final LoanScheme? loanScheme;
+  final List<int>? _fundedChargesList;
+  @override
+  List<int>? get fundedChargesList {
+    final value = _fundedChargesList;
+    if (value == null) return null;
+    if (_fundedChargesList is EqualUnmodifiableListView)
+      return _fundedChargesList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'LoanDetails(loanAmount: $loanAmount, ltv: $ltv, serviceCharge: $serviceCharge, documentationCharge: $documentationCharge, lifeAmount: $lifeAmount, pacAmount: $pacAmount, stampDuty: $stampDuty, dateShiftingCharge: $dateShiftingCharge, counterAmount: $counterAmount)';
+    return 'LoanDetails(loanAmount: $loanAmount, ltv: $ltv, serviceCharge: $serviceCharge, documentationCharge: $documentationCharge, lifeAmount: $lifeAmount, pacAmount: $pacAmount, stampDuty: $stampDuty, dateShiftingCharge: $dateShiftingCharge, counterAmount: $counterAmount, loanScheme: $loanScheme, fundedChargesList: $fundedChargesList)';
   }
 
   @override
@@ -255,7 +296,11 @@ class _$LoanDetailsImpl extends _LoanDetails {
             (identical(other.dateShiftingCharge, dateShiftingCharge) ||
                 other.dateShiftingCharge == dateShiftingCharge) &&
             (identical(other.counterAmount, counterAmount) ||
-                other.counterAmount == counterAmount));
+                other.counterAmount == counterAmount) &&
+            (identical(other.loanScheme, loanScheme) ||
+                other.loanScheme == loanScheme) &&
+            const DeepCollectionEquality()
+                .equals(other._fundedChargesList, _fundedChargesList));
   }
 
   @override
@@ -269,7 +314,9 @@ class _$LoanDetailsImpl extends _LoanDetails {
       pacAmount,
       stampDuty,
       dateShiftingCharge,
-      counterAmount);
+      counterAmount,
+      loanScheme,
+      const DeepCollectionEquality().hash(_fundedChargesList));
 
   @JsonKey(ignore: true)
   @override
@@ -288,7 +335,9 @@ abstract class _LoanDetails extends LoanDetails {
       required final OptionalPrice pacAmount,
       required final RequiredPrice stampDuty,
       required final OptionalPrice dateShiftingCharge,
-      required final OptionalPrice counterAmount}) = _$LoanDetailsImpl;
+      required final OptionalPrice counterAmount,
+      required final LoanScheme? loanScheme,
+      required final List<int>? fundedChargesList}) = _$LoanDetailsImpl;
   const _LoanDetails._() : super._();
 
   @override
@@ -309,6 +358,10 @@ abstract class _LoanDetails extends LoanDetails {
   OptionalPrice get dateShiftingCharge;
   @override
   OptionalPrice get counterAmount;
+  @override
+  LoanScheme? get loanScheme;
+  @override
+  List<int>? get fundedChargesList;
   @override
   @JsonKey(ignore: true)
   _$$LoanDetailsImplCopyWith<_$LoanDetailsImpl> get copyWith =>

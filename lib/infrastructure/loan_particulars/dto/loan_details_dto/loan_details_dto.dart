@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/domain/core/value_objects.dart';
 import 'package:data_dex/domain/loan_particulars/models/loan_details/loan_details.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -20,6 +21,8 @@ class LoanDetailsDto with _$LoanDetailsDto {
     required double stampDuty,
     required double? dateShiftingCharge,
     required double? counterAmount,
+    required int? loanScheme,
+    required List<int>? fundedChargesList,
   }) = _LoanDetailsDto;
 
   factory LoanDetailsDto.fromDomain(LoanDetails loanDetails) {
@@ -62,6 +65,8 @@ class LoanDetailsDto with _$LoanDetailsDto {
               loanDetails.counterAmount.getOrCrash(),
             )
           : null,
+      loanScheme: loanDetails.loanScheme?.index,
+      fundedChargesList: loanDetails.fundedChargesList,
     );
   }
 
@@ -86,6 +91,8 @@ class LoanDetailsDto with _$LoanDetailsDto {
       counterAmount: OptionalPrice(
         counterAmount != null ? counterAmount.toString() : '',
       ),
+      loanScheme: loanScheme != null ? LoanScheme.values[loanScheme!] : null,
+      fundedChargesList: fundedChargesList,
     );
   }
 
