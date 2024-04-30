@@ -118,6 +118,17 @@ class StreetName extends ValueObject<String> {
   const StreetName._(this.value);
 }
 
+class Landmark extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory Landmark(String input) {
+    return Landmark._(validateMaxStringLength(input, 100).flatMap(
+      validateSingleLine,
+    ));
+  }
+  const Landmark._(this.value);
+}
+
 class PinCode extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;

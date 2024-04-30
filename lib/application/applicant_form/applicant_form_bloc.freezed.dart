@@ -27,6 +27,7 @@ mixin _$ApplicantFormEvent {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -47,6 +48,7 @@ mixin _$ApplicantFormEvent {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -67,6 +69,7 @@ mixin _$ApplicantFormEvent {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -88,6 +91,7 @@ mixin _$ApplicantFormEvent {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -108,6 +112,7 @@ mixin _$ApplicantFormEvent {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -128,6 +133,7 @@ mixin _$ApplicantFormEvent {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -232,6 +238,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -255,6 +262,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -278,6 +286,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -305,6 +314,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -328,6 +338,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -351,6 +362,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -451,6 +463,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -474,6 +487,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -497,6 +511,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -524,6 +539,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -547,6 +563,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -570,6 +587,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -668,6 +686,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -691,6 +710,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -714,6 +734,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -741,6 +762,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -764,6 +786,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -787,6 +810,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -887,6 +911,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -910,6 +935,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -933,6 +959,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -960,6 +987,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -983,6 +1011,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1006,6 +1035,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1105,6 +1135,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -1128,6 +1159,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -1151,6 +1183,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -1178,6 +1211,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -1201,6 +1235,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1224,6 +1259,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1323,6 +1359,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -1346,6 +1383,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -1369,6 +1407,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -1396,6 +1435,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -1419,6 +1459,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1442,6 +1483,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1543,6 +1585,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -1566,6 +1609,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -1589,6 +1633,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -1616,6 +1661,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -1639,6 +1685,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1662,6 +1709,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1763,6 +1811,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -1786,6 +1835,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -1809,6 +1859,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -1836,6 +1887,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -1859,6 +1911,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1882,6 +1935,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -1983,6 +2037,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -2006,6 +2061,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -2029,6 +2085,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -2056,6 +2113,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -2079,6 +2137,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2102,6 +2161,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2125,6 +2185,231 @@ abstract class _StreetNameChanged implements ApplicantFormEvent {
   String get streetName;
   @JsonKey(ignore: true)
   _$$StreetNameChangedImplCopyWith<_$StreetNameChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LandmarkChangedImplCopyWith<$Res> {
+  factory _$$LandmarkChangedImplCopyWith(_$LandmarkChangedImpl value,
+          $Res Function(_$LandmarkChangedImpl) then) =
+      __$$LandmarkChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String landmark});
+}
+
+/// @nodoc
+class __$$LandmarkChangedImplCopyWithImpl<$Res>
+    extends _$ApplicantFormEventCopyWithImpl<$Res, _$LandmarkChangedImpl>
+    implements _$$LandmarkChangedImplCopyWith<$Res> {
+  __$$LandmarkChangedImplCopyWithImpl(
+      _$LandmarkChangedImpl _value, $Res Function(_$LandmarkChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? landmark = null,
+  }) {
+    return _then(_$LandmarkChangedImpl(
+      null == landmark
+          ? _value.landmark
+          : landmark // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LandmarkChangedImpl implements _LandmarkChanged {
+  const _$LandmarkChangedImpl(this.landmark);
+
+  @override
+  final String landmark;
+
+  @override
+  String toString() {
+    return 'ApplicantFormEvent.landmarkChanged(landmark: $landmark)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LandmarkChangedImpl &&
+            (identical(other.landmark, landmark) ||
+                other.landmark == landmark));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, landmark);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LandmarkChangedImplCopyWith<_$LandmarkChangedImpl> get copyWith =>
+      __$$LandmarkChangedImplCopyWithImpl<_$LandmarkChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Option<Loan> initializeOption) initialized,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
+    required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() getCurrentLocation,
+    required TResult Function() openLocationInMap,
+    required TResult Function() takeImage,
+    required TResult Function() pickImage,
+    required TResult Function() deleteImage,
+    required TResult Function() saveApplicant,
+  }) {
+    return landmarkChanged(landmark);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Loan> initializeOption)? initialized,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? getCurrentLocation,
+    TResult? Function()? openLocationInMap,
+    TResult? Function()? takeImage,
+    TResult? Function()? pickImage,
+    TResult? Function()? deleteImage,
+    TResult? Function()? saveApplicant,
+  }) {
+    return landmarkChanged?.call(landmark);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Loan> initializeOption)? initialized,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? getCurrentLocation,
+    TResult Function()? openLocationInMap,
+    TResult Function()? takeImage,
+    TResult Function()? pickImage,
+    TResult Function()? deleteImage,
+    TResult Function()? saveApplicant,
+    required TResult orElse(),
+  }) {
+    if (landmarkChanged != null) {
+      return landmarkChanged(landmark);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_GetCurrentLocation value) getCurrentLocation,
+    required TResult Function(_OpenLocationInMap value) openLocationInMap,
+    required TResult Function(_TakeImage value) takeImage,
+    required TResult Function(_PickImage value) pickImage,
+    required TResult Function(_DeleteImage value) deleteImage,
+    required TResult Function(_SaveApplicant value) saveApplicant,
+  }) {
+    return landmarkChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult? Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult? Function(_TakeImage value)? takeImage,
+    TResult? Function(_PickImage value)? pickImage,
+    TResult? Function(_DeleteImage value)? deleteImage,
+    TResult? Function(_SaveApplicant value)? saveApplicant,
+  }) {
+    return landmarkChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_GetCurrentLocation value)? getCurrentLocation,
+    TResult Function(_OpenLocationInMap value)? openLocationInMap,
+    TResult Function(_TakeImage value)? takeImage,
+    TResult Function(_PickImage value)? pickImage,
+    TResult Function(_DeleteImage value)? deleteImage,
+    TResult Function(_SaveApplicant value)? saveApplicant,
+    required TResult orElse(),
+  }) {
+    if (landmarkChanged != null) {
+      return landmarkChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LandmarkChanged implements ApplicantFormEvent {
+  const factory _LandmarkChanged(final String landmark) = _$LandmarkChangedImpl;
+
+  String get landmark;
+  @JsonKey(ignore: true)
+  _$$LandmarkChangedImplCopyWith<_$LandmarkChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2202,6 +2487,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -2225,6 +2511,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -2248,6 +2535,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -2275,6 +2563,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -2298,6 +2587,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2321,6 +2611,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2393,6 +2684,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -2416,6 +2708,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -2439,6 +2732,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -2466,6 +2760,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -2489,6 +2784,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2512,6 +2808,7 @@ class _$GetCurrentLocationImpl implements _GetCurrentLocation {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2579,6 +2876,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -2602,6 +2900,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -2625,6 +2924,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -2652,6 +2952,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -2675,6 +2976,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2698,6 +3000,7 @@ class _$OpenLocationInMapImpl implements _OpenLocationInMap {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2765,6 +3068,7 @@ class _$TakeImageImpl implements _TakeImage {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -2788,6 +3092,7 @@ class _$TakeImageImpl implements _TakeImage {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -2811,6 +3116,7 @@ class _$TakeImageImpl implements _TakeImage {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -2838,6 +3144,7 @@ class _$TakeImageImpl implements _TakeImage {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -2861,6 +3168,7 @@ class _$TakeImageImpl implements _TakeImage {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2884,6 +3192,7 @@ class _$TakeImageImpl implements _TakeImage {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -2951,6 +3260,7 @@ class _$PickImageImpl implements _PickImage {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -2974,6 +3284,7 @@ class _$PickImageImpl implements _PickImage {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -2997,6 +3308,7 @@ class _$PickImageImpl implements _PickImage {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -3024,6 +3336,7 @@ class _$PickImageImpl implements _PickImage {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -3047,6 +3360,7 @@ class _$PickImageImpl implements _PickImage {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -3070,6 +3384,7 @@ class _$PickImageImpl implements _PickImage {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -3137,6 +3452,7 @@ class _$DeleteImageImpl implements _DeleteImage {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -3160,6 +3476,7 @@ class _$DeleteImageImpl implements _DeleteImage {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -3183,6 +3500,7 @@ class _$DeleteImageImpl implements _DeleteImage {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -3210,6 +3528,7 @@ class _$DeleteImageImpl implements _DeleteImage {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -3233,6 +3552,7 @@ class _$DeleteImageImpl implements _DeleteImage {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -3256,6 +3576,7 @@ class _$DeleteImageImpl implements _DeleteImage {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,
@@ -3323,6 +3644,7 @@ class _$SaveApplicantImpl implements _SaveApplicant {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() getCurrentLocation,
     required TResult Function() openLocationInMap,
@@ -3346,6 +3668,7 @@ class _$SaveApplicantImpl implements _SaveApplicant {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? getCurrentLocation,
     TResult? Function()? openLocationInMap,
@@ -3369,6 +3692,7 @@ class _$SaveApplicantImpl implements _SaveApplicant {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? getCurrentLocation,
     TResult Function()? openLocationInMap,
@@ -3396,6 +3720,7 @@ class _$SaveApplicantImpl implements _SaveApplicant {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_GetCurrentLocation value) getCurrentLocation,
     required TResult Function(_OpenLocationInMap value) openLocationInMap,
@@ -3419,6 +3744,7 @@ class _$SaveApplicantImpl implements _SaveApplicant {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult? Function(_OpenLocationInMap value)? openLocationInMap,
@@ -3442,6 +3768,7 @@ class _$SaveApplicantImpl implements _SaveApplicant {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_GetCurrentLocation value)? getCurrentLocation,
     TResult Function(_OpenLocationInMap value)? openLocationInMap,

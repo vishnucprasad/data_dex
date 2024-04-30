@@ -30,6 +30,7 @@ mixin _$CoApplicantFormEvent {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) =>
@@ -47,6 +48,7 @@ mixin _$CoApplicantFormEvent {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) =>
@@ -64,6 +66,7 @@ mixin _$CoApplicantFormEvent {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -81,6 +84,7 @@ mixin _$CoApplicantFormEvent {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) =>
@@ -97,6 +101,7 @@ mixin _$CoApplicantFormEvent {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) =>
@@ -113,6 +118,7 @@ mixin _$CoApplicantFormEvent {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -227,6 +233,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -247,6 +254,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -267,6 +275,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -290,6 +299,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -309,6 +319,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -328,6 +339,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -427,6 +439,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -447,6 +460,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -467,6 +481,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -490,6 +505,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -509,6 +525,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -528,6 +545,7 @@ class _$LoanIdChangedImpl implements _LoanIdChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -625,6 +643,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -645,6 +664,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -665,6 +685,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -688,6 +709,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -707,6 +729,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -726,6 +749,7 @@ class _$FormStepChangedImpl implements _FormStepChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -822,6 +846,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -842,6 +867,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -862,6 +888,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -885,6 +912,7 @@ class _$NameChangedImpl implements _NameChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -904,6 +932,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -923,6 +952,7 @@ class _$NameChangedImpl implements _NameChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -1021,6 +1051,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -1041,6 +1072,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -1061,6 +1093,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -1084,6 +1117,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -1103,6 +1137,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -1122,6 +1157,7 @@ class _$PhoneNumberChangedImpl implements _PhoneNumberChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -1219,6 +1255,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -1239,6 +1276,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -1259,6 +1297,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -1282,6 +1321,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -1301,6 +1341,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -1320,6 +1361,7 @@ class _$EmailChnagedImpl implements _EmailChnaged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -1417,6 +1459,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -1437,6 +1480,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -1457,6 +1501,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -1480,6 +1525,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -1499,6 +1545,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -1518,6 +1565,7 @@ class _$DateOfBirthChangedImpl implements _DateOfBirthChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -1617,6 +1665,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -1637,6 +1686,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -1657,6 +1707,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -1680,6 +1731,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -1699,6 +1751,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -1718,6 +1771,7 @@ class _$HouseNameChangedImpl implements _HouseNameChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -1817,6 +1871,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -1837,6 +1892,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -1857,6 +1913,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -1880,6 +1937,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -1899,6 +1957,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -1918,6 +1977,7 @@ class _$PostOfficeChangedImpl implements _PostOfficeChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -2017,6 +2077,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -2037,6 +2098,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -2057,6 +2119,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -2080,6 +2143,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -2099,6 +2163,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -2118,6 +2183,7 @@ class _$StreetNameChangedImpl implements _StreetNameChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -2136,6 +2202,211 @@ abstract class _StreetNameChanged implements CoApplicantFormEvent {
   String get streetName;
   @JsonKey(ignore: true)
   _$$StreetNameChangedImplCopyWith<_$StreetNameChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LandmarkChangedImplCopyWith<$Res> {
+  factory _$$LandmarkChangedImplCopyWith(_$LandmarkChangedImpl value,
+          $Res Function(_$LandmarkChangedImpl) then) =
+      __$$LandmarkChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String landmark});
+}
+
+/// @nodoc
+class __$$LandmarkChangedImplCopyWithImpl<$Res>
+    extends _$CoApplicantFormEventCopyWithImpl<$Res, _$LandmarkChangedImpl>
+    implements _$$LandmarkChangedImplCopyWith<$Res> {
+  __$$LandmarkChangedImplCopyWithImpl(
+      _$LandmarkChangedImpl _value, $Res Function(_$LandmarkChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? landmark = null,
+  }) {
+    return _then(_$LandmarkChangedImpl(
+      null == landmark
+          ? _value.landmark
+          : landmark // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LandmarkChangedImpl implements _LandmarkChanged {
+  const _$LandmarkChangedImpl(this.landmark);
+
+  @override
+  final String landmark;
+
+  @override
+  String toString() {
+    return 'CoApplicantFormEvent.landmarkChanged(landmark: $landmark)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LandmarkChangedImpl &&
+            (identical(other.landmark, landmark) ||
+                other.landmark == landmark));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, landmark);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LandmarkChangedImplCopyWith<_$LandmarkChangedImpl> get copyWith =>
+      __$$LandmarkChangedImplCopyWithImpl<_$LandmarkChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<Loan> initializeOption, bool? closeAfterSave)
+        initialized,
+    required TResult Function(UniqueId loanId) loanIdChanged,
+    required TResult Function(int index) formStepChanged,
+    required TResult Function(String name) nameChanged,
+    required TResult Function(String phoneNumber) phoneNumberChanged,
+    required TResult Function(String email) emailChnaged,
+    required TResult Function(DateTime date) dateOfBirthChanged,
+    required TResult Function(String houseName) houseNameChanged,
+    required TResult Function(String postOffice) postOfficeChanged,
+    required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
+    required TResult Function(String pincode) pincodeChanged,
+    required TResult Function() saveCoApplicant,
+  }) {
+    return landmarkChanged(landmark);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<Loan> initializeOption, bool? closeAfterSave)?
+        initialized,
+    TResult? Function(UniqueId loanId)? loanIdChanged,
+    TResult? Function(int index)? formStepChanged,
+    TResult? Function(String name)? nameChanged,
+    TResult? Function(String phoneNumber)? phoneNumberChanged,
+    TResult? Function(String email)? emailChnaged,
+    TResult? Function(DateTime date)? dateOfBirthChanged,
+    TResult? Function(String houseName)? houseNameChanged,
+    TResult? Function(String postOffice)? postOfficeChanged,
+    TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
+    TResult? Function(String pincode)? pincodeChanged,
+    TResult? Function()? saveCoApplicant,
+  }) {
+    return landmarkChanged?.call(landmark);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<Loan> initializeOption, bool? closeAfterSave)?
+        initialized,
+    TResult Function(UniqueId loanId)? loanIdChanged,
+    TResult Function(int index)? formStepChanged,
+    TResult Function(String name)? nameChanged,
+    TResult Function(String phoneNumber)? phoneNumberChanged,
+    TResult Function(String email)? emailChnaged,
+    TResult Function(DateTime date)? dateOfBirthChanged,
+    TResult Function(String houseName)? houseNameChanged,
+    TResult Function(String postOffice)? postOfficeChanged,
+    TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
+    TResult Function(String pincode)? pincodeChanged,
+    TResult Function()? saveCoApplicant,
+    required TResult orElse(),
+  }) {
+    if (landmarkChanged != null) {
+      return landmarkChanged(landmark);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_LoanIdChanged value) loanIdChanged,
+    required TResult Function(_FormStepChanged value) formStepChanged,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_PhoneNumberChanged value) phoneNumberChanged,
+    required TResult Function(_EmailChnaged value) emailChnaged,
+    required TResult Function(_DateOfBirthChanged value) dateOfBirthChanged,
+    required TResult Function(_HouseNameChanged value) houseNameChanged,
+    required TResult Function(_PostOfficeChanged value) postOfficeChanged,
+    required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
+    required TResult Function(_PincodeChanged value) pincodeChanged,
+    required TResult Function(_SaveCoApplicant value) saveCoApplicant,
+  }) {
+    return landmarkChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_LoanIdChanged value)? loanIdChanged,
+    TResult? Function(_FormStepChanged value)? formStepChanged,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult? Function(_EmailChnaged value)? emailChnaged,
+    TResult? Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult? Function(_HouseNameChanged value)? houseNameChanged,
+    TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
+    TResult? Function(_PincodeChanged value)? pincodeChanged,
+    TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
+  }) {
+    return landmarkChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_LoanIdChanged value)? loanIdChanged,
+    TResult Function(_FormStepChanged value)? formStepChanged,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_PhoneNumberChanged value)? phoneNumberChanged,
+    TResult Function(_EmailChnaged value)? emailChnaged,
+    TResult Function(_DateOfBirthChanged value)? dateOfBirthChanged,
+    TResult Function(_HouseNameChanged value)? houseNameChanged,
+    TResult Function(_PostOfficeChanged value)? postOfficeChanged,
+    TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
+    TResult Function(_PincodeChanged value)? pincodeChanged,
+    TResult Function(_SaveCoApplicant value)? saveCoApplicant,
+    required TResult orElse(),
+  }) {
+    if (landmarkChanged != null) {
+      return landmarkChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LandmarkChanged implements CoApplicantFormEvent {
+  const factory _LandmarkChanged(final String landmark) = _$LandmarkChangedImpl;
+
+  String get landmark;
+  @JsonKey(ignore: true)
+  _$$LandmarkChangedImplCopyWith<_$LandmarkChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2216,6 +2487,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -2236,6 +2508,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -2256,6 +2529,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -2279,6 +2553,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -2298,6 +2573,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -2317,6 +2593,7 @@ class _$PincodeChangedImpl implements _PincodeChanged {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),
@@ -2387,6 +2664,7 @@ class _$SaveCoApplicantImpl implements _SaveCoApplicant {
     required TResult Function(String houseName) houseNameChanged,
     required TResult Function(String postOffice) postOfficeChanged,
     required TResult Function(String streetName) streetNameChanged,
+    required TResult Function(String landmark) landmarkChanged,
     required TResult Function(String pincode) pincodeChanged,
     required TResult Function() saveCoApplicant,
   }) {
@@ -2407,6 +2685,7 @@ class _$SaveCoApplicantImpl implements _SaveCoApplicant {
     TResult? Function(String houseName)? houseNameChanged,
     TResult? Function(String postOffice)? postOfficeChanged,
     TResult? Function(String streetName)? streetNameChanged,
+    TResult? Function(String landmark)? landmarkChanged,
     TResult? Function(String pincode)? pincodeChanged,
     TResult? Function()? saveCoApplicant,
   }) {
@@ -2427,6 +2706,7 @@ class _$SaveCoApplicantImpl implements _SaveCoApplicant {
     TResult Function(String houseName)? houseNameChanged,
     TResult Function(String postOffice)? postOfficeChanged,
     TResult Function(String streetName)? streetNameChanged,
+    TResult Function(String landmark)? landmarkChanged,
     TResult Function(String pincode)? pincodeChanged,
     TResult Function()? saveCoApplicant,
     required TResult orElse(),
@@ -2450,6 +2730,7 @@ class _$SaveCoApplicantImpl implements _SaveCoApplicant {
     required TResult Function(_HouseNameChanged value) houseNameChanged,
     required TResult Function(_PostOfficeChanged value) postOfficeChanged,
     required TResult Function(_StreetNameChanged value) streetNameChanged,
+    required TResult Function(_LandmarkChanged value) landmarkChanged,
     required TResult Function(_PincodeChanged value) pincodeChanged,
     required TResult Function(_SaveCoApplicant value) saveCoApplicant,
   }) {
@@ -2469,6 +2750,7 @@ class _$SaveCoApplicantImpl implements _SaveCoApplicant {
     TResult? Function(_HouseNameChanged value)? houseNameChanged,
     TResult? Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult? Function(_StreetNameChanged value)? streetNameChanged,
+    TResult? Function(_LandmarkChanged value)? landmarkChanged,
     TResult? Function(_PincodeChanged value)? pincodeChanged,
     TResult? Function(_SaveCoApplicant value)? saveCoApplicant,
   }) {
@@ -2488,6 +2770,7 @@ class _$SaveCoApplicantImpl implements _SaveCoApplicant {
     TResult Function(_HouseNameChanged value)? houseNameChanged,
     TResult Function(_PostOfficeChanged value)? postOfficeChanged,
     TResult Function(_StreetNameChanged value)? streetNameChanged,
+    TResult Function(_LandmarkChanged value)? landmarkChanged,
     TResult Function(_PincodeChanged value)? pincodeChanged,
     TResult Function(_SaveCoApplicant value)? saveCoApplicant,
     required TResult orElse(),

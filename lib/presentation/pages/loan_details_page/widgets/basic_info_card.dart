@@ -1,3 +1,4 @@
+import 'package:age_calculator/age_calculator.dart';
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:data_dex/application/app_action/app_action_cubit.dart';
 import 'package:data_dex/domain/core/models/basic_info/basic_info.dart';
@@ -236,6 +237,21 @@ class BasicInfoCard extends StatelessWidget {
                   kWidthMd,
                   Text(
                     basicInfo.emailAddress?.getOrCrash() ?? 'NILL',
+                  ),
+                ],
+              ),
+              kHeightMd,
+              Row(
+                children: [
+                  const Text(
+                    'Age:',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  kWidthMd,
+                  Text(
+                    '${AgeCalculator.age(DateTime.parse(basicInfo.dateOfBirth.getOrCrash())).years} years',
                   ),
                 ],
               ),

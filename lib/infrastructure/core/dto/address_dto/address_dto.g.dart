@@ -11,6 +11,7 @@ _$AddressDtoImpl _$$AddressDtoImplFromJson(Map<String, dynamic> json) =>
       houseName: json['houseName'] as String,
       postOffice: json['postOffice'] as String,
       streetName: json['streetName'] as String,
+      landmark: json['landmark'] as String?,
       pincode: json['pincode'] as String,
     );
 
@@ -19,5 +20,6 @@ Map<String, dynamic> _$$AddressDtoImplToJson(_$AddressDtoImpl instance) =>
       'houseName': instance.houseName,
       'postOffice': instance.postOffice,
       'streetName': instance.streetName,
+      'landmark': instance.landmark,
       'pincode': instance.pincode,
     };

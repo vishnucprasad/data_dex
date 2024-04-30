@@ -33,6 +33,9 @@ class CoApplicantFormEvent with _$CoApplicantFormEvent {
   const factory CoApplicantFormEvent.streetNameChanged(
     String streetName,
   ) = _StreetNameChanged;
+  const factory CoApplicantFormEvent.landmarkChanged(
+    String landmark,
+  ) = _LandmarkChanged;
   const factory CoApplicantFormEvent.pincodeChanged(
     String pincode,
   ) = _PincodeChanged;

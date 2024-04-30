@@ -14,6 +14,7 @@ class AddressDto with _$AddressDto {
     required String houseName,
     required String postOffice,
     required String streetName,
+    required String? landmark,
     required String pincode,
   }) = _AddressDto;
 
@@ -22,6 +23,7 @@ class AddressDto with _$AddressDto {
       houseName: address.houseName.getOrCrash(),
       postOffice: address.postOffice.getOrCrash(),
       streetName: address.streetName.getOrCrash(),
+      landmark: address.landmark?.getOrCrash(),
       pincode: address.pincode.getOrCrash(),
     );
   }
@@ -31,6 +33,7 @@ class AddressDto with _$AddressDto {
       houseName: HouseName(houseName),
       postOffice: PostOffice(postOffice),
       streetName: StreetName(streetName),
+      landmark: landmark == null ? null : Landmark(landmark!),
       pincode: PinCode(pincode),
     );
   }

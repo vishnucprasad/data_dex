@@ -107,6 +107,11 @@ class GuarenterFormBloc extends Bloc<GuarenterFormEvent, GuarenterFormState> {
           ),
           failureOrSuccess: none(),
         )),
+        landmarkChanged: (e) async => emit(state.copyWith(
+          address: state.address.copyWith(
+            landmark: Landmark(e.landmark),
+          ),
+        )),
         pincodeChanged: (e) async => emit(state.copyWith(
           address: state.address.copyWith(
             pincode: PinCode(e.pincode),

@@ -1,12 +1,13 @@
 name: data_dex
 description: "A new Flutter project."
 publish_to: "none"
-version: 1.0.1
+version: 1.1.0
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
 
 dependencies:
+  age_calculator: ^1.0.0
   another_flushbar: ^1.12.30
   auto_route: ^7.8.4
   bottom_bar_page_transition: ^2.0.0

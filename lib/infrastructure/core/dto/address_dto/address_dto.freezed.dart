@@ -23,6 +23,7 @@ mixin _$AddressDto {
   String get houseName => throw _privateConstructorUsedError;
   String get postOffice => throw _privateConstructorUsedError;
   String get streetName => throw _privateConstructorUsedError;
+  String? get landmark => throw _privateConstructorUsedError;
   String get pincode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -38,7 +39,11 @@ abstract class $AddressDtoCopyWith<$Res> {
       _$AddressDtoCopyWithImpl<$Res, AddressDto>;
   @useResult
   $Res call(
-      {String houseName, String postOffice, String streetName, String pincode});
+      {String houseName,
+      String postOffice,
+      String streetName,
+      String? landmark,
+      String pincode});
 }
 
 /// @nodoc
@@ -57,6 +62,7 @@ class _$AddressDtoCopyWithImpl<$Res, $Val extends AddressDto>
     Object? houseName = null,
     Object? postOffice = null,
     Object? streetName = null,
+    Object? landmark = freezed,
     Object? pincode = null,
   }) {
     return _then(_value.copyWith(
@@ -72,6 +78,10 @@ class _$AddressDtoCopyWithImpl<$Res, $Val extends AddressDto>
           ? _value.streetName
           : streetName // ignore: cast_nullable_to_non_nullable
               as String,
+      landmark: freezed == landmark
+          ? _value.landmark
+          : landmark // ignore: cast_nullable_to_non_nullable
+              as String?,
       pincode: null == pincode
           ? _value.pincode
           : pincode // ignore: cast_nullable_to_non_nullable
@@ -89,7 +99,11 @@ abstract class _$$AddressDtoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String houseName, String postOffice, String streetName, String pincode});
+      {String houseName,
+      String postOffice,
+      String streetName,
+      String? landmark,
+      String pincode});
 }
 
 /// @nodoc
@@ -106,6 +120,7 @@ class __$$AddressDtoImplCopyWithImpl<$Res>
     Object? houseName = null,
     Object? postOffice = null,
     Object? streetName = null,
+    Object? landmark = freezed,
     Object? pincode = null,
   }) {
     return _then(_$AddressDtoImpl(
@@ -121,6 +136,10 @@ class __$$AddressDtoImplCopyWithImpl<$Res>
           ? _value.streetName
           : streetName // ignore: cast_nullable_to_non_nullable
               as String,
+      landmark: freezed == landmark
+          ? _value.landmark
+          : landmark // ignore: cast_nullable_to_non_nullable
+              as String?,
       pincode: null == pincode
           ? _value.pincode
           : pincode // ignore: cast_nullable_to_non_nullable
@@ -136,6 +155,7 @@ class _$AddressDtoImpl extends _AddressDto {
       {required this.houseName,
       required this.postOffice,
       required this.streetName,
+      required this.landmark,
       required this.pincode})
       : super._();
 
@@ -149,11 +169,13 @@ class _$AddressDtoImpl extends _AddressDto {
   @override
   final String streetName;
   @override
+  final String? landmark;
+  @override
   final String pincode;
 
   @override
   String toString() {
-    return 'AddressDto(houseName: $houseName, postOffice: $postOffice, streetName: $streetName, pincode: $pincode)';
+    return 'AddressDto(houseName: $houseName, postOffice: $postOffice, streetName: $streetName, landmark: $landmark, pincode: $pincode)';
   }
 
   @override
@@ -167,13 +189,15 @@ class _$AddressDtoImpl extends _AddressDto {
                 other.postOffice == postOffice) &&
             (identical(other.streetName, streetName) ||
                 other.streetName == streetName) &&
+            (identical(other.landmark, landmark) ||
+                other.landmark == landmark) &&
             (identical(other.pincode, pincode) || other.pincode == pincode));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, houseName, postOffice, streetName, pincode);
+  int get hashCode => Object.hash(
+      runtimeType, houseName, postOffice, streetName, landmark, pincode);
 
   @JsonKey(ignore: true)
   @override
@@ -194,6 +218,7 @@ abstract class _AddressDto extends AddressDto {
       {required final String houseName,
       required final String postOffice,
       required final String streetName,
+      required final String? landmark,
       required final String pincode}) = _$AddressDtoImpl;
   const _AddressDto._() : super._();
 
@@ -206,6 +231,8 @@ abstract class _AddressDto extends AddressDto {
   String get postOffice;
   @override
   String get streetName;
+  @override
+  String? get landmark;
   @override
   String get pincode;
   @override

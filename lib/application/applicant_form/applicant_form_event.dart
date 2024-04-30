@@ -29,6 +29,9 @@ class ApplicantFormEvent with _$ApplicantFormEvent {
   const factory ApplicantFormEvent.streetNameChanged(
     String streetName,
   ) = _StreetNameChanged;
+  const factory ApplicantFormEvent.landmarkChanged(
+    String landmark,
+  ) = _LandmarkChanged;
   const factory ApplicantFormEvent.pincodeChanged(
     String pincode,
   ) = _PincodeChanged;

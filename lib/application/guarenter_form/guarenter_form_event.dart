@@ -33,6 +33,9 @@ class GuarenterFormEvent with _$GuarenterFormEvent {
   const factory GuarenterFormEvent.streetNameChanged(
     String streetName,
   ) = _StreetNameChanged;
+  const factory GuarenterFormEvent.landmarkChanged(
+    String landmark,
+  ) = _LandmarkChanged;
   const factory GuarenterFormEvent.pincodeChanged(
     String pincode,
   ) = _PincodeChanged;

@@ -77,6 +77,26 @@ class AddressCard extends StatelessWidget {
             ],
           ),
           kHeightMd,
+          if (address.landmark != null)
+            Column(
+              children: [
+                Row(
+                  children: [
+                    const Text(
+                      'Landmark:',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    kWidthMd,
+                    Text(
+                      address.landmark!.getOrCrash(),
+                    ),
+                  ],
+                ),
+                kHeightMd,
+              ],
+            ),
           Row(
             children: [
               const Text(

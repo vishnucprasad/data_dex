@@ -12,6 +12,7 @@ class Address with _$Address {
     required HouseName houseName,
     required PostOffice postOffice,
     required StreetName streetName,
+    required Landmark? landmark,
     required PinCode pincode,
     dynamic key,
   }) = _Address;
@@ -21,6 +22,7 @@ class Address with _$Address {
       houseName: HouseName(''),
       postOffice: PostOffice(''),
       streetName: StreetName(''),
+      landmark: null,
       pincode: PinCode(''),
     );
   }
@@ -29,6 +31,9 @@ class Address with _$Address {
     return houseName.failureOrUnit
         .andThen(postOffice.failureOrUnit)
         .andThen(streetName.failureOrUnit)
+        .andThen(
+          landmark == null ? right(unit) : landmark!.failureOrUnit,
+        )
         .andThen(pincode.failureOrUnit)
         .fold((f) => some(f), (_) => none());
   }

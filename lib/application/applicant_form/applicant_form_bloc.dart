@@ -107,6 +107,11 @@ class ApplicantFormBloc extends Bloc<ApplicantFormEvent, ApplicantFormState> {
           ),
           failureOrSuccess: none(),
         )),
+        landmarkChanged: (e) async => emit(state.copyWith(
+          address: state.address.copyWith(
+            landmark: e.landmark.isEmpty ? null : Landmark(e.landmark),
+          ),
+        )),
         pincodeChanged: (e) async => emit(state.copyWith(
           address: state.address.copyWith(
             pincode: PinCode(e.pincode),

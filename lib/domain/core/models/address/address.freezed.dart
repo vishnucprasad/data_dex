@@ -19,6 +19,7 @@ mixin _$Address {
   HouseName get houseName => throw _privateConstructorUsedError;
   PostOffice get postOffice => throw _privateConstructorUsedError;
   StreetName get streetName => throw _privateConstructorUsedError;
+  Landmark? get landmark => throw _privateConstructorUsedError;
   PinCode get pincode => throw _privateConstructorUsedError;
   dynamic get key => throw _privateConstructorUsedError;
 
@@ -35,6 +36,7 @@ abstract class $AddressCopyWith<$Res> {
       {HouseName houseName,
       PostOffice postOffice,
       StreetName streetName,
+      Landmark? landmark,
       PinCode pincode,
       dynamic key});
 }
@@ -55,6 +57,7 @@ class _$AddressCopyWithImpl<$Res, $Val extends Address>
     Object? houseName = null,
     Object? postOffice = null,
     Object? streetName = null,
+    Object? landmark = freezed,
     Object? pincode = null,
     Object? key = freezed,
   }) {
@@ -71,6 +74,10 @@ class _$AddressCopyWithImpl<$Res, $Val extends Address>
           ? _value.streetName
           : streetName // ignore: cast_nullable_to_non_nullable
               as StreetName,
+      landmark: freezed == landmark
+          ? _value.landmark
+          : landmark // ignore: cast_nullable_to_non_nullable
+              as Landmark?,
       pincode: null == pincode
           ? _value.pincode
           : pincode // ignore: cast_nullable_to_non_nullable
@@ -94,6 +101,7 @@ abstract class _$$AddressImplCopyWith<$Res> implements $AddressCopyWith<$Res> {
       {HouseName houseName,
       PostOffice postOffice,
       StreetName streetName,
+      Landmark? landmark,
       PinCode pincode,
       dynamic key});
 }
@@ -112,6 +120,7 @@ class __$$AddressImplCopyWithImpl<$Res>
     Object? houseName = null,
     Object? postOffice = null,
     Object? streetName = null,
+    Object? landmark = freezed,
     Object? pincode = null,
     Object? key = freezed,
   }) {
@@ -128,6 +137,10 @@ class __$$AddressImplCopyWithImpl<$Res>
           ? _value.streetName
           : streetName // ignore: cast_nullable_to_non_nullable
               as StreetName,
+      landmark: freezed == landmark
+          ? _value.landmark
+          : landmark // ignore: cast_nullable_to_non_nullable
+              as Landmark?,
       pincode: null == pincode
           ? _value.pincode
           : pincode // ignore: cast_nullable_to_non_nullable
@@ -147,6 +160,7 @@ class _$AddressImpl extends _Address {
       {required this.houseName,
       required this.postOffice,
       required this.streetName,
+      required this.landmark,
       required this.pincode,
       this.key})
       : super._();
@@ -158,13 +172,15 @@ class _$AddressImpl extends _Address {
   @override
   final StreetName streetName;
   @override
+  final Landmark? landmark;
+  @override
   final PinCode pincode;
   @override
   final dynamic key;
 
   @override
   String toString() {
-    return 'Address(houseName: $houseName, postOffice: $postOffice, streetName: $streetName, pincode: $pincode, key: $key)';
+    return 'Address(houseName: $houseName, postOffice: $postOffice, streetName: $streetName, landmark: $landmark, pincode: $pincode, key: $key)';
   }
 
   @override
@@ -178,13 +194,15 @@ class _$AddressImpl extends _Address {
                 other.postOffice == postOffice) &&
             (identical(other.streetName, streetName) ||
                 other.streetName == streetName) &&
+            (identical(other.landmark, landmark) ||
+                other.landmark == landmark) &&
             (identical(other.pincode, pincode) || other.pincode == pincode) &&
             const DeepCollectionEquality().equals(other.key, key));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, houseName, postOffice,
-      streetName, pincode, const DeepCollectionEquality().hash(key));
+      streetName, landmark, pincode, const DeepCollectionEquality().hash(key));
 
   @JsonKey(ignore: true)
   @override
@@ -198,6 +216,7 @@ abstract class _Address extends Address {
       {required final HouseName houseName,
       required final PostOffice postOffice,
       required final StreetName streetName,
+      required final Landmark? landmark,
       required final PinCode pincode,
       final dynamic key}) = _$AddressImpl;
   const _Address._() : super._();
@@ -208,6 +227,8 @@ abstract class _Address extends Address {
   PostOffice get postOffice;
   @override
   StreetName get streetName;
+  @override
+  Landmark? get landmark;
   @override
   PinCode get pincode;
   @override
