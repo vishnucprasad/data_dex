@@ -1,6 +1,7 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:data_dex/domain/core/constants.dart';
 import 'package:data_dex/domain/loan_particulars/models/loan_particulars.dart';
 import 'package:data_dex/infrastructure/loan_particulars/dto/emi_details_dto/emi_details_dto.dart';
 import 'package:data_dex/infrastructure/loan_particulars/dto/loan_details_dto/loan_details_dto.dart';
@@ -35,6 +36,10 @@ class LoanParticularsDto with _$LoanParticularsDto {
       vehicleDetails: vehicleDetails.toDomain(),
       loanDetails: loanDetails.toDomain(),
       emiDetails: emiDetails.toDomain(),
+      fundedLoanAmount:
+          LoanScheme.values[loanDetails.loanScheme ?? 1] == LoanScheme.funded
+              ? calculateFundedLoanAmount(loanDetails)
+              : null,
       ddAmount: calculateDD(loanDetails),
       downPayment: calculateDownpayment(vehicleDetails, loanDetails),
     );
@@ -49,6 +54,30 @@ class LoanParticularsDto with _$LoanParticularsDto {
     return LoanParticularsDto.fromJson(doc.data() as Map<String, dynamic>);
   }
 
+  double calculateFundedLoanAmount(LoanDetailsDto loanDetails) {
+    if (loanDetails.fundedChargesList == null ||
+        loanDetails.fundedChargesList!.isEmpty) {
+      return loanDetails.loanAmount;
+    }
+
+    double fundedCharges = 0;
+
+    for (int index in loanDetails.fundedChargesList!) {
+      switch (FundOptions.values[index]) {
+        case FundOptions.service:
+          fundedCharges += loanDetails.serviceCharge;
+        case FundOptions.documentation:
+          fundedCharges += loanDetails.documentationCharge ?? 0;
+        case FundOptions.life:
+          fundedCharges += loanDetails.lifeAmount ?? 0;
+        case FundOptions.pac:
+          fundedCharges += loanDetails.pacAmount ?? 0;
+      }
+    }
+
+    return loanDetails.loanAmount + fundedCharges;
+  }
+
   double calculateDD(LoanDetailsDto loanDetails) {
     final double deductions = ((loanDetails.serviceCharge) +
         (loanDetails.documentationCharge ?? 0) +
@@ -57,7 +86,9 @@ class LoanParticularsDto with _$LoanParticularsDto {
         (loanDetails.stampDuty) +
         (loanDetails.dateShiftingCharge ?? 0));
 
-    return loanDetails.loanAmount - deductions;
+    return LoanScheme.values[loanDetails.loanScheme ?? 1] == LoanScheme.funded
+        ? calculateFundedLoanAmount(loanDetails) - deductions
+        : loanDetails.loanAmount - deductions;
   }
 
   double calculateDownpayment(

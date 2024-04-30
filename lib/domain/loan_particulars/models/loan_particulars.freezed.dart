@@ -19,6 +19,7 @@ mixin _$LoanParticulars {
   VehicleDetails get vehicleDetails => throw _privateConstructorUsedError;
   LoanDetails get loanDetails => throw _privateConstructorUsedError;
   EMIDetails get emiDetails => throw _privateConstructorUsedError;
+  double? get fundedLoanAmount => throw _privateConstructorUsedError;
   double? get ddAmount => throw _privateConstructorUsedError;
   double? get downPayment => throw _privateConstructorUsedError;
 
@@ -37,6 +38,7 @@ abstract class $LoanParticularsCopyWith<$Res> {
       {VehicleDetails vehicleDetails,
       LoanDetails loanDetails,
       EMIDetails emiDetails,
+      double? fundedLoanAmount,
       double? ddAmount,
       double? downPayment});
 
@@ -61,6 +63,7 @@ class _$LoanParticularsCopyWithImpl<$Res, $Val extends LoanParticulars>
     Object? vehicleDetails = null,
     Object? loanDetails = null,
     Object? emiDetails = null,
+    Object? fundedLoanAmount = freezed,
     Object? ddAmount = freezed,
     Object? downPayment = freezed,
   }) {
@@ -77,6 +80,10 @@ class _$LoanParticularsCopyWithImpl<$Res, $Val extends LoanParticulars>
           ? _value.emiDetails
           : emiDetails // ignore: cast_nullable_to_non_nullable
               as EMIDetails,
+      fundedLoanAmount: freezed == fundedLoanAmount
+          ? _value.fundedLoanAmount
+          : fundedLoanAmount // ignore: cast_nullable_to_non_nullable
+              as double?,
       ddAmount: freezed == ddAmount
           ? _value.ddAmount
           : ddAmount // ignore: cast_nullable_to_non_nullable
@@ -125,6 +132,7 @@ abstract class _$$LoanParticularsImplCopyWith<$Res>
       {VehicleDetails vehicleDetails,
       LoanDetails loanDetails,
       EMIDetails emiDetails,
+      double? fundedLoanAmount,
       double? ddAmount,
       double? downPayment});
 
@@ -150,6 +158,7 @@ class __$$LoanParticularsImplCopyWithImpl<$Res>
     Object? vehicleDetails = null,
     Object? loanDetails = null,
     Object? emiDetails = null,
+    Object? fundedLoanAmount = freezed,
     Object? ddAmount = freezed,
     Object? downPayment = freezed,
   }) {
@@ -166,6 +175,10 @@ class __$$LoanParticularsImplCopyWithImpl<$Res>
           ? _value.emiDetails
           : emiDetails // ignore: cast_nullable_to_non_nullable
               as EMIDetails,
+      fundedLoanAmount: freezed == fundedLoanAmount
+          ? _value.fundedLoanAmount
+          : fundedLoanAmount // ignore: cast_nullable_to_non_nullable
+              as double?,
       ddAmount: freezed == ddAmount
           ? _value.ddAmount
           : ddAmount // ignore: cast_nullable_to_non_nullable
@@ -185,6 +198,7 @@ class _$LoanParticularsImpl implements _LoanParticulars {
       {required this.vehicleDetails,
       required this.loanDetails,
       required this.emiDetails,
+      this.fundedLoanAmount,
       this.ddAmount,
       this.downPayment});
 
@@ -195,13 +209,15 @@ class _$LoanParticularsImpl implements _LoanParticulars {
   @override
   final EMIDetails emiDetails;
   @override
+  final double? fundedLoanAmount;
+  @override
   final double? ddAmount;
   @override
   final double? downPayment;
 
   @override
   String toString() {
-    return 'LoanParticulars(vehicleDetails: $vehicleDetails, loanDetails: $loanDetails, emiDetails: $emiDetails, ddAmount: $ddAmount, downPayment: $downPayment)';
+    return 'LoanParticulars(vehicleDetails: $vehicleDetails, loanDetails: $loanDetails, emiDetails: $emiDetails, fundedLoanAmount: $fundedLoanAmount, ddAmount: $ddAmount, downPayment: $downPayment)';
   }
 
   @override
@@ -215,6 +231,8 @@ class _$LoanParticularsImpl implements _LoanParticulars {
                 other.loanDetails == loanDetails) &&
             (identical(other.emiDetails, emiDetails) ||
                 other.emiDetails == emiDetails) &&
+            (identical(other.fundedLoanAmount, fundedLoanAmount) ||
+                other.fundedLoanAmount == fundedLoanAmount) &&
             (identical(other.ddAmount, ddAmount) ||
                 other.ddAmount == ddAmount) &&
             (identical(other.downPayment, downPayment) ||
@@ -223,7 +241,7 @@ class _$LoanParticularsImpl implements _LoanParticulars {
 
   @override
   int get hashCode => Object.hash(runtimeType, vehicleDetails, loanDetails,
-      emiDetails, ddAmount, downPayment);
+      emiDetails, fundedLoanAmount, ddAmount, downPayment);
 
   @JsonKey(ignore: true)
   @override
@@ -238,6 +256,7 @@ abstract class _LoanParticulars implements LoanParticulars {
       {required final VehicleDetails vehicleDetails,
       required final LoanDetails loanDetails,
       required final EMIDetails emiDetails,
+      final double? fundedLoanAmount,
       final double? ddAmount,
       final double? downPayment}) = _$LoanParticularsImpl;
 
@@ -247,6 +266,8 @@ abstract class _LoanParticulars implements LoanParticulars {
   LoanDetails get loanDetails;
   @override
   EMIDetails get emiDetails;
+  @override
+  double? get fundedLoanAmount;
   @override
   double? get ddAmount;
   @override

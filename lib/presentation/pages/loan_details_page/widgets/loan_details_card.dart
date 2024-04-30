@@ -6,12 +6,14 @@ import 'package:flutter/material.dart';
 class LoanDetailsCard extends StatelessWidget {
   const LoanDetailsCard({
     required this.loanDetails,
+    required this.fundedLoanAmount,
     required this.ddAmount,
     required this.downPayment,
     super.key,
   });
 
   final LoanDetails loanDetails;
+  final double? fundedLoanAmount;
   final double? ddAmount;
   final double? downPayment;
 
@@ -51,6 +53,27 @@ class LoanDetailsCard extends StatelessWidget {
             ],
           ),
           kHeightMd,
+          if (fundedLoanAmount != null)
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'Funded loan amount:',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.lightBlue.shade600,
+                      ),
+                    ),
+                    kWidthMd,
+                    Text(
+                      '₹ ${fundedLoanAmount!.toStringAsFixed(2)}',
+                    ),
+                  ],
+                ),
+                kHeightMd,
+              ],
+            ),
           Row(
             children: [
               const Text(
