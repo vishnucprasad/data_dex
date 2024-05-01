@@ -1,10 +1,16 @@
 # DataDex Changelog 
 
+## 1 May 2024
+
+### Features
+
+- Setup calculations of DD and downpayment based on loanscheme
+
+
 ## 30 April 2024
 
 ### Features
 
-- Setup calculations of DD and downpayment based in loanscheme
 - Setup option to set loan scheme and set funded charges
 - Setup option to add landmark in address
 
